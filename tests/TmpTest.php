@@ -3,7 +3,7 @@
 use PHPUnit\Framework\TestCase;
 
 
-class MyTestCases extends TestCase
+class TmpTest extends TestCase
 {
     public function testSampleTests()
     {
