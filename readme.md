@@ -3,7 +3,11 @@
 
 مثال:
 </div>
-get_char(65) # => 'A'
+<code>
+    <pre>
+        get_char(65) # => 'A'
+    </pre>
+</code>
 <br>
 <br>
 <br>
