@@ -1,10 +1,25 @@
 <div dir="rtl">
-تابعی بنویسید که یک عدد را بگیرد و کاراکتر ASCII مربوطه را برای آن مقدار برگرداند.
+<h3>namespace</h3>
+همان‌طور که در راهنمای رسمی PHP توضیح داده شده است، فضای نام‌گذاری در PHP مانند ساختار دایرکتوری در سیستم‌عامل عمل می‌کند. همان‌طور که دو فایل با نام‌های یکسان در دو دایرکتوری می‌توانند وجود داشته باشند، دو کلاس PHP با نام‌های یکسان در دو فضای نام‌گذاری جداگونه می‌توانند وجود داشته باشند. به همین سادگی!
+<br>
 
-مثال:
+توی زبان سی پلاس پلاس یا حتی تو دیاگرام‌های UML اینارو این جوری نشون میدیم:
+
+
 </div>
-get_char(65) # => 'A'
+<pre>
+    <code>
+        Microsoft::Windows
+        Math1_class::Alireza
+        std::sin()
+        ashkanLib::sin()<br>
+    </code>
+</pre>
+
+<div dir="rtl">
+به این :: هم میگن namespace resolution operator یا عملگر تعیین فضای نام
+</div>
 <br>
 <br>
-<br>
-For ASCII table, you can refer to http://www.asciitable.com/
+
+https://hitos.ir/283/php-oop-namespace

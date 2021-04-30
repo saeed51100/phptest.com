@@ -1,9 +1,7 @@
 <?php
-//echo chr(74);
+require "class1.php";
+require "class2.php";
 
-
-
-
-require '../app/main.php';
-
-
+$Test = new test1\Test();
+echo $Test->name;
+?>
