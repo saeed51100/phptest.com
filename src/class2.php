@@ -1,4 +1,6 @@
 <?php
+namespace test2;
+class Test{
+    public $name = __FILE__;
+}
 
-
-require '../src/Email.php';
