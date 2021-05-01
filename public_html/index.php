@@ -4,6 +4,6 @@
 
 
 
-require '../app/main.php';
+require '../src/Email.php';
 
 
