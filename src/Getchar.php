@@ -16,8 +16,8 @@ final class Getchar
     }
 }
 
-$getchar = new Getchar();
-echo $getchar->getchar();
+//$getchar = new Getchar();
+//echo $getchar->getchar();
 
 
 
