@@ -13,7 +13,7 @@ final class Getchar
 
 echo getchar(74);
 
-function getchar($c){
-    return chr($c);
-}
-echo getchar(75);
+//function getchar($c){
+//    return chr($c);
+//}
+//echo getchar(75);
