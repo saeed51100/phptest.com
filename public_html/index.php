@@ -1,4 +1,4 @@
 <?php
-require '../src/getChar.php';
+require '../src/Getchar.php';
 
 

@@ -10,7 +10,7 @@ class TmpTest extends TestCase
 
 
 
-//        function getChar($c): string
+//        function getchar($c): string
 //        {
 //            return chr($c);
 //        }
