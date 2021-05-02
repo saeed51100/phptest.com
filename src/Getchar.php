@@ -30,7 +30,6 @@ final class Getchar
 //}
 //echo getchar(75);
 
-//echo getchar(74);
 
 
 
