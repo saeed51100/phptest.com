@@ -31,5 +31,15 @@ final class Getchar
 //echo getchar(75);
 
 
+class User{
 
+    public function __construct(){
+
+        echo 'wpmen.ir';
+
+    }
+
+}
+
+$User = new User();
 
