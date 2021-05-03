@@ -1,6 +1,6 @@
 <?php
 
-class Fruit {
+class Getchar {
     public $name;
 
     function __construct($name) {
@@ -11,7 +11,7 @@ class Fruit {
     }
 }
 
-$apple = new Fruit(74);
+$apple = new Getchar(74);
 echo $apple->get_name();
 
 
