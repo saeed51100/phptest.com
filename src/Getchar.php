@@ -1,5 +1,6 @@
 <?php
 
+
 class Getchar
 {
     public $name;
@@ -18,7 +19,6 @@ class Getchar
 
 $apple = new Getchar(74);
 echo $apple->get_name();
-
 
 
 
