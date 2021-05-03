@@ -1,12 +1,16 @@
 <?php
 
-class Getchar {
+class Getchar
+{
     public $name;
 
-    function __construct($name) {
+    function __construct($name)
+    {
         $this->name = chr($name);
     }
-    function get_name() {
+
+    function get_name()
+    {
 
         return $this->name;
     }
@@ -21,5 +25,5 @@ echo $apple->get_name();
 //function getchar($c){
 //    return chr($c);
 //}
-
+//echo getchar(75);
 
