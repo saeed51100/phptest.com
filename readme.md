@@ -12,4 +12,8 @@
 <br>
 <br>
 <br>
+https://www.codewars.com/kata/55ad04714f0b468e8200001c
+<br>
+https://github.com/drmonkeyninja/phpunit-simple-example
+<br>
 For ASCII table, you can refer to http://www.asciitable.com/
