@@ -1,29 +1,14 @@
 <?php
+namespace saeed;
+
 
 
 class Getchar
 {
-    public $name;
 
-    function __construct($name)
+    public function getchar($c)
     {
-        $this->name = chr($name);
-    }
-
-    function get_name()
-    {
-
-        return $this->name;
+        return chr($c);
     }
 }
-
-$apple = new Getchar(74);
-echo $apple->get_name();
-
-
-
-//function getchar($c){
-//    return chr($c);
-//}
-//echo getchar(75);
-
+echo getchar(75);
