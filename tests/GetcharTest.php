@@ -4,7 +4,7 @@ use saeed\Getchar;
 use PHPUnit\Framework\TestCase;
 
 
-class getcharTest extends TestCase
+class GetcharTest extends TestCase
 {
     protected $Getchar;
 

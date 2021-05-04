@@ -1,6 +1,6 @@
 <?php
-namespace saeed;
 
+namespace saeed;
 
 
 class Getchar
@@ -11,4 +11,12 @@ class Getchar
         return chr($c);
     }
 }
-echo getchar(75);
+
+echo (new Getchar)->getchar(75);
+
+
+
+
+
+
+
