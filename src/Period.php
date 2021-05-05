@@ -5,7 +5,9 @@ class Period
 {
    public function periodIsLate($last, $today, $cycleLength): bool
    {
-       return false;
+//       return false;
+       return $last;
+
    }
 }
 
