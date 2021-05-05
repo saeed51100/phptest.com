@@ -5,7 +5,7 @@ class Multiply
 {
    public function multiply($a, $b)
     {
-        return $a * $b;
+        return $a * $b; // return is added for solve problem.
     }
 }
 
