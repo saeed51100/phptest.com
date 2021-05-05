@@ -6,8 +6,8 @@
 <code>
     <pre>
         function multiply($a, $b) {
-$a * $b;
-}
+            $a * $b;
+            }
     </pre>
 </code>
 <br>
