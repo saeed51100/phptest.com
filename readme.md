@@ -1,16 +1,16 @@
 <div dir="rtl">
-این کد به درستی اجرا نمی شود. سعی کنید دلیل آن را بفهمید.
+<h3>ASCII_Value</h3>
+تابعی بنویسید که یک عدد را بگیرد و کاراکتر ASCII مربوطه را برای آن مقدار برگرداند.
+مثال:
+
 
 
 </div>
 <code>
     <pre>
-        function multiply($a, $b) {
-$a * $b;
-}
+        get_char(65) # => 'A'
     </pre>
 </code>
 <br>
 <br>
 <br>
-https://www.codewars.com/kata/50654ddff44f800200000004/train/php
