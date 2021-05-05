@@ -1,14 +1,16 @@
 <div dir="rtl">
-تابعی بنویسید که یک عدد را بگیرد و کاراکتر ASCII مربوطه را برای آن مقدار برگرداند.
+این کد به درستی اجرا نمی شود. سعی کنید دلیل آن را بفهمید.
 
-مثال:
+
 </div>
 <code>
     <pre>
-        get_char(65) # => 'A'
+        function multiply($a, $b) {
+$a * $b;
+}
     </pre>
 </code>
 <br>
 <br>
 <br>
-For ASCII table, you can refer to http://www.asciitable.com/
+https://www.codewars.com/kata/50654ddff44f800200000004/train/php
