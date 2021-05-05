@@ -1,15 +1,24 @@
 <?php
+namespace saeed;
 
-
-//function getchar($c)
-//{
-//    return chr($c);
-//}
-//
-//echo getchar(75);
-
-
-function multiply($a, $b) {
-    return $a * $b;
+class Multiply
+{
+   public function multiply($a, $b)
+    {
+        return $a * $b;
+    }
 }
-//echo multiply(9,5);
+
+//echo (new Multiply())->multiply(75,4);
+
+
+
+
+
+
+
+
+
+
+
+
