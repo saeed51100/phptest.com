@@ -29,12 +29,10 @@ echo  time(). "<br>". "<br>"; // 1620322734
 
 echo  date("N"). "<br>". "<br>"; // 4
 echo  date("w"). "<br>". "<br>"; // 4
-
 echo  date("z"). "<br>". "<br>"; // 125
 echo  date("W"). "<br>". "<br>"; // 18
 echo  date("t"). "<br>". "<br>"; // 31
 echo  date("L"). "<br>". "<br>"; // 0
-
 echo  date("e"). "<br>". "<br>"; // UTC
 echo  date("P"). "<br>". "<br>"; //+00:00
 
