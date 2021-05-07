@@ -14,9 +14,3 @@ class Getchar
 
 echo (new Getchar)->getchar(75);
 
-
-
-
-
-
-
