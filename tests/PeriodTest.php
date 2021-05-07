@@ -1,5 +1,5 @@
 <?php
-use saeed\Period;
+
 use PHPUnit\Framework\TestCase;
 
 class PeriodTest extends TestCase
@@ -12,8 +12,8 @@ class PeriodTest extends TestCase
     }
 
     public function testExample() {
-        $this->assertSame(false, periodIsLate(new DateTime('2016-07-13'), new DateTime('2016-08-16'), 35));
-        $this->assertSame(true, periodIsLate(new DateTime('2016-07-13'), new DateTime('2016-08-16'), 28));
+        $this->assertSame(false, $this->Period->periodIsLate(new DateTime('2016-07-13'), new DateTime('2016-08-16'), 35));
+        $this->assertSame(true, $this->Period->periodIsLate(new DateTime('2016-07-13'), new DateTime('2016-08-16'), 28));
     }
 }
 
