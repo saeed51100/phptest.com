@@ -3,22 +3,15 @@ namespace saeed;
 
 class Period
 {
-   public function periodIsLate($last, $today, $cycleLength)
+   public function periodIsLate($last, $today, $cycleLength): bool
    {
 
-//       if ($cycleLength>($today-$last)){
-//           return "false";
-//       }else{
-//           return "true";
-//       }
-//       return false;
-
-      return date($today)-date($last);
+       return ((date_diff($today, $last)->days) > $cycleLength);
 
    }
 }
 
-echo (new Period())->periodIsLate(2016-07-13,2015-07-15,5);
+//echo (new Period())->periodIsLate(2016-07-13,2015-07-15,5);
 
 
 
