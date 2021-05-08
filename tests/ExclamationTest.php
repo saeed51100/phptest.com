@@ -2,13 +2,13 @@
 
 use PHPUnit\Framework\TestCase;
 
-class PeriodTest extends TestCase
+class ExclamationTest extends TestCase
 {
-    protected $Period;
+    protected $Exclamation;
 
     public function setUp(): void
     {
-        $this->Period = new \saeed\Period();
+        $this->Exclamation = new \saeed\Exclamation();
     }
 
     public function testExample() {
