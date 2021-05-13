@@ -5,6 +5,7 @@ class Exclamation2
 {
     public function remove(string $s): string {
         // Coding and coding ...
+        $string = preg_replace('/!+$/', '', $string);
     }
 }
 
