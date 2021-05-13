@@ -1,2 +1,2 @@
 <?php
-require '../src/Exclamation.php';
+require '../src/Exclamation2.php';

@@ -2,13 +2,13 @@
 
 use PHPUnit\Framework\TestCase;
 
-class ExclamationTest extends TestCase
+class Exclamation2Test extends TestCase
 {
     protected $Exclamation;
 
     public function setUp(): void
     {
-        $this->Exclamation = new \saeed\Exclamation();
+        $this->Exclamation = new \saeed\Exclamation2();
     }
 
     public function testExample() {

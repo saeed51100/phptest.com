@@ -1,14 +1,14 @@
 <?php
 namespace saeed;
 
-class Exclamation
+class Exclamation2
 {
     public function remove(string $s): string {
         // Coding and coding ...
     }
 }
 
-//echo (new Exclamation())->periodIsLate(2016-07-13,2015-07-15,5);
+//echo (new Exclamation2())->periodIsLate(2016-07-13,2015-07-15,5);
 
 
 
