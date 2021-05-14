@@ -11,9 +11,13 @@ class Exclamation2Test extends TestCase
         $this->Exclamation = new \saeed\Exclamation2();
     }
 
-    public function testExample() {
-        $this->assertSame(false, $this->Period->periodIsLate(new DateTime('2016-07-13'), new DateTime('2016-08-16'), 35));
-        $this->assertSame(true, $this->Period->periodIsLate(new DateTime('2016-07-13'), new DateTime('2016-08-16'), 28));
+    public function testDescriptionExamples() {
+        $this->assertEquals("Hi", remove("Hi!"));
+        $this->assertEquals("Hi", remove("Hi!!!"));
+        $this->assertEquals("!Hi", remove("!Hi"));
+        $this->assertEquals("!Hi", remove("!Hi!"));
+        $this->assertEquals("Hi! Hi", remove("Hi! Hi!"));
+        $this->assertEquals("Hi", remove("Hi"));
     }
 }
 

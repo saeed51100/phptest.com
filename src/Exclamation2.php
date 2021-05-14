@@ -1,11 +1,17 @@
 <?php
+
 namespace saeed;
 
 class Exclamation2
 {
-    public function remove(string $s): string {
-        // Coding and coding ...
-        return preg_replace('/!+$/', '', $s);
+    public function remove(string $s): string
+    {
+// I find this in stackoverflow:
+// return preg_replace('/!+$/', '', $s);
+
+
+// Best Practices in codewars:
+        return rtrim($s, '!');
     }
 }
 
