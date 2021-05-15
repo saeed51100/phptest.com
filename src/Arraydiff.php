@@ -10,9 +10,9 @@ class Arraydiff
     }
 }
 
-echo (new Arraydiff)->arrayDiff("[1,2,2,2,3]","[2]");
 
 
+echo (new Arraydiff)->arrayDiff(['1','2','2','2','3'],['2']);
 
 
 
