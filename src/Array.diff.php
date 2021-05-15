@@ -2,7 +2,7 @@
 
 namespace saeed;
 
-class Exclamation2
+class diff
 {
     public function remove(string $s): string
     {
@@ -15,7 +15,7 @@ class Exclamation2
     }
 }
 
-echo (new Exclamation2())->remove("!hello!!!!");
+echo (new diff())->remove("!hello!!!!");
 
 
 
