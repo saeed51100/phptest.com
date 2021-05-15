@@ -1,2 +1,2 @@
 <?php
-require '../src/Array.diff.php';
+require '../src/Arraydiff.php';
