@@ -8,7 +8,7 @@ class diffTest extends TestCase
 
     public function setUp(): void
     {
-        $this->Exclamation2 = new \saeed\diff();
+        $this->Exclamation2 = new \saeed\Arraydiff();
     }
 
     public function testDescriptionExamples() {

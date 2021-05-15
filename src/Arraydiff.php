@@ -2,7 +2,7 @@
 
 namespace saeed;
 
-class diff
+class Arraydiff
 {
     public function arrayDiff($a, $b) {
         // your code here
@@ -10,7 +10,8 @@ class diff
     }
 }
 
-echo (new diff())->arrayDiff([1,2,2,2,3],[2]);
+//echo (new Arraydiff)->arrayDiff([1,2,2,2,3],[2]);
+print_r (new Arraydiff)->arrayDiff([1,2,2,2,3],[2]);
 
 
 
