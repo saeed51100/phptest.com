@@ -11,8 +11,8 @@ class Arraydiff
 }
 
 
-
-echo (new Arraydiff)->arrayDiff([1,2,2,2,3],[2]);
+// Use print_r instead of echo for print array
+print_r((new Arraydiff)->arrayDiff([1,2,2,2,3],[2]));
 
 
 
