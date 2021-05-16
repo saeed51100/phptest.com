@@ -22,4 +22,3 @@
 
 https://www.codewars.com/kata/523f5d21c841566fde000009
 
-https://stackoverflow.com/questions/40013415/remove-all-exclamation-marks-from-the-end-of-sentence
