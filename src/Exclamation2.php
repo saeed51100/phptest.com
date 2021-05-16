@@ -6,7 +6,7 @@ class Exclamation2
 {
     public function remove(string $s): string
     {
-// I find this in stackoverflow:
+// I find this in stackoverflow ( Regular Expression ):
 // return preg_replace('/!+$/', '', $s);
 
 
