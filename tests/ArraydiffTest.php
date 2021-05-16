@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class diffTest extends TestCase
+class ArraydiffTest extends TestCase
 {
     protected $Exclamation2;
 
