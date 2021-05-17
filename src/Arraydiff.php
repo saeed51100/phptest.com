@@ -5,8 +5,9 @@ namespace saeed;
 class Arraydiff
 {
     public function arrayDiff($a, $b) {
-        // your code here
-        return array_diff($a, $b);
+        // use array_values for reset indexes in array_diff result.
+        // https://stackoverflow.com/questions/3109098/how-to-reset-indexes-in-array-diff-result
+        return array_values(array_diff($a, $b));
     }
 }
 
