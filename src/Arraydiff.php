@@ -1,5 +1,4 @@
 <?php
-
 namespace saeed;
 
 class Arraydiff
