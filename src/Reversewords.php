@@ -5,11 +5,11 @@ namespace saeed;
 class Reversewords
 {
 
-    public function getchar($c)
+    public function reverse($c): string
     {
-        return chr($c);
+        return strrev($c);
     }
 }
 
-echo (new Reversewords)->getchar(75);
+echo (new Reversewords)->reverse("Hello World!");
 
