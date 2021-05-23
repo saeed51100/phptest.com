@@ -6,7 +6,9 @@ use PHPUnit\Framework\TestCase;
 
 class ReversewordsTest extends TestCase
 {
-    protected $Reversewords;
+    protected Reversewords $Reversewords;
+
+
 
     public function setUp(): void
     {
@@ -25,9 +27,3 @@ class ReversewordsTest extends TestCase
 
 
 
-//public function testSampleTests()
-//{
-//
-//    $this->assertEquals('A', $this->Getchar->getChar(65));
-//
-//}
