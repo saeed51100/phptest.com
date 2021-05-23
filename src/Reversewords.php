@@ -11,5 +11,5 @@ class Reversewords
     }
 }
 
-echo (new Reversewords)->reverse("Hello World!");
+echo (new Reversewords)->reverse("desserts stressed");
 
