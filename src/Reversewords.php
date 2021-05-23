@@ -2,7 +2,7 @@
 namespace saeed;
 
 
-class Getchar
+class Reversewords
 {
 
     public function getchar($c)
@@ -11,5 +11,5 @@ class Getchar
     }
 }
 
-echo (new Getchar)->getchar(75);
+echo (new Reversewords)->getchar(75);
 

@@ -1,4 +1,4 @@
 <?php
-require '../src/Getchar.php';
+require '../src/Reversewords.php';
 
 
