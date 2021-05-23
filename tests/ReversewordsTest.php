@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class ReversewordsTest extends TestCase
 {
-    protected Reversewords $Reversewords;
+    protected $Reversewords;
 
     public function setUp(): void
     {
