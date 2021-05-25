@@ -2,7 +2,7 @@
 namespace saeed;
 
 
-class Reversewords
+class Convertnumber
 {
 
     public function reverse($c): string
@@ -11,5 +11,5 @@ class Reversewords
     }
 }
 
-echo (new Reversewords)->reverse("ehT kciuq nworb xof spmuj revo eht yzal .god");
+echo (new Convertnumber)->reverse("ehT kciuq nworb xof spmuj revo eht yzal .god");
 

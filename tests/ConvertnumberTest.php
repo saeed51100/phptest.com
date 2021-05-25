@@ -1,10 +1,10 @@
 <?php
 
-use saeed\Reversewords;
+use saeed\Convertnumber;
 use PHPUnit\Framework\TestCase;
 
 
-class ReversewordsTest extends TestCase
+class ConvertnumberTest extends TestCase
 {
     protected $Reversewords;
 
@@ -12,7 +12,7 @@ class ReversewordsTest extends TestCase
 
     public function setUp(): void
     {
-        $this->Reversewords = new Reversewords();
+        $this->Reversewords = new Convertnumber();
     }
     public function testBasicTests() {
         $this->assertEquals('ehT kciuq nworb xof spmuj revo eht yzal .god', $this->Reversewords-> reverse('The quick brown fox jumps over the lazy dog.'));
