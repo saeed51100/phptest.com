@@ -7,7 +7,7 @@ class Reversewords
 
     public function reverse($c): string
     {
-        return strrev($c);
+        return implode(' ', array_reverse(explode(' ', strrev($c)))) ;
     }
 }
 
