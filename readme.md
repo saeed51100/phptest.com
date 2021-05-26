@@ -1,19 +1,17 @@
 <div dir="rtl">
-<h3>Reverse words</h3>
-تابعی را که یک پارامتر رشته را می پذیرد کامل کنید و هر کلمه را در رشته معکوس کنید. تمام فضاهای رشته باید حفظ شوند.
+<h3>Convert number to reversed array of digits</h3>
+با توجه به یک عدد تصادفی غیر منفی ، شما باید ارقام این عدد را در یک آرایه به ترتیب معکوس برگردانید.
 
 مثال:
 </div>
 <code>
     <pre>
-        "This is an example!" ==> "sihT si na !elpmaxe"
-        "double  spaces"      ==> "elbuod  secaps"
+        348597 => [7,9,5,8,4,3]
     </pre>
 </code>
 <br>
 <br>
 <br>
-https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/php
-https://netparadis.com/php-explode-implode/
+https://www.codewars.com/kata/5583090cbe83f4fd8c000051/train/javascript
 <br>
 
