@@ -9,9 +9,10 @@ class Convertnumber
 
     public function digitize($c)
     {
-        return explode('-', $c);
+        return array_reverse(str_split($c));
     }
 }
 
-print_r((new Convertnumber)->digitize ("6-845-7")) ;
-
+echo "<pre>";
+print_r((new Convertnumber)->digitize ("68457")) ;
+echo "</pre>";
