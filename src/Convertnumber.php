@@ -2,14 +2,16 @@
 namespace saeed;
 
 
+use phpDocumentor\Reflection\Types\String_;
+
 class Convertnumber
 {
 
-    public function reverse($c): string
+    public function digitize($c)
     {
-        return implode(' ', array_reverse(explode(' ', strrev($c)))) ;
+        return explode('-', $c);
     }
 }
 
-echo (new Convertnumber)->reverse("ehT kciuq nworb xof spmuj revo eht yzal .god");
+echo (new Convertnumber)->digitize("6-845-7");
 
