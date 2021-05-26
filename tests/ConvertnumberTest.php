@@ -24,5 +24,3 @@ class ConvertnumberTest extends TestCase
 }
 
 
-$this->assertEquals('elppa', $this->Convertnumber->reverse('apple'));
-
