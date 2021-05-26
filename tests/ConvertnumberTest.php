@@ -17,7 +17,7 @@ class ConvertnumberTest extends TestCase
     public function testBasicTests()
     {
 
-        $this->assertDeepEquals([1, 3, 2, 5, 3], $this->Convertnumber->digitize(35231));
+        $this->assertEquals([1, 3, 2, 5, 3], $this->Convertnumber->digitize(35231));
 
     }
 
