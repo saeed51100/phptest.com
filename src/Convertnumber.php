@@ -13,5 +13,5 @@ class Convertnumber
     }
 }
 
-echo (new Convertnumber)->digitize("6-845-7");
+print_r((new Convertnumber)->digitize ("6-845-7")) ;
 
