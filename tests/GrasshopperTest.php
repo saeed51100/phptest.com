@@ -4,21 +4,23 @@ use saeed\Grasshopper;
 use PHPUnit\Framework\TestCase;
 
 
-class GrasshopperTest extends TestCase
+final class GrasshopperTest extends TestCase
+
 {
-    protected $Convertnumber;
+    protected Grasshopper $Grasshopper;
 
 
     public function setUp(): void
     {
-        $this->Convertnumber = new Grasshopper();
+        $this->Grasshopper = new Grasshopper();
     }
 
-    public function testBasicTests()
-    {
-
-        $this->assertEquals([1, 3, 2, 5, 3], $this->Convertnumber->digitize(35231));
-
+    public function testThatSummationWorksForExampleTests() {
+        $this->assertEquals(1, $this->Grasshopper->summation(1));
+        $this->assertEquals(3, $this->Grasshopper->summation(2));
+        $this->assertEquals(6, $this->Grasshopper->summation(3));
+        $this->assertEquals(10, $this->Grasshopper->summation(4));
+        $this->assertEquals(15, $this->Grasshopper->summation(5));
     }
 
 }

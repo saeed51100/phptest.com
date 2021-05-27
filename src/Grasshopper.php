@@ -2,19 +2,18 @@
 namespace saeed;
 
 
-
 class Grasshopper
 {
 
     public function summation($c)
     {
-        return array_reverse(str_split($c));
+        return ($c * ($c + 1) / 2);
     }
 }
 
 
 
 
-//echo "<pre>";
-//print_r((new Grasshopper)->digitize ("68457")) ;
-//echo "</pre>";
+echo "<h2>";
+echo(new Grasshopper)->summation (80) ;
+echo "</h2>";
