@@ -1,17 +1,17 @@
 <?php
 
-use saeed\Convertnumber;
+use saeed\Grasshopper;
 use PHPUnit\Framework\TestCase;
 
 
-class ConvertnumberTest extends TestCase
+class GrasshopperTest extends TestCase
 {
     protected $Convertnumber;
 
 
     public function setUp(): void
     {
-        $this->Convertnumber = new Convertnumber();
+        $this->Convertnumber = new Grasshopper();
     }
 
     public function testBasicTests()
