@@ -3,11 +3,10 @@
 use saeed\Grasshopper;
 use PHPUnit\Framework\TestCase;
 
-
 final class GrasshopperTest extends TestCase
 
 {
-    protected Grasshopper $Grasshopper;
+    protected  $Grasshopper;
 
 
     public function setUp(): void
