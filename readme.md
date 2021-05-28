@@ -1,19 +1,15 @@
 <div dir="rtl">
-<h3>ASCII_Value</h3>
-تابعی بنویسید که یک عدد را بگیرد و کاراکتر ASCII مربوطه را برای آن مقدار برگرداند.
+<h3>Substituting Variables Into Strings: Padded Numbers</h3>
+راه حل را کامل کنید تا یک رشته قالب بندی شده را برگرداند. مقدار برگشتی باید برابر با "Value is VALUE" باشد که در آن مقدار 5 رقمی است.
 
 مثال:
 </div>
 <code>
     <pre>
-        get_char(65) # => 'A'
+        solution(5); // should return "Value is 00005"
     </pre>
 </code>
 <br>
 <br>
 <br>
-https://www.codewars.com/kata/55ad04714f0b468e8200001c
-<br>
-https://github.com/drmonkeyninja/phpunit-simple-example
-<br>
-For ASCII table, you can refer to http://www.asciitable.com/
+https://www.codewars.com/kata/51c89385ee245d7ddf000001
