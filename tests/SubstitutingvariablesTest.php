@@ -15,7 +15,7 @@ class SubstitutingvariablesTest extends TestCase
     public function testSampleTests()
     {
 
-        $this->assertEquals("value is 00005", $this->Substitutingvariables->solution(5));
+        $this->assertEquals("Value is 00005", $this->Substitutingvariables->solution(5));
 
     }
 }
