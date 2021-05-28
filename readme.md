@@ -1,19 +1,15 @@
 <div dir="rtl">
-<h3>ASCII_Value</h3>
-تابعی بنویسید که یک عدد را بگیرد و کاراکتر ASCII مربوطه را برای آن مقدار برگرداند.
+<h3>Caps_look</h3>
+حرف اول هر کلمه را در یک رشته بزرگ بزرگ کنید.
 
 مثال:
 </div>
 <code>
     <pre>
-        get_char(65) # => 'A'
+        "Hello My Friends." => "hello my friends."
     </pre>
 </code>
 <br>
 <br>
 <br>
-https://www.codewars.com/kata/55ad04714f0b468e8200001c
-<br>
-https://github.com/drmonkeyninja/phpunit-simple-example
-<br>
-For ASCII table, you can refer to http://www.asciitable.com/
+https://www.codewars.com/kumite/60b09086639df900237fddf4?sel=60b0e3944eef9b0031fbc097
