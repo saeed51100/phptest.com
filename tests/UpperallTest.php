@@ -1,16 +1,16 @@
 <?php
 
-use saeed\Getchar;
+use saeed\Upperall;
 use PHPUnit\Framework\TestCase;
 
 
-class GetcharTest extends TestCase
+class UpperallTest extends TestCase
 {
     protected $Getchar;
 
     public function setUp(): void
     {
-        $this->Getchar = new Getchar();
+        $this->Getchar = new Upperall();
     }
 
     public function testSampleTests()
