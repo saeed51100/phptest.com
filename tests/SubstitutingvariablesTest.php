@@ -1,15 +1,15 @@
 <?php
-use saeed\Upperall;
+use saeed\Substitutingvariables;
 use PHPUnit\Framework\TestCase;
 
 
-class UpperallTest extends TestCase
+class SubstitutingvariablesTest extends TestCase
 {
     protected $Upperall;
 
     public function setUp(): void
     {
-        $this->Upperall = new Upperall();
+        $this->Upperall = new Substitutingvariables();
     }
 
     public function testSampleTests()
