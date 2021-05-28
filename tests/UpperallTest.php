@@ -1,22 +1,21 @@
 <?php
-
 use saeed\Upperall;
 use PHPUnit\Framework\TestCase;
 
 
 class UpperallTest extends TestCase
 {
-    protected $Getchar;
+    protected $Upperall;
 
     public function setUp(): void
     {
-        $this->Getchar = new Upperall();
+        $this->Upperall = new Upperall();
     }
 
     public function testSampleTests()
     {
 
-        $this->assertEquals('A', $this->Getchar->getChar(65));
+        $this->assertEquals("Fdhd Hs Sdsg Tr", $this->Upperall->caps("fdhd hs sdsg tr"));
 
     }
 }

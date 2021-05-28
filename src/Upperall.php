@@ -11,5 +11,5 @@ class Upperall
     }
 }
 
-echo (new Upperall)->caps("75");
+echo (new Upperall)->caps("fdhd hs sdsg tr");
 
