@@ -15,7 +15,7 @@ class UpperallTest extends TestCase
     public function testSampleTests()
     {
 
-        $this->assertEquals("Fdhd Hs Sdsg Tr", $this->Upperall->caps("fdhd hs sdsg tr"));
+        $this->assertEquals("Hello My Friends.", $this->Upperall->caps("hello my friends."));
 
     }
 }
