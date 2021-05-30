@@ -27,5 +27,5 @@ class Quarteroftheyear
     }
 }
 
-echo (new Quarteroftheyear)->quarterOf(5);
+echo (new Quarteroftheyear)->quarterOf(7);
 
