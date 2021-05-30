@@ -1,15 +1,15 @@
 <?php
-use saeed\Quarteroftheyear;
+use saeed\Stopgninnip;
 use PHPUnit\Framework\TestCase;
 
 
-class QuarteroftheyearTest extends TestCase
+class StopgninnipTest extends TestCase
 {
     protected $Quarteroftheyear;
 
     public function setUp(): void
     {
-        $this->Quarteroftheyear = new Quarteroftheyear();
+        $this->Quarteroftheyear = new Stopgninnip();
     }
 
     public function testSampleTests()
