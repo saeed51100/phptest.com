@@ -1,15 +1,10 @@
 <div dir="rtl">
-<h3>Substituting Variables Into Strings: Padded Numbers</h3>
-راه حل را کامل کنید تا یک رشته قالب بندی شده را برگرداند. مقدار برگشتی باید برابر با "Value is VALUE" باشد که در آن مقدار 5 رقمی است.
+<h3>Quarter of the year</h3>
+با یک ماه عدد صحیح از 1 تا 12 ، به کدام سه ماهه سال به عنوان عدد صحیح تعلق بگیرید.
 
-مثال:
+به عنوان مثال: ماه 2 (فوریه) ، بخشی از سه ماهه اول است. ماه 6 (ژوئن) ، بخشی از سه ماهه دوم است. و ماه 11 (نوامبر) ، بخشی از سه ماهه چهارم است.
 </div>
-<code>
-    <pre>
-        solution(5); // should return "Value is 00005"
-    </pre>
-</code>
 <br>
 <br>
 <br>
-https://www.codewars.com/kata/51c89385ee245d7ddf000001
+https://www.codewars.com/kata/5ce9c1000bab0b001134f5af
