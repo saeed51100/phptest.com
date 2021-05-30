@@ -6,23 +6,23 @@ namespace saeed;
 class Quarteroftheyear
 {
 
-    public function quarterOf($c)
+    public function quarterOf($month)
     {
-        if ($c == 1 || $c == 2 || $c == 3) {
-            return 1;
-        }
-        if ($c == 4 || $c == 5 || $c == 6) {
-            return 2;
-        }
-        if ($c == 7 || $c == 8 || $c == 9) {
-            return 3;
-        }
-        if ($c == 10 || $c == 11 || $c == 12) {
-            return 4;
-        } else {
-            return "enter 1-12";
-        }
-
+//        if ($month == 1 || $month == 2 || $month == 3) {
+//            return 1;
+//        }
+//        if ($month == 4 || $month == 5 || $month == 6) {
+//            return 2;
+//        }
+//        if ($month == 7 || $month == 8 || $month == 9) {
+//            return 3;
+//        }
+//        if ($month == 10 || $month == 11 || $month == 12) {
+//            return 4;
+//        } else {
+//            return "enter 1-12";
+//        }
+        return ceil($month / 3);
 
     }
 }
