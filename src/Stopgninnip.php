@@ -6,25 +6,22 @@ namespace saeed;
 class Stopgninnip
 {
 
-    public function spinWords(string $str): string {
+    public function spinWords(string $str)
+    {
+
+        // preg_replace example:
+        // return preg_replace('/(\b\w{5,}\b)+/i', "1111111", $str);
 
 
-//        https://minwook-shin.github.io/how-to-solve-stop-gninnips-my-sdrow!/
-//        public String spinWords(String sentence) {
-//        String[] arr = sentence.split(" ");
-//        for(int i=0;i<arr.length;i++){
-//            if(arr[i].length() >= 5)
-//                arr[i] = new StringBuffer(arr[i]).reverse().toString();
-//        }
-//        return String.join(" ",arr);
-//    }
-
-        preg_replace_callback('/(\b\w{5,}\b)+/i', fn($str) => strrev($str[0]), 'Hello world, this is a test string.');
+        // preg_replace_callback example:
+        return preg_replace_callback('/(\b\w{5,}\b)+/i', function ($match) {
+            return strrev($match[0]);
+        }, $str);
 
 
-
+    }
 
 }
 
-//echo (new Stopgninnip)->quarterOf(7);
+echo (new Stopgninnip)->spinWords(" is currently unable to handle this request.");
 

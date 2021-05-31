@@ -1,22 +1,27 @@
 <?php
+
 use saeed\Stopgninnip;
 use PHPUnit\Framework\TestCase;
 
 
 class StopgninnipTest extends TestCase
 {
-    protected $Quarteroftheyear;
+    protected $Stopgninnip;
 
     public function setUp(): void
     {
-        $this->Quarteroftheyear = new Stopgninnip();
+        $this->Stopgninnip = new Stopgninnip();
     }
 
     public function testSampleTests()
     {
-        $this->assertEquals(1, $this->Quarteroftheyear->quarterOf(2));
-        $this->assertEquals(2, $this->Quarteroftheyear->quarterOf(6));
-        $this->assertEquals(3, $this->Quarteroftheyear->quarterOf(7));
+        $this->assertEquals("emocleW", $this->Stopgninnip->spinWords("Welcome"));
+        $this->assertEquals("Hey wollef sroirraw", $this->Stopgninnip->spinWords("Hey fellow warriors"));
+        $this->assertEquals("This is a test", $this->Stopgninnip->spinWords("This is a test"));
+        $this->assertEquals("This is rehtona test", $this->Stopgninnip->spinWords("This is another test"));
+        $this->assertEquals("You are tsomla to the last test", $this->Stopgninnip->spinWords("You are almost to the last test"));
+        $this->assertEquals("Just gniddik ereht is llits one more", $this->Stopgninnip->spinWords("Just kidding there is still one more"));
+        $this->assertEquals("ylsuoireS this is the last one", $this->Stopgninnip->spinWords("Seriously this is the last one"));
 
     }
 }
