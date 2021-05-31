@@ -1,19 +1,19 @@
-<h3>Stop gninnipS My sdroW!</h3>
+<h3>Dashatize it</h3>
 <div dir="rtl">
-تابعی را بنویسید که رشته ای از یک یا چند کلمه را گرفته و همان رشته را برگرداند ، اما کلمات پنج حرفی یا بیشتر را معکوس نماید (مانند نام این کاتا).
-
-رشته های وارد شده فقط از حروف و فاصله تشکیل می شوند.
+با توجه به متغیر n ،
 <br>
-فقط در صورت وجود بیش از یک کلمه ، فضاها گنجانده خواهند شد.
+اگر n یک عدد صحیح است ، یک رشته را با علائم dash '-' قبل و بعد از هر عدد فرد عجیب و غریب برگردانید ، اما رشته را با علامت dash شروع یا پایان ندهید.
+<br>
+اگر n منفی باشد ، باید علامت منفی حذف شود. اگر n یک عدد صحیح نیست ، یک مقدار خالی برگردانید.
+<br>
 </div>
 <code>
     <pre>
-        spinWords("Hey fellow warriors") => "Hey wollef sroirraw" 
-        spinWords("This is a test") => "This is a test" 
-        spinWords("This is another test") => "This is rehtona test"
+        dashatize(274) -> '2-7-4'
+        dashatize(6815) -> '68-1-5'
     </pre>
 </code>
 <br>
 <br>
 <br>
-https://www.codewars.com/kata/5264d2b162488dc400000001
+https://www.codewars.com/kata/58223370aef9fc03fd000071
