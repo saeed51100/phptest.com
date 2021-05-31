@@ -1,16 +1,16 @@
 <?php
 
-use saeed\Stopgninnip;
+use saeed\Dashatizeit;
 use PHPUnit\Framework\TestCase;
 
 
-class StopgninnipTest extends TestCase
+class DashatizeitTest extends TestCase
 {
     protected $Stopgninnip;
 
     public function setUp(): void
     {
-        $this->Stopgninnip = new Stopgninnip();
+        $this->Stopgninnip = new Dashatizeit();
     }
 
     public function testSampleTests()
