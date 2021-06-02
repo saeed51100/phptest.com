@@ -1,16 +1,16 @@
 <?php
 
-use saeed\Dashatizeit;
+use saeed\Rainfall;
 use PHPUnit\Framework\TestCase;
 
 
-class DashatizeitTest extends TestCase
+class RainfallTest extends TestCase
 {
     protected $Dashatizeit;
 
     public function setUp(): void
     {
-        $this->Dashatizeit = new Dashatizeit();
+        $this->Dashatizeit = new Rainfall();
     }
 
     public function testSampleTests()

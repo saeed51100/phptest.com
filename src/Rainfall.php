@@ -2,7 +2,7 @@
 
 namespace saeed;
 
-class Dashatizeit
+class Rainfall
 {
 
     public function dashatize(int $num): string
@@ -36,6 +36,6 @@ class Dashatizeit
 
 }
 
-echo (new Dashatizeit)->dashatize(124434568789);
+echo (new Rainfall)->dashatize(124434568789);
 
 

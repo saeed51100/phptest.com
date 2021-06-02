@@ -1,4 +1,4 @@
 <?php
-require '../src/Dashatizeit.php';
+require '../src/Rainfall.php';
 
 
