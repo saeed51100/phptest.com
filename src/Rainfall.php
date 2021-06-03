@@ -8,7 +8,8 @@ class Rainfall
     {
 
 
-        // codewars solution:
+
+
         return  preg_replace('/Jan\s*\d{2}/',
                 '11111111', $strng);
 
