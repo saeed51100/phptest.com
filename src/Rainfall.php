@@ -2,6 +2,8 @@
 
 namespace saeed;
 
+use phpDocumentor\Reflection\DocBlock\Tags\Return_;
+
 class Rainfall
 {
     public function solution( $strng )
@@ -10,7 +12,7 @@ class Rainfall
 
 
 
-        return  array_values (explode(" ",$strng));
+        return preg_replace_callback('/[a-zA-Z]+:/i',function (),$strng);
 
 
     }
