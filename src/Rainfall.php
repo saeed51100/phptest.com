@@ -12,7 +12,7 @@ class Rainfall
 
 
 
-        return preg_replace_callback('/[a-zA-Z]+:/i',function (),$strng);
+        return array_values(explode());
 
 
     }
