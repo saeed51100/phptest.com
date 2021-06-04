@@ -9,10 +9,9 @@ class Rainfall
     public function solution($strng)
     {
 
-
-        $nnn= explode(" ",$strng);
-//       return array_chunk($nnn,13);
-       return ($nnn);
+       $nnnn= str_replace(":", ",", $strng);
+         $mm = explode(",",$nnnn );
+        return array_chunk($mm, 12);
 
 
 
