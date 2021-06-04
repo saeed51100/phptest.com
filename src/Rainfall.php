@@ -12,7 +12,8 @@ class Rainfall
 
 
 
-        return array_values(explode());
+        return /*array_values*/(explode('\n', $strng));
+
 
 
     }
