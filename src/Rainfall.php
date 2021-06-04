@@ -6,14 +6,20 @@ use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 
 class Rainfall
 {
-    public function solution($strng)
+    public function solution($town, $strng)
     {
+        // https://regex-generator.olafneumann.org/
+        $nnn = preg_replace_callback('/[a-zA-Z]+:/', function ($matches) use ($town) {
+            echo($matches[0]);
+//              echo($town);
+            return ($matches[0] == $town) ? "       " . $matches[0] : $matches[0];
+        }, $strng);
 
-       $nnnn= str_replace(":", ",", $strng);
-         $mm = explode(",",$nnnn );
-        return array_chunk($mm, 12);
+
+        return explode("  ", $nnn);
 
 
+//        return array_chunk($nnn, 1);
 
 
     }
@@ -36,5 +42,5 @@ $data =
 //echo (new Rainfall)->solution($data);
 
 echo "<pre>";
-print_r((new Rainfall)->solution($data));
+print_r((new Rainfall)->solution("Paris", $data));
 echo "</pre>";
