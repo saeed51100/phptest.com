@@ -9,10 +9,11 @@ class Rainfall
     public function solution($town, $strng)
     {
         // https://regex-generator.olafneumann.org/
-        $nnn = preg_replace_callback('/[a-zA-Z]+:/', function ($matches) use ($town) {
+        $nnn = preg_replace_callback('/[a-zA-Z]+/', function ($matches) use ($town) {
             echo($matches[0]);
 //              echo($town);
-            return ($matches[0] == $town) ? "       " . $matches[0] : $matches[0];
+//            return rtrim($s, '!');
+            return ( $matches[0] == $town) ? "  " . $matches[0]."1" : "  " . $matches[0];
         }, $strng);
 
 
