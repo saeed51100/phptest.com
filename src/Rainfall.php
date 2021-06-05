@@ -6,7 +6,7 @@ use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 
 class Rainfall
 {
-    public function solution($town, $strng)
+    public function solution($town, $strng)/*:string*/
     {
 
         // https://regex-generator.olafneumann.org/
@@ -28,7 +28,16 @@ class Rainfall
 
 
         $aaa = explode(" ", $yyy);
-        print_r($aaa);
+        $variance = 0.0;
+        $mean = array_sum($aaa) / count($aaa);
+
+
+        foreach ($aaa as $i) {
+
+            $variance  += pow(($i - $mean), 2);
+        }
+
+        return (float)sqrt($variance  / count($aaa));
 
 
     }
