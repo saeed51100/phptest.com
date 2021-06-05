@@ -8,19 +8,37 @@ class Rainfall
 {
     public function solution($town, $strng)
     {
+
         // https://regex-generator.olafneumann.org/
-        $nnn = preg_replace_callback('/[a-zA-Z]+/', function ($matches) use ($town) {
-            echo($matches[0]);
-//              echo($town);
-//            return rtrim($s, '!');
-            return ( $matches[0] == $town) ? "  " . $matches[0]."1" : "  " . $matches[0];
+        $nnn = preg_replace_callback('/[a-zA-Z]+:/', function ($matches) use ($town) {
+            return "  " . $matches[0];
         }, $strng);
 
 
-        return explode("  ", $nnn);
+//       return $nnn;
+        $mmm = explode("  ", $nnn);
+
+//        return $mmm;
+
+        $zzz = array_filter($mmm, function ($var) use ($town) {
+            return preg_match("/\b$town\b/i", $var);
+        });
 
 
-//        return array_chunk($nnn, 1);
+//        print_r(array_values($zzz));
+
+        $sss = implode("", $zzz);
+//        echo $sss;
+
+
+        // Replace multiple characters in one replace call:
+        // https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
+        $yyy = preg_replace('/[a-zA-Z]|:|,/', "", $sss);
+
+        $aaa = explode(",", $yyy);
+        print_r($aaa);
+
+
 
 
     }
@@ -43,5 +61,5 @@ $data =
 //echo (new Rainfall)->solution($data);
 
 echo "<pre>";
-print_r((new Rainfall)->solution("Paris", $data));
+print_r((new Rainfall)->solution("Tokyo", $data));
 echo "</pre>";
