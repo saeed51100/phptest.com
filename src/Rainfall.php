@@ -28,6 +28,9 @@ class Rainfall
 
 
         $aaa = explode(" ", $yyy);
+
+
+        // https://www.geeksforgeeks.org/php-program-find-standard-deviation-array/
         $variance = 0.0;
         $mean = array_sum($aaa) / count($aaa);
 
