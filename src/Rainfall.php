@@ -14,31 +14,21 @@ class Rainfall
             return "  " . $matches[0];
         }, $strng);
 
-
-//       return $nnn;
         $mmm = explode("  ", $nnn);
-
-//        return $mmm;
 
         $zzz = array_filter($mmm, function ($var) use ($town) {
             return preg_match("/\b$town\b/i", $var);
         });
-
-
-//        print_r(array_values($zzz));
-
         $sss = implode("", $zzz);
-//        echo $sss;
-
 
         // Replace multiple characters in one replace call:
         // https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
-        $yyy = preg_replace('/[a-zA-Z]|:|,/', "", $sss);
+        $ggg = preg_replace('/[a-zA-Z]|:|,/', "", $sss);
+        $yyy = ltrim($ggg);
 
-        $aaa = explode(",", $yyy);
+
+        $aaa = explode(" ", $yyy);
         print_r($aaa);
-
-
 
 
     }
@@ -61,5 +51,5 @@ $data =
 //echo (new Rainfall)->solution($data);
 
 echo "<pre>";
-print_r((new Rainfall)->solution("Tokyo", $data));
+print_r((new Rainfall)->solution("Lima", $data));
 echo "</pre>";
