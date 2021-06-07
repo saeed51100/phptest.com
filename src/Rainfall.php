@@ -20,6 +20,7 @@ class Rainfall
         $zzz = array_filter($mmm, function ($var) use ($town) {
             return preg_match("/\b$town\b/i", $var);
         });
+
         $sss = implode("", $zzz);
 
         // Replace multiple characters in one replace call:
@@ -29,6 +30,7 @@ class Rainfall
 
 
         $aaa = explode(" ", $yyy);
+
 
 
         // https://www.geeksforgeeks.org/php-program-find-standard-deviation-array/
@@ -42,7 +44,7 @@ class Rainfall
         }
 
         $varriance = (float)sqrt($riance / count($aaa));
-        return $varriance;
+//        return $varriance;
 
 
 
@@ -52,7 +54,7 @@ class Rainfall
 }
 
 
-include 'dsd1.php';
+include 'datafile.php';
 
 // PHPStorm: undefined variables caused by include/require
 // https://stackoverflow.com/questions/22476778/phpstorm-undefined-variables-caused-by-include-require
