@@ -7,13 +7,14 @@ use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 
 class Rainfall
 {
-    public function solution($town, $strng)/*:string*/
+    public function extract_town($town, $strng)/*:string*/
     {
 
         // https://regex-generator.olafneumann.org/
         $nnn = preg_replace_callback('/[a-zA-Z]+:/', function ($matches) use ($town) {
             return "  " . $matches[0];
         }, $strng);
+
 
         $mmm = explode("  ", $nnn);
 
@@ -30,9 +31,13 @@ class Rainfall
 
 
         $aaa = explode(" ", $yyy);
+        return $aaa;
 
 
+    }
 
+    public function mean($)
+    {
         // https://www.geeksforgeeks.org/php-program-find-standard-deviation-array/
         $riance = 0.0;
         $mean = array_sum($aaa) / count($aaa);
@@ -44,10 +49,8 @@ class Rainfall
         }
 
         $varriance = (float)sqrt($riance / count($aaa));
-//        return $varriance;
 
-
-
+        return $mean;
     }
 
 
@@ -62,5 +65,17 @@ include 'datafile.php';
  * @var string $data
  */
 
+//echo "<pre>";
+//print_r((new Rainfall)->extract_town("Bangkok", $data));
+//echo "</pre>";
 
-echo (new Rainfall)->solution("Bangkok", $data);
+
+//echo "<pre>";
+//print_r((new Rainfall)->variance("Bangkok", $data));
+//echo "</pre>";
+
+
+echo "<pre>";
+print_r((new Rainfall)->mean("Bangkok", $data));
+echo "</pre>";
+
