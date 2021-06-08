@@ -38,16 +38,10 @@ class Rainfall
     {
 
         $aaa = $this->extract_town($town, $strng);
-
-        // https://www.geeksforgeeks.org/php-program-find-standard-deviation-array/
-        $riance = 0.0;
+        // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
+        // calculate the mean
         $mean = array_sum($aaa) / count($aaa);
 
-
-        foreach ($aaa as $i) {
-
-            $riance += pow(($i - $mean), 2);
-        }
 
         return $mean;
     }
@@ -57,19 +51,20 @@ class Rainfall
 
         $aaa = $this->extract_town($town, $strng);
 
-        // https://www.geeksforgeeks.org/php-program-find-standard-deviation-array/
-        $riance = 0.0;
+        // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
+        // calculate the variance
         $mean = array_sum($aaa) / count($aaa);
-
-
-        foreach ($aaa as $i) {
-
-            $riance += pow(($i - $mean), 2);
+        for ($i = 0; $i < count($aaa); $i++)
+        {
+            //sum the array
+            $the_variance = $the_variance + ($a[$i] - $mean) * ($a[$i] - $mean);
         }
 
-        $varriance = (float)sqrt($riance / count($aaa));
+        $the_variance = $the_variance / (count($aaa) - 1.0);
 
-        return $varriance;
+        //return the variance
+        return $the_variance;
+
     }
 
 
@@ -95,6 +90,6 @@ include 'datafile.php';
 
 
 echo "<pre>";
-print_r((new Rainfall)->mean("London", $data1));
+print_r((new Rainfall)->variance("London", $data1));
 echo "</pre>";
 
