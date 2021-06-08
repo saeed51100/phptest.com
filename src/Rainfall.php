@@ -36,8 +36,11 @@ class Rainfall
 
     }
 
-    public function mean($)
+    public function mean($town, $strng)
     {
+
+        $aaa = $this->extract_town($town,$this);
+
         // https://www.geeksforgeeks.org/php-program-find-standard-deviation-array/
         $riance = 0.0;
         $mean = array_sum($aaa) / count($aaa);
