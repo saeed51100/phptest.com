@@ -2,24 +2,22 @@
 
 namespace saeed;
 
-use phpDocumentor\Reflection\DocBlock\Tags\Return_;
-
 
 class Rainfall
 {
-    public function extract_town($town, $strng)/*:string*/
+    public function extract_town($town1, $strng1)/*:string*/
     {
 
         // https://regex-generator.olafneumann.org/
-        $nnn = preg_replace_callback('/[a-zA-Z]+:/', function ($matches) use ($town) {
+        $nnn = preg_replace_callback('/[a-zA-Z]+:/', function ($matches) {
             return "  " . $matches[0];
-        }, $strng);
+        }, $strng1);
 
 
         $mmm = explode("  ", $nnn);
 
-        $zzz = array_filter($mmm, function ($var) use ($town) {
-            return preg_match("/\b$town\b/i", $var);
+        $zzz = array_filter($mmm, function ($var) use ($town1) {
+            return preg_match("/\b$town1\b/i", $var);
         });
 
         $sss = implode("", $zzz);
@@ -30,8 +28,8 @@ class Rainfall
         $yyy = ltrim($ggg);
 
 
-        $aaa = explode(" ", $yyy);
-        return $aaa;
+        $bbb = explode(" ", $yyy);
+        return $bbb;
 
 
     }
@@ -39,7 +37,25 @@ class Rainfall
     public function mean($town, $strng)
     {
 
-        $aaa = $this->extract_town($town,$this);
+        $aaa = $this->extract_town($town, $strng);
+
+        // https://www.geeksforgeeks.org/php-program-find-standard-deviation-array/
+        $riance = 0.0;
+        $mean = array_sum($aaa) / count($aaa);
+
+
+        foreach ($aaa as $i) {
+
+            $riance += pow(($i - $mean), 2);
+        }
+
+        return $mean;
+    }
+
+    public function variance($town, $strng)
+    {
+
+        $aaa = $this->extract_town($town, $strng);
 
         // https://www.geeksforgeeks.org/php-program-find-standard-deviation-array/
         $riance = 0.0;
@@ -53,7 +69,7 @@ class Rainfall
 
         $varriance = (float)sqrt($riance / count($aaa));
 
-        return $mean;
+        return $varriance;
     }
 
 
@@ -65,7 +81,7 @@ include 'datafile.php';
 // PHPStorm: undefined variables caused by include/require
 // https://stackoverflow.com/questions/22476778/phpstorm-undefined-variables-caused-by-include-require
 /**
- * @var string $data
+ * @var string $data1
  */
 
 //echo "<pre>";
@@ -79,6 +95,6 @@ include 'datafile.php';
 
 
 echo "<pre>";
-print_r((new Rainfall)->mean("Bangkok", $data));
+print_r((new Rainfall)->mean("London", $data1));
 echo "</pre>";
 
