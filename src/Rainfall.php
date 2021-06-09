@@ -38,12 +38,11 @@ class Rainfall
     {
 
         $aaa = $this->extract_town($town, $strng);
+
         // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
         // calculate the mean
-        $the_mean = 0.0;
 
         $the_mean = array_sum($aaa) / count($aaa);
-
 
         return $the_mean;
     }
@@ -57,13 +56,12 @@ class Rainfall
         // calculate the variance
         $the_variance = 0.0;
         $the_mean = array_sum($aaa) / count($aaa);
-        for ($i = 0; $i < count($aaa); $i++)
-        {
+        for ($i = 0; $i < count($aaa); $i++) {
             //sum the array
             $the_variance = $the_variance + ($aaa[$i] - $the_mean) * ($aaa[$i] - $the_mean);
         }
 
-        $the_variance = $the_variance / (count($aaa) - 1.0);
+        $the_variance = $the_variance / (count($aaa) /*- 1.0*/);
 
         //return the variance
         return $the_variance;
@@ -83,17 +81,9 @@ include 'datafile.php';
  * @var string $data2
  */
 
-//echo "<pre>";
-//print_r((new Rainfall)->extract_town("Bangkok", $data));
-//echo "</pre>";
-
-
-//echo "<pre>";
-//print_r((new Rainfall)->variance("Bangkok", $data));
-//echo "</pre>";
 
 
 echo "<pre>";
-print_r((new Rainfall)->variance /*mean*/("London", $data1));
+print_r((new Rainfall)->variance /*mean*/ ("London", $data1));
 echo "</pre>";
 

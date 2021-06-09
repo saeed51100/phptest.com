@@ -38,17 +38,17 @@ class RainfallTest extends TestCase
 
     public function testRainfallBasics()
     {
-        $this->assertEquals(51.199999999999996, $this->Rainfall->mean("London", $this->data1), "Tested at 1e-2 ", 1.e-2);
+        $this->assertEqualsWithDelta(51.199999999999996, $this->Rainfall->mean("London", $this->data1), 1.e-2, "Tested at 1e-2 ");
         $this->assertEquals(52.416666666666664, $this->Rainfall->mean("Beijing", $this->data1), "Tested at 1e-2 ", 1.e-2);
 
         $this->assertEquals(57.42833333333374, $this->Rainfall->variance("London", $this->data1), "Tested at 1e-2 ", 1.e-2);
-//        $this->assertEquals(4808.37138888889, $this->Rainfall->variance("Beijing", $this->data1), "Tested at 1e-2 ", 1.e-2);
+        $this->assertEquals(4808.37138888889, $this->Rainfall->variance("Beijing", $this->data1), "Tested at 1e-2 ", 1.e-2);
 //
         $this->assertEquals(57.03333333333333, $this->Rainfall->mean("London", $this->data2), "Tested at 1e-2 ", 1.e-2);
         $this->assertEquals(59.083333333333336, $this->Rainfall->mean("Beijing", $this->data2), "Tested at 1e-2 ", 1.e-2);
 //
-//        $this->assertEquals(110.90055555555546, $this->Rainfall->variance("London", $this->data2), "Tested at 1e-2 ", 1.e-2);
-//        $this->assertEquals(4437.038055555556, $this->Rainfall->variance("Beijing", $this->data2), "Tested at 1e-2 ", 1.e-2);
+        $this->assertEquals(110.90055555555546, $this->Rainfall->variance("London", $this->data2), "Tested at 1e-2 ", 1.e-2);
+        $this->assertEquals(4437.038055555556, $this->Rainfall->variance("Beijing", $this->data2), "Tested at 1e-2 ", 1.e-2);
     }
 
 }
