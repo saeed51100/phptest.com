@@ -40,10 +40,12 @@ class Rainfall
         $aaa = $this->extract_town($town, $strng);
         // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
         // calculate the mean
-        $mean = array_sum($aaa) / count($aaa);
+        $the_mean = 0.0;
+
+        $the_mean = array_sum($aaa) / count($aaa);
 
 
-        return $mean;
+        return $the_mean;
     }
 
     public function variance($town, $strng)
@@ -53,11 +55,12 @@ class Rainfall
 
         // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
         // calculate the variance
-        $mean = array_sum($aaa) / count($aaa);
+        $the_variance = 0.0;
+        $the_mean = array_sum($aaa) / count($aaa);
         for ($i = 0; $i < count($aaa); $i++)
         {
             //sum the array
-            $the_variance = $the_variance + ($a[$i] - $mean) * ($a[$i] - $mean);
+            $the_variance = $the_variance + ($aaa[$i] - $the_mean) * ($aaa[$i] - $the_mean);
         }
 
         $the_variance = $the_variance / (count($aaa) - 1.0);
@@ -77,6 +80,7 @@ include 'datafile.php';
 // https://stackoverflow.com/questions/22476778/phpstorm-undefined-variables-caused-by-include-require
 /**
  * @var string $data1
+ * @var string $data2
  */
 
 //echo "<pre>";
@@ -90,6 +94,6 @@ include 'datafile.php';
 
 
 echo "<pre>";
-print_r((new Rainfall)->variance("London", $data1));
+print_r((new Rainfall)->variance /*mean*/("London", $data1));
 echo "</pre>";
 
