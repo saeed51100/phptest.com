@@ -5,14 +5,13 @@ namespace saeed;
 
 class Rainfall
 {
-    public function extract_town($town1, $strng1)/*:string*/
+    public function extract_town($town1, $strng1)
     {
 
         // https://regex-generator.olafneumann.org/
         $nnn = preg_replace_callback('/[a-zA-Z]+:/', function ($matches) {
             return "  " . $matches[0];
         }, $strng1);
-
 
         $mmm = explode("  ", $nnn);
 
@@ -22,9 +21,11 @@ class Rainfall
 
         $sss = implode("", $zzz);
 
+
         // Replace multiple characters in one replace call:
         // https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
         $ggg = preg_replace('/[a-zA-Z]|:|,/', "", $sss);
+
         $yyy = ltrim($ggg);
 
 
@@ -84,6 +85,6 @@ include 'datafile.php';
 
 
 echo "<pre>";
-print_r((new Rainfall)->variance /*mean*/ ("London", $data1));
+   print_r((new Rainfall)->variance ("London", $data1));
 echo "</pre>";
 
