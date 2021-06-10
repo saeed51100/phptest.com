@@ -37,7 +37,9 @@ class Rainfall
 
     public function mean($town, $strng)
     {
-
+        if (preg_match("/$town/", $strng) === 0) {
+            return -1;
+        }
         $aaa = $this->extract_town($town, $strng);
 
         // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
@@ -50,7 +52,9 @@ class Rainfall
 
     public function variance($town, $strng)
     {
-
+        if (preg_match("/$town/", $strng) === 0) {
+            return -1;
+        }
         $aaa = $this->extract_town($town, $strng);
 
         // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
