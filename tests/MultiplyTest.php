@@ -1,4 +1,5 @@
 <?php
+
 use saeed\Multiply;
 use PHPUnit\Framework\TestCase;
 

@@ -9,7 +9,7 @@ class Multiply
     }
 }
 
-echo (new Multiply())->multiply(75,4);
+echo (new Multiply)->multiply(75,4);
 
 
 
