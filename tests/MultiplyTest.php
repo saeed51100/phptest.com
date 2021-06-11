@@ -42,7 +42,7 @@ class MultiplyTest extends TestCase
         for ($i = 0; $i < 100; $i++) {
             $a = 1 + ~~(20 * lcg_value());
             $b = 1 + ~~(20 * lcg_value());
-            $this->assertEquals($a * $b, $this->Multiply->multiply($a, $b) );
+            $this->assertEquals($a * $b, $this->Multiply->multiply($a, $b));
         }
     }
 }
