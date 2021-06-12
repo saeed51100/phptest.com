@@ -7,6 +7,8 @@ class MatrixAddition
 {
     public function matrix_addition(array $a, array $b)
     {
+        $rows =
+        $cols
 
         for ($i = 0; $i < $rows; $i = $i + 1) {
             for ($j = 0; $j < $cols; $j = $j + 1) {
