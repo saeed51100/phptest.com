@@ -7,21 +7,26 @@ use phpDocumentor\Reflection\Types\This;
 
 class MatrixAddition
 {
-    function myfunction($v)
+    function myfunction($ar1, $ar2)
     {
-        return($v*$v);
+        $sums = array();
+        foreach (array_keys($ar1 + $ar2) as $key) {
+            $sums[$key] = (isset($ar1[$key]) ? $ar1[$key] : 0) + (isset($ar2[$key]) ? $ar2[$key] : 0);
+        }
+        return $sums;
     }
 
 
 
 }
-$a=array(1,2,3,4,5);
+$a = array(10, 2, 5, 10, 0);
+$b = array(1, 20, 11, 8, 3);
 echo "<pre>";
-   print_r((new MatrixAddition)->myfunction($a));
+   print_r((new MatrixAddition)->myfunction($a, $b));
 echo "</pre>";
 
 
 
 
-
+// https://stackoverflow.com/questions/1496682/how-to-sum-all-column-values-in-multi-dimensional-array?noredirect=1&lq=1
 //https://backendbaz.ir/php-array-func-array-map/
