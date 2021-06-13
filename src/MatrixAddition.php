@@ -5,27 +5,18 @@ namespace saeed;
 
 class MatrixAddition
 {
-    public function matrix_addition(array $a, array $b)
+    function myfunction($v)
     {
-        $rows =
-        $cols
-
-        for ($i = 0; $i < $rows; $i = $i + 1) {
-            for ($j = 0; $j < $cols; $j = $j + 1) {
-                $c[$i][$j] = $a[$i][$j] + $b[$i][$j];
-                echo $c[$i][$j] . " ";
-            }
-            echo "<br>";
-
-
-        }
-
-
+        return($v*$v);
     }
 
-}
 
+
+}
+$a=array(1,2,3,4,5);
 echo "<pre>";
-   print_r((new MatrixAddition)->matrix_addition() ("London", $data1));
+   print_r(array_map(((new MatrixAddition)->myfunction),$a));
 echo "</pre>";
 
+
+//print_r(array_map("myfunction",$a));
