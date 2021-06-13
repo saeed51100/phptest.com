@@ -19,4 +19,4 @@ echo "<pre>";
 echo "</pre>";
 
 
-//print_r(array_map("myfunction",$a));
+//https://backendbaz.ir/php-array-func-array-map/
