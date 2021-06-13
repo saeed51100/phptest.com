@@ -17,8 +17,7 @@ class MatrixAddition
 }
 $a=array(1,2,3,4,5);
 echo "<pre>";
-$fff = $this
-   print_r(array_map(((new MatrixAddition)->myfunction),$a));
+   print_r((new MatrixAddition)->myfunction($a));
 echo "</pre>";
 
 
