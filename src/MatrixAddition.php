@@ -27,9 +27,13 @@ class MatrixAddition
 //            }
 //            return null;
 //        }
-        $mam = $ar1[0][0];
 
+
+        $mam = $ar1[0][0];
         print_r($mam) ;
+
+        print_r($ar1) ;
+
         return null ;
 
     }
