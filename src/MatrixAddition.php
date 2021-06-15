@@ -29,11 +29,19 @@ class MatrixAddition
 //        }
 
 
-        $mam = $ar1[0][0];
-        print_r($mam);
+//        $mam = $ar1[0][0];
+//        print_r($mam[0]);
 
-        $nyn = $mam[0];
-        print_r($nyn);
+
+        print_r($ar1[0][4][1]);
+
+
+
+
+
+
+//        $nyn = $mam[0];
+//        print_r($nyn);
 
         return null;
 
