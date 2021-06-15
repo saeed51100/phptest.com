@@ -33,8 +33,7 @@ class MatrixAddition
             for ($col = 0; $col < count($ar1); $col++) {
 
                 echo "<pre>";
-                echo "row=",$row;
-                echo"col=",$col;
+                echo $row,"," ,$col,"  => ";
                 print_r($ar1[$row][$col]);
                 echo "</pre>";
 
