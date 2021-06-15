@@ -18,8 +18,19 @@ class MatrixAddition
 //            }
 //
 //        }
+//        function searchForId($id, $array)
+//        {
+//            foreach ($array as $key => $val) {
+//                if ($val['uid'] === $id) {
+//                    print_r($key);
+//                }
+//            }
+//            return null;
+//        }
+        $mam = $ar1[0][0];
 
-        print_r($ar1[0][0]) ;
+        print_r($mam) ;
+        return null ;
 
     }
 
