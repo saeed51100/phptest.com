@@ -7,7 +7,7 @@ use phpDocumentor\Reflection\Types\This;
 
 class MatrixAddition
 {
-    function myfunction($ar1)
+    function myfunction($ar1, $ar2)
     {
 
 //        for ($row = 0; $row < 5; $row++) {
@@ -34,11 +34,11 @@ class MatrixAddition
 
         for ($row = 0; $row < count($ar1); $row++) {
 
-            echo "u";
+            print_r($ar1[$row][0]);
         }
 
 
-//        print_r($ar1[1][1]);
+
 
         return null;
 
@@ -57,10 +57,17 @@ $a = array(
     [10, 4],
     [0, 1]);
 
+$b = array(
+    [1, 2],
+    [3, 4],
+    [5, 6],
+    [8, 10],
+    [9, 1]);
+
 
 
 echo "<pre>";
-print_r((new MatrixAddition)->myfunction($a));
+print_r((new MatrixAddition)->myfunction($a, $b));
 echo "</pre>";
 
 
