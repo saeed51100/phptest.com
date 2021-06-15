@@ -29,15 +29,18 @@ class MatrixAddition
 //        }
 
 
-
-
-
         for ($row = 0; $row < count($ar1); $row++) {
+            for ($col = 0; $col < count($ar1); $col++) {
 
-            print_r($ar1[$row][0]);
+                echo "<pre>";
+                echo "row=",$row;
+                echo"col=",$col;
+                print_r($ar1[$row][$col]);
+                echo "</pre>";
+
+            }
+
         }
-
-
 
 
         return null;
@@ -63,7 +66,6 @@ $b = array(
     [5, 6],
     [8, 10],
     [9, 1]);
-
 
 
 echo "<pre>";
