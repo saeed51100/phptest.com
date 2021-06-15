@@ -14,11 +14,12 @@ class MatrixAddition
             echo "<p><b>Row number $row</b></p>";
             echo "<ul>";
             for ($col = 0; $col < 3; $col++) {
-                echo  $ar1[$row][$col] ;
+//                return  $ar1[$row][$col] ;
+                return $ar1;
             }
 
         }
-        return;
+//        return;
 
 
     }
