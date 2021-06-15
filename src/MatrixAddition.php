@@ -7,14 +7,17 @@ use phpDocumentor\Reflection\Types\This;
 
 class MatrixAddition
 {
-    function myfunction($ar1, $ar2)
+    function myfunction($ar1)
     {
-        // https://stackoverflow.com/questions/6086267/how-to-merge-two-arrays-by-summing-the-merged-values?noredirect=1&lq=1
-        $sums = array();
-        foreach (array_keys($ar1 + $ar2) as $key) {
-            $sums[$key] = (isset($ar1[$key]) ? $ar1[$key] : 0) + (isset($ar2[$key]) ? $ar2[$key] : 0);
+
+        for ($row = 0; $row < 5; $row++) {
+            echo "<p><b>Row number $row</b></p>";
+            echo "<ul>";
+            for ($col = 0; $col < 3; $col++) {
+                echo "<li>" . $ar1[$row][$col] . "</li>";
+            }
+            echo "</ul>";
         }
-        return $sums;
 
 
     }
@@ -25,11 +28,15 @@ class MatrixAddition
 //$a = array(10, 2, 5, 10, 0);
 //$b = array(1, 20, 11, 8, 3);
 
-$a = array(10, 2, 5, 10, 0);
-$b = array(1, 20, 11, 8, 3);
+$a = array([
+    [10, 3],
+    [2, 4],
+    [5, 2],
+    [10, 4],
+    [0, 1]]);
 
 echo "<pre>";
-print_r((new MatrixAddition)->myfunction($a, $b));
+print_r((new MatrixAddition)->myfunction($a));
 echo "</pre>";
 
 
