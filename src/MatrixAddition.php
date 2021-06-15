@@ -30,11 +30,12 @@ class MatrixAddition
 
 
         $mam = $ar1[0][0];
-        print_r($mam) ;
+        print_r($mam);
 
-        print_r($ar1) ;
+        $nyn = $mam[0];
+        print_r($nyn);
 
-        return null ;
+        return null;
 
     }
 
