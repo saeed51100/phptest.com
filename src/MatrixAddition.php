@@ -10,31 +10,13 @@ class MatrixAddition
     function myfunction($ar1, $ar2)
     {
 
-//        for ($row = 0; $row < 5; $row++) {
-//            echo "<p><b>Row number $row</b></p>";
-//            echo "<ul>";
-//            for ($col = 0; $col < 3; $col++) {
-//                print_r($ar1[$row][$col]) ;
-//            }
-//
-//        }
-//        function searchForId($id, $array)
-//        {
-//            foreach ($array as $key => $val) {
-//                if ($val['uid'] === $id) {
-//                    print_r($key);
-//                }
-//            }
-//            return null;
-//        }
-
 
         for ($row = 0; $row < count($ar1); $row++) {
-            for ($col = 0; $col < count($ar1); $col++) {
+            for ($col = 0; $col < count($ar1[0]); $col++) {
 
                 echo "<pre>";
-                echo $row,"," ,$col,"  => ";
-                print_r($ar1[$row][$col]);
+                echo $row, ",", $col, "  => ";
+                print_r(($ar1[$row][$col]) + ($ar2[$row][$col]));
                 echo "</pre>";
 
             }
