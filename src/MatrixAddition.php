@@ -29,19 +29,16 @@ class MatrixAddition
 //        }
 
 
-//        $mam = $ar1[0][0];
-//        print_r($mam[0]);
-
-
-        print_r($ar1[0][4][1]);
 
 
 
+        for ($row = 0; $row < count($ar1); $row++) {
+
+            echo "u";
+        }
 
 
-
-//        $nyn = $mam[0];
-//        print_r($nyn);
+//        print_r($ar1[1][1]);
 
         return null;
 
@@ -53,12 +50,13 @@ class MatrixAddition
 //$a = array(10, 2, 5, 10, 0);
 //$b = array(1, 20, 11, 8, 3);
 
-$a = array([
+$a = array(
     [10, 3],
     [2, 4],
     [5, 2],
     [10, 4],
-    [0, 1]]);
+    [0, 1]);
+
 
 
 echo "<pre>";
