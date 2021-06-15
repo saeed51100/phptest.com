@@ -7,50 +7,44 @@ use phpDocumentor\Reflection\Types\This;
 
 class MatrixAddition
 {
-    function myfunction($ar1, $ar2)
+    function matrix_addition($ar1, $ar2)
     {
-
-
+        $result = array();
         for ($row = 0; $row < count($ar1); $row++) {
             for ($col = 0; $col < count($ar1[0]); $col++) {
 
-                echo "<pre>";
-                echo $row, ",", $col, "  => ";
-                print_r(($ar1[$row][$col]) + ($ar2[$row][$col]));
-                echo "</pre>";
+                $result[$row][$col] = ($ar1[$row][$col]) + ($ar2[$row][$col]);
+
 
             }
 
         }
 
 
-        return null;
+        return $result;
 
     }
 
 
 }
 
-//$a = array(10, 2, 5, 10, 0);
-//$b = array(1, 20, 11, 8, 3);
+
 
 $a = array(
-    [10, 3],
-    [2, 4],
-    [5, 2],
-    [10, 4],
-    [0, 1]);
+    [10, 3,5],
+    [2, 4,6],
+    [2, 4,9],
+    );
 
 $b = array(
-    [1, 2],
-    [3, 4],
-    [5, 6],
-    [8, 10],
-    [9, 1]);
+    [1, 2,5],
+    [3, 4,3],
+    [3, 4,6],
+    );
 
 
 echo "<pre>";
-print_r((new MatrixAddition)->myfunction($a, $b));
+print_r((new MatrixAddition)->matrix_addition($a, $b));
 echo "</pre>";
 
 
