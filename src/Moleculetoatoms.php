@@ -12,7 +12,7 @@ class Moleculetoatoms
 }
 
 
-$a = "Mg(OH)2";
+$a = "Fe(NO3)2";
 
 
 
