@@ -10,17 +10,16 @@ class MatrixAddition
     function myfunction($ar1)
     {
 
-        for ($row = 0; $row < 5; $row++) {
-            echo "<p><b>Row number $row</b></p>";
-            echo "<ul>";
-            for ($col = 0; $col < 3; $col++) {
-//                return  $ar1[$row][$col] ;
-                return $ar1;
-            }
+//        for ($row = 0; $row < 5; $row++) {
+//            echo "<p><b>Row number $row</b></p>";
+//            echo "<ul>";
+//            for ($col = 0; $col < 3; $col++) {
+//                print_r($ar1[$row][$col]) ;
+//            }
+//
+//        }
 
-        }
-//        return;
-
+        print_r($ar1[0][0]) ;
 
     }
 
