@@ -10,17 +10,15 @@ class MatrixAddition
     function myfunction($ar1)
     {
 
-//        for ($row = 0; $row < 5; $row++) {
-//            echo "<p><b>Row number $row</b></p>";
-//            echo "<ul>";
-//            for ($col = 0; $col < 3; $col++) {
-//                echo "<li>" . $ar1[$row][$col] . "</li>";
-//            }
-//            echo "</ul>";
-//        }
+        for ($row = 0; $row < 5; $row++) {
+            echo "<p><b>Row number $row</b></p>";
+            echo "<ul>";
+            for ($col = 0; $col < 3; $col++) {
+                echo  $ar1[$row][$col] ;
+            }
 
-
-        return "uuuu";
+        }
+        return;
 
 
     }
@@ -37,6 +35,7 @@ $a = array([
     [5, 2],
     [10, 4],
     [0, 1]]);
+
 
 echo "<pre>";
 print_r((new MatrixAddition)->myfunction($a));
