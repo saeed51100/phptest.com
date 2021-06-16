@@ -6,7 +6,10 @@ namespace saeed;
 class Moleculetoatoms
 {
     function parse_molecule(string $formula): array {
-        // Do your science here :)
+        $nnn = preg_replace_callback('/[a-zA-Z]+:/', function ($matches) {
+            return "  " . $matches[0];
+        }, $formula);
+
     }
 
 }
