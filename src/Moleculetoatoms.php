@@ -19,6 +19,7 @@ class Moleculetoatoms
 
 
 $a = "Fe(NO3)2";
+//$a = "K4[ON(SO3)2]2";
 
 
 echo "<pre>";
