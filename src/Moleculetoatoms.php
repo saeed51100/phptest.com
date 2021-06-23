@@ -19,8 +19,8 @@ class Moleculetoatoms
         for ($row = 0; $row < count($mmm); $row++) {
             for ($col = 0; $col < 2; $col++) {
 
-                $result[$row][0] = ($mmm[$row][$col]);
-                $result[$row][1] = ($mmm[$row][$col]);
+                $result[$row][0] = ($mmm[$row]);
+                $result[$row][1] = ($mmm[$row]);
 
             }
 
