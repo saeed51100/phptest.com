@@ -6,17 +6,18 @@ namespace saeed;
 class CoordinatesValidator
 {
     function isValidCoordinates($coordinates) {
+
         return true;
     }
 }
 
 
-$a = "NO3";
+$a = "24.53525235, 23.45235";
 
 
 
 echo "<pre>";
-print_r((new CoordinatesValidator)->parse_molecule($a));
+print_r((new CoordinatesValidator)->isValidCoordinates($a));
 echo "</pre>";
 
 
