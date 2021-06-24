@@ -8,13 +8,17 @@ class CoordinatesValidator
     function isValidCoordinates($coordinates)
     {
 
-       return preg_match("/[0-9]*\.[0-9]+, [0-9]*\.[0-9]/", $coordinates);
+        if (preg_match("/[0-9]*\.[0-9]+, [0-9]*\.[0-9]/", $coordinates)) {
+            return "true";
+        } else {
+            return "false";
+        }
 
     }
 }
 
 
-$a = "24.53525235, 23.45235";
+$a = "24.5352 5235, 23.45235";
 
 
 echo "<pre>";
