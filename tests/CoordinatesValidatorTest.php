@@ -23,6 +23,12 @@ class MyTestCases extends TestCase
         "0.342q0832, 1.2324",
         "23.245, 1e1"
     ];
+    protected $CoordinatesValidator;
+
+    public function setUp(): void
+    {
+        $this->CoordinatesValidator = new CoordinatesValidator();
+    }
     // test function names should start with "test"
     public function testValid() {
         foreach($this->validCoordinates as $c){
