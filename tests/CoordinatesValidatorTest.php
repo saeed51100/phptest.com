@@ -26,12 +26,12 @@ class MyTestCases extends TestCase
     // test function names should start with "test"
     public function testValid() {
         foreach($this->validCoordinates as $c){
-            $this->assertEquals(true, isValidCoordinates($c));
+            $this->assertEquals(true, $this->CoordinatesValidator->isValidCoordinates($c));
         }
     }
     public function testInvalid() {
         foreach($this->invalidCoordinates as $c){
-            $this->assertEquals(false, isValidCoordinates($c));
+            $this->assertEquals(false, $this->CoordinatesValidator->isValidCoordinates($c));
         }
     }
 }
