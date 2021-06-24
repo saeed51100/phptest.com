@@ -1,4 +1,4 @@
 <?php
-require '../src/Moleculetoatoms.php';
+require '../src/CoordinatesValidator.php';
 
 
