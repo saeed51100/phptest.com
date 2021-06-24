@@ -7,6 +7,19 @@ class Moleculetoatoms
 {
     function parse_molecule(string $formula)
     {
+        // this kata is not complete!
+        // this kata is not complete!
+        // this kata is not complete!
+        // this kata is not complete!
+        // this kata is not complete!
+        // this kata is not complete!
+        // this kata is not complete!
+        // this kata is not complete!
+        // this kata is not complete!
+        // this kata is not complete!
+        // this kata is not complete!
+        // this kata is not complete!
+
         $nnn = preg_replace_callback('/[A-Z]|[A-Z]+[a-z]|\(|\)|[0-9]/', function ($matches) {
             return "  " . $matches[0];
         }, $formula);
@@ -22,8 +35,9 @@ class Moleculetoatoms
 
                 $result[$row][0] = ($mmm[$row]);
 
-                if (3 > 7) {
-                    $zarib = 3;
+                $zarib = 3;
+                if (3 > 2) {
+                    $zarib = 4;
                 } else {
                     $zarib = 9;
                 }
@@ -41,8 +55,9 @@ class Moleculetoatoms
 }
 
 
-$a = "Fe(NO3)2";
-//$a = "K4[ON(SO3)2]2";
+$a = "NO3";
+//$a = "Fe(NO3)2";
+//$a = "K4(ON(SO3)2)2";
 
 
 echo "<pre>";
