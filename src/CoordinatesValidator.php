@@ -15,7 +15,7 @@ class CoordinatesValidator
             && is_numeric($mmm[1])
             && ($mmm[0] >= -90 && $mmm[0] <= 90)
             && ($mmm[1] >= -180 && $mmm[1] <= 180)
-            !
+            ! preg_match("//i", $coordinates);
         )
             return true;
         else
