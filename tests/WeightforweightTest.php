@@ -1,10 +1,10 @@
 <?php
 
-use saeed\CoordinatesValidator;
+use saeed\Weightforweight;
 use PHPUnit\Framework\TestCase;
 
 
-class CoordinatesValidatorTest extends TestCase
+class WeightforweightTest extends TestCase
 {
     private $validCoordinates = [
         "-23, 25",
@@ -27,7 +27,7 @@ class CoordinatesValidatorTest extends TestCase
 
     public function setUp(): void
     {
-        $this->CoordinatesValidator = new CoordinatesValidator();
+        $this->CoordinatesValidator = new Weightforweight();
     }
     // test function names should start with "test"
     public function testValid() {

@@ -1,4 +1,4 @@
 <?php
-require '../src/CoordinatesValidator.php';
+require '../src/Weightforweight.php';
 
 
