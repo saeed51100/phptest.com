@@ -8,7 +8,7 @@ class CoordinatesValidator
     function isValidCoordinates($coordinates)
     {
         $mmm = explode(" ", $coordinates);
-//return $mmm;
+
         $mmm[0] = rtrim($mmm[0], ",");
         if (
                is_numeric($mmm[0])
