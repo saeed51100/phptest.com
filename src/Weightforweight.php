@@ -5,9 +5,10 @@ namespace saeed;
 
 class Weightforweight
 {
-    function sortVazn($vazn)
+
+    function orderWeight($str)
     {
-        $mmm = explode(" ", $vazn);
+        $mmm = explode(" ", $str);
 
         for ($row = 0; $row < count($mmm); $row++) {
 
@@ -26,6 +27,9 @@ class Weightforweight
 //        return $tt;
 
 
+        // asort(): Sort an associative array in descending order, according to the value.
+        // see also arsort() ksort() and krsort() Sorting Arrays:
+        // https://www.php.net/manual/en/array.sorting.php
         asort($tt);
 
         return $tt;
@@ -39,7 +43,7 @@ $a = "56 65 74 100 99 68 86 180 90";
 
 
 echo "<pre>";
-print_r((new Weightforweight)->sortVazn($a));
+print_r((new Weightforweight)->orderWeight($a));
 echo "</pre>";
 
 
