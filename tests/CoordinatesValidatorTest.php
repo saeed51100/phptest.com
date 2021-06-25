@@ -8,10 +8,10 @@ class CoordinatesValidatorTest extends TestCase
 {
     private $validCoordinates = [
         "-23, 25",
-//        "4, -3",
+        "4, -3",
         "24.53525235, 23.45235",
-//        "04, -23.234235",
-//        "43.91343345, 143"
+        "04, -23.234235",
+        "43.91343345, 143"
     ];
     private $invalidCoordinates = [
         "23.234, - 23.4234",
@@ -35,11 +35,11 @@ class CoordinatesValidatorTest extends TestCase
             $this->assertEquals(true, $this->CoordinatesValidator->isValidCoordinates($c));
         }
     }
-//    public function testInvalid() {
-//        foreach($this->invalidCoordinates as $c){
-//            $this->assertEquals(false, $this->CoordinatesValidator->isValidCoordinates($c));
-//        }
-//    }
+    public function testInvalid() {
+        foreach($this->invalidCoordinates as $c){
+            $this->assertEquals(false, $this->CoordinatesValidator->isValidCoordinates($c));
+        }
+    }
 }
 
 

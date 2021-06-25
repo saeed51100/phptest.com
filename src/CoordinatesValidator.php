@@ -8,11 +8,10 @@ class CoordinatesValidator
     function isValidCoordinates($coordinates)
     {
         $mmm = explode(" ", $coordinates);
-//return rtrim ($mmm[0],",");
-//var_dump($mmm[1]);
-        if (/*(preg_match("/[0-9]*\.[0-9]+, [0-9]*\.[0-9]/", $coordinates))*/
-            is_float($mmm[0])
-            && is_float($mmm[1])
+//return $mmm;
+        $mmm[0] = rtrim($mmm[0], ",");
+        if (is_numeric($mmm[0])
+            && is_numeric($mmm[1])
             && ($mmm[0] >= -90 && $mmm[0] <= 90)
             && ($mmm[1] >= -180 && $mmm[1] <= 180))
             return true;
@@ -24,7 +23,7 @@ class CoordinatesValidator
 
 
 //$a = "-23, 25";
-$a = "24.53525235, 23.45235";
+$a = "23.245, 1e1";
 
 
 echo "<pre>";
