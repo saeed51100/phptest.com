@@ -8,26 +8,24 @@ class Weightforweight
     function sortVazn($vazn)
     {
         $mmm = explode(" ", $vazn);
-//        return $mmm;
-
 
         for ($row = 0; $row < count($mmm); $row++) {
-            for ($col = 0; $col < 2; $col++) {
+
+        // Get the sum of digits in PHP
+        // https://stackoverflow.com/questions/3232511/get-the-sum-of-digits-in-php
+                $queu = array_sum(str_split($mmm[$row]));
 
 
-                $result[$row][0] = ($mmm[$row]);
-// Get the sum of digits in PHP
-// https://stackoverflow.com/questions/3232511/get-the-sum-of-digits-in-php
-                $zarib = array_sum(str_split($result[$row][0]));
-
-
-                $result[$row][1] = ($zarib);
-
-            }
+                $asum[$row] = ($queu);
 
 
         }
-        return $result;
+        // PHP - Merge two arrays (same-length) into one associative?
+        // https://stackoverflow.com/questions/1200885/php-merge-two-arrays-same-length-into-one-associative
+        return array_combine($mmm,$asum);
+//        return $mmm;
+
+
 
     }
 }
@@ -43,5 +41,6 @@ echo "</pre>";
 
 
 
-
-
+// Get the sum of digits in PHP
+// https://stackoverflow.com/questions/3232511/get-the-sum-of-digits-in-php
+// $queu = array_sum(str_split($result[$row]));
