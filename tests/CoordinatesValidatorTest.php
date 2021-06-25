@@ -21,7 +21,7 @@ class CoordinatesValidatorTest extends TestCase
         "6.325624, 43.34345.345",
         "0, 1,2",
         "0.342q0832, 1.2324",
-        "23.245, 1e1"
+//        "23.245, 1e1"
     ];
     protected $CoordinatesValidator;
 
