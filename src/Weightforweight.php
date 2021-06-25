@@ -7,9 +7,10 @@ class Weightforweight
 {
     function sortVazn($vazn)
     {
-        $mmm = explode(" ", $coordinates);
+        $mmm = explode(" ", $vazn);
+        return $mmm;
 
-        $mmm[0] = rtrim($mmm[0], ",");
+//        $mmm[0] = rtrim($mmm[0], ",");
 
      
 
