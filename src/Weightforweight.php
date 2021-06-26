@@ -16,23 +16,26 @@ class Weightforweight
             // https://stackoverflow.com/questions/3232511/get-the-sum-of-digits-in-php
             $queu = array_sum(str_split($mmm[$row]));
 
-
+            // Put them in new array:
             $asum[$row] = ($queu);
 
 
         }
+
         // PHP - Merge two arrays (same-length) into one associative?
         // https://stackoverflow.com/questions/1200885/php-merge-two-arrays-same-length-into-one-associative
         $tt = array_combine($mmm, $asum);
-//        return $tt;
 
 
         // asort(): Sort an associative array in descending order, according to the value.
-        // see also arsort() ksort() and krsort() Sorting Arrays:
+        // see also arsort() ksort() and krsort() to Sorting Arrays:
         // https://www.php.net/manual/en/array.sorting.php
         asort($tt);
 
-        return $tt;
+
+        // implode array with keys.
+        // https://stackoverflow.com/questions/3233896/implode-array-of-values-as-well-as-its-keys
+        return implode(" ", array_keys($tt));
 
 
     }

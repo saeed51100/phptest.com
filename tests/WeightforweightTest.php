@@ -4,42 +4,18 @@ use saeed\Weightforweight;
 use PHPUnit\Framework\TestCase;
 
 
-class WeightforweightTest extends TestCase
+class OrderWeightTestCases extends TestCase
 {
-    private $validCoordinates = [
-        "-23, 25",
-        "4, -3",
-        "24.53525235, 23.45235",
-        "04, -23.234235",
-        "43.91343345, 143"
-    ];
-    private $invalidCoordinates = [
-        "23.234, - 23.4234",
-        "2342.43536, 34.324236",
-        "N23.43345, E32.6457",
-        "99.234, 12.324",
-        "6.325624, 43.34345.345",
-        "0, 1,2",
-        "0.342q0832, 1.2324",
-        "23.245, 1e1"
-    ];
-    protected $CoordinatesValidator;
+    protected $Weightforweight;
 
     public function setUp(): void
     {
-        $this->CoordinatesValidator = new Weightforweight();
+        $this->Weightforweight = new Weightforweight();
     }
-    // test function names should start with "test"
-    public function testValid() {
-        foreach($this->validCoordinates as $c){
-            $this->assertEquals(true, $this->CoordinatesValidator->isValidCoordinates($c));
-        }
-    }
-    public function testInvalid() {
-        foreach($this->invalidCoordinates as $c){
-            $this->assertEquals(false, $this->CoordinatesValidator->isValidCoordinates($c));
-        }
-    }
-}
+
+    public function testBasics() {
+        $this->assertEquals("2000 103 123 4444 99", $this->Weightforweight->orderWeight("103 123 4444 99 2000"));
+        $this->assertEquals("11 11 2000 10003 22 123 1234000 44444444 9999", $this->Weightforweight->orderWeight("2000 10003 1234000 44444444 9999 11 11 22 123"));
+    }}
 
 
