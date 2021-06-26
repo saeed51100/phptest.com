@@ -9,7 +9,7 @@ class Weightforweight
     function orderWeight($str)
     {
         $mmm = explode(" ", $str);
-
+//        return $mmm;
         for ($row = 0; $row < count($mmm); $row++) {
 
             // Get the sum of digits in PHP
@@ -21,11 +21,11 @@ class Weightforweight
 
 
         }
-
+//        return $asum;
         // PHP - Merge two arrays (same-length) into one associative?
         // https://stackoverflow.com/questions/1200885/php-merge-two-arrays-same-length-into-one-associative
         $tt = array_combine($mmm, $asum);
-
+        return $tt;
 
         // asort(): Sort an associative array in descending order, according to the value.
         // see also arsort() ksort() and krsort() to Sorting Arrays:
@@ -42,7 +42,8 @@ class Weightforweight
 }
 
 
-$a = "56 65 74 100 99 68 86 180 90";
+//$a = "56 65 74 100 99 68 86 180 90";
+$a = "2000 10003 1234000 44444444 9999 11 11 22 123";
 
 
 echo "<pre>";
