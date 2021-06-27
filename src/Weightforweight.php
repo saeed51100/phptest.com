@@ -11,31 +11,28 @@ class Weightforweight
         $mmm = explode(" ", $str);
 //        return $mmm;
         for ($row = 0; $row < count($mmm); $row++) {
+            for ($col = 0; $col < 2; $col++) {
+                // Get the sum of digits in PHP
+                // https://stackoverflow.com/questions/3232511/get-the-sum-of-digits-in-php
+                $queu[$row][0] = $mmm[$row];
+                $queu[$row][1] = array_sum(str_split($mmm[$row]));
 
-            // Get the sum of digits in PHP
-            // https://stackoverflow.com/questions/3232511/get-the-sum-of-digits-in-php
-            $queu = array_sum(str_split($mmm[$row]));
-
-            // Put them in new array:
-            $asum[$row] = ($queu);
-
+            }
 
         }
-//        return $asum;
-        // PHP - Merge two arrays (same-length) into one associative?
-        // https://stackoverflow.com/questions/1200885/php-merge-two-arrays-same-length-into-one-associative
-        $tt = array_combine($mmm, $asum);
-        return $tt;
+//        return $queu ;
 
-        // asort(): Sort an associative array in descending order, according to the value.
-        // see also arsort() ksort() and krsort() to Sorting Arrays:
-        // https://www.php.net/manual/en/array.sorting.php
-        asort($tt);
+        // sort two dimensional array by column.
+        // https://stackoverflow.com/questions/2426917/how-do-i-sort-a-multidimensional-array-by-one-of-the-fields-of-the-inner-array-i
+        $col = array_column($queu, "1");
+
+        array_multisort($col, SORT_ASC, $queu);
+        return $queu;
 
 
         // implode array with keys.
         // https://stackoverflow.com/questions/3233896/implode-array-of-values-as-well-as-its-keys
-        return implode(" ", array_keys($tt));
+        return implode(" ", array_keys($queu));
 
 
     }
