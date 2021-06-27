@@ -32,8 +32,10 @@ class Weightforweight
         for ($row = 0; $row < count($queu); $row++) {
             for ($col = 0; $col < 2; $col++) {
 
-                $a1 = ord($queu[$row][0]);
-                $a2 = ord($queu[$row+1][0]);
+                $a1 = ord("$queu[$row][0]");
+                $a2 = $queu[$row+1][0];
+
+                $a3 = strval($a2);
 
                 if (
                     ($queu[$row][1] == $queu[$row + 1][1])
