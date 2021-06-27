@@ -22,11 +22,32 @@ class Weightforweight
         }
 //        return $queu ;
 
+
         // sort two dimensional array by column.
         // https://stackoverflow.com/questions/2426917/how-do-i-sort-a-multidimensional-array-by-one-of-the-fields-of-the-inner-array-i
         $col = array_column($queu, "1");
         array_multisort($col, SORT_ASC, $queu);
+//        return $queu ;
+//        return ord("$queu[$row][0]");
+        for ($row = 0; $row < count($queu); $row++) {
+            for ($col = 0; $col < 2; $col++) {
 
+                $a1 = ord($queu[$row][0]);
+                $a2 = ord($queu[$row+1][0]);
+
+                if (
+                    ($queu[$row][1] == $queu[$row + 1][1])
+                    && ($a1 > $a2)
+                ) {
+                    $temp[$row][0] = $queu[$row][0];
+                    $queu[$row][0] = $queu[$row + 1][0];
+                    $queu[$row + 1][0] = $temp[$row][0];
+
+                }
+
+            }
+
+        }
 
         // implode two dimensional array by column.
         // https://stackoverflow.com/questions/16710800/return-single-column-from-a-multi-dimensional-array
