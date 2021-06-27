@@ -9,9 +9,7 @@ class Weightforweight
     function orderWeight($str)
     {
         $mmm = explode(" ", $str);
-//        return $mmm;
-        return sort($mmm);
-//        return $mmm;
+
         for ($row = 0; $row < count($mmm); $row++) {
             for ($col = 0; $col < 2; $col++) {
                 // Get the sum of digits in PHP
@@ -28,7 +26,7 @@ class Weightforweight
         // https://stackoverflow.com/questions/2426917/how-do-i-sort-a-multidimensional-array-by-one-of-the-fields-of-the-inner-array-i
         $col = array_column($queu, "1");
         array_multisort($col, SORT_ASC, $queu);
-//        return $queu;
+
 
         // implode two dimensional array by column.
         // https://stackoverflow.com/questions/16710800/return-single-column-from-a-multi-dimensional-array
