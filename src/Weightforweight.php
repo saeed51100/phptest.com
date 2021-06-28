@@ -29,6 +29,9 @@ class Weightforweight
         array_multisort($col, SORT_ASC, $queu);
 //        return $queu ;
 
+
+        // When two numbers have the same "weight", let us class them as if they were strings (alphabetical ordering) and not numbers:
+        // 180 is before 90 since, having the same "weight" (9), it comes before as a string.
         for ($row = 0; $row < count($queu); $row++) {
             for ($col = 0; $col < 2; $col++) {
 
@@ -47,6 +50,7 @@ class Weightforweight
             }
 
         }
+
 
         // implode two dimensional array by column.
         // https://stackoverflow.com/questions/16710800/return-single-column-from-a-multi-dimensional-array
