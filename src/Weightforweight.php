@@ -28,18 +28,18 @@ class Weightforweight
         $col = array_column($queu, "1");
         array_multisort($col, SORT_ASC, $queu);
 //        return $queu ;
-//        return ord("$queu[$row][0]");
+
         for ($row = 0; $row < count($queu); $row++) {
             for ($col = 0; $col < 2; $col++) {
 
-                $a1 = ord("$queu[$row][0]");
-                $a2 = $queu[$row+1][0];
-
-                $a3 = strval($a2);
+//               return ord($queu[$row][0]);
+//               return ord($queu[$row + 1][0]);
+//
+//                return implode("", $a2);
 
                 if (
                     ($queu[$row][1] == $queu[$row + 1][1])
-                    && ($a1 > $a2)
+                    && (ord($queu[$row][0]) > ord($queu[$row + 1][0]))
                 ) {
                     $temp[$row][0] = $queu[$row][0];
                     $queu[$row][0] = $queu[$row + 1][0];
