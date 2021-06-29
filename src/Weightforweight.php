@@ -26,8 +26,14 @@ class Weightforweight
         // sort two dimensional array by column.
         // https://stackoverflow.com/questions/2426917/how-do-i-sort-a-multidimensional-array-by-one-of-the-fields-of-the-inner-array-i
         $col = array_column($queu, "1");
+//        return $col ;
         array_multisort($col, SORT_ASC, $queu);
 //        return $queu ;
+
+
+
+
+
 
 
         // When two numbers have the same "weight", let us class them as if they were strings (alphabetical ordering) and not numbers:
