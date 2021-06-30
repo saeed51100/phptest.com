@@ -9,7 +9,7 @@ class Weightforweight
     function orderWeight($str)
     {
         $mmm = explode(" ", $str);
-
+//        return $mmm ;
         for ($row = 0; $row < count($mmm); $row++) {
             for ($col = 0; $col < 2; $col++) {
                 // Get the sum of digits in PHP
@@ -21,6 +21,18 @@ class Weightforweight
 
         }
 //        return $queu ;
+
+
+
+
+        // How to filter a two dimensional array by value.
+        // https://stackoverflow.com/questions/27447923/how-to-filter-a-two-dimensional-array-by-value
+        $new = array_filter($queu, function ($var) {
+            return ( $var[0]=='40328' );
+        });
+        return $new;
+
+
 
 
         // sort two dimensional array by column.
@@ -38,24 +50,24 @@ class Weightforweight
 
         // When two numbers have the same "weight", let us class them as if they were strings (alphabetical ordering) and not numbers:
         // 180 is before 90 since, having the same "weight" (9), it comes before as a string.
-        for ($row = 0; $row < count($queu); $row++) {
-            for ($col = 0; $col < 2; $col++) {
-
-
-                if (
-                    (($row + 1) < count($queu))
-                    && ($queu[$row][1] == $queu[$row + 1][1])
-                    && ((strcmp(($queu[$row][0]), ($queu[$row + 1][0]))) > 0)
-                ) {
-                    $temp[$row][0] = $queu[$row][0];
-                    $queu[$row][0] = $queu[$row + 1][0];
-                    $queu[$row + 1][0] = $temp[$row][0];
-
-                }
-
-            }
-
-        }
+//        for ($row = 0; $row < count($queu); $row++) {
+//            for ($col = 0; $col < 2; $col++) {
+//
+//
+//                if (
+//                    (($row + 1) < count($queu))
+//                    && ($queu[$row][1] == $queu[$row + 1][1])
+//                    && ((strcmp(($queu[$row][0]), ($queu[$row + 1][0]))) > 0)
+//                ) {
+//                    $temp[$row][0] = $queu[$row][0];
+//                    $queu[$row][0] = $queu[$row + 1][0];
+//                    $queu[$row + 1][0] = $temp[$row][0];
+//
+//                }
+//
+//            }
+//
+//        }
 
 
         // implode two dimensional array by column.
