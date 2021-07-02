@@ -21,16 +21,32 @@ class Weightforweight
 
         }
 //        return $queu ;
+        $colcol = array_column($queu, 1);
+//        return $colcol;
+
+        $result = preg_grep("/32/", $colcol);
+        return $result;
+
+
+
+        // Unique Values from Column in Array.
+        // https://stackoverflow.com/questions/14270217/php-unique-values-from-column-in-array
+        $zzz = array_unique(array_column($queu, 1));
+        $unique = array_intersect_key( $queu, $zzz );
+        return $unique;
+
+        $hhh = /*array_unique*/( array_diff_assoc( $queu, $unique ) );
+        return $hhh;
 
 
 
 
         // How to filter a two dimensional array by value.
         // https://stackoverflow.com/questions/27447923/how-to-filter-a-two-dimensional-array-by-value
-        $new = array_filter($queu, function ($var) {
-            return ( $var[0]=='40328' );
-        });
-        return $new;
+//        $new = array_filter($queu, function ($var) {
+//            return ( $var[0]=='40328' );
+//        });
+//        return $new;
 
 
 
@@ -82,9 +98,9 @@ class Weightforweight
 
 
 //$a = "56 65 74 100 99 68 86 180 90";
-//$a = "2000 10003 1234000 44444444 9999 11 11 22 123";
+$a = "2000 10003 1234000 44444444 9999 11 11 22 123";
 //$a = "10324 40332 42404 4370 14154 3760 47320 33831 8604 12386 15329 24167 40358 28831 45955 49298";
-$a = "10046 21370 20833 40328 32454 17734 12389 1778 23495 8808 46293 8970 35557 41786 39483 32779 44979 37879";
+//$a = "10046 21370 20833 40328 32454 17734 12389 1778 23495 8808 46293 8970 35557 41786 39483 32779 44979 37879";
 
 
 echo "<pre>";
