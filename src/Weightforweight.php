@@ -9,7 +9,10 @@ class Weightforweight
     function orderWeight($str)
     {
         $mmm = explode(" ", $str);
-//        return $mmm ;
+//        return $mmm;
+
+
+
         for ($row = 0; $row < count($mmm); $row++) {
             for ($col = 0; $col < 2; $col++) {
                 // Get the sum of digits in PHP
@@ -21,32 +24,9 @@ class Weightforweight
 
         }
 //        return $queu ;
-        $colcol = array_column($queu, 1);
-//        return $colcol;
-
-        $result = preg_grep("/32/", $colcol);
-        return $result;
 
 
 
-        // Unique Values from Column in Array.
-        // https://stackoverflow.com/questions/14270217/php-unique-values-from-column-in-array
-        $zzz = array_unique(array_column($queu, 1));
-        $unique = array_intersect_key( $queu, $zzz );
-        return $unique;
-
-        $hhh = /*array_unique*/( array_diff_assoc( $queu, $unique ) );
-        return $hhh;
-
-
-
-
-        // How to filter a two dimensional array by value.
-        // https://stackoverflow.com/questions/27447923/how-to-filter-a-two-dimensional-array-by-value
-//        $new = array_filter($queu, function ($var) {
-//            return ( $var[0]=='40328' );
-//        });
-//        return $new;
 
 
 
@@ -56,8 +36,19 @@ class Weightforweight
         $col = array_column($queu, "1");
 //        return $col ;
         array_multisort($col, SORT_ASC, $queu);
-//        return $queu ;
+        return $queu ;
 
+
+
+
+
+        // PHP sort array alphabetically using a subarray value
+        // https://stackoverflow.com/questions/10484607/php-sort-array-alphabetically-using-a-subarray-value
+//        usort($mmm, function ($mmm, $b) {
+//            return strcmp($mmm[0], $b[0]);
+//        });
+
+//        return $mmm ;
 
 
 
