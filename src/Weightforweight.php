@@ -12,7 +12,6 @@ class Weightforweight
 //        return $mmm;
 
 
-
         for ($row = 0; $row < count($mmm); $row++) {
             for ($col = 0; $col < 2; $col++) {
                 // Get the sum of digits in PHP
@@ -26,20 +25,21 @@ class Weightforweight
 //        return $queu ;
 
 
-
-
-
-
-
         // sort two dimensional array by column.
         // https://stackoverflow.com/questions/2426917/how-do-i-sort-a-multidimensional-array-by-one-of-the-fields-of-the-inner-array-i
         $col = array_column($queu, "1");
 //        return $col ;
         array_multisort($col, SORT_ASC, $queu);
-        return $queu ;
+//        return $queu ;
 
+        $acr = array_count_values($col);
 
+        for ($row = 0; $row < count($queu); $row++) {
+            for ($col = 0; $col < 2; $col++) {
+                (($row + 1) < count($queu));
 
+            }
+        }
 
 
         // PHP sort array alphabetically using a subarray value
@@ -49,10 +49,6 @@ class Weightforweight
 //        });
 
 //        return $mmm ;
-
-
-
-
 
 
         // When two numbers have the same "weight", let us class them as if they were strings (alphabetical ordering) and not numbers:
