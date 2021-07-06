@@ -1,25 +1,30 @@
 <?php
 
-use saeed\Dashatizeit;
+use saeed\BasicMathematicalOperations;
 use PHPUnit\Framework\TestCase;
 
 
-class BasicMathematicalOperationsTest extends TestCase
+class MyTestCases extends TestCase
 {
-    protected $Dashatizeit;
+    protected $BasicMathematicalOperations;
 
     public function setUp(): void
     {
-        $this->Dashatizeit = new Dashatizeit();
+        $this->BasicMathematicalOperations = new BasicMathematicalOperations();
     }
 
-    public function testSampleTests()
+    public function test()
     {
-        $this->assertEquals('2-7-4', $this->Dashatizeit->dashatize(274));
-        $this->assertEquals('5-3-1-1', $this->Dashatizeit->dashatize(5311));
-        $this->assertEquals('86-3-20', $this->Dashatizeit->dashatize(86320));
-        $this->assertEquals('9-7-4-3-02', $this->Dashatizeit->dashatize(974302));
-
+        echo "<h1>Static Test Cases: </h1><br>";
+        $this->check($this->BasicMathematicalOperations->basicOp('+', 4, 7), 11);
+        $this->check($this->BasicMathematicalOperations->basicOp('-', 15, 18), -3);
+        $this->check($this->BasicMathematicalOperations->basicOp('*', 5, 5), 25);
+        $this->check($this->BasicMathematicalOperations->basicOp('/', 49, 7), 7);
+    }
+    private function check($a, $b)
+    {
+        echo "<span style='font-size: 20px'><span style='color:" . ($a == $b ? "green'>True:" : "red'>False:") . "</span></span><br>" . "Expected: " . $b . " <br> Got: " . $a . "<br>";
+        $this->assertSame($a, $b);
     }
 }
 
