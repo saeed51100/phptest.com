@@ -4,7 +4,7 @@ use saeed\Dashatizeit;
 use PHPUnit\Framework\TestCase;
 
 
-class DashatizeitTest extends TestCase
+class BasicMathematicalOperationsTest extends TestCase
 {
     protected $Dashatizeit;
 
