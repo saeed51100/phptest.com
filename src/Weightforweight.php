@@ -30,16 +30,12 @@ class Weightforweight
         $col = array_column($queu, "1");
 //        return $col ;
         array_multisort($col, SORT_ASC, $queu);
-//        return $queu ;
+//        return $queu[0] ;
 
         $acr = array_count_values($col);
+//        return $acr ;
 
-        for ($row = 0; $row < count($queu); $row++) {
-            for ($col = 0; $col < 2; $col++) {
-                (($row + 1) < count($queu));
 
-            }
-        }
 
 
         // PHP sort array alphabetically using a subarray value
