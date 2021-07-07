@@ -5,14 +5,18 @@ namespace saeed;
 class CountbyX
 {
 
-    function countBy($x, $n) {
-        $z = [];
+    function countBy($x, $n)
+    {
+        for ($x = 1; $x <= $n; $x++) {
+            $result[$x] = $x * $n;
+        }
+        return $result;
 
-        return $z;
+
     }
 
 }
 
-echo (new CountbyX)->countBy( 4, 7);
+print_r((new CountbyX)->countBy(1, 7));
 
 
