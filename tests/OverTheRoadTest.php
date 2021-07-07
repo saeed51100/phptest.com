@@ -1,6 +1,6 @@
 <?php
 
-use saeed\BeginnerSeries2Clock;
+use saeed\OverTheRoad;
 use PHPUnit\Framework\TestCase;
 
 
@@ -10,7 +10,7 @@ class MyTestCases extends TestCase
 
     public function setUp(): void
     {
-        $this->BeginnerSeries2Clock = new BeginnerSeries2Clock();
+        $this->BeginnerSeries2Clock = new OverTheRoad();
     }
 
     public function testBasicTests() {

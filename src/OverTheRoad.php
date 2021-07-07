@@ -2,7 +2,7 @@
 
 namespace saeed;
 
-class BeginnerSeries2Clock
+class OverTheRoad
 {
 
     function past($h, $m, $s)
@@ -27,5 +27,5 @@ class BeginnerSeries2Clock
 
 
 echo "<pre>";
-print_r((new BeginnerSeries2Clock)->past(2, 8, 20));
+print_r((new OverTheRoad)->past(2, 8, 20));
 echo "</pre>";
