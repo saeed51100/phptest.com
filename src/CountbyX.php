@@ -7,8 +7,9 @@ class CountbyX
 
     function countBy($x, $n)
     {
-        for ($x = 1; $x <= $n; $x++) {
-            $result[$x] = $x * $n;
+        for ($i = 0; $i < $n; $i++) {
+
+            $result[$i] = ($i + 1) * $x;
         }
         return $result;
 
@@ -17,6 +18,7 @@ class CountbyX
 
 }
 
-print_r((new CountbyX)->countBy(1, 7));
 
-
+echo "<pre>";
+print_r((new CountbyX)->countBy(2, 5));
+echo "</pre>";
