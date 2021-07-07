@@ -16,6 +16,7 @@ class OverTheRoad
 
         $ar2 = array_reverse($ar2);
 
+        array_search($ar1,$address)?
 
 
 
