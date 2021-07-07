@@ -1,23 +1,22 @@
 <div dir="rtl">
-<h3>Basic Mathematical Operations</h3>
+<h3>Count by X</h3>
 
-وظیفه شما ایجاد تابعی است که چهار عملیات اساسی ریاضی را انجام دهد.
+یک تابع با دو آرگومان ایجاد کنید که آرایه ای از اولین (n) مضرب (x) را بازگرداند.
 <br>
-این تابع باید سه آرگومان بگیرد - عملیات (رشته / کاراکتر) ، مقدار 1 (تعداد) ، مقدار 2 (تعداد).
+فرض کنید هم عدد داده شده و هم تعداد دفعات شمارش اعداد مثبت بزرگتر از 0 باشد.
 <br>
+نتایج را به صورت آرایه (یا لیست در پایتون ، هاسکل یا اکسیر) برگردانید.
 
 <br>
 </div>
 <code>
     <pre>
-        Examples
-            basicOp('+', 4, 7)         // Output: 11
-            basicOp('-', 15, 18)       // Output: -3
-            basicOp('*', 5, 5)         // Output: 25
-            basicOp('/', 49, 7)        // Output: 7
+        Examples:
+            countBy(1,10) // should return [1,2,3,4,5,6,7,8,9,10]
+            countBy(2,5) // should return [2,4,6,8,10]
     </pre>
 </code>
 <br>
 <br>
 <br>
-https://www.codewars.com/kata/57356c55867b9b7a60000bd7/php
+https://www.codewars.com/kata/5513795bd3fafb56c200049e/php
