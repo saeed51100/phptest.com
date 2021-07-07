@@ -5,17 +5,22 @@ namespace saeed;
 class OverTheRoad
 {
 
-    function overTheRoad($address, $street){
-        for ($x = 0; $x < $street ; $x++) {
-            $ar1[$x] = ($x+1)*2-1 ;
+    function overTheRoad($address, $street)
+    {
+        for ($x = 0; $x < $street; $x++) {
+            $ar1[$x] = 2 * $x + 1;
         }
-        for ($x = 0; $x < $street ; $x++) {
-            $ar1[$x] = ($x+1)*2 ;
+        for ($x = 0; $x < $street; $x++) {
+            $ar2[$x] = 2 * $x + 2;
         }
 
+        $ar2 = array_reverse($ar2);
 
-        return $ar1;
-    }}
+
+
+
+    }
+}
 
 
 echo "<pre>";
