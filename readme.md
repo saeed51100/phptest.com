@@ -1,22 +1,28 @@
 <div dir="rtl">
-<h3>Count by X</h3>
+<h3>Beginner Series #2 Clock</h3>
 
-یک تابع با دو آرگومان ایجاد کنید که آرایه ای از اولین (n) مضرب (x) را بازگرداند.
+ساعت ساعت ، متر دقیقه و ثانیه بعد از نیمه شب را نشان می دهد.
 <br>
-فرض کنید هم عدد داده شده و هم تعداد دفعات شمارش اعداد مثبت بزرگتر از 0 باشد.
+وظیفه شما نوشتن تابعی است که زمان را از نیمه شب بر حسب میلی ثانیه برگرداند.
 <br>
-نتایج را به صورت آرایه (یا لیست در پایتون ، هاسکل یا اکسیر) برگردانید.
 
 <br>
 </div>
 <code>
     <pre>
-        Examples:
-            countBy(1,10) // should return [1,2,3,4,5,6,7,8,9,10]
-            countBy(2,5) // should return [2,4,6,8,10]
+        Example:
+            h = 0
+            m = 1
+            s = 1
+                result = 61000
+<br>
+                        Input constraints:
+                        0 <= h <= 23
+                        0 <= m <= 59
+                        0 <= s <= 59
     </pre>
 </code>
 <br>
 <br>
 <br>
-https://www.codewars.com/kata/5513795bd3fafb56c200049e/php
+https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/php
