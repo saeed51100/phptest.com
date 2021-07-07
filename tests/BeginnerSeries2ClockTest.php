@@ -16,7 +16,7 @@ class MyTestCases extends TestCase
     public function testBasicTests() {
         $this->assertEquals(61000, $this->BeginnerSeries2Clock->past(0, 1, 1));
         $this->assertEquals(3661000, $this->BeginnerSeries2Clock->past(1, 1, 1));
-        $this->assertEquals(0, past(0, 0, 0));
+        $this->assertEquals(0, $this->BeginnerSeries2Clock->past(0, 0, 0));
         $this->assertEquals(3601000, $this->BeginnerSeries2Clock->past(1, 0, 1));
         $this->assertEquals(3600000, $this->BeginnerSeries2Clock->past(1, 0, 0));
     }}
