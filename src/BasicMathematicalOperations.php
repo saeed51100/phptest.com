@@ -24,6 +24,6 @@ class BasicMathematicalOperations
 
 }
 
-echo (new BasicMathematicalOperations)->basicOp('*', 4, 7);
+echo (new BasicMathematicalOperations)->basicOp('/', 4, 7);
 
 
