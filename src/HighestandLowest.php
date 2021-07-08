@@ -6,13 +6,20 @@ class HighestandLowest
 {
     function highAndLow($numbers)
     {
-        $ar1 = explode(" ", $numbers);
-        sort($ar1);
-        foreach ($numbers as $key => $val) {
-            $ar1[$key] = $val;
-        }
-//        return $ar1;
-//        return $ar1[count($ar1)-1]." ".$ar1[0];
+        // My solution:
+        // $ar1 = explode(" ", $numbers);
+        // sort($ar1);
+        // foreach ($ar1 as $key => $val) {
+        //     $ar1[$key] = $val;
+        // }
+        // return $ar1[count($ar1) - 1] . " " . $ar1[0];
+
+
+        // Codewars solution:
+        $a = explode(' ', $numbers);
+        return max($a) . " " . min($a);
+
+
 
     }
 
