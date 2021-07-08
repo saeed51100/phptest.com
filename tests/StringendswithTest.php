@@ -6,27 +6,28 @@ use PHPUnit\Framework\TestCase;
 
 class MyTestCases extends TestCase
 {
-    protected $overTheRoad;
+    protected $Stringendswith;
 
     public function setUp(): void
     {
-        $this->overTheRoad = new Stringendswith();
+        $this->Stringendswith = new Stringendswith();
     }
 
-    public function testOne() {
-        $this->assertSame(6, $this->overTheRoad->overTheRoad(1, 3));
-    }
-    public function testTwo() {
-        $this->assertSame(4, $this->overTheRoad->overTheRoad(3, 3));
-    }
-    public function testThree() {
-        $this->assertSame(5, $this->overTheRoad->overTheRoad(2, 3));
-    }
-    public function testFour() {
-        $this->assertSame(8, $this->overTheRoad->overTheRoad(3, 5));
-    }
-    public function testFive() {
-        $this->assertSame(16, $this->overTheRoad->overTheRoad(7, 11));
+    public function testFixedTests() {
+        $this->assertEquals(true, $this->Stringendswith->solution("samurai", "ai"));
+        $this->assertEquals(false, $this->Stringendswith->solution("sumo", "omo"));
+        $this->assertEquals(true, $this->Stringendswith->solution("ninja", "ja"));
+        $this->assertEquals(true, $this->Stringendswith->solution("sensei", "i"));
+        $this->assertEquals(false, $this->Stringendswith->solution("samurai", "ra"));
+        $this->assertEquals(false, $this->Stringendswith->solution("abc", "abcd"));
+        $this->assertEquals(true, $this->Stringendswith->solution("abc", "abc"));
+        $this->assertEquals(true, $this->Stringendswith->solution("abcabc", "bc"));
+        $this->assertEquals(false, $this->Stringendswith->solution('ails', 'fails'));
+        $this->assertEquals(true, $this->Stringendswith->solution('fails', 'ails'));
+        $this->assertEquals(false, $this->Stringendswith->solution('this', 'fails'));
+        $this->assertEquals(true, $this->Stringendswith->solution('yes this will pass', ''));
+        $this->assertEquals(false, $this->Stringendswith->solution('this will not pass', '`^$<>()[]*|'));
+        $this->assertEquals(false, $this->Stringendswith->solution("abc\n", 'abc'), 'Watch out for \n in the end');
     }
 }
 
