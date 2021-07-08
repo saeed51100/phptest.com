@@ -14,11 +14,11 @@ class MyTestCases extends TestCase
     }
 
     public function testExamples() {
-        $this->assertEquals("TTTT", DNA_strand("AAAA"));
-        $this->assertEquals("AAAA", DNA_strand("TTTT"));
-        $this->assertEquals("TAACG", DNA_strand("ATTGC"));
-        $this->assertEquals("ATTGC", DNA_strand("TAACG"));
-        $this->assertEquals("CATA", DNA_strand("GTAT"));
-        $this->assertEquals("GTAT", DNA_strand("CATA"));
+        $this->assertEquals("TTTT", $this->ComplementaryDNA->DNA_strand("AAAA"));
+        $this->assertEquals("AAAA", $this->ComplementaryDNA->DNA_strand("TTTT"));
+        $this->assertEquals("TAACG", $this->ComplementaryDNA->DNA_strand("ATTGC"));
+        $this->assertEquals("ATTGC", $this->ComplementaryDNA->DNA_strand("TAACG"));
+        $this->assertEquals("CATA", $this->ComplementaryDNA->DNA_strand("GTAT"));
+        $this->assertEquals("GTAT", $this->ComplementaryDNA->DNA_strand("CATA"));
     }}
 
