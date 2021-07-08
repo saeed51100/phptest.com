@@ -1,4 +1,4 @@
 <?php
-require '../src/Stringendswith.php';
+require '../src/ComplementaryDNA.php';
 
 
