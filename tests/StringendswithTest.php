@@ -1,6 +1,6 @@
 <?php
 
-use saeed\OverTheRoad;
+use saeed\Stringendswith;
 use PHPUnit\Framework\TestCase;
 
 
@@ -10,7 +10,7 @@ class MyTestCases extends TestCase
 
     public function setUp(): void
     {
-        $this->overTheRoad = new OverTheRoad();
+        $this->overTheRoad = new Stringendswith();
     }
 
     public function testOne() {
