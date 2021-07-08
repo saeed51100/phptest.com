@@ -13,5 +13,5 @@ class ComplementaryDNA
 
 
 echo "<pre>";
-print_r((new ComplementaryDNA)->DNA_strand("samurai"));
+print_r((new ComplementaryDNA)->DNA_strand("AAAA"));
 echo "</pre>";

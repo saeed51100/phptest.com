@@ -6,11 +6,11 @@ use PHPUnit\Framework\TestCase;
 
 class MyTestCases extends TestCase
 {
-    protected $Stringendswith;
+    protected $ComplementaryDNA;
 
     public function setUp(): void
     {
-        $this->Stringendswith = new ComplementaryDNA();
+        $this->ComplementaryDNA = new ComplementaryDNA();
     }
 
     public function testExamples() {
