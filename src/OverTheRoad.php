@@ -16,14 +16,14 @@ class OverTheRoad
 
         $ar2 = array_reverse($ar2);
 
-        array_search($ar1,$address)?
-
-
+        if (in_array($address, $ar1))
+            return $ar2[array_search($address, $ar1)];
+        else return $ar1[array_search($address, $ar2)];
 
     }
 }
 
 
 echo "<pre>";
-print_r((new OverTheRoad)->overTheRoad(2, 3));
+print_r((new OverTheRoad)->overTheRoad(2, 6));
 echo "</pre>";
