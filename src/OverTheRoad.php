@@ -25,5 +25,5 @@ class OverTheRoad
 
 
 echo "<pre>";
-print_r((new OverTheRoad)->overTheRoad(2, 6));
+print_r((new OverTheRoad)->overTheRoad(250, 1005000));
 echo "</pre>";

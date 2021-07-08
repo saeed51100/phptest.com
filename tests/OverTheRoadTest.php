@@ -6,18 +6,27 @@ use PHPUnit\Framework\TestCase;
 
 class MyTestCases extends TestCase
 {
-    protected $BeginnerSeries2Clock;
+    protected $overTheRoad;
 
     public function setUp(): void
     {
-        $this->BeginnerSeries2Clock = new OverTheRoad();
+        $this->overTheRoad = new OverTheRoad();
     }
 
-    public function testBasicTests() {
-        $this->assertEquals(61000, $this->BeginnerSeries2Clock->past(0, 1, 1));
-        $this->assertEquals(3661000, $this->BeginnerSeries2Clock->past(1, 1, 1));
-        $this->assertEquals(0, $this->BeginnerSeries2Clock->past(0, 0, 0));
-        $this->assertEquals(3601000, $this->BeginnerSeries2Clock->past(1, 0, 1));
-        $this->assertEquals(3600000, $this->BeginnerSeries2Clock->past(1, 0, 0));
-    }}
+    public function testOne() {
+        $this->assertSame(6, $this->overTheRoad->overTheRoad(1, 3));
+    }
+    public function testTwo() {
+        $this->assertSame(4, $this->overTheRoad->overTheRoad(3, 3));
+    }
+    public function testThree() {
+        $this->assertSame(5, $this->overTheRoad->overTheRoad(2, 3));
+    }
+    public function testFour() {
+        $this->assertSame(8, $this->overTheRoad->overTheRoad(3, 5));
+    }
+    public function testFive() {
+        $this->assertSame(16, $this->overTheRoad->overTheRoad(7, 11));
+    }
+}
 
