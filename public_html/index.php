@@ -1,4 +1,4 @@
 <?php
-require '../src/ComplementaryDNA.php';
+require '../src/HighestandLowest.php';
 
 
