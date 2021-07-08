@@ -11,7 +11,8 @@ class HighestandLowest
         foreach ($numbers as $key => $val) {
             $ar1[$key] = $val;
         }
-        return $ar1;
+//        return $ar1;
+//        return $ar1[count($ar1)-1]." ".$ar1[0];
 
     }
 
