@@ -19,17 +19,11 @@ class ScalingSquaredStrings
         return preg_replace_callback('/[a-zA-Z]+/',
             function ($matches) use ($k) {
 //                return $matches[0] . '(' . strlen($matches[0]) . ')';
-            return str_repeat($matches[0],$k);
+                return str_repeat($matches[0], $k);
             },
             $s);
 
 
-//        $input = $s;
-//        $pattern = '/[a-z0-9\.]+/i';
-//        $result = preg_replace_callback($pattern, function ($matches) {
-//            return $matches[0] . '(' . strlen($matches[0]) . ')';
-//        }, $input);
-//        echo $result;
 
 
     }
@@ -37,5 +31,5 @@ class ScalingSquaredStrings
 
 
 echo "<pre>";
-print_r((new ScalingSquaredStrings)->scale("CG\nla", 2, 3));
+print_r((new ScalingSquaredStrings)->scale("CG\nla", 3, 3));
 echo "</pre>";
