@@ -36,5 +36,5 @@ class ScalingSquaredStrings
 //echo "</pre>";
 
 
-echo(new ScalingSquaredStrings)->scale("CG\nla", 3, 8);
+//echo(new ScalingSquaredStrings)->scale("CG\nla", 3, 8);
 
