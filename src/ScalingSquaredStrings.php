@@ -6,7 +6,9 @@ class ScalingSquaredStrings
 {
     function scale($s, $k, $n)
     {
-
+//        return $s;
+        $s = preg_replace('/\n/', " ", $s);
+//        return $s;
 
         // use ($k) ????
         // Passing additional arguments to preg_replace_callback using PHP 5.2.6
@@ -22,7 +24,7 @@ class ScalingSquaredStrings
 
         return preg_replace_callback('/[a-zA-Z]+/',
             function ($matches) use ($n) {
-                return str_repeat(($matches[0]."\n"), $n);
+                return str_repeat(($matches[0] . "\n"), $n);
             },
             $yyy);
 
@@ -31,10 +33,10 @@ class ScalingSquaredStrings
 }
 
 
-//echo "<pre>";
-//print_r((new ScalingSquaredStrings)->scale("CG\nla", 3, 8));
-//echo "</pre>";
+echo "<pre>";
+print_r((new ScalingSquaredStrings)->scale("abcd\nefgh\nijkl\nmnop", 2, 3));
+echo "</pre>";
 
 
-//echo(new ScalingSquaredStrings)->scale("CG\nla", 3, 8);
+//echo(new ScalingSquaredStrings)->scale("abcd\nefgh\nijkl\nmnop", 2, 3);
 
