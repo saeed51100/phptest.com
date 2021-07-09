@@ -8,8 +8,6 @@ class ScalingSquaredStrings
     {
 
 
-//        return str_repeat($s,$k);
-
         // use ($k) ????
         // Passing additional arguments to preg_replace_callback using PHP 5.2.6
         //https://stackoverflow.com/questions/9550769/passing-additional-arguments-to-preg-replace-callback-using-php-5-2-6?noredirect=1&lq=1
@@ -18,10 +16,13 @@ class ScalingSquaredStrings
                 return str_repeat($matches[0], $k);
             },
             $s);
+//        return $s;
+//        return $yyy;
+
 
         return preg_replace_callback('/[a-zA-Z]+/',
             function ($matches) use ($n) {
-                return str_repeat($matches[0], $n);
+                return str_repeat(($matches[0]."\n"), $n);
             },
             $yyy);
 
@@ -30,6 +31,10 @@ class ScalingSquaredStrings
 }
 
 
-echo "<pre>";
-print_r((new ScalingSquaredStrings)->scale("CG\nla", 3, 8));
-echo "</pre>";
+//echo "<pre>";
+//print_r((new ScalingSquaredStrings)->scale("CG\nla", 3, 8));
+//echo "</pre>";
+
+
+echo(new ScalingSquaredStrings)->scale("CG\nla", 3, 8);
+
