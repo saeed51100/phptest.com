@@ -1,32 +1,59 @@
 <div dir="rtl">
-<h3>Highest and Lowest</h3>
-
-در این انتساب کوچک به شما رشته ای از اعداد فضا جدا شده داده شده و باید بالاترین و کمترین عدد را برگردانید.
+<h3>Scaling Squared Strings</h3>
+به شما رشته ای از n خط داده می شود که هر زیر رشته دارای n کاراکتر است. مثلا:
 <br>
+<div dir="ltr">
+s = "abcd\nefgh\nijkl\nmnop"
+</div>
+<br>
+مقیاس بندی "افقی" و "عمودی" این مربع رشته ها را مطالعه خواهیم کرد.
+<br>
+مقیاس بندی k- افقی یک رشته شامل تکرار k برابر هر کاراکتر رشته است (به جز '\ n').
+<br>
+مثال: مقیاس گذاری 2 افقی از s: => "aabbccdd \ neeffgghh \ niijjkkll \ nmmnnoopp"
+<br>
+مقیاس گذاری عمودی یک رشته شامل تکرار v در هر قسمت از رشته مربع است.
+<br>
+مثال: مقیاس گذاری 2 عمودی s: => "abcd \ nabcd \ nefgh \ nefgh \ nijkl \ nijkl \ nmnop \ nmnop"
+<br>
+مقیاس عملکرد (strng ، k ، v) مقیاس بندی افقی k و مقیاس عمودی V را انجام می دهد.
 <br>
 
 </div>
 <code>
     <pre>
-        Example:
+        Example: 
+            a = "abcd\nefgh\nijkl\nmnop"
+            scale(a, 2, 3) --> "aabbccdd\naabbccdd\naabbccdd\neeffgghh\neeffgghh\neeffgghh\niijjkkll\niijjkkll\niijjkkll\nmmnnoopp\nmmnnoopp\nmmnnoopp"
+    </pre>
+</code>
 <br>
-            highAndLow("1 2 3 4 5");  // return "5 1"
-            highAndLow("1 2 -3 4 5"); // return "5 -3"
-            highAndLow("1 9 3 4 -5"); // return "9 -5"
+<code>
+    <pre>
+abcd   ----->   aabbccdd
+efgh            aabbccdd
+ijkl            aabbccdd
+mnop            eeffgghh
+                eeffgghh
+                eeffgghh
+                iijjkkll
+                iijjkkll
+                iijjkkll
+                mmnnoopp
+                mmnnoopp
+                mmnnoopp
     </pre>
 </code>
 <div dir="rtl">
 یادداشت:
 <br>
-همه اعداد معتبر Int32 هستند ، نیازی به اعتبارسنجی آنها نیست.
+وظیفه: مقیاس تابع را بنویسید (strng ، k ، v) k و v عدد صحیح مثبت خواهند بود. اگر strng == "" بازگشت "".
 
 <br>
-همیشه حداقل یک عدد در رشته ورودی وجود دارد.
 
 <br>
-رشته خروجی باید دو عدد باشد که با یک فضای واحد از هم جدا شده اند و بالاترین عدد اول است.
 </div>
 
 <br>
 <br>
-https://www.codewars.com/kata/554b4ac871d6813a03000035/php
+https://www.codewars.com/kata/56ed20a2c4e5d69155000301/php

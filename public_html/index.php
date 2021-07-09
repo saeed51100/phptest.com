@@ -1,4 +1,4 @@
 <?php
-require '../src/HighestandLowest.php';
+require '../src/ScalingSquaredStrings.php';
 
 
