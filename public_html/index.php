@@ -1,4 +1,4 @@
 <?php
-require '../src/OddorEven.php';
+require '../src/Buildasquare.php';
 
 
