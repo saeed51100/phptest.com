@@ -1,4 +1,4 @@
 <?php
-require '../src/FindtheSquares.php';
+require '../src/OddorEven.php';
 
 
