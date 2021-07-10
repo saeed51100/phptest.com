@@ -22,7 +22,7 @@ class MyTestCases extends TestCase
     {
         $a = "abcd\nefgh\nijkl\nmnop";
         $r = "aabbccdd\naabbccdd\naabbccdd\neeffgghh\neeffgghh\neeffgghh\niijjkkll\niijjkkll\niijjkkll\nmmnnoopp\nmmnnoopp\nmmnnoopp";
-//        $this->revTest($this->ScalingSquaredStrings->scale($a, 2, 3), $r);
+        $this->revTest($this->ScalingSquaredStrings->scale($a, 2, 3), $r);
 
         $this->revTest($this->ScalingSquaredStrings->scale("CG\nla", 2, 3), "CCGG\nCCGG\nCCGG\nllaa\nllaa\nllaa");
     }
