@@ -4,10 +4,19 @@ namespace saeed;
 
 class OddorEven
 {
-    function odd_or_even(array $a): string {
-        // Your code here
-        return  8;
-    }}
+    function odd_or_even(array $a): string
+    {
+        // My solution:
+        // https://stackoverflow.com/questions/7959247/test-if-number-is-odd-or-even
+        if (array_sum($a) % 2 == 0 || $a == 0)
+            return "even";
+        else return "odd";
+
+
+        // Codewars solution:
+        // return array_sum($a) % 2 ? 'odd' : 'even';
+    }
+}
 
 
 echo "<pre>";
