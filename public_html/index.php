@@ -1,4 +1,4 @@
 <?php
-require '../src/ScalingSquaredStrings.php';
+require '../src/FindtheSquares.php';
 
 
