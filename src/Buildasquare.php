@@ -16,8 +16,11 @@ class Buildasquare
             $ar2[$x] = (implode($ar1)) . "\n";
 
         }
-        return implode($ar2);
+        $a = implode($ar2);
 
+        // Remove trailing newline.
+        // https://stackoverflow.com/questions/3530099/remove-trailing-newline
+        return preg_replace('/\n$/','',$a);
     }
 
 }
