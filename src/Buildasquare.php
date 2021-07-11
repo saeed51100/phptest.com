@@ -35,7 +35,7 @@ class Buildasquare
 
 
 echo "<pre>";
-print_r((new Buildasquare)->generateShape(4));
+print_r((new Buildasquare)->generateShape(15));
 echo "</pre>";
 
 
