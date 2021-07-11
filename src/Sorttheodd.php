@@ -18,7 +18,7 @@ echo "</pre>";
 
 
 
-//echo(new Sorttheodd)->generateShape(4);
+
 
 
 
