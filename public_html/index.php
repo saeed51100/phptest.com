@@ -1,4 +1,4 @@
 <?php
-require '../src/Buildasquare.php';
+require '../src/Findtheoddint.php';
 
 
