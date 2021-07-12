@@ -9,10 +9,10 @@ class Sorttheodd
     {
         foreach ($arr as $key => $val) {
             if ($val % 2) {
-                echo $key;
+                $arrodd[$key] = $arr[$val];
             }
         }
-
+return $arrodd;
     }
 }
 
