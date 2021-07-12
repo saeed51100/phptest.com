@@ -5,8 +5,9 @@ namespace saeed;
 class Sorttheodd
 {
 
-    function sortArray(array $arr) : array {
-        // Return a sorted array.
+    function sortArray(array $arr): array
+    {
+        foreach ($arr as $key => $value)
     }
 
 }
