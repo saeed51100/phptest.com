@@ -8,13 +8,18 @@ class Sorttheodd
     function sortArray(array $arr)
     {
         foreach ($arr as $key => $val) {
-//            if ($val % 2)
-            if ($val % 2 == 0) {
+
+            if ($val % 2 !== 0) {
                 $arrodd[$key] = $arr[$key];
-                //         return array_search($value, $y);
+//                         return array_search($value, $y);
             }
         }
-        return $arrodd;
+//        return $arrodd;
+
+
+        sort($arrodd);
+//        return $arrodd;
+        return $arrodd + $arr;
 
     }
 }
