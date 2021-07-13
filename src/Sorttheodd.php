@@ -17,20 +17,16 @@ class Sorttheodd
 //        return $arrodd;
 //        return $arreven;
 
-        $key1 = array_column($arrodd,'0');
-        return $key1;
 
         sort($arrodd);
-//        return $arrodd;
         foreach ($arrodd as $key => $val) {
 
-                $arrodd2[$key] = $arr[$key];
+                $arrodd2[$key] = $arr[$val];
 
 
         }
 
-        sort($arrodd);
-//        return $arrodd;
+        return $arrodd2;
 
 
 
