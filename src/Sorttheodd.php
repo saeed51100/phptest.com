@@ -17,8 +17,10 @@ class Sorttheodd
 //        return $arrodd;
 
 
-        sort($arrodd);
-//        return $arrodd;
+        sort($arrodd,5);
+        return $arrodd;
+        // Combine two arrays ---- array operators:
+        // https://stackoverflow.com/questions/6535444/combine-two-arrays
         return $arrodd + $arr;
 
     }
