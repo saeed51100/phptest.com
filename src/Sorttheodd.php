@@ -9,19 +9,36 @@ class Sorttheodd
     {
         foreach ($arr as $key => $val) {
 
-            if ($val % 2 !== 0) {
+            if ($val % 2 !== 0)
                 $arrodd[$key] = $arr[$key];
-//                         return array_search($value, $y);
-            }
+            else $arreven[$key] = $arr[$key];
+
         }
+//        return $arrodd;
+//        return $arreven;
+
+        $key1 = array_column($arrodd,'0');
+        return $key1;
+
+        sort($arrodd);
+//        return $arrodd;
+        foreach ($arrodd as $key => $val) {
+
+                $arrodd2[$key] = $arr[$key];
+
+
+        }
+
+        sort($arrodd);
 //        return $arrodd;
 
 
-        sort($arrodd,5);
-        return $arrodd;
+
+
+
         // Combine two arrays ---- array operators:
         // https://stackoverflow.com/questions/6535444/combine-two-arrays
-        return $arrodd + $arr;
+        return $arr + $arrodd;
 
     }
 }
