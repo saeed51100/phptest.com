@@ -18,10 +18,11 @@ class Sorttheodd
 //        return $arreven;
 
 
-        sort($arrodd);
+//        sort($arrodd);
+//        return $arrodd;
         foreach ($arrodd as $key => $val) {
-
-                $arrodd2[$key] = $arr[$val];
+            sort($arrodd);
+                $arrodd2[$key] = $arrodd[$key];
 
 
         }
