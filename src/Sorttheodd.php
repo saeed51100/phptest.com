@@ -8,44 +8,39 @@ class Sorttheodd
     function sortArray(array $arr)
     {
 
-        // Key unchanged:
-//        foreach ($arr as $key => $val) {
-//
-//            if ($val % 2 !== 0)
-//                $arrodd[$key] = $arr[$key];
-//            else $arreven[$key] = $arr[$key];
-//
-//        }
+        // Keep keys:
+        // foreach ($arr as $key => $val) {
 
-        // Key is reset:
+        //     if ($val % 2 !== 0)
+        //         $arrodd[$key] = $arr[$key];
+        //     else $arreven[$key] = $arr[$key];
+
+        // }
+
+        $even = $odd = array();
+        // Reset keys:
         foreach ($arr as $a) {
             if ($a % 2 == 0)
-                $arreven[] = $a;
+                $even[] = $a;
             else
-                $arrodd[] = $a;
-
-        }
-
-//        return $arrodd;
-        return $arreven;
-
-
-//        return $arrodd;
-
-
-        foreach ($arrodd as $key => $val) {
-            sort($arrodd);
-            $arrodd2[$key] = $arrodd[$key];
+                $odd[] = $a;
 
         }
 
 
-        return $arrodd;
+        sort($odd);
 
 
-        // Combine two arrays ---- array operators:
-        // https://stackoverflow.com/questions/6535444/combine-two-arrays
-        return $arr + $arrodd;
+        $newArr = [];
+        for ($i = 0; $i < count($arr); $i++) {
+            if ($arr[$i] % 2 == 0) {
+                $newArr[] = array_shift($even);
+            } else {
+                $newArr[] = array_shift($odd);
+            }
+        }
+        return $newArr;
+
 
     }
 }
