@@ -32,10 +32,34 @@ hor_mirror(s) => "mnop\nijkl\nefgh\nabcd"
 </code>
 </div>
 <br>
+وظیفه:
+<br>
 این دو عملکرد را بنویسید
+<h4>همچنین</h4>
+عملکرد عملکرد بالا (fct ، s) در کجا
+<br>
+fct عملکرد یک متغیر f برای اعمال بر روی رشته s است (fct یکی از vertMirror ، horMirror خواهد بود)
+<br>
+<div dir="ltr">
+        <code>
+            <pre>
+                Examples:
+                    s = "abcd\nefgh\nijkl\nmnop"
+                    oper(vert_mirror, s) => "dcba\nhgfe\nlkji\nponm"
+                    oper(hor_mirror, s) => "mnop\nijkl\nefgh\nabcd"
+            </pre>
+        </code>
+</div>
+<br>
+یادداشت:
+<br>
+فرم پارامتر fct در اپر با توجه به زبان تغییر می کند. شما می توانید هر فرم را با توجه به زبان در "نمونه تست ها" مشاهده کنید.
 <br>
 <br>
+یادداشت 2:
 <br>
+رشته های ورودی به جای \ n از یکدیگر جدا می شوند. رشته های خروجی باید به جای \ n با \ r جدا شوند. به "نمونه آزمایشات" مراجعه کنید.
+
 </div>
 
 https://www.codewars.com/kata/56dbe0e313c2f63be4000b25/php
