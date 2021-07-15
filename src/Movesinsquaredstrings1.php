@@ -12,10 +12,10 @@ class Movesinsquaredstrings1
 
     function horMirror($s)
     {
-        return implode(' ', array_reverse(explode(' ', strrev($s)))) ;
+        // How to explode a multi-line string?
+        // https://stackoverflow.com/questions/6162912/how-to-explode-a-multi-line-string
+        return implode("\n", array_reverse(explode("\n", strrev($s)))) ;
 
-//        return  strrev($s) ;
-//        return  ($s) ;
     }
 
     function oper($fct, $s)
