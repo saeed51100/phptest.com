@@ -11,6 +11,8 @@ s = "abcd\nefgh\nijkl\nmnop"
 <br>
 برخی از تحولات این مربع رشته ها را مطالعه خواهیم کرد.
 <br>
+<br>
+<br>
 <div dir="ltr">
 Vertical mirror: vert_mirror (or vertMirror or vert-mirror)
 <br>
@@ -19,6 +21,7 @@ vert_mirror(s) => "dcba\nhgfe\nlkji\nponm"
 Horizontal mirror: hor_mirror (or horMirror or hor-mirror)
 <br>
 hor_mirror(s) => "mnop\nijkl\nefgh\nabcd"
+<br>
 <br>
 <code>
     <pre>
