@@ -7,25 +7,27 @@ class Movesinsquaredstrings1
 
     function vertMirror($s)
     {
-        // your code
+
     }
 
     function horMirror($s)
     {
-        // your code
+        return implode(' ', array_reverse(explode(' ', strrev($s)))) ;
+
+//        return  strrev($s) ;
+//        return  ($s) ;
     }
 
     function oper($fct, $s)
     {
-        // your code
-        return 9;
+        return $this->horMirror($s);
     }
 
 
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings1)->oper('vertMirror',"hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
+print_r((new Movesinsquaredstrings1)->oper('horMirror',"hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings1)->sortArray([5, 3, 2, 8, 1, 4]));
