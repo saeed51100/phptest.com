@@ -23,6 +23,7 @@ Horizontal mirror: hor_mirror (or horMirror or hor-mirror)
 hor_mirror(s) => "mnop\nijkl\nefgh\nabcd"
 <br>
 <br>
+<h3>
 <code>
     <pre>
         or printed:
@@ -33,6 +34,7 @@ hor_mirror(s) => "mnop\nijkl\nefgh\nabcd"
             mnop     ponm     |mnop     abcd
     </pre>
 </code>
+</h3>
 </div>
 <br>
 وظیفه:
@@ -44,14 +46,16 @@ hor_mirror(s) => "mnop\nijkl\nefgh\nabcd"
 fct عملکرد یک متغیر f برای اعمال بر روی رشته s است (fct یکی از vertMirror ، horMirror خواهد بود)
 <br>
 <div dir="ltr">
-        <code>
-            <pre>
-                Examples:
-                    s = "abcd\nefgh\nijkl\nmnop"
-                    oper(vert_mirror, s) => "dcba\nhgfe\nlkji\nponm"
-                    oper(hor_mirror, s) => "mnop\nijkl\nefgh\nabcd"
-            </pre>
-        </code>
+<h3>
+    <code>
+        <pre>
+        Examples:
+            s = "abcd\nefgh\nijkl\nmnop"
+            oper(vert_mirror, s) => "dcba\nhgfe\nlkji\nponm"
+            oper(hor_mirror, s) => "mnop\nijkl\nefgh\nabcd"
+        </pre>
+    </code>
+</h3>
 </div>
 <br>
 یادداشت:

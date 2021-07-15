@@ -25,7 +25,7 @@ class Movesinsquaredstrings1
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings1)->oper([5, 3, 2, 8, 1, 4]));
+print_r((new Movesinsquaredstrings1)->oper('vertMirror',"hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings1)->sortArray([5, 3, 2, 8, 1, 4]));
