@@ -1,20 +1,41 @@
 <div dir="rtl">
-<h3>Sort the odd</h3>
-به شما آرایه ای از اعداد داده می شود. شما باید اعداد فرد را به ترتیب صعودی مرتب کنید در حالی که اعداد زوج را در موقعیت اصلی خود بگذارید.
-<br>
+<h3>Moves in squared strings (I)</h3>
 
 <br>
-
-
+این کاتا اولین سکانس چهار نفره درباره "رشته های مربع" است.
+<br>
+به شما یک رشته n خط داده می شود که هر زیر رشته دارای n کاراکتر است: به عنوان مثال:
+<div dir="ltr">
+s = "abcd\nefgh\nijkl\nmnop"
 </div>
+<br>
+برخی از تحولات این مربع رشته ها را مطالعه خواهیم کرد.
+<br>
+<div dir="ltr">
+Vertical mirror: vert_mirror (or vertMirror or vert-mirror)
+<br>
+vert_mirror(s) => "dcba\nhgfe\nlkji\nponm"
+<br>
+Horizontal mirror: hor_mirror (or horMirror or hor-mirror)
+<br>
+hor_mirror(s) => "mnop\nijkl\nefgh\nabcd"
+<br>
 <code>
     <pre>
-        Examples
-            [7, 1]  =>  [1, 7]
-            [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4]
-            [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
+        or printed:
+            vertical mirror   |horizontal mirror   
+            abcd --> dcba     |abcd --> mnop
+            efgh     hgfe     |efgh     ijkl
+            ijkl     lkji     |ijkl     efgh
+            mnop     ponm     |mnop     abcd
     </pre>
 </code>
+</div>
+<br>
+این دو عملکرد را بنویسید
 <br>
 <br>
-https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/php
+<br>
+</div>
+
+https://www.codewars.com/kata/56dbe0e313c2f63be4000b25/php
