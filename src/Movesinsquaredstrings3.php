@@ -4,7 +4,7 @@ namespace saeed;
 
 use phpDocumentor\Reflection\Types\This;
 
-class Movesinsquaredstrings2
+class Movesinsquaredstrings3
 {
 
     function rot($s)
@@ -53,9 +53,9 @@ class Movesinsquaredstrings2
     // function oper($fct, $s)
     // {
     // if ($fct == 'horMirror')
-    //       return Movesinsquaredstrings2::horMirror($s);
+    //       return Movesinsquaredstrings3::horMirror($s);
     // else
-    //     return Movesinsquaredstrings2::vertMirror($s);
+    //     return Movesinsquaredstrings3::vertMirror($s);
     // }
 
 
@@ -69,10 +69,10 @@ class Movesinsquaredstrings2
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings2)->oper('rot', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
+print_r((new Movesinsquaredstrings3)->oper('rot', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
 echo "</pre>";
 
-//print_r((new Movesinsquaredstrings2)->sortArray([5, 3, 2, 8, 1, 4]));
+//print_r((new Movesinsquaredstrings3)->sortArray([5, 3, 2, 8, 1, 4]));
 
 
 

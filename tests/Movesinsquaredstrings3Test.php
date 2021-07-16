@@ -1,16 +1,16 @@
 <?php
 
-use saeed\Movesinsquaredstrings2;
+use saeed\Movesinsquaredstrings3;
 use PHPUnit\Framework\TestCase;
 
 
-class Movesinsquaredstrings2Test extends TestCase
+class Movesinsquaredstrings3Test extends TestCase
 {
     protected $Movesinsquaredstrings2;
 
     public function setUp(): void
     {
-        $this->Movesinsquaredstrings2 = new Movesinsquaredstrings2();
+        $this->Movesinsquaredstrings2 = new Movesinsquaredstrings3();
     }
 
     private function revTest($actual, $expected)
