@@ -5,18 +5,21 @@ namespace saeed;
 class Movesinsquaredstrings2
 {
 
-    function vertMirror($s)
+    function rot($s)
     {
         // How to explode a multi-line string?
         // https://stackoverflow.com/questions/6162912/how-to-explode-a-multi-line-string
-        return implode("\n", array_reverse(explode("\n", strrev($s))));
+        $aa = implode("\n", array_reverse(explode("\n", strrev($s))));
+        return implode("\n", array_reverse(explode("\n", $aa)));
+
 
     }
 
-    function horMirror($s)
+    function selfieAndRot($s)
     {
+        $s = "abcd";
+        return  strrev($s);
 
-        return implode("\n", array_reverse(explode("\n", $s)));
 
     }
 
@@ -24,10 +27,10 @@ class Movesinsquaredstrings2
     // My function1: ( Not working in Codewars )
     function oper($fct, $s)
     {
-        if ($fct == 'horMirror')
-            return $this->horMirror($s);
+        if ($fct == 'rot')
+            return $this->rot($s);
         else
-            return $this->vertMirror($s);
+            return $this->selfieAndRot($s);
     }
 
 
@@ -52,7 +55,7 @@ class Movesinsquaredstrings2
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings2)->oper('horMirror', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
+print_r((new Movesinsquaredstrings2)->oper('rot', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings2)->sortArray([5, 3, 2, 8, 1, 4]));
