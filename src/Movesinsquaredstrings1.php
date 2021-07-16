@@ -21,28 +21,32 @@ class Movesinsquaredstrings1
     }
 
 
-    // My function:
+    // My function1: ( Not working in Codewars )
+    function oper($fct, $s)
+    {
+        if ($fct == 'horMirror')
+            return $this->horMirror($s);
+        else
+            return $this->vertMirror($s);
+    }
+
+
+    // My function2: ( Not working in Codewars )
+    // https://stackoverflow.com/questions/32053694/php-how-to-solve-error-using-this-when-not-in-object-context
     // function oper($fct, $s)
     // {
-    //    if ($fct == 'horMirror')
-    //         return $this->horMirror($s);
-    //     else
-    //         return $this->vertMirror($s);
-
-
-    // My function:
-    // https://stackoverflow.com/questions/32053694/php-how-to-solve-error-using-this-when-not-in-object-context
     // if ($fct == 'horMirror')
     //       return Movesinsquaredstrings1::horMirror($s);
     // else
     //     return Movesinsquaredstrings1::vertMirror($s);
+    // }
 
 
     // Codewars function:
-    function oper($f, $s)
-    {
-        return $f($s);
-    }
+    // function oper($fct, $s)
+    // {
+    //     return $fct($s);
+    // }
 
 
 }
