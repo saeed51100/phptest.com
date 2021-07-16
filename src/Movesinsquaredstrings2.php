@@ -17,28 +17,41 @@ class Movesinsquaredstrings2
 
     }
 
-    function str2rev($w)
-    {
-        $t = str_split($w);
-        $u = array_slice($t, 2);
-        $v = array_reverse($u);
-        array_splice($t, 2, 2, $v);
-        return implode($t);
-    }
+//    function str2rev($w)
+//    {
+//        $t = str_split($w);
+//        $u = array_slice($t, 2);
+//        $v = array_reverse($u);
+//        array_splice($t, 2, 2, $v);
+//        return implode($t);
+//    }
 
     function selfieAndRot($s)
     {
-//        $s = "abcd";
-//        return strrev($s);
-//        return $this->str2rev($s);
 
-//        return implode("\n", array_reverse(explode("\n", strrev($s))));
-//        return $s;
+        $s = "abcd\nefgh\nijkl\nmnop";
+
 
         $z = explode("\n", ($s));
-        foreach ($z as $valuel){
+        $dots = str_repeat(".", count($z));
 
+
+        foreach ($z as $valuel) {
+            $zz[] = ($valuel . $dots);
         }
+        $half1 = implode("\n",$zz);
+
+        foreach ($z as $valuel) {
+            $zz[] = ($valuel . $dots);
+        }
+
+
+
+
+
+
+
+
 
     }
 
