@@ -2,7 +2,7 @@
 
 namespace saeed;
 
-class Movesinsquaredstrings1
+class Movesinsquaredstrings2
 {
 
     function vertMirror($s)
@@ -36,9 +36,9 @@ class Movesinsquaredstrings1
     // function oper($fct, $s)
     // {
     // if ($fct == 'horMirror')
-    //       return Movesinsquaredstrings1::horMirror($s);
+    //       return Movesinsquaredstrings2::horMirror($s);
     // else
-    //     return Movesinsquaredstrings1::vertMirror($s);
+    //     return Movesinsquaredstrings2::vertMirror($s);
     // }
 
 
@@ -52,10 +52,10 @@ class Movesinsquaredstrings1
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings1)->oper('horMirror', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
+print_r((new Movesinsquaredstrings2)->oper('horMirror', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
 echo "</pre>";
 
-//print_r((new Movesinsquaredstrings1)->sortArray([5, 3, 2, 8, 1, 4]));
+//print_r((new Movesinsquaredstrings2)->sortArray([5, 3, 2, 8, 1, 4]));
 
 
 
