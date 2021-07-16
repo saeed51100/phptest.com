@@ -9,49 +9,31 @@ class Movesinsquaredstrings2
 
     function rot($s)
     {
-        // How to explode a multi-line string?
-        // https://stackoverflow.com/questions/6162912/how-to-explode-a-multi-line-string
-        $aa = implode("\n", array_reverse(explode("\n", strrev($s))));
-        return implode("\n", array_reverse(explode("\n", $aa)));
+        // My function:
+        // return implode("\n", (explode("\n", strrev($s))));
 
-
+        // Codewars function:
+        return strrev($s);
     }
 
-//    function str2rev($w)
-//    {
-//        $t = str_split($w);
-//        $u = array_slice($t, 2);
-//        $v = array_reverse($u);
-//        array_splice($t, 2, 2, $v);
-//        return implode($t);
-//    }
 
     function selfieAndRot($s)
     {
-
-        $s = "abcd\nefgh\nijkl\nmnop";
-
 
         $z = explode("\n", ($s));
         $dots = str_repeat(".", count($z));
 
 
         foreach ($z as $valuel) {
-            $zz[] = ($valuel . $dots);
-        }
-        $half1 = implode("\n",$zz);
-
-        foreach ($z as $valuel) {
-            $zz[] = ($valuel . $dots);
+            $zz1[] = ($valuel . $dots);
         }
 
 
-
-
-
-
-
-
+        $aa = explode("\n", strrev($s));
+        foreach ($aa as $valuel) {
+            $zz2[] = ($dots . $valuel);
+        }
+        return implode("\n", $zz1) . "\n" . implode("\n", $zz2);
 
     }
 
@@ -87,7 +69,7 @@ class Movesinsquaredstrings2
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings2)->oper('selfieAndRot', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
+print_r((new Movesinsquaredstrings2)->oper('rot', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings2)->sortArray([5, 3, 2, 8, 1, 4]));
