@@ -24,11 +24,11 @@ class Movesinsquaredstrings1Test extends TestCase
         $this->revTest($this->Movesinsquaredstrings1->oper('vertMirror', "IzOTWE\nkkbeCM\nWuzZxM\nvDddJw\njiJyHF\nPVHfSx"), "EWTOzI\nMCebkk\nMxZzuW\nwJddDv\nFHyJij\nxSfHVP");
     }
 
-//    public function testOperHorizontalBasics()
-//    {
-//        $this->revTest($this->Movesinsquaredstrings1->oper('horMirror', "lVHt\nJVhv\nCSbg\nyeCt"), "yeCt\nCSbg\nJVhv\nlVHt");
-//        $this->revTest($this->Movesinsquaredstrings1->oper('horMirror', "njMK\ndbrZ\nLPKo\ncEYz"), "cEYz\nLPKo\ndbrZ\nnjMK");
-//    }
+    public function testOperHorizontalBasics()
+    {
+        $this->revTest($this->Movesinsquaredstrings1->oper('horMirror', "lVHt\nJVhv\nCSbg\nyeCt"), "yeCt\nCSbg\nJVhv\nlVHt");
+        $this->revTest($this->Movesinsquaredstrings1->oper('horMirror', "njMK\ndbrZ\nLPKo\ncEYz"), "cEYz\nLPKo\ndbrZ\nnjMK");
+    }
 }
 
 
