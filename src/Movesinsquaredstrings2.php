@@ -2,6 +2,8 @@
 
 namespace saeed;
 
+use phpDocumentor\Reflection\Types\This;
+
 class Movesinsquaredstrings2
 {
 
@@ -15,11 +17,28 @@ class Movesinsquaredstrings2
 
     }
 
+    function str2rev($w)
+    {
+        $t = str_split($w);
+        $u = array_slice($t, 2);
+        $v = array_reverse($u);
+        array_splice($t, 2, 2, $v);
+        return implode($t);
+    }
+
     function selfieAndRot($s)
     {
-        $s = "abcd";
-        return  strrev($s);
+//        $s = "abcd";
+//        return strrev($s);
+//        return $this->str2rev($s);
 
+//        return implode("\n", array_reverse(explode("\n", strrev($s))));
+//        return $s;
+
+        $z = explode("\n", ($s));
+        foreach ($z as $valuel){
+
+        }
 
     }
 
@@ -55,7 +74,7 @@ class Movesinsquaredstrings2
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings2)->oper('rot', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
+print_r((new Movesinsquaredstrings2)->oper('selfieAndRot', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings2)->sortArray([5, 3, 2, 8, 1, 4]));
