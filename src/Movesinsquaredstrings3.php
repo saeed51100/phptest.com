@@ -74,7 +74,7 @@ class Movesinsquaredstrings3
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings3)->oper('rot', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
+print_r((new Movesinsquaredstrings3)->oper('rot', "abcd\nefgh\nijkl\nmnop"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings3)->sortArray([5, 3, 2, 8, 1, 4]));
