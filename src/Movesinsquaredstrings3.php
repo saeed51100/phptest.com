@@ -13,7 +13,7 @@ class Movesinsquaredstrings3
         $a = explode("\n", $s);
         foreach ($a as $key => $value) {
             foreach ($a as $keya => $valuea) {
-                $zz1[$keya][$valuea] = $a[$key][$value];
+                $zz1[$key][$keya] = $a[$key][$value];
 
             }
         }
