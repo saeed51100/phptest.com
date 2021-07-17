@@ -17,7 +17,7 @@ class Movesinsquaredstrings3
 
             }
         }
-        return zz1($s);
+        return $zz1;
     }
 
 
