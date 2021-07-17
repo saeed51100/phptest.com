@@ -39,8 +39,14 @@ class Movesinsquaredstrings3
     function selfieAndDiag1($s)
     {
         $a = explode("\n", $s);
-        return $a;
+//        return $a[0];
 
+        $imp = explode("\n", $this->diag1Sym($s));
+        foreach ($a as $key => $value) {
+            $output2[$key] = $a[$key]."|".$imp[$key];
+        }
+
+        return implode("\n", $output2);
     }
 
     // My function1: ( Not working in Codewars )
@@ -76,7 +82,7 @@ class Movesinsquaredstrings3
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings3)->oper('selfieAndDiag1', "abcd\nefgh\nijkl\nmnop"));
+print_r((new Movesinsquaredstrings3)->oper('rot90Clock', "abcd\nefgh\nijkl\nmnop"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings3)->sortArray([5, 3, 2, 8, 1, 4]));

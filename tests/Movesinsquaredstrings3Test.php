@@ -6,30 +6,31 @@ use PHPUnit\Framework\TestCase;
 
 class Movesinsquaredstrings3Test extends TestCase
 {
-    protected $Movesinsquaredstrings2;
+    protected $Movesinsquaredstrings3;
 
     public function setUp(): void
     {
-        $this->Movesinsquaredstrings2 = new Movesinsquaredstrings3();
+        $this->Movesinsquaredstrings3 = new Movesinsquaredstrings3();
     }
 
-    private function revTest($actual, $expected)
-    {
+    private function revTest($actual, $expected) {
         $this->assertEquals($expected, $actual);
     }
-
-    public function testOperRotBasics()
-    {
-        $this->revTest($this->Movesinsquaredstrings2->oper("rot", "fijuoo\nCqYVct\nDrPmMJ\nerfpBA\nkWjFUG\nCVUfyL"), "LyfUVC\nGUFjWk\nABpfre\nJMmPrD\ntcVYqC\nooujif");
-        $this->revTest($this->Movesinsquaredstrings2->oper("rot", "rkKv\ncofM\nzXkh\nflCB"), "BClf\nhkXz\nMfoc\nvKkr");
+    public function testOperRot90ClockBasics() {
+        $this->revTest($this->Movesinsquaredstrings3->oper("rot90Clock", "rgavce\nvGcEKl\ndChZVW\nxNWgXR\niJBYDO\nSdmEKb"),
+            "Sixdvr\ndJNCGg\nmBWhca\nEYgZEv\nKDXVKc\nbORWle");
+        $this->revTest($this->Movesinsquaredstrings3->oper("rot90Clock", "EFAxSN\nXbJObC\nMrNVyg\nUKqDsE\nrYnAfU\nnNjADZ"),
+            "nrUMXE\nNYKrbF\njnqNJA\nAADVOx\nDfsybS\nZUEgCN");
     }
-
-    public function testOperSelfieRotBasics()
-    {
-        $this->revTest($this->Movesinsquaredstrings2->oper("selfieAndRot", "xZBV\njsbS\nJcpN\nfVnP"),
-            "xZBV....\njsbS....\nJcpN....\nfVnP....\n....PnVf\n....NpcJ\n....Sbsj\n....VBZx");
-        $this->revTest($this->Movesinsquaredstrings2->oper("selfieAndRot", "uLcq\nJkuL\nYirX\nnwMB"),
-            "uLcq....\nJkuL....\nYirX....\nnwMB....\n....BMwn\n....XriY\n....LukJ\n....qcLu");
+    public function testOperDiag1SymBasics() {
+        $this->revTest($this->Movesinsquaredstrings3->oper("diag1Sym", "wuUyPC\neNHWxw\nehifmi\ntBTlFI\nvWNpdv\nIFkGjZ"),
+            "weetvI\nuNhBWF\nUHiTNk\nyWflpG\nPxmFdj\nCwiIvZ");
+        $this->revTest($this->Movesinsquaredstrings3->oper("diag1Sym", "qAdPMX\nkRIQKU\nJeoroo\nNwVbtn\nAmQUqi\nVguxub"),
+            "qkJNAV\nARewmg\ndIoVQu\nPQrbUx\nMKotqu\nXUonib");
+    }
+    public function testOperSelfieAndDiagBasics() {
+        $this->revTest($this->Movesinsquaredstrings3->oper("selfieAndDiag1", "NJVGhr\nMObsvw\ntPhCtl\nsoEnhi\nrtQRLK\nzjliWg"),
+            "NJVGhr|NMtsrz\nMObsvw|JOPotj\ntPhCtl|VbhEQl\nsoEnhi|GsCnRi\nrtQRLK|hvthLW\nzjliWg|rwliKg");
     }
 }
 
