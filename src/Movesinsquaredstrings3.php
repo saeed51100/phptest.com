@@ -32,20 +32,7 @@ class Movesinsquaredstrings3
     function rot90Clock($s)
     {
 
-        $z = explode("\n", ($s));
-        $dots = str_repeat(".", count($z));
-
-
-        foreach ($z as $valuel) {
-            $zz1[] = ($valuel . $dots);
-        }
-
-
-        $aa = explode("\n", strrev($s));
-        foreach ($aa as $valuel) {
-            $zz2[] = ($dots . $valuel);
-        }
-        return implode("\n", $zz1) . "\n" . implode("\n", $zz2);
+        return strrev($s);
 
     }
 
