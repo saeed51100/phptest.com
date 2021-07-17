@@ -17,8 +17,15 @@ class Movesinsquaredstrings3
 
             }
         }
-//        return implode("\n", $zz1);
-        return $zz1;
+
+
+        foreach ($zz1 as $value) {
+            $output[] = implode('', $value);
+        }
+
+        return implode("\n", $output);
+
+
     }
 
 
@@ -81,7 +88,7 @@ class Movesinsquaredstrings3
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings3)->oper('diag1Sym', "abcd\nefgh\nijkl\nmnop"));
+print_r((new Movesinsquaredstrings3)->oper('rot90Clock', "abcd\nefgh\nijkl\nmnop"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings3)->sortArray([5, 3, 2, 8, 1, 4]));
