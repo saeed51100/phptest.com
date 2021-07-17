@@ -32,14 +32,15 @@ class Movesinsquaredstrings3
     function rot90Clock($s)
     {
 
-        return strrev($s);
+        return implode("\n", array_reverse(explode("\n", strrev($s))));
 
     }
 
     function selfieAndDiag1($s)
     {
-        // your code
-        return 9;
+        $a = explode("\n", $s);
+        return $a;
+
     }
 
     // My function1: ( Not working in Codewars )
@@ -75,7 +76,7 @@ class Movesinsquaredstrings3
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings3)->oper('rot90Clock', "abcd\nefgh\nijkl\nmnop"));
+print_r((new Movesinsquaredstrings3)->oper('selfieAndDiag1', "abcd\nefgh\nijkl\nmnop"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings3)->sortArray([5, 3, 2, 8, 1, 4]));
