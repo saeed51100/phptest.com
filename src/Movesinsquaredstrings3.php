@@ -7,7 +7,7 @@ use phpDocumentor\Reflection\Types\This;
 class Movesinsquaredstrings3
 {
 
-    function rot($s)
+    function diag1Sym($s)
     {
         // My function:
         // return implode("\n", (explode("\n", strrev($s))));
@@ -17,7 +17,7 @@ class Movesinsquaredstrings3
     }
 
 
-    function selfieAndRot($s)
+    function rot90Clock($s)
     {
 
         $z = explode("\n", ($s));
@@ -36,15 +36,20 @@ class Movesinsquaredstrings3
         return implode("\n", $zz1) . "\n" . implode("\n", $zz2);
 
     }
-
+    function selfieAndDiag1($s) {
+        // your code
+        return 9;
+    }
 
     // My function1: ( Not working in Codewars )
     function oper($fct, $s)
     {
-        if ($fct == 'rot')
-            return $this->rot($s);
+        if ($fct == 'diag1Sym')
+            return $this->diag1Sym($s);
+        elseif($fct == 'rot90Clock')
+            return $this->rot90Clock($s);
         else
-            return $this->selfieAndRot($s);
+            return $this->selfieAndDiag1($s);
     }
 
 
