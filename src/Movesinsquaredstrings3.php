@@ -9,11 +9,16 @@ class Movesinsquaredstrings3
 
     function diag1Sym($s)
     {
-        // My function:
-        // return implode("\n", (explode("\n", strrev($s))));
 
-        // Codewars function:
-        return strrev($s);
+        $a = explode("\n", $s);
+        foreach ($a as $key => $valuel) {
+            $zz1[$key] = $a[$key] ;
+            $zz1[$key] = $a[$key] ;
+            $zz1[$key] = $a[$key] ;
+            $zz1[$key] = $a[$key] ;
+        }
+
+//        return strrev($s);
     }
 
 
@@ -36,7 +41,9 @@ class Movesinsquaredstrings3
         return implode("\n", $zz1) . "\n" . implode("\n", $zz2);
 
     }
-    function selfieAndDiag1($s) {
+
+    function selfieAndDiag1($s)
+    {
         // your code
         return 9;
     }
@@ -46,7 +53,7 @@ class Movesinsquaredstrings3
     {
         if ($fct == 'diag1Sym')
             return $this->diag1Sym($s);
-        elseif($fct == 'rot90Clock')
+        elseif ($fct == 'rot90Clock')
             return $this->rot90Clock($s);
         else
             return $this->selfieAndDiag1($s);
@@ -74,7 +81,7 @@ class Movesinsquaredstrings3
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings3)->oper('rot', "abcd\nefgh\nijkl\nmnop"));
+print_r((new Movesinsquaredstrings3)->oper('diag1Sym', "abcd\nefgh\nijkl\nmnop"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings3)->sortArray([5, 3, 2, 8, 1, 4]));
