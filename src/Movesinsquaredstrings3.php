@@ -11,9 +11,9 @@ class Movesinsquaredstrings3
     {
 
         $a = explode("\n", $s);
-        foreach ($a as $key => $valuel) {
-            foreach ($a as $key => $valuel) {
-                $zz1[$key] = $a[$key];
+        foreach ($a as $key => $value) {
+            foreach ($a as $keya => $valuea) {
+                $zz1[$keya][$valuea] = $a[$key][$value];
 
             }
         }
