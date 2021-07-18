@@ -33,13 +33,12 @@ class Movesinsquaredstrings3
     {
         $s = $this->diag1Sym($s);
         return implode("\n", array_reverse(explode("\n", strrev($s))));
-
     }
+
 
     function selfieAndDiag1($s)
     {
         $a = explode("\n", $s);
-//        return $a[0];
 
         $imp = explode("\n", $this->diag1Sym($s));
         foreach ($a as $key => $value) {
@@ -49,34 +48,12 @@ class Movesinsquaredstrings3
         return implode("\n", $output2);
     }
 
-    // My function1: ( Not working in Codewars )
-    function oper($fct, $s)
-    {
-        if ($fct == 'diag1Sym')
-            return $this->diag1Sym($s);
-        elseif ($fct == 'rot90Clock')
-            return $this->rot90Clock($s);
-        else
-            return $this->selfieAndDiag1($s);
-    }
-
-
-    // My function2: ( Not working in Codewars )
-    // https://stackoverflow.com/questions/32053694/php-how-to-solve-error-using-this-when-not-in-object-context
-    // function oper($fct, $s)
-    // {
-    // if ($fct == 'horMirror')
-    //       return Movesinsquaredstrings3::horMirror($s);
-    // else
-    //     return Movesinsquaredstrings3::vertMirror($s);
-    // }
-
 
     // Codewars function:
-    // function oper($fct, $s)
-    // {
-    //     return $fct($s);
-    // }
+    function oper($fct, $s)
+    {
+        return $this->$fct($s);
+    }
 
 
 }
@@ -86,10 +63,5 @@ print_r((new Movesinsquaredstrings3)->oper('selfieAndDiag1', "abcd\nefgh\nijkl\n
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings3)->sortArray([5, 3, 2, 8, 1, 4]));
-
-
-
-
-
 
 
