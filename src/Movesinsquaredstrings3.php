@@ -49,14 +49,16 @@ class Movesinsquaredstrings3
     }
 
 
-    // Codewars function:
     function oper($fct, $s)
     {
         return $this->$fct($s);
+//        return Movesinsquaredstrings3::$fct($s);
     }
 
 
 }
+
+
 
 echo "<pre>";
 print_r((new Movesinsquaredstrings3)->oper('selfieAndDiag1', "abcd\nefgh\nijkl\nmnop"));
