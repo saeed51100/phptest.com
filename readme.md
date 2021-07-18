@@ -8,25 +8,25 @@ s = "abcd\nefgh\nijkl\nmnop"
 <br>
 برخی از تحولات این مربع رشته ها را مطالعه خواهیم کرد.
 <br>
-تقارن با توجه به مورب اصلی: diag_1_sym (یا diag1Sym یا diag-1-sym)
+تقارن با توجه به قطر اصلی: diag_2_sym (یا diag2Sym یا diag-2-sym)
 <br>
 
 <br>
 <div dir="ltr">
-diag_1_sym(s) => "aeim\nbfjn\ncgko\ndhlp"
+diag_2_sym(s) => "plhd\nokgc\nnjfb\nmiea"
 </div>
 <br>
-چرخش در جهت عقربه های ساعت 90 درجه: rot_90_clock (یا rot90Clock یا rot-90-clock)
+چرخش در خلاف جهت عقربه های ساعت 90 درجه: rot_90_ شمارنده (یا rot90 شمارشگر یا rot-90 شمارنده)
 <br>
 <div dir="ltr">
-rot_90_clock(s) => "miea\nnjfb\nokgc\nplhd"
+rot_90_counter(s)=> "dhlp\ncgko\nbfjn\naeim"
 </div>
 <br>
-selfie_and_diag1 (ها) (یا selfieAndDiag1 یا selfie-and-diag1) این رشته اولیه است + رشته ای که با توجه به قطر اصلی نسبت به مورب اصلی بدست می آید.
+selfie_diag2_counterclock (یا selfieDiag2Counterclock یا selfie-diag2-counterclock) این رشته اولیه است + رشته ای که با توجه به تقارن اصلی با قطر اصلی مورب + چرخش خلاف جهت عقربه های ساعت 90 درجه بدست می آید.
 <br>
 <div dir="ltr">
-s = "abcd\nefgh\nijkl\nmnop" -->
-"abcd|aeim\nefgh|bfjn\nijkl|cgko\nmnop|dhlp"
+s = "abcd\nefgh\nijkl\nmnop" --> 
+"abcd|plhd|dhlp\nefgh|okgc|cgko\nijkl|njfb|bfjn\nmnop|miea|aeim"
 </div>
 <br>
 </div>
@@ -36,22 +36,21 @@ s = "abcd\nefgh\nijkl\nmnop" -->
         <code>
             <pre>
     or printed for the last:
-                    selfie_and_diag1:
-                    abcd|aeim
-                    efgh|bfjn
-                    ijkl|cgko 
-                    mnop|dhlp
+                    selfie_diag2_counterclock
+                    abcd|plhd|dhlp
+                    efgh|okgc|cgko
+                    ijkl|njfb|bfjn
+                    mnop|miea|aeim
             </pre>
         </code>
 </div>
 </h3>
 <div dir="rtl">
 <br>
-توجه داشته باشید که تعداد نقاط طول معمول "abcd" ، "efgh" ، "ijkl" ، "mnop" است.
 <br>
 وظیفه:
 <br>
-این توابع را diag_1_sym ، rot_90_clock ، selfie_and_diag1 بنویسید
+این توابع را diag_2_sym ، rot_90_counter ، selfie_diag2_counterclock بنویسید
 <h4>همچنین</h4>
 عملکرد عملکرد بالا (fct ، s) در کجا
 <br>
@@ -65,9 +64,9 @@ fct عملکرد یک متغیر f برای اعمال بر روی رشته s ا
         <pre>
             Examples:
                 s = "abcd\nefgh\nijkl\nmnop"
-                oper(diag_1_sym, s) => "aeim\nbfjn\ncgko\ndhlp"
-                oper(rot_90_clock, s) => "miea\nnjfb\nokgc\nplhd"
-                oper(selfie_and_diag1, s) => "abcd|aeim\nefgh|bfjn\nijkl|cgko\nmnop|dhlp"
+                oper(diag_2_sym, s) => "plhd\nokgc\nnjfb\nmiea"
+                oper(rot_90_counter, s) => "dhlp\ncgko\nbfjn\naeim"
+                oper(selfie_diag2_counterclock, s) => "abcd|plhd|dhlp\nefgh|okgc|cgko\nijkl|njfb|bfjn\nmnop|miea|aeim"
         </pre>
     </code>
 </h3>
@@ -80,8 +79,8 @@ fct عملکرد یک متغیر f برای اعمال بر روی رشته s ا
 <br>
 به راحتی می توان این کاتاها را از شماره (I) به شماره (IV) برد
 <br>
-توجه داشته باشید Bash: رشته های خروجی به جای \ n باید با \ r جدا شوند. به "نمونه آزمایشات" مراجعه کنید.
+توجه داشته باشید Bash: رشته های خروجی باید به جای \ n با \ r جدا شوند. به "نمونه آزمایشات" مراجعه کنید.
 <br>
 <br>
 </div>
-https://www.codewars.com/kata/56dbeec613c2f63be4000be6/php
+https://www.codewars.com/kata/56dbf59b0a10feb08c000227/php

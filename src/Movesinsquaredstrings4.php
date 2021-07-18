@@ -4,7 +4,7 @@ namespace saeed;
 
 use phpDocumentor\Reflection\Types\This;
 
-class Movesinsquaredstrings3
+class Movesinsquaredstrings4
 {
 
     function diag1Sym($s)
@@ -52,7 +52,7 @@ class Movesinsquaredstrings3
     function oper($fct, $s)
     {
         return $this->$fct($s);
-//        return Movesinsquaredstrings3::$fct($s);
+//        return Movesinsquaredstrings4::$fct($s);
     }
 
 
@@ -61,9 +61,9 @@ class Movesinsquaredstrings3
 
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings3)->oper('selfieAndDiag1', "abcd\nefgh\nijkl\nmnop"));
+print_r((new Movesinsquaredstrings4)->oper('selfieAndDiag1', "abcd\nefgh\nijkl\nmnop"));
 echo "</pre>";
 
-//print_r((new Movesinsquaredstrings3)->sortArray([5, 3, 2, 8, 1, 4]));
+//print_r((new Movesinsquaredstrings4)->sortArray([5, 3, 2, 8, 1, 4]));
 
 

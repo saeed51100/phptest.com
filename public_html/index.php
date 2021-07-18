@@ -1,4 +1,4 @@
 <?php
-require '../src/Movesinsquaredstrings3.php';
+require '../src/Movesinsquaredstrings4.php';
 
 
