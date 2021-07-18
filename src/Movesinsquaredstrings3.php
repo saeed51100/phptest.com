@@ -31,7 +31,7 @@ class Movesinsquaredstrings3
 
     function rot90Clock($s)
     {
-
+        $s = $this->diag1Sym($s);
         return implode("\n", array_reverse(explode("\n", strrev($s))));
 
     }
@@ -43,7 +43,7 @@ class Movesinsquaredstrings3
 
         $imp = explode("\n", $this->diag1Sym($s));
         foreach ($a as $key => $value) {
-            $output2[$key] = $a[$key]."|".$imp[$key];
+            $output2[$key] = $a[$key] . "|" . $imp[$key];
         }
 
         return implode("\n", $output2);
@@ -82,7 +82,7 @@ class Movesinsquaredstrings3
 }
 
 echo "<pre>";
-print_r((new Movesinsquaredstrings3)->oper('rot90Clock', "abcd\nefgh\nijkl\nmnop"));
+print_r((new Movesinsquaredstrings3)->oper('selfieAndDiag1', "abcd\nefgh\nijkl\nmnop"));
 echo "</pre>";
 
 //print_r((new Movesinsquaredstrings3)->sortArray([5, 3, 2, 8, 1, 4]));
