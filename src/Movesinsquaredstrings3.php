@@ -1,8 +1,8 @@
 <?php
 
-namespace saeed;
+//namespace saeed;
 
-
+// Try functional programming:
 function diag1Sym($s)
 {
     $a = explode("\n", $s);
@@ -27,7 +27,7 @@ function diag1Sym($s)
 function rot90Clock($s)
 {
 //        return $s;
-        $s = diag1Sym($s);
+    $s = diag1Sym($s);
     return implode("\n", array_reverse(explode("\n", strrev($s))));
 }
 
@@ -49,6 +49,7 @@ function selfieAndDiag1($s)
 function oper($fct, $s)
 {
     return $fct($s);
+
 }
 
 //echo "<pre>";
@@ -57,7 +58,7 @@ function oper($fct, $s)
 
 
 echo "<pre>";
-print_r(oper('rot90Clock',"abcd\nefgh\nijkl\nmnop")) ;
+print_r(oper('selfieAndDiag1', "abcd\nefgh\nijkl\nmnop"));
 echo "</pre>";
 
 
