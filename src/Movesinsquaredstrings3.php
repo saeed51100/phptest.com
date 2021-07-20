@@ -1,6 +1,5 @@
 <?php
-
-//namespace saeed;
+//require '../tests/Movesinsquaredstrings3Test.php';
 
 // Try functional programming:
 function diag1Sym($s)
@@ -52,17 +51,10 @@ function oper($fct, $s)
 
 }
 
-//echo "<pre>";
-//print_r(rot90Clock("abcd\nefgh\nijkl\nmnop")) ;
-//echo "</pre>";
-
 
 echo "<pre>";
 print_r(oper('selfieAndDiag1', "abcd\nefgh\nijkl\nmnop"));
 echo "</pre>";
-
-
-
 
 
 
