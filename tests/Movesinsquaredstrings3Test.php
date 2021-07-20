@@ -15,7 +15,7 @@ class Movesinsquaredstrings3Test extends TestCase
 
     public function setUp(): void
     {
-        $this->assertTrue(true);
+        $this->Movesinsquaredstrings3 = new Movesinsquaredstrings3();
     }
 
     private function revTest($actual, $expected)
