@@ -1,15 +1,10 @@
 <?php
-namespace saeed;
 
 
-class Getchar
+function getchar($c)
 {
-
-    public function getchar($c)
-    {
-        return chr($c);
-    }
+    return chr($c);
 }
 
-echo (new Getchar)->getchar(75);
 
+echo getchar(75);

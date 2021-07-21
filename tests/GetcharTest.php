@@ -1,22 +1,24 @@
 <?php
 
-use saeed\Getchar;
 use PHPUnit\Framework\TestCase;
 
 
 class GetcharTest extends TestCase
 {
-    protected $Getchar;
 
     public function setUp(): void
     {
-        $this->Getchar = new Getchar();
+        if (isset($_POST['getChar'])) {
+            unset($_POST['getChar']);
+        }
     }
 
     public function testSampleTests()
     {
-
-        $this->assertEquals('A', $this->Getchar->getChar(65));
+        $_POST['getChar'] = 'bar';
+        ob_start();
+        include('../src/Getchar.php');
+        $this->assertEquals('A', getChar(65));
 
     }
 }
