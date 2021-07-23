@@ -1,12 +1,11 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
+//require '../src/Getchar.php';
 
 class GetcharTest extends TestCase
 {
 
-    private string $getChar;
 
     public function setUp(): void
     {
@@ -17,10 +16,7 @@ class GetcharTest extends TestCase
     public function testSampleTests()
     {
 
-        $_POST['getChar'] = 'A';
-        ob_start();
-        include '../src/Getchar.php';
-
+        require '../src/Getchar.php';
         $this->assertEquals('A', getChar(65));
 
     }
