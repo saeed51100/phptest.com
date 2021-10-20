@@ -1,3 +1,6 @@
+
+
+
 This command uses a small Docker container containing PHP and Composer to install the application's dependencies:
 
 docker run --rm \
