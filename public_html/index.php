@@ -1,4 +1,9 @@
 <?php
-require '../src/Getchar.php';
+
+function getchar($c)
+{
+    return chr($c);
+}
 
 
+echo chr(75);
