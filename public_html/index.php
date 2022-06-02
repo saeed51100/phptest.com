@@ -14,4 +14,4 @@ function periodIsLate($last, $today, $cycleLength)
 //print_r(periodIsLate("2017-07-13", "2017-07-11", 5));
 //echo "</pre>";
 
-echo(periodIsLate("2017-07-13", "2017-07-11", 1));
+echo(periodIsLate("2017-07-13", "2017-07-11", 4));
