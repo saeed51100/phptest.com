@@ -1,15 +1,9 @@
 <?php
 
-function remove(string $s): string
+function remove($s)
 {
-// I find this in stackoverflow ( Regular Expression ):
-// return preg_replace('/!+$/', '', $s);
-
-
-// Best Practices in codewars:
     return rtrim($s, '!');
 }
-
 
 echo (remove("!hello!!!!"));
 
