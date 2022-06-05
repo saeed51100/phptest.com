@@ -1,24 +1,20 @@
 <?php
 
-function periodIsLate($last, $today, $cycleLength)
+function remove(string $s): string
 {
-$aaa=date_create($today);
-$bbb=date_create($last);
+// I find this in stackoverflow ( Regular Expression ):
+// return preg_replace('/!+$/', '', $s);
 
-if ((date_diff($aaa, $bbb) ->days)>$cycleLength){
-    return 1;
+
+// Best Practices in codewars:
+    return rtrim($s, '!');
 }
 
 
-
-//    return ((date_diff(date_create($today), date_create($last))->days) > $cycleLength);
-
-
-}
+echo (remove("!hello!!!!"));
 
 
 //echo "<pre>",
 //print_r(periodIsLate("2017-07-13", "2017-07-11", 5));
 //echo "</pre>";
 
-echo(periodIsLate("2017-07-18", "2017-07-11", 10));
