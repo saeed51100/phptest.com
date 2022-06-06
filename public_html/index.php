@@ -1,14 +1,12 @@
 <?php
 
-function remove($s)
+function digitize($c)
 {
-    return rtrim($s, '!');
+    return array_reverse(str_split($c));
+
 }
 
-echo (remove("!hello!!!!"));
-
-
-//echo "<pre>",
-//print_r(periodIsLate("2017-07-13", "2017-07-11", 5));
-//echo "</pre>";
+echo "<pre>";
+print_r(digitize("68457"));
+echo "</pre>";
 
