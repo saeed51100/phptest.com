@@ -1,12 +1,16 @@
 <?php
 
-function digitize($c)
+function summation($c)
 {
-    return array_reverse(str_split($c));
+//     I find this in internet:
+     return ($c * ($c + 1) / 2);
 
+//    return array_sum(range(1, $c));
 }
 
-echo "<pre>";
-print_r(digitize("68457"));
-echo "</pre>";
+
+
+
+echo summation(80);
+
 
