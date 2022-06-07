@@ -11,6 +11,6 @@ function summation($c)
 
 
 
-echo summation(80);
+echo summation(8);
 
 
