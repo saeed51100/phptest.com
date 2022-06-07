@@ -21,5 +21,5 @@ function quarterOf($month)
 
 }
 
-echo (new Quarteroftheyear)->quarterOf(7);
+echo quarterOf(7);
 
