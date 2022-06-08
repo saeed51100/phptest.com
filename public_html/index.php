@@ -1,23 +1,31 @@
 <?php
 
-function basicOp($op, $val1, $val2)
+
+function countBy($x, $n)
 {
-    switch ($op) {
-        case "+":
-            return $val1 + $val2;
-        case "-":
-            return $val1 - $val2;
-        case "*":
-            return $val1 * $val2;
-        case "/":
-            return $val1 / $val2;
-        default:
-            return "no match operator";
+    // My solution:
+    for ($i = 0; $i < $n; $i++) {
+
+        $result[$i] = ($i + 1) * $x;
     }
+    return $result;
+
+
+    // Codewars solution1:
+    // return range($x, $n * $x, $x);
+
+
+    // Codewars solution2:
+    // $result = [$x];
+    // for ($i = 1; $i < $n; $i++) {
+    //     array_push($result, $x * ($i + 1));
+    // }
+    // return $result;
+
+
 }
 
-echo basicOp('/', 4, 7);
 
-
-
-
+echo "<pre>";
+print_r(countBy(2, 5));
+echo "</pre>";
