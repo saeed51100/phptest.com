@@ -1,31 +1,9 @@
 <?php
 
 
-function countBy($x, $n)
+function reverse($c): string
 {
-    // My solution:
-    for ($i = 0; $i < $n; $i++) {
-
-        $result[$i] = ($i + 1) * $x;
-    }
-    return $result;
-
-
-    // Codewars solution1:
-    // return range($x, $n * $x, $x);
-
-
-    // Codewars solution2:
-    // $result = [$x];
-    // for ($i = 1; $i < $n; $i++) {
-    //     array_push($result, $x * ($i + 1));
-    // }
-    // return $result;
-
-
+   return implode(' ', array_reverse(explode(' ', strrev($c)))) ;
 }
 
-
-echo "<pre>";
-print_r(countBy(2, 5));
-echo "</pre>";
+echo reverse("ehT kciuq nworb xof spmuj revo eht yzal .god");
