@@ -1,12 +1,28 @@
 <?php
 
 
-function overTheRoad($address, $street)
 {
-    return $street * 2 - $address + 1;
+    // My solution:
+    // function solution($str, $ending)
+    // {
+
+    // How can I get the last 7 characters of a PHP string?
+    // https://stackoverflow.com/questions/10542310/how-can-i-get-the-last-7-characters-of-a-php-string
+    // if ((substr($str, -strlen($ending)) == $ending) || $ending == "")
+    //    return true;
+    // }
+
+
+    // Codewars solution:
+    function solution($str, $ending): bool
+    {
+        return substr($str, -strlen($ending), strlen($ending)) == $ending;
+    }
+
+
 }
 
 
 echo "<pre>";
-print_r(overTheRoad(5, 6));
+print_r(solution("samurai", "ai"));
 echo "</pre>";
