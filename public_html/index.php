@@ -1,27 +1,22 @@
 <?php
 
-function DNA_strand($dna)
+function highAndLow($numbers)
 {
-
-//    $ar1 = str_split($dna);
-//    for ($x = 0; $x < strlen($dna); $x++) {
-//        if ($ar1[$x] == "A") $ar1[$x] = "T";
-//        elseif ($ar1[$x] == "T") $ar1[$x] = "A";
-//        elseif ($ar1[$x] == "C") $ar1[$x] = "G";
-//        elseif ($ar1[$x] == "G") $ar1[$x] = "C";
-//    }
-//
-//    return implode($ar1);
+//     My solution:
+     $ar1 = explode(" ", $numbers);
+     sort($ar1);
+     foreach ($ar1 as $key => $val) {
+         $ar1[$key] = $val;
+     }
+     return $ar1[count($ar1) - 1] . " " . $ar1[0];
 
 
-//     Codewars solution1:
-//    return strtr($dna, ['A' => 'T', 'T' => 'A', 'C' => 'G', 'G' => 'C']);
-
-
-    // Codewars solution2:
-    return strtr($dna, 'ACGT', 'TGCA');
+    // Codewars solution:
+//    $a = explode(' ', $numbers);
+//    return max($a) . " " . min($a);
 
 
 }
 
-echo(DNA_strand("ACTA"));
+
+echo (highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
