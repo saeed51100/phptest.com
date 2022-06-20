@@ -1,22 +1,30 @@
 <?php
 
-function highAndLow($numbers)
-{
-
-//    $ar1 = explode(" ", $numbers);
-//    sort($ar1);
-//    foreach ($ar1 as $key => $val) {
-//        $ar1[$key] = $val;
-//    }
-//    return $ar1[count($ar1) - 1] . " " . $ar1[0];
 
 
-    // Codewars solution:
-    $a = explode(' ', $numbers);
-    return max($a) . " " . min($a);
+    function spinWords(string $str)
+    {
+
+        // preg_replace example:
+        // return preg_replace('/(\b\w{5,}\b)+/i', "1111111", $str);
+
+
+        // preg_replace_callback example: (My solution)
+        // return preg_replace_callback('/(\b\w{5,}\b)+/i',
+        //     function ($match) {
+        //         return strrev($match[0]);
+        //     }, $str);
+
+
+        // codewars solution:
+        return preg_replace_callback('/\w{5,}/', function ($matches) {
+            return strrev($matches[0]);
+        }, $str);
+
+
 
 
 }
 
+echo spinWords(" is currently unable to handle this request.");
 
-echo(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
