@@ -1,30 +1,36 @@
 <?php
 
 
-
-    function spinWords(string $str)
+    function findIt(array $seq)
     {
-
-        // preg_replace example:
-        // return preg_replace('/(\b\w{5,}\b)+/i', "1111111", $str);
-
-
-        // preg_replace_callback example: (My solution)
-        // return preg_replace_callback('/(\b\w{5,}\b)+/i',
-        //     function ($match) {
-        //         return strrev($match[0]);
-        //     }, $str);
+        // My solution:
+        // $y = array_count_values($seq);
+        // foreach ($y as $value) {
+        //     if ($value % 2 !== 0)
+        //         return array_search($value, $y);
+        // }
 
 
-        // codewars solution:
-        return preg_replace_callback('/\w{5,}/', function ($matches) {
-            return strrev($matches[0]);
-        }, $str);
+        // Codewars solution:
+        $nums = array_count_values($seq);
+        foreach ($nums as $key => $val) {
+            if ($val % 2) {
+                return $key;
+            }
+        }
+
+
+    }
+
+
+echo "<pre>";
+echo print_r(findIt([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5]));
+echo "</pre>";
 
 
 
+//echo(new Findtheoddint)->generateShape(4);
 
-}
 
-echo spinWords(" is currently unable to handle this request.");
+
 
