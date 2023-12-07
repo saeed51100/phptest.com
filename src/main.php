@@ -1,6 +1,7 @@
 <?php
 
-print_r(date_diff(date_create("2017-07-18"), date_create("2017-07-11")));
+$str = "Hello world. It's a beautiful day.";
+print_r (explode(" ",$str));
 
 
 
