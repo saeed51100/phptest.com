@@ -1,2030 +1,302 @@
-<!-- wp:spacer {"height":"40px"} -->
-<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<p dir="rtl" style="text-align: justify;">      برای اجرای برنامه های php نیاز به یک سرور داریم که روی آن php و پایگاه داده روی آن به درستی نصب و پیکربندی شده است. سرور هم همانطور که می دانید مجموعه ای از سخت افزار و نرم افزار شامل سیستم عامل است که وظیفه آن میزبانی سایت ها است.</p>
+<p dir="rtl" style="text-align: justify;">      خب. اگر برای مقاصد تمرینی و یا آزمایشی بخواهیم php ران کنیم ، پرداخت هزینه و زمان برای سرور واقعی منطقی نیست. از این رو نرم افزارهایی ساخته شده است که یک سرور مجازی را روی کامپیوتر شما شبیه سازی می کنند. یکی از معروف ترین این برنامه ها استک <strong><span class="colored-text">LAMP </span></strong>است.</p>
+<p dir="rtl" style="text-align: justify;"><strong><span class="colored-text">LAMP</span> </strong>چیست؟ پشته "LAMP" گروهی از نرم‌افزارهای منبع باز است که معمولاً با هم نصب می‌شوند تا سرور را قادر به میزبانی وب‌سایت‌های پویا و برنامه‌های وب نوشته شده به زبان PHP کند. این پشته شامل برنامه های زیر می باشد:</p>
+<p dir="rtl"><strong><span class="colored-text">L</span></strong>inux : نام سیستم عامل متن باز ، رایگان و مورد علاقه برنامه نویسان است.</p>
+<p dir="rtl"><strong><span class="colored-text">A</span></strong>pache : یکی از معروف ترین وب سرورهای لینوکس است.</p>
+<p dir="rtl"><strong><span class="colored-text">M</span></strong>ysql : یک سیستم مدیریت پایگاه داده می باشد.</p>
+<p dir="rtl"><strong><span class="colored-text">P</span></strong>HP : یک زبان برنامه نویسی سمت سرور است. ( ممکن است با زبان Perl یا Python جایگزین شود. )</p>
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":3} -->
+<h3 class="wp-block-heading has-text-align-right"><span class="tadv-color" style="color: #0693e3;">مراحل نصب LAMP :</span></h3>
+<!-- /wp:heading -->
+
+<!-- wp:spacer {"height":"58px"} -->
+<div class="wp-block-spacer" style="height: 58px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۱) ابتدا با دو دستور زیر پکیج های اوبونتو را به روز رسانی می کنیم:</span></h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo apt update
+sudo apt upgrade</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۲) سپس با دستور زیر apache را نصب می کنیم. در هنگام نصب از شما تاییدیه نصب سؤال می شود که با Y پاسخ دهید.</span></h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo apt install apache2</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"53px"} -->
+<div class="wp-block-spacer" style="height: 53px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+<p dir="rtl" style="text-align: justify;">برای اطمینان از درست نصب شدن آپاچی در مرورگر خود تایپ کنید <strong><span class="colored-text">localhost</span> </strong>یا <strong><span class="colored-text">http://127.0.0.1</span></strong> باید صفحه ای مانند این ببینید:</p>
+<!-- wp:image {"align":"center","id":6731,"sizeSlug":"full","linkDestination":"none"} -->
+<div style="display: flex; justify-content: center;">
+<div style="width: 600px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/apache.png" alt="apache" /></div>
+</div>
+<!-- /wp:image -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
 <h4 class="wp-block-heading has-text-align-right">
-<span class="colored-text">۲۱. این اولین تمرین از چهارگانهء «رشته‌های مربع» است.</span>
-</h4>
+<span class="colored-text">۳) نصب MySQL :</span></h4>
 <!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"56px"} -->
-<div style="height:56px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">به شما یک رشته از n خط داده می شود که هر زیر رشته دارای n کاراکتر است: به
-    عنوان مثال:
-</div>
+<div dir="rtl" style="text-align: justify;">اکنون که یک وب سرور دارید، باید سیستم پایگاه داده را نصب کنید تا بتوانید داده ها را برای سایت خود ذخیره و مدیریت کنید. <strong><span class="colored-text">MySQL</span> </strong>یک سیستم مدیریت پایگاه داده محبوب است که در محیط های PHP استفاده می شود.</div>
+<p dir="rtl">با دستور زیر MySQL را نصب کنید:</p>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo apt install mysql-server</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">وقتی از شما خواسته شد، نصب را با تایپ <strong><span class="colored-text">Y </span></strong>و سپس ENTER تأیید کنید.</div>
+<div dir="rtl"> </div>
 <div dir="rtl">
-    <p dir="ltr">
-    &nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;
-    </p>
-    <div>ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
-    <div><strong><span class="colored-text">n\</span></strong> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
+<div>در انتها تست کنید که آیا می‌توانید با تایپ کردن به کنسول MySQL وارد شوید:</div>
 </div>
-<div>&nbsp;</div>
-<ul>
-    <li dir="rtl" style="text-align: right;">آینه عمودی: <strong><span class="colored-text">vert_mirror</span>
-    </strong>(یا vertMirror یا vert-mirror)
-    </li>
-</ul>
-
 <!-- wp:html -->
-<pre style="direction:ltr">vert_mirror(s) =&gt; "dcba\nhgfe\nlkji\nponm"</pre>
+<pre style="direction: ltr;">sudo mysql</pre>
 <!-- /wp:html -->
-
-<!-- wp:spacer {"height":"75px"} -->
-<div style="height:75px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: justify;">آینه افقی: <strong><span class="colored-text">hor_mirror</span>
-    </strong>(یا horizontal mirror یا hor-mirror)
-    </li>
-</ul>
-
+<div dir="rtl" style="text-align: justify;">شما باید خروجی را مانند این ببینید:</div>
+<!-- wp:image {"align":"center","id":6751,"width":"682px","height":"360px","sizeSlug":"full","linkDestination":"none"} -->
+<div style="display: flex; justify-content: center;">
+<div style="width: 650px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/mysql.png" alt="mysql" /></div>
+</div>
+<!-- /wp:image -->
+<div style="text-align: right;">برای خروج از MySQL :</div>
 <!-- wp:html -->
-<pre style="direction:ltr"> hor_mirror(s) =&gt; "mnop\nijkl\nefgh\nabcd"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"71px"} -->
-<div style="height:71px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>یا چاپ شده:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">
-    vertical mirror |horizontal mirror
-    abcd --&gt; dcba   |abcd --&gt; mnop
-    efgh hgfe       |efgh ijkl
-    ijkl lkji       |ijkl efgh
-    mnop ponm       |mnop abcd
-</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: right;"><strong>وظیفه:</strong></p>
-<ol class="farsi-number">
-    <li dir="rtl" style="text-align: right;">دو تابع <strong><span class="colored-text">vert_mirror</span></strong> و
-        <strong><span class="colored-text">hor_mirror</span></strong> را بنویسید.
-    </li>
-    <li dir="rtl" style="text-align: right;">تابع دست بالای <strong><span
-            class="colored-text">oper(fct, s)</span></strong> را بنویسید. در این تابع پارامتر fct مشخص می کند
-        که
-        کدامیک از دو تابع vert_mirror و hor_mirror باید روی رشته اعمال شود.
-    </li>
-</ol>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">s = "abcd\nefgh\nijkl\nmnop"
-oper(vert_mirror, s) =&gt; "dcba\nhgfe\nlkji\nponm"
-oper(hor_mirror, s) =&gt; "mnop\nijkl\nefgh\nabcd"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function vertMirror($s)
-{
-    // How to explode a multi-line string?
-    // https://stackoverflow.com/questions/6162912/how-to-explode-a-multi-line-string
-    return implode("\n", array_reverse(explode("\n", strrev($s))));
-}
-function horMirror($s)
-{
-    return implode("\n", array_reverse(explode("\n", $s)));
-}
-function oper($fct, $s)
-{
-    if ($fct == 'horMirror')
-        return horMirror($s);
-    else
-        return vertMirror($s);
-}
-
-  print_r(oper('horMirror', "abcd\nefgh\nijkl\nmnop\n"));
-</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction: ltr; white-space: pre-wrap;"><code>
-    mnop
-    ijkl
-    efgh
-    abcd
-        </code></p>
-    </div>
+<div style="display: flex; justify-content: center;">
+<div style="width: 650px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/exit.png" alt="exit" /></div>
 </div>
 <!-- /wp:html -->
 
 <!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">توابع
-
-        <strong><span class="colored-text">()implode</span></strong>
-        &nbsp;و
-
-        <strong><span class="colored-text">()explode</span></strong> و
-        <strong><span class="colored-text">()array_reverse </span></strong>در تمرینات قبلی معرفی شدند.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۲۲. <span
-        class="colored-text">این دومین تمرین از چهارگانهء «رشته‌های مربع» است</span>.</span></h4>
+<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۴) نصب PHP :</span></h4>
 <!-- /wp:heading -->
+<p dir="rtl" style="text-align: justify;">      شما Apache را برای ارائه محتوای خود و MySQL را برای ذخیره و مدیریت داده های خود نصب کرده اید. حالا نوبت به نصب PHP است که کد را برای نمایش محتوای پویا به کاربر نهایی پردازش می کند. علاوه بر بسته php، به <strong><span class="colored-text">php-mysql</span></strong> نیاز دارید، که یک ماژول PHP است که به PHP اجازه می دهد با پایگاه های داده مبتنی بر MySQL ارتباط برقرار کند. شما همچنین به <strong><span class="colored-text">libapache2-mod-php</span></strong> نیاز دارید تا Apache را برای مدیریت فایل های PHP فعال کند. بسته های اصلی PHP به طور خودکار به عنوان وابستگی نصب می شوند.</p>
+<p dir="rtl"><strong>کدام ورژن PHP را نصب کنیم؟</strong></p>
+<p dir="rtl" style="text-align: justify;">      هدف از نصب LAMP و PHP آماده سازی یک محیط توسعه برای اجرای لاراول یا وردپرس یا . . . است. از آنجایی که اپلیکیشن هایی که با PHP ساخته شده اند مدتی طول می کشد تا توابع جدید PHP را ساپورت کنند، بهتر است از یک ورژن ماقبل جدید ترین ورژن PHP استفاده کنید تا مشکل عدم شناسایی توابع جدید PHP توسط اپلیکیشن تان به وجود نیاید. در زمان نوشتن این مقاله آخرین ورژن PHP ورژن 8.1 است و ما می توانیم ورژن 8.0 را نصب و استفاده کنیم.</p>
+<p dir="rtl">برای نصب PHP ورژن 8 باید ابتدا پکیجهای شخص ثالث زیر را نصب کنیم:</p>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo apt update
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:ondrej/php</pre>
+<!-- /wp:html -->
 
-<div dir="rtl" style="text-align: justify;">به شما یک رشته از n خط داده می شود که هر زیر رشته دارای n کاراکتر است: به
-    عنوان مثال:
+<!-- wp:spacer {"height":"44px"} -->
+<div class="wp-block-spacer" style="height: 44px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+<p dir="rtl" style="text-align: justify;">حالا نوبت نصب PHP و ماژول های آن است: ( به ورژن PHP توجه کنید )</p>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo apt install php8.0 libapache2-mod-php8.0 php8.0-mysql</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"42px"} -->
+<div class="wp-block-spacer" style="height: 42px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+<div dir="rtl" style="text-align: justify;">پس از اتمام نصب، می توانید دستور زیر را برای تایید نسخه PHP خود اجرا کنید:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">php -v</pre>
+<!-- /wp:html -->
+
+<!-- wp:image {"align":"center","id":6754,"width":"732px","height":"259px","sizeSlug":"full","linkDestination":"none"} -->
+<div style="display: flex; justify-content: center;">
+<div style="width: 650px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/php-v.png" alt="php-v.png" /></div>
 </div>
-<p dir="ltr" style="text-align: left;">
-&nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;
-</p>
-<div dir="rtl" style="text-align: justify;">ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
-<div dir="rtl"><strong><span class="colored-text">n\</span></strong> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">&nbsp;</div>
-
-<ul>
-    <li dir="rtl" style="text-align: justify;">چرخش ساعتگرد ۱۸۰ درجه: <strong><span
-            class="colored-text">rot</span></strong></li>
-</ul>
-
-
-<!-- wp:html -->
-<pre style="direction:ltr">rot(s) =&gt; "ponm\nlkji\nhgfe\ndcba"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"80px"} -->
-<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: right;">چرخش ساعتگرد ۱۸۰ درجه و نقاط پراکنده: <strong><span
-            class="colored-text">selfie_and_rot</span></strong>
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">selfie_and_rot(s) =&gt;
-"abcd....\nefgh....\nijkl....\nmnop....\n....ponm\n....lkji\n....hgfe\n....dcba"</pre>
-<!-- /wp:html -->
+<!-- /wp:image -->
 
 <!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl"><strong>یا چاپ شده:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">
-    |rotation          |selfie_and_rot
-    |abcd --&gt; ponm     |abcd --&gt; abcd....
-    |efgh     lkji     |efgh     efgh....
-    |ijkl     hgfe     |ijkl     ijkl....
-    |mnop     dcba     |mnop     mnop....
-                                 ....ponm
-                                 ....lkji
-                                 ....hgfe
-                                 ....dcba
-</pre>
-<!-- /wp:code -->
-
-<p dir="rtl" style="text-align: justify;">توجه داشته باشید که تعداد نقاط برابر با طول مشترک "abcd"، "efgh"، "ijkl"،
-    "mnop" است.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: right;"><strong>وظیفه:</strong></p>
-<ol class="farsi-number">
-    <li dir="rtl" style="text-align: right;">دو تابع <strong><span class="colored-text">rot</span></strong> و
-    <strong><span class="colored-text">selfie_and_rot</span></strong> را بنویسید.
-    </li>
-    <li dir="rtl" style="text-align: right;">تابع دست بالای <strong><span
-            class="colored-text">oper(fct, s)</span></strong> را بنویسید. در این تابع پارامتر fct مشخص می کند
-        که
-        کدامیک از دو تابع rot و selfie_and_rot باید روی رشته اعمال شود.
-    </li>
-</ol>
-
-<!-- wp:spacer {"height":"75px"} -->
-<div style="height:75px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">s = "abcd\nefgh\nijkl\nmnop"
-oper(rot, s) =&gt; "ponm\nlkji\nhgfe\ndcba"
-oper(selfie_and_rot, s) =&gt; "abcd....\nefgh....\nijkl....\nmnop....\n....ponm\n....lkji\n....hgfe\n....dcba"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function rot($s)
-{
-    return strrev($s);
-}
-function selfieAndRot($s)
-{
-    $z = explode("\n", ($s));
-    $dots = str_repeat(".", count($z));
-    foreach ($z as $valuel) {
-        $zz1[] = ($valuel . $dots);
-    }
-    $aa = explode("\n", strrev($s));
-    foreach ($aa as $valuel) {
-        $zz2[] = ($dots . $valuel);
-    }
-    return implode("\n", $zz1) . "\n" . implode("\n", $zz2);
-}
-function oper($fct, $s)
-{
-    if ($fct == 'rot')
-        return rot($s);
-    else
-        return selfieAndRot($s);
-}
-echo "&lt;pre&gt;";
-  print_r(oper('selfieAndRot', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">
-            hSgdHQ......
-            HnDMao......
-            ClNNxX......
-            iRvxxH......
-            bqTVvA......
-            wvSyRu......
-            ......uRySvw
-            ......AvVTqb
-            ......HxxvRi
-            ......XxNNlC
-            ......oaMDnH
-            ......QHdgSh</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"81px"} -->
-<div style="height:81px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">توابع
-        <strong><span class="colored-text">()implode</span></strong>&nbsp;و
-        <strong><span class="colored-text">()explode</span></strong> و
-        <strong><span class="colored-text">()strrev</span></strong> و
-        <strong><span class="colored-text">()str_repeat</span></strong>
-    و <strong><span class="colored-text">()count</span></strong> در تمرینات قبلی معرفی شدند.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4><span class="colored-text">۲۳. این سومین تمرین از چهارگانهء «رشته‌های مربع» است.</span>
-</h4>
+<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۵) ایجاد یک هاست مجازی برای وبسایت شما :</span></h4>
 <!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">به شما یک رشته از n خط داده می شود که هر زیر رشته دارای n کاراکتر است: به
-    عنوان مثال:
-</div>
-<div dir="rtl">
-    <p dir="ltr">
-    &nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;
-    </p>
-    <div>ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
-    <div><strong><span class="colored-text">n\</span></strong> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
-</div>
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-<div dir="rtl">
-    <ul>
-        <li>تقارن با توجه به قطر اصلی: <strong><span class="colored-text">diag_1_sym</span></strong> (یا diag1Sym یا
-            diag-1-sym)
-        </li>
-    </ul>
-</div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">diag_1_sym(s) =&gt; "aeim\nbfjn\ncgko\ndhlp"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"85px"} -->
-<div style="height:85px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: justify;">چر خش در جهت عقربه های ساعت 90 درجه: <strong><span
-            class="colored-text">rot_90_clock</span></strong>
-        (یا rot90Clock یا rot-90-clock)
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">rot_90_clock(s) =&gt; "miea\nnjfb\nokgc\nplhd"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"85px"} -->
-<div style="height:85px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: justify;">
-        <div><strong><span class="colored-text">selfie_and_diag1(s)</span></strong> (یا selfieAndDiag1 یا
-            selfie-and-diag1): این یک رشته اولیه + رشته است که با تقارن نسبت به قطر اصلی به دست می آید.
-        </div>
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">s = "abcd\nefgh\nijkl\nmnop" --&gt;
-"abcd|aeim\nefgh|bfjn\nijkl|cgko\nmnop|dhlp"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>یا چاپ شده:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">
-    selfie_and_diag1
-    abcd|aeim
-    efgh|bfjn
-    ijkl|cgko
-    mnop|dhlp</pre>
-<!-- /wp:code -->
-
-<p dir="rtl" style="text-align: justify;"><strong>وظیفه:</strong></p>
-<ul>
-    <li dir="rtl" style="text-align: justify;">این توابع را بنویسید: <strong><span
-            class="colored-text">diag_1_sym</span></strong> و <strong><span
-            class="colored-text">rot_90_clock</span></strong> و <strong><span class="colored-text">selfie_and_diag1</span></strong>
-    </li>
-    <li dir="rtl" style="text-align: right;">
-        <div>تابع مرتبه بالای <strong><span class="colored-text">oper(fct, s)</span></strong> را بنویسید.</div>
-    </li>
-    <li dir="rtl" style="text-align: right;">
-        <div style="text-align: justify;">fct تابع یک متغیر f برای اعمال به رشته s است (fct یکی از diag_1_sym،
-            rot_90_clock،
-            selfie_and_diag1 خواهد بود)
-        </div>
-    </li>
-</ul>
-<p dir="rtl">
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">   s = "abcd\nefgh\nijkl\nmnop"
-   oper(diag_1_sym, s) =&gt; "aeim\nbfjn\ncgko\ndhlp"
-   oper(rot_90_clock, s) =&gt; "miea\nnjfb\nokgc\nplhd"
-   oper(selfie_and_diag1, s) =&gt; "abcd|aeim\nefgh|bfjn\nijkl|cgko\nmnop|dhlp"</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function diag1Sym($s)
-{
-    $a = explode("\n", $s);
-    foreach ($a as $key =&gt; $value) {
-        foreach ($a as $keya =&gt; $valuea) {
-            $zz1[$key][$keya] = $a[$keya][$key];
-        }
-    }
-    foreach ($zz1 as $value) {
-        $output[] = implode('', $value);
-    }
-    return implode("\n", $output);
-}
-function rot90Clock($s)
-{
-    $s = diag1Sym($s);
-    return implode("\n", array_reverse(explode("\n", strrev($s))));
-}
-function selfieAndDiag1($s)
-{
-    $a = explode("\n", $s);
-    $imp = explode("\n", diag1Sym($s));
-    foreach ($a as $key =&gt; $value) {
-        $output2[$key] = $a[$key] . "|" . $imp[$key];
-    }
-    return implode("\n", $output2);
-}
-function oper($fct, $s)
-{
-    return $fct($s);
-}
-echo "&lt;pre&gt;";
-  print_r(oper('selfieAndDiag1', "abcd\nefgh\nijkl\nmnop"));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">
-            abcd|aeim
-            efgh|bfjn
-            ijkl|cgko
-            mnop|dhlp
-        </p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"77px"} -->
-<div style="height:77px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">توابع
-        <strong><span class="colored-text">()implode</span></strong>&nbsp;و
-        <strong><span class="colored-text">()explode</span></strong> و
-        <strong><span class="colored-text">()strrev</span></strong> و
-        <strong><span class="colored-text">()array_reverse</span></strong> و
-        <strong><span class="colored-text">()count</span></strong>
-    در تمرینات قبلی معرفی شدند.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4><span class="colored-text">۲۴. این چهارمین تمرین از چهارگانهء «رشته‌های مربع» است.</span>
-</h4>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">به شما یک رشته از n خط داده می شود که هر زیر رشته دارای n کاراکتر است: به
-    عنوان مثال:
-</div>
-<div dir="rtl">
-    <p dir="ltr">
-    &nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;
-    </p>
-    <div>ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
-    <div><strong><span class="colored-text">n\</span></strong> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
-    <div>&nbsp;</div>
-</div>
-<div>&nbsp;</div>
+<div dir="rtl" style="text-align: justify;">      هنگام استفاده از وب سرور آپاچی، می‌توانید یک هاست مجازی ایجاد کنید تا جزئیات پیکربندی را کپسوله کرده و بیش از یک دامنه را از یک سرور واحد میزبانی کنید. در این راهنما، دامنه ای به نام your_domain راه اندازی می کنیم، اما شما باید آن را با نام دامنه خود جایگزین کنید.</div>
+<div> </div>
 <div>
-    <ul>
-        <li dir="rtl" style="text-align: justify;">تقارن با توجه به مورب متقاطع اصلی: <strong><span
-                class="colored-text">diag_2_sym</span>
-        </strong>(یا diag2Sym یا diag-2-sym)
-        </li>
-    </ul>
+<div dir="rtl" style="text-align: justify;">      آپاچی در اوبونتو 20.04 دارای یک بلوک سرور است که به طور پیش فرض فعال شده است که برای ارائه اسناد از دایرکتوری /var/www/html پیکربندی شده است. ارائه یک سایت از این دایرکتوری خوب کار می کند اما اگر بخواهید چندین سایت را میزبانی کنید ، کار سخت می شود. به جای تغییر /var/www/html، یک ساختار دایرکتوری در /var/www برای سایت your_domain ایجاد می‌کنیم و در صورت عدم درخواست مشتری، /var/www/html را به عنوان دایرکتوری پیش‌فرض باقی می‌گذاریم تا با هر سایت دیگری مطابقت داشته باشد.</div>
+<div> </div>
+<div>
+<div dir="rtl" style="text-align: justify;">یک دایرکتوری برای your_domain به صورت زیر ایجاد کنید:</div>
 </div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">diag_2_sym(s) =&gt; "plhd\nokgc\nnjfb\nmiea"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: justify;">
-        <div>چرخش خلاف جهت عقربه های ساعت 90 درجه: <strong><span class="colored-text">rot_90_counter</span> </strong>(یا
-            rot90Counter یا rot-90-counter)
-        </div>
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">rot_90_counter(s)=&gt; "dhlp\ncgko\nbfjn\naeim"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: justify;"><strong><span
-            class="colored-text">selfie_diag2_counterclock</span></strong> (یا selfieDiag2Counterclock یا
-        selfie-diag2-counterclock) رشته اولیه + رشته است که با تقارن نسبت به مورب اصلی متقاطع + چرخش خلاف جهت عقربه های
-        ساعت
-        90 درجه به دست می آید.
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">s = "abcd\nefgh\nijkl\nmnop" --&gt;
-"abcd|plhd|dhlp\nefgh|okgc|cgko\nijkl|njfb|bfjn\nmnop|miea|aeim"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"66px"} -->
-<div style="height:66px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>یا چاپ شده:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">
-    selfie_diag2_counterclock
-   abcd|plhd|dhlp
-   efgh|okgc|cgko
-   ijkl|njfb|bfjn
-   mnop|miea|aeim
-</pre>
-<!-- /wp:code -->
-
-<p dir="rtl" style="text-align: justify;"><strong>وظیفه:</strong></p>
-
-<ol class="farsi-number">
-    <li dir="rtl" style="text-align: justify;">این توابع را بنویسید: <strong><span
-            class="colored-text">diag_2_sym</span></strong> و&nbsp; <strong><span
-            class="colored-text">rot_90_counter</span></strong> و&nbsp; <strong><span
-            class="colored-text">selfie_diag2_counterclock</span></strong>
-    </li>
-    <li dir="rtl" style="text-align: justify;">
-        <div>تابع مرتبه بالا<strong><span class="colored-text"> oper(fct,s)</span></strong> را بنویسید که در آن fct
-            تابع یک متغیر f است که روی رشته s اعمال می شود (fct یکی از diag_2_sym، rot_90_counter،
-            selfie_diag2_counterclock
-            خواهد بود)
-        </div>
-    </li>
-</ol>
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">   s = "abcd\nefgh\nijkl\nmnop"
-   oper(diag_2_sym, s) =&gt; "plhd\nokgc\nnjfb\nmiea"
-   oper(rot_90_counter, s) =&gt; "dhlp\ncgko\nbfjn\naeim"
-   oper(selfie_diag2_counterclock, s) =&gt;       "abcd|plhd|dhlp\nefgh|okgc|cgko\nijkl|njfb|bfjn\nmnop|miea|aeim"</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: right;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function transpose($array)
-{
-    array_unshift($array, null);
-    return call_user_func_array('array_map', $array);
-}
-function rot90Counter($s)
-{
-    $m = transpose(array_map("str_split", array_map("strrev", explode("\n", $s))));
-    return implode("\n", array_map(function ($x) {
-        return implode("", $x);
-    }, $m));
-}
-function diag2Sym($s)
-{
-    return implode("\n", array_map("strrev", explode("\n", rot90Counter($s))));
-}
-function selfieDiag2Counterclock($s)
-{
-    $ts = explode("\n", $s);
-    $tDiag = explode("\n", diag2Sym($s));
-    $stcounter = explode("\n", rot90Counter($s));
-    $result = [];
-    for ($i = 0; $i &lt; count($ts); $i++) {
-        $result[$i] = $ts[$i] . "|" . $tDiag[$i] . "|" . $stcounter[$i];
-    }
-    return implode("\n", $result);
-}
-function oper($fct, $s)
-{
-    return $fct($s);
-}
-echo "&lt;pre&gt;";
-  print_r(oper('selfieDiag2Counterclock', "abcd\nefgh\nijkl\nmnop"));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">
-            abcd|plhd|dhlp
-            efgh|okgc|cgko
-            ijkl|njfb|bfjn
-            mnop|miea|aeim
-        </p>
-    </div>
 </div>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo mkdir /var/www/your_domain</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">سپس، مالکیت دایرکتوری را با متغیر محیطی $USER اختصاص دهید، که به کاربر فعلی سیستم شما ارجاع خواهد داد:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo chown -R $USER:$USER /var/www/your_domain</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">      سپس، با استفاده از ویرایشگر خط فرمان دلخواه خود، یک فایل پیکربندی جدید را در دایرکتوری sites-available Apache باز کنید. در اینجا از نانو استفاده خواهیم کرد:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo nano /etc/apache2/sites-available/your_domain.conf</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">با این کار یک فایل خالی جدید ایجاد می شود. کدهای زیر را در آن قرار دهید:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;VirtualHost *:80&gt;
+   ServerName your_domain
+   ServerAlias www.your_domain
+   ServerAdmin webmaster@localhost
+   DocumentRoot /var/www/your_domain
+   ErrorLog ${APACHE_LOG_DIR}/error.log
+   CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">      پس از اتمام، فایل را ذخیره کرده و ببندید. اگر از نانو استفاده می کنید، می توانید این کار را با فشار دادن CTRL+X، سپس Y و ENTER انجام دهید.</div>
+<div dir="rtl">
+<div style="text-align: justify;">    با این پیکربندی VirtualHost، به آپاچی می‌گوییم که your_domain را با استفاده از /var/www/your_domain به‌عنوان دایرکتوری ریشه وب سرویس دهد. اگر می‌خواهید آپاچی را بدون نام دامنه آزمایش کنید، می‌توانید با اضافه کردن یک کاراکتر # در ابتدای خطوط هر گزینه، گزینه‌های ServerName و ServerAlias ​​را حذف یا کامنت کنید.</div>
+</div>
+<div> </div>
+<div>
+<div dir="rtl">
+<div style="text-align: justify;">اکنون می توانید از <strong><span class="colored-text">a2ensite </span></strong>برای فعال کردن میزبان مجازی جدید استفاده کنید:</div>
+</div>
+</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo a2ensite your_domain</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">      ممکن است بخواهید وب سایت پیش فرض نصب شده با آپاچی را غیرفعال کنید. اگر از نام دامنه سفارشی استفاده نمی کنید، این مورد ضروری است، زیرا در این مورد تنظیمات پیش فرض آپاچی میزبان مجازی شما را بازنویسی می کند. برای غیرفعال کردن وب‌سایت پیش‌فرض آپاچی، تایپ کنید:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo a2dissite 000-default</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">برای اطمینان از اینکه فایل پیکربندی شما حاوی خطاهای نحوی نیست، دستور زیر را اجرا کنید:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo apache2ctl configtest</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">در نهایت، آپاچی را دوباره بارگیری کنید تا این تغییرات اعمال شوند:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo systemctl reload apache2</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">      وب سایت جدید شما اکنون فعال است، اما ریشه وب /var/www/your_domain هنوز خالی است. یک فایل index.html در آن مکان ایجاد کنید تا بتوانیم آزمایش کنیم که میزبان مجازی مطابق انتظار کار می کند:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">nano /var/www/your_domain/index.html</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">کدهای زیر را در این فایل قرار دهید:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;your_domain website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is the landing page of &lt;strong&gt;your_domain&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">اکنون به مرورگر خود بروید و یک بار دیگر به نام دامنه یا آدرس IP سرور خود دسترسی پیدا کنید:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">http://server_domain_or_IP</pre>
+<!-- /wp:html -->
+<p dir="rtl" style="text-align: justify;">باید صفحه ای مانند این را ببینید:</p>
+<!-- wp:image {"align":"center","id":6741,"width":"556px","height":"235px","sizeSlug":"full","linkDestination":"none"} -->
+<div style="display: flex; justify-content: center;">
+<div style="width: 550px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/helloworld.png" alt="helloworld.png" /></div>
+</div>
+<!-- /wp:image -->
+<div dir="rtl" style="text-align: justify;">اگر این صفحه را می بینید، به این معنی است که هاست مجازی آپاچی شما مطابق انتظار کار می کند.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div style="text-align: justify;">      شما می توانید این فایل را به عنوان یک صفحه فرود موقت برای برنامه خود بگذارید تا زمانی که یک فایل index.php برای جایگزینی آن تنظیم کنید. پس از انجام این کار، به یاد داشته باشید که فایل index.html را از ریشه سند خود حذف کرده یا تغییر نام دهید، زیرا به طور پیش فرض بر فایل index.php اولویت دارد.</div>
+</div>
+<div> </div>
+<div>
+<div dir="rtl" style="text-align: justify;"><strong>نکته ای درباره <span style="color: #800000;">DirectoryIndex</span><br />در آپاچی</strong></div>
+</div>
+<div dir="rtl">
+<div style="text-align: justify;">      با تنظیمات پیش‌فرض DirectoryIndex در آپاچی، فایلی با نام index.html همیشه بر فایل index.php اولویت دارد. این برای راه‌اندازی صفحات نگهداری در برنامه‌های PHP، با ایجاد یک فایل موقت index.html حاوی یک پیام آموزنده برای بازدیدکنندگان مفید است. از آنجایی که این صفحه بر صفحه index.php اولویت دارد، سپس به صفحه فرود برنامه تبدیل می شود. پس از پایان تعمیر و نگهداری، index.html تغییر نام داده یا از ریشه سند حذف می شود و صفحه برنامه معمولی را باز می گرداند.</div>
+</div>
+<div>
+<div dir="rtl" style="text-align: justify;">اگر می‌خواهید این رفتار را تغییر دهید، باید فایل /etc/apache2/mods-enabled/dir.conf را ویرایش کنید و ترتیب فهرست‌بندی فایل index.php را در دستورالعمل DirectoryIndex تغییر دهید:</div>
+</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo nano /etc/apache2/mods-enabled/dir.conf</pre>
 <!-- /wp:html -->
 
-<!-- wp:spacer {"height":"83px"} -->
-<div style="height:83px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- wp:spacer {"height":"67px"} -->
+<div class="wp-block-spacer" style="height: 67px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
-<p dir="rtl" style="text-align: justify;">
-        <strong><span class="colored-text">()implode</span></strong>&nbsp;و
-        <strong><span class="colored-text">()explode</span></strong> و
-        <strong><span class="colored-text">()strrev</span></strong> و
-        <strong><span class="colored-text">()array_reverse</span></strong> &nbsp;در تمرینات قبلی معرفی شدند.</p>
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;IfModule mod_dir.c&gt;
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+&lt;/IfModule&gt;</pre>
+<!-- /wp:html -->
 
+<!-- wp:spacer {"height":"82px"} -->
+<div class="wp-block-spacer" style="height: 82px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+<div dir="rtl" style="text-align: justify;">پس از ذخیره و بستن فایل، باید Apache را مجدداً بارگیری کنید تا تغییرات اعمال شوند:</div>
+<!-- wp:html -->
+<pre style="direction: ltr;">sudo systemctl reload apache2</pre>
+<!-- /wp:html -->
+<div dir="rtl" style="text-align: justify;">در مرحله بعد، ما یک اسکریپت PHP ایجاد می کنیم تا آزمایش کنیم که PHP به درستی روی سرور شما نصب و پیکربندی شده است.</div>
 <!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4><span class="colored-text">۲۵. تابعی بنویسید که یک لیست را از لیست دیگر کم می کند و نتیجه را برمی گرداند.</span>
-</h4>
+<h4 class="wp-block-heading has-text-align-right"><span class="tadv-color" style="color: #cf2e2e;">۶) آزمایش پردازش PHP بر روی وب سرور شما</span></h4>
 <!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: right;">تابع باید تمام مقادیری را که در لیست
-        <strong><span class="colored-text">b</span></strong> وجود دارد از لیست
-        <strong><span class="colored-text">a</span></strong> کم
-    کند. همچنین ترتیب را حفظ نماید:
-</div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">arrayDiff([1,2],[1]) == [2]</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"79px"} -->
-<div style="height:79px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">اگر مقداری در b وجود داشته باشد، باید تمام مقادیر آن از دیگری حذف شوند:
-</div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">arrayDiff([1,2,2,2,3],[2]) == [1,3]</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function arrayDiff($a, $b)
-{
-    return array_values(array_diff($a, $b));
-}
-echo "&lt;pre&gt;";
-  print_r(arrayDiff([1, 2, 2, 2, 3, 3], [2]));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">
-      Array
-            (
-            [0] =&gt; 1
-            [1] =&gt; 3
-            [2] =&gt; 3
-            )
-        </p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"88px"} -->
-<div style="height:88px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()array_values :</h3>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">تابع <strong><span class="colored-text">()array_values</span></strong>
-    ​​یک آرایه حاوی تمام <strong><span class="colored-text">مقادیر</span> </strong>یک آرایه را برمی گرداند.
-</div>
-<div dir="rtl">&nbsp;</div>
+<div dir="rtl" style="text-align: justify;">      اکنون که یک مکان سفارشی برای میزبانی فایل‌ها و پوشه‌های وب‌سایت خود دارید، یک اسکریپت تست PHP ایجاد می‌کنیم تا تأیید کنیم که آپاچی قادر به رسیدگی و پردازش درخواست‌های فایل‌های PHP است.</div>
 <div dir="rtl">
-    <div><strong>نکته:</strong> آرایه برگشتی دارای کلیدهای عددی است که از صفر شروع می شود و یکی یکی افزایش می یابد.
-    </div>
+<div>یک فایل جدید به نام info.php در پوشه ریشه وب سفارشی خود ایجاد کنید:</div>
 </div>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
 <!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$a=array("Name"=&gt;"Peter","Age"=&gt;"41","Country"=&gt;"USA");
-print_r(array_values($a));</pre>
+<pre style="direction: ltr;">nano /var/www/your_domain/info.php</pre>
 <!-- /wp:html -->
-
+<div dir="rtl" style="text-align: justify;">با این کار یک فایل خالی باز می شود. متن زیر را که یک کد PHP معتبر است، داخل فایل اضافه کنید:</div>
 <!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">Array
-            (
-            [0] =&gt; Peter
-            [1] =&gt; 41
-            [2] =&gt; USA
-            )</p>
-    </div>
-</div>
+<pre style="direction: ltr;">&lt;?php
+phpinfo();</pre>
 <!-- /wp:html -->
-
-<!-- wp:spacer {"height":"79px"} -->
-<div style="height:79px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>سینتکس:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">array_values(array)</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"86px"} -->
-<div style="height:86px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 90.119%; height: 49px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 26px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 68.2391%; height: 26px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>array</em>
-        </td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. تعیین یک آرایه</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()array_diff :</h3>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">تابع <strong><span class="colored-text">()array_diff</span></strong>
-    مقادیر دو (یا چند) آرایه را مقایسه می کند و تفاوت ها را برمی گرداند.
-</div>
+<div dir="rtl" style="text-align: justify;">وقتی کارتان تمام شد، فایل را ذخیره کرده و ببندید.</div>
 <div dir="rtl">
-    <div style="text-align: justify;">این تابع مقادیر دو (یا چند) آرایه را مقایسه می‌کند و آرایه‌ای را برمی‌گرداند که
-        حاوی
-        ورودی‌های آرایه <strong>۱</strong> است که در آرایه <strong>۲</strong> یا آرایه <strong>۳</strong> و غیره وجود
-        ندارند.
-    </div>
+<div style="text-align: justify;">برای آزمایش این اسکریپت، به مرورگر وب خود بروید و به نام دامنه یا آدرس IP سرور خود دسترسی پیدا کنید و به دنبال آن نام اسکریپت که در این مورد info.php است وارد کنید:</div>
 </div>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl"><strong>مثال:</strong></p>
-
 <!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$a1=array("a"=&gt;"red","b"=&gt;"green","c"=&gt;"blue","d"=&gt;"yellow");
-$a2=array("e"=&gt;"red","f"=&gt;"green","g"=&gt;"blue");
-$result=array_diff($a1,$a2);
-echo "&lt;pre&gt;";
-  print_r($result);
-echo "&lt;/pre&gt;";</pre>
+<pre style="direction: ltr;">http://server_domain_or_IP/info.php</pre>
 <!-- /wp:html -->
-
+<div dir="rtl" style="text-align: justify;">صفحه ای مشابه این را خواهید دید:</div>
 <!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap"> Array
-            (
-            &#91;d] =&gt; yellow
-            )</p>
-    </div>
+<div style="display: flex; justify-content: center;">
+<div style="width: 700px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/phpinfo.png" alt="phpinfo.png" /></div>
 </div>
 <!-- /wp:html -->
-
-<p dir="rtl" style="text-align: justify;"><strong>سینتکس:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">array_diff(array1, array2, array3, ...)</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 87.1427%; height: 79px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 23px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 64.9366%; height: 23px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>array1</em>
-        </td>
-        <td dir="rtl" style="width: 64.9366%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. آرایه ای برای مقایسه</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #dbd7d7;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>array2</em>
-        </td>
-        <td dir="rtl" style="width: 64.9366%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. آرایه ای برای مقایسه</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 10px; text-align: center; border-left: 2px solid #3b3a3a;">array3,...</td>
-        <td dir="rtl" style="width: 64.9366%; height: 10px; text-align: justify; padding-right: 40px;">
-            <div>اختیاری. آرایه های بیشتر برای مقایسه با</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۲۶. تابعی بنویسید که رشته ای از یک یا چند کلمه را دریافت کند و همان رشته را برگرداند، اما تمام کلمات پنج یا چند حرفی معکوس شوند. رشته های ارسال شده فقط از حروف و فاصله تشکیل شده است. فضاها فقط زمانی درج خواهند شد که بیش از یک کلمه وجود داشته باشد.</span>
-</h4>
-<!-- /wp:heading -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:code {"backgroundColor":"white"} -->
-<pre style="direction:ltr">   spinWords( "Hey fellow warriors" ) =&gt; returns "Hey wollef sroirraw"
-   spinWords( "This is a test" ) =&gt; returns "This is a test"
-   spinWords( "This is another test" )=&gt; returns "This is rehtona test"</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function spinWords(string $str)
-{
-    return preg_replace_callback('/\w{5,}/', function ($matches) {
-        return strrev($matches[0]);
-    }, $str);
-}
-echo spinWords(" is currently unable to handle this request.");</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background has-medium-font-size">is yltnerruc elbanu to eldnah this
-            tseuqer.</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"77px"} -->
-<div style="height:77px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">تابعهای <strong><span
-        class="colored-text">()preg_replace_callback</span></strong> و <strong><span
-        class="colored-text">()strrev</span></strong> در تمرینهای قبلی معرفی شدند.</p>
-<p dir="rtl"><strong><span class="colored-text">/\w{5,}/</span></strong> یک عبارت <strong><span
-        class="colored-text">RegEx</span> </strong>است که برای پیدا کردن کلمات ۵ حرفی یا بیشتر استفاده شده است.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4><span class="colored-text">۲۷. تابعی بنویسید که اگر n یک عدد صحیح بود، رشته ای را با علامت های dash'-' قبل و بعد از هر عدد صحیح فرد برگرداند، اما رشته را با علامت خط تیره شروع یا پایان ندهد. اگر n منفی باشد، علامت منفی باید حذف شود. اگر n یک عدد صحیح نبود، یک مقدار خالی برگرداند.</span>
-</h4>
-<!-- /wp:heading -->
-
-<p dir="rtl"><strong>مثال:</strong></p>
-
-<!-- wp:code {"backgroundColor":"white"} -->
-<pre style="direction:ltr">
-    dashatize(274) -&gt; '2-7-4'
-   dashatize(6815) -&gt; '68-1-5'
-</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function dashatize(int $num): string
-{
-    return trim(str_replace('--', '-', preg_replace('/([13579])/', '-$1-', $num)), '-');
-}
-echo dashatize(124434568789);</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background has-medium-font-size">1-244-3-4-5-68-7-8-9</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()str_replace :</h3>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">تابع
-<strong><span class="colored-text">()str_replace</span></strong>&nbsp;برخی از کاراکترها را با برخی کاراکترهای دیگر در یک رشته
-    جایگزین می کند.
-</div>
-<div dir="rtl">&nbsp;</div>
+<div dir="rtl" style="text-align: justify;">      این صفحه اطلاعاتی در مورد سرور شما از دیدگاه PHP ارائه می دهد. برای اشکال زدایی و اطمینان از اینکه تنظیمات شما به درستی اعمال می شوند مفید است.</div>
 <div dir="rtl">
-    <div>این تابع با قوانین زیر کار می کند:</div>
-    <ul>
-        <li>
-            <div>اگر رشته مورد جستجو یک آرایه باشد، یک آرایه را برمی گرداند.</div>
-        </li>
-        <li>
-            <div>اگر رشته ای که باید جستجو شود یک آرایه است، پیدا کردن و جایگزینی با هر عنصر آرایه انجام می شود.</div>
-        </li>
-        <li>
-            <div>اگر هم <strong><span class="colored-text">find</span></strong> و هم <strong><span
-                    class="colored-text">replace</span>
-            </strong>آرایه باشند، و <strong><span class="colored-text">replace</span></strong> عناصر کمتری نسبت به
-                <strong><span class="colored-text">find</span></strong> داشته باشد، یک رشته خالی به عنوان
-                <strong><span class="colored-text">replace</span></strong> استفاده می شود.
-            </div>
-        </li>
-        <li>
-            <div>اگر <strong><span class="colored-text">find</span></strong> یک آرایه و <strong><span
-                    class="colored-text">replace</span></strong> یک رشته باشد، رشته جایگزین برای هر مقدار
-                <strong><span
-                        class="colored-text">find</span> </strong>استفاده می شود.
-            </div>
-        </li>
-    </ul>
-    <div><strong>توجه:</strong> این تابع به حروف بزرگ و کوچک حساس است. از تابع <strong><span class="colored-text">()str_ireplace</span></strong>
-        برای انجام جستجوی <strong><span class="colored-text">غیرحساس</span> </strong>به حروف بزرگ و کوچک استفاده
-        کنید.
-    </div>
+<div>اگر می توانید این صفحه را در مرورگر خود ببینید، نصب PHP شما همانطور که انتظار می رود کار می کند.</div>
+<div style="text-align: justify;">      پس از بررسی اطلاعات مربوط به سرور PHP خود از طریق آن صفحه، بهتر است فایلی را که ایجاد کرده اید حذف کنید زیرا حاوی اطلاعات حساسی در مورد محیط PHP و سرور اوبونتو شما است. برای این کار می توانید از <strong><span style="color: #800000;">rm</span> </strong>استفاده کنید:</div>
 </div>
-<div>&nbsp;</div>
-<div dir="rtl" style="text-align: justify;">
-    <div><strong>توجه:</strong> این تابع binary-safe است.</div>
-</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl"><strong>سینتکس:</strong></div>
-<div dir="rtl">&nbsp;</div>
-
 <!-- wp:html -->
-<pre style="direction:ltr">str_replace(find,replace,string,count)</pre>
+<pre style="direction: ltr;">sudo rm /var/www/your_domain/info.php</pre>
 <!-- /wp:html -->
-
+<div dir="rtl" style="text-align: justify;">در صورت نیاز به دسترسی مجدد به اطلاعات، همیشه می توانید این صفحه را دوباره ایجاد کنید.</div>
 <!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
-<!-- wp:paragraph {"align":"right"} -->
-<p class="has-text-align-right"><strong>مثال:</strong></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-echo str_replace("world","Peter","Hello world!");</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap"> Hello Peter!</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 90.119%; height: 102px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 23px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>find</em></td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. مقدار مورد نظر را مشخص می کند.</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #dbd7d7;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>replace</em>
-        </td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. مقدار را برای جایگزینی مقدار در find مشخص می کند.</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 10px; text-align: center; border-left: 2px solid #3b3a3a;"><em>string</em>
-        </td>
-        <td dir="rtl" style="width: 68.2391%; height: 10px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. رشته مورد جستجو را مشخص می کند.</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #dbd7d7;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>count</em>
-        </td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>اختیاری. متغیری که تعداد تعویض ها را می شمارد.</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4><span class="colored-text">۲۸. data و data1 دو رشته با رکورد بارندگی چند شهر برای ماهها از ژانویه تا دسامبر است. سوابق شهرها با n\ جدا می شوند. پس از نام هر شهر دو نقطه : قرار دارد.</span>
-</h4>
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-cyan-blue"} -->
+<h3 class="wp-block-heading has-text-align-right has-vivid-cyan-blue-color has-text-color">نتیجه گیری</h3>
 <!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"79px"} -->
-<div style="height:79px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>وظیفه:</strong></p>
-<ol class="farsi-number">
-    <li dir="rtl" style="text-align: justify;">
-        <div>تابع: mean(town, strng) باید میانگین بارندگی شهر و داده strng یا data1 را برگرداند (در R و Julia این تابع
-            avg
-            را فراخوانی می کند).
-        </div>
-    </li>
-    <li dir="rtl" style="text-align: justify;">
-        <div>تابع: (town، strng)variance باید واریانس بارندگی برای شهر town و داده strng یا data1 را برگرداند.</div>
-    </li>
-</ol>
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:code {"backgroundColor":"white"} -->
-<pre style="direction:ltr">mean("London", data), 51.19(9999999999996)
-variance("London", data), 57.42(833333333374)</pre>
-<!-- /wp:code -->
-
-<p dir="rtl"><strong>ملاحظات:</strong></p>
-<ul>
-    <li dir="rtl" style="text-align: justify;">
-        <div>اگر میانگین یا واریانس توابع به عنوان شهر پارامتر شهری باشد که هیچ رکوردی ندارد -1 یا -1.0 (بسته به زبان)
-            برمی‌گرداند.
-        </div>
-    </li>
-    <li dir="rtl" style="text-align: justify;">
-        <div>کوتاه یا گرد نکنید: بسته به زبان، اگر abs(نتیجه_شما - نتیجه_تست) &lt;= 1e-2 یا abs((نتیجه_آزمایش_تست) /
-            نتیجه_تست) &lt;= 1e-6 باشد، آزمون ها با موفقیت انجام می شود.
-        </div>
-    </li>
-    <li dir="rtl" style="text-align: justify;">
-        <div><strong>مرجع:</strong> http://www.mathsisfun.com/data/standard-deviation.html</div>
-    </li>
-</ul>
-
+<div dir="rtl" style="text-align: justify;">      در این راهنما، با استفاده از آپاچی به عنوان وب سرور و MySQL به عنوان سیستم پایگاه داده، پایه ای انعطاف پذیر برای ارائه وب سایت ها و برنامه های کاربردی PHP به بازدیدکنندگان ایجاد کرده ایم.</div>
+<div dir="rtl">      اگر می خواهید از آپاچی به عنوان سرور جهت نصب لاراول ، وردپرس یا . . . استفاده کنید گام بعدی می تواند نصب phpmyadmin باشد. phpmyadmin یک نرم افزار رایگان است که به شما امکان می دهد پایگاه داده mysql خود را به صورت گرافیکی مدیریت کرده و هرنوع عملیات را روی آن اعمال نمایید.</div>
 <!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: right;"><strong>پاسخ:</strong></p>
-<p dir="rtl">ابتدا فایل <strong><span style="color: #ff0000;">datafile.php</span></strong> را که حاوی اطلاعات بارندگی
-    شهرها است ایجاد می کنیم.</p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$data1 =
-"Rome:Jan 81.2,Feb 63.2,Mar 70.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 117.7,Nov 111.0,Dec 97.9\n"
-. "London:Jan 48.0,Feb 38.9,Mar 39.9,Apr 42.2,May 47.3,Jun 52.1,Jul 59.5,Aug 57.2,Sep 55.4,Oct 62.0,Nov 59.0,Dec 52.9\n"
-. "Paris:Jan 182.3,Feb 120.6,Mar 158.1,Apr 204.9,May 323.1,Jun 300.5,Jul 236.8,Aug 192.9,Sep 66.3,Oct 63.3,Nov 83.2,Dec 154.7\n"
-. "NY:Jan 108.7,Feb 101.8,Mar 131.9,Apr 93.5,May 98.8,Jun 93.6,Jul 102.2,Aug 131.8,Sep 92.0,Oct 82.3,Nov 107.8,Dec 94.2\n"
-. "Vancouver:Jan 145.7,Feb 121.4,Mar 102.3,Apr 69.2,May 55.8,Jun 47.1,Jul 31.3,Aug 37.0,Sep 59.6,Oct 116.3,Nov 154.6,Dec 171.5\n"
-. "Sydney:Jan 103.4,Feb 111.0,Mar 131.3,Apr 129.7,May 123.0,Jun 129.2,Jul 102.8,Aug 80.3,Sep 69.3,Oct 82.6,Nov 81.4,Dec 78.2\n"
-. "Bangkok:Jan 10.6,Feb 28.2,Mar 30.7,Apr 71.8,May 189.4,Jun 151.7,Jul 158.2,Aug 187.0,Sep 319.9,Oct 230.8,Nov 57.3,Dec 9.4\n"
-. "Tokyo:Jan 49.9,Feb 71.5,Mar 106.4,Apr 129.2,May 144.0,Jun 176.0,Jul 135.6,Aug 148.5,Sep 216.4,Oct 194.1,Nov 95.6,Dec 54.4\n"
-. "Beijing:Jan 3.9,Feb 4.7,Mar 8.2,Apr 18.4,May 33.0,Jun 78.1,Jul 224.3,Aug 170.0,Sep 58.4,Oct 18.0,Nov 9.3,Dec 2.7\n"
-. "Lima:Jan 1.2,Feb 0.9,Mar 0.7,Apr 0.4,May 0.6,Jun 1.8,Jul 4.4,Aug 3.1,Sep 3.3,Oct 1.7,Nov 0.5,Dec 0.7";
-$data2 =
-    "Rome:Jan 90.2,Feb 73.2,Mar 80.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 147.7,Nov 121.0,Dec 97.9\n"
-    ."London:Jan 58.0,Feb 38.9,Mar 49.9,Apr 42.2,May 67.3,Jun 52.1,Jul 59.5,Aug 77.2,Sep 55.4,Oct 62.0,Nov 69.0,Dec 52.9\n"
-    ."Paris:Jan 182.3,Feb 120.6,Mar 188.1,Apr 204.9,May 323.1,Jun 350.5,Jul 336.8,Aug 192.9,Sep 66.3,Oct 63.3,Nov 83.2,Dec 154.7\n"
-    ."NY:Jan 128.7,Feb 121.8,Mar 151.9,Apr 93.5,May 98.8,Jun 93.6,Jul 142.2,Aug 131.8,Sep 92.0,Oct 82.3,Nov 107.8,Dec 94.2\n"
-    ."Vancouver:Jan 155.7,Feb 121.4,Mar 132.3,Apr 69.2,May 85.8,Jun 47.1,Jul 31.3,Aug 37.0,Sep 69.6,Oct 116.3,Nov 154.6,Dec 171.5\n"
-    ."Sydney:Jan 123.4,Feb 111.0,Mar 151.3,Apr 129.7,May 123.0,Jun 159.2,Jul 102.8,Aug 90.3,Sep 69.3,Oct 82.6,Nov 81.4,Dec 78.2\n"
-    ."Bangkok:Jan 20.6,Feb 28.2,Mar 40.7,Apr 81.8,May 189.4,Jun 151.7,Jul 198.2,Aug 197.0,Sep 319.9,Oct 230.8,Nov 57.3,Dec 9.4\n"
-    ."Tokyo:Jan 59.9,Feb 81.5,Mar 106.4,Apr 139.2,May 144.0,Jun 186.0,Jul 155.6,Aug 148.5,Sep 216.4,Oct 194.1,Nov 95.6,Dec 54.4\n"
-    ."Beijing:Jan 13.9,Feb 14.7,Mar 18.2,Apr 18.4,May 43.0,Jun 88.1,Jul 224.3,Aug 170.0,Sep 58.4,Oct 38.0,Nov 19.3,Dec 2.7\n"
-    ."Lima:Jan 11.2,Feb 10.9,Mar 10.7,Apr 10.4,May 10.6,Jun 11.8,Jul 14.4,Aug 13.1,Sep 23.3,Oct 1.7,Nov 0.5,Dec 10.7";
-</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"75px"} -->
-<div style="height:75px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">سپس آن را در فایل اصلی <strong><span class="colored-text">include</span>
-</strong>می کنیم:</p>
-
-<!-- wp:spacer {"height":"60px"} -->
-<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function extract_town($town1, $strng1)
-{
-    // https://regex-generator.olafneumann.org/
-    $nnn = preg_replace_callback('/[a-zA-Z]+:/', function ($matches) {
-        return "  " . $matches[0];
-    }, $strng1);
-    $mmm = explode("  ", $nnn);
-    $zzz = array_filter($mmm, function ($var) use ($town1) {
-        return preg_match("/\b$town1\b/i", $var);
-    });
-    $sss = implode("", $zzz);
-    // Replace multiple characters in one replace call:
-    // https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
-    $ggg = preg_replace('/[a-zA-Z]|:|,/', "", $sss);
-    $yyy = ltrim($ggg);
-    $bbb = explode(" ", $yyy);
-    return $bbb;
-}
-function mean($town, $strng)
-{
-    if (preg_match("/$town/", $strng) === 0) {
-        return -1;
-    }
-    $aaa = extract_town($town, $strng);
-    // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
-    // calculate the mean
-    $the_mean = array_sum($aaa) / count($aaa);
-    return $the_mean;
-}
-function variance($town, $strng)
-{
-    if (preg_match("/$town/", $strng) === 0) {
-        return -1;
-    }
-    $aaa = extract_town($town, $strng);
-    // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
-    // calculate the variance
-    $the_variance = 0.0;
-    $the_mean = array_sum($aaa) / count($aaa);
-    for ($i = 0; $i &lt; count($aaa); $i++) {
-        //sum the array
-        $the_variance = $the_variance + ($aaa[$i] - $the_mean) * ($aaa[$i] - $the_mean);
-    }
-    $the_variance = $the_variance / (count($aaa) /*- 1.0*/);
-    //return the variance
-    return $the_variance;
-}
-include 'datafile.php';
-// PHPStorm: undefined variables caused by include/require
-// https://stackoverflow.com/questions/22476778/phpstorm-undefined-variables-caused-by-include-require
-/**
- * @var string $data1
- * @var string $data2
- */
-echo "&lt;pre&gt;";
-  print_r(variance("London", $data1));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">57.428333333333</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">تابع های
-    <strong><span class="colored-text">()preg_replace_callback</span></strong>&nbsp;و
-    <strong><span class="colored-text">()explode</span></strong>&nbsp;و
-    <strong><span class="colored-text">()array_sum</span></strong>&nbsp;و
-    <strong><span class="colored-text">()count</span></strong>&nbsp;در
-    تمرینات قبلی معرفی شدند.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()preg_match :</h3>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">تابع <strong>
-<strong><span class="colored-text">preg_match</span></strong>&nbsp;برمی‌گرداند که آیا مطابقت در یک رشته پیدا شده است یا
-    خیر.
-</strong>
-</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl"><strong>سینتکس:</strong></div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">preg_match(pattern, input, matches, flags, offset)</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$str = "Visit W3Schools";
-$pattern = "/w3schools/i";
-echo preg_match($pattern, $str);</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background has-medium-font-size">1</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 98.6906%; height: 112px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 23px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 77.7503%; height: 23px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>pattern</em>
-        </td>
-        <td dir="rtl" style="width: 77.7503%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. شامل یک عبارت منظم است که نشان می دهد چه چیزی باید جستجو شود.</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #dbd7d7;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>input</em>
-        </td>
-        <td dir="rtl" style="width: 77.7503%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. رشته ای که جستجو در آن انجام خواهد شد.</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 10px; text-align: center; border-left: 2px solid #3b3a3a;"><em>matches</em>
-        </td>
-        <td dir="rtl" style="width: 77.7503%; height: 10px; text-align: justify; padding-right: 40px;">
-            <div>اختیاری. متغیر مورد استفاده در این پارامتر با آرایه‌ای پر می‌شود که شامل همه موارد منطبق است</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #dbd7d7;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>flags</em>
-        </td>
-        <td dir="rtl" style="width: 77.7503%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>اختیاری. مجموعه ای از گزینه ها که نحوه ساختار آرایه مطابقت را تغییر می دهد:</div>
-
-            <ul>
-                <li><strong><span class="colored-text">PREG_OFFSET_CAPTURE</span></strong> - وقتی این گزینه فعال
-                    باشد، هر
-                    تطابق، به جای اینکه یک رشته باشد، آرایه ای خواهد بود که عنصر اول یک زیررشته حاوی تطابق و عنصر دوم
-                    موقعیت
-                    اولین کاراکتر رشته فرعی در ورودی است.
-                </li>
-                <li>
-                    <div><strong><span class="colored-text">PREG_UNMATCHED_AS_NULL</span></strong> - وقتی این گزینه
-                        فعال
-                        باشد، الگوهای فرعی ناهمسان به جای رشته خالی به صورت NULL برگردانده می شوند.
-                    </div>
-                </li>
-            </ul>
-
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 10px; text-align: center; border-left: 2px solid #3b3a3a;"><em>offset</em>
-        </td>
-        <td dir="rtl" style="width: 77.7503%; height: 10px; text-align: justify; padding-right: 40px;">
-            <div>اختیاری. پیش‌فرض به 0 می‌رسد. نشان می‌دهد که تا چه اندازه در رشته برای شروع جستجو است. تابع
-                ()preg_match
-                منطبقاتی را که قبل از موقعیت داده شده در این پارامتر رخ می دهد، پیدا نمی کند.
-            </div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۲۹. تابعی بنویسید که دو ماتریس مربع (N x N آرایه دو بعدی) را بپذیرد و مجموع آن دو را برگرداند. هر دو ماتریس ارسال شده به تابع دارای اندازه N x N (مربع) خواهند بود که فقط شامل اعداد صحیح هستند.</span>
-</h4>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"69px"} -->
-<div style="height:69px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">چگونه دو ماتریس را جمع کنیم:</div>
-<div dir="rtl">
-    <div>هر سلول [n][m] را از ماتریس اول بگیرید و با همان [n][m] سلول از ماتریس دوم اضافه کنید. این سلول [n][m] ماتریس
-        حل
-        شده خواهد بود.
-    </div>
-</div>
-<div>&nbsp;</div>
-<div dir="rtl" style="text-align: justify;"><strong>مثال:</strong></div>
-
-<!-- wp:code {"backgroundColor":"white"} -->
-<pre style="direction:ltr">    |1 2 3|     |2 2 1|     |1+2 2+2 3+1|     |3 4 4|
-    |3 2 1|  +  |3 2 3|  =  |3+3 2+2 1+3|  =  |6 4 4|
-    |1 1 1|     |1 1 3|     |1+1 1+1 1+3|     |2 2 4|</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function matrix_addition($ar1, $ar2): array
-{
-    for ($row = 0; $row &lt; count($ar1); $row++) {
-        for ($col = 0; $col &lt; count($ar1[0]); $col++) {
-            $result[$row][$col] = ($ar1[$row][$col]) + ($ar2[$row][$col]);
-        }
-    }
-    return $result;
-}
-$a = array(
-    [10, 3, 5],
-    [2, 4, 6],
-    [2, 4, 9],
-);
-$b = array(
-    [1, 2, 5],
-    [3, 4, 3],
-    [3, 4, 6],
-);
-echo "&lt;pre&gt;";
-  print_r(matrix_addition($a, $b));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">Array
-            (
-            [0] =&gt; Array
-            (
-            [0] =&gt; 11
-            [1] =&gt; 5
-            [2] =&gt; 10
-            )
-
-            [1] =&gt; Array
-            (
-            [0] =&gt; 5
-            [1] =&gt; 8
-            [2] =&gt; 9
-            )
-
-            [2] =&gt; Array
-            (
-            [0] =&gt; 5
-            [1] =&gt; 8
-            [2] =&gt; 15
-            )
-
-            )</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4><span class="colored-text">۳۰. شما باید تابعی بسازید که اگر پارامترهای داده شده مختصات جغرافیایی معتبری باشند اعتبار سنجی کند.</span>
-</h4>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"43px"} -->
-<div style="height:43px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">مختصات معتبر مانند زیر است: "23.32353342, -32.543534534". مقدار بازگشتی باید
-    درست یا نادرست باشد.
-</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">
-    <div><strong>عرض جغرافیایی</strong> (که اولین float است) می تواند بین 0 تا 90 باشد، مثبت یا منفی.</div>
-    <div><strong> طول جغرافیایی</strong> (که float دوم است) می تواند بین 0 تا 180 باشد، مثبت یا منفی.</div>
-</div>
-<div>&nbsp;</div>
-<div dir="rtl" style="text-align: justify;">
-    <div>مختصات فقط می توانند دارای اعداد یا یکی از نمادهای زیر باشند (از جمله فاصله بعد از کاما) __ -، . __</div>
-</div>
-<div dir="rtl">
-    <div>بین علامت منفی "-" و رقم بعد از آن نباید فاصله ای وجود داشته باشد.</div>
-</div>
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-<div dir="rtl">
-    <div>در اینجا چند مختصات معتبر وجود دارد:</div>
-</div>
-<ul style="margin-left: 90px;">
-    <li dir="ltr" style="text-align: left;">-23, 25</li>
-    <li dir="ltr" style="text-align: left;">24.53525235, 23.45235</li>
-    <li dir="ltr" style="text-align: left;">04, -23.234235</li>
-    <li dir="ltr" style="text-align: left;">43.91343345, 143</li>
-    <li dir="ltr" style="text-align: left;">4, -3</li>
-</ul>
-<div dir="rtl" style="text-align: justify;">و چند مورد نامعتبر:</div>
-<div dir="rtl">&nbsp;</div>
-<ul style="margin-left: 90px;">
-    <li dir="ltr" style="text-align: left;">23.234, - 23.4234</li>
-    <li dir="ltr" style="text-align: left;">2342.43536, 34.324236</li>
-    <li dir="ltr" style="text-align: left;">N23.43345, E32.6457</li>
-    <li dir="ltr" style="text-align: left;">99.234, 12.324</li>
-    <li dir="ltr" style="text-align: left;">6.325624, 43.34345.345</li>
-    <li dir="ltr" style="text-align: left;">0, 1,2</li>
-    <li dir="ltr" style="text-align: left;">0.342q0832, 1.2324</li>
-</ul>
-<div dir="rtl">&nbsp;</div>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function isValidCoordinates($coordinates)
-{
-    $mmm = explode(" ", $coordinates);
-    $mmm[0] = rtrim($mmm[0], ",");
-    if (
-        is_numeric($mmm[0])
-        &amp;&amp; is_numeric($mmm[1])
-        &amp;&amp; ($mmm[0] &gt;= -90 &amp;&amp; $mmm[0] &lt;= 90)
-        &amp;&amp; ($mmm[1] &gt;= -180 &amp;&amp; $mmm[1] &lt;= 180)
-        &amp;&amp; !preg_match("/e/i", $coordinates)
-    )
-        return "true";
-    else
-        return "false";
-}
-//$a = "0, 1,2";
-$a = "-23, 25";
-echo(isValidCoordinates($a));</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background" style="font-size:18px">true</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()is_numeric :</h3>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">تابع
-
-        <strong><span class="colored-text">()is_numeric</span></strong>&nbsp;بررسی می کند که متغیر یک
-        <strong><span class="colored-text">عدد </span></strong>است یا یک
-        <strong><span class="colored-text">رشته عددی</span></strong>.
-</div>
-<div dir="rtl">
-    <div>اگر متغیر یک عدد یا یک رشته عددی باشد، این تابع true (1) را برمی‌گرداند، در غیر این صورت false/nothing را
-        برمی‌گرداند.
-    </div>
-</div>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>سینتکس:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">is_numeric(variable);</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$a = 32;
-echo "a is " . is_numeric($a) . "&lt;br&gt;";
-$b = 0;
-echo "b is " . is_numeric($b) . "&lt;br&gt;";
-$c = 32.5;
-echo "c is " . is_numeric($c) . "&lt;br&gt;";
-$d = "32";
-echo "d is " . is_numeric($d) . "&lt;br&gt;";
-$e = true;
-echo "e is " . is_numeric($e) . "&lt;br&gt;";
-$f = null;
-echo "f is " . is_numeric($f) . "&lt;br&gt;";
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background" style="font-size:17px">a is 1<br>b is 1<br>c is 1<br>d is 1<br>e
-            is<br>f is</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 83.9284%; height: 46px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 23px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 61.3699%; height: 23px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>variable</em>
-        </td>
-        <td dir="rtl" style="width: 61.3699%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. متغیری را برای بررسی مشخص می کند.</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4>
-<span class="colored-text">۳۱. با توجه به آرایه ای از اعداد صحیح، اعدادی را که به تعداد فرد ظاهر می شود، پیدا کنید.</span>
-</h4>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"49px"} -->
-<div style="height:49px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">همیشه فقط یک عدد صحیح وجود خواهد داشت که به تعداد فرد ظاهر می شود.</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">
-    <div><strong>مثال:</strong></div>
-    <div>
-        <div>[7] باید 7 را برگرداند، زیرا 1 بار رخ می دهد (که فرد است).</div>
-        <div>[0] باید 0 را برگرداند، زیرا 1 بار رخ می دهد (که فرد است).</div>
-        <div>[1،1،2] باید 2 را برگرداند، زیرا 1 بار رخ می دهد (که فرد است).</div>
-        <div>[0,1,0,1,0] باید 0 را برگرداند، زیرا 3 بار اتفاق می افتد (که فرد است).</div>
-        <div>[1،2،2،3،3،3،4،3،3،3،2،2،1] باید 4 را برگرداند، زیرا 1 بار ظاهر می شود (که فرد است).</div>
-
-    </div>
-</div>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-<p dir="rtl">
-<p dir="rtl" style="text-align: justify;"><strong>روش اول:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function findIt(array $seq)
-{
-    $y = array_count_values($seq);
-    foreach ($y as $value) {
-        if ($value % 2 !== 0)
-            return array_search($value, $y);
-    }
-}
-echo "&lt;pre&gt;";
-  print_r(findIt([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5]));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background" style="font-size:18px">5</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>روش دوم:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function findIt(array $seq)
-{
-     $nums = array_count_values($seq);
-    foreach ($nums as $key =&gt; $val) {
-        if ($val % 2) {
-            return $key;
-        }
-    }
-}
-echo "&lt;pre&gt;";
-  print_r(findIt([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5]));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background" style="font-size:18px">5</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"51px"} -->
-<div style="height:51px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">تابع <strong><span class="colored-text">()array_search</span></strong> در
-    تمرین های قبلی معرفی شد.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۳۲. آرایه ای از اعداد به شما داده می شود. شما باید اعداد فرد را به ترتیب صعودی مرتب کنید در حالی که اعداد زوج را در موقعیت اصلی خود نگه دارید.</span>
-</h4>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"63px"} -->
-<div style="height:63px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:code -->
-<pre style="direction:ltr">&#91;7, 1]  =&gt;  &#91;1, 7]
-&#91;5, 8, 6, 3, 4]  =&gt;  &#91;3, 8, 6, 5, 4]
-&#91;9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =&gt;  &#91;1, 8, 3, 6, 5, 4, 7, 2, 9, 0]</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function sortArray(array $arr)
-{
-    $even = $odd = array();
-    // Reset keys:
-    foreach ($arr as $a) {
-        if ($a % 2 == 0)
-            $even[] = $a;
-        else
-            $odd[] = $a;
-    }
-    sort($odd);
-    $newArr = [];
-    for ($i = 0; $i &lt; count($arr); $i++) {
-        if ($arr[$i] % 2 == 0) {
-            $newArr[] = array_shift($even);
-        } else {
-            $newArr[] = array_shift($odd);
-        }
-    }
-    return $newArr;
-}
-echo "&lt;pre&gt;";
-  print_r(sortArray([5, 3, 2, 8, 1, 4]));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap"> Array
-            (
-            &#91;0] =&gt; 1
-            &#91;1] =&gt; 3
-            &#91;2] =&gt; 2
-            &#91;3] =&gt; 8
-            &#91;4] =&gt; 5
-            &#91;5] =&gt; 4
-            )</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()array_shift :</h3>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"37px"} -->
-<div style="height:37px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">تابع <strong><span class="colored-text">()array_shift</span></strong>
-    اولین عنصر را از یک آرایه حذف می کند و مقدار عنصر حذف شده را برمی گرداند.
-</div>
-<div dir="rtl">
-    <div>توجه: اگر کلیدها عددی باشند، همه عناصر کلیدهای جدیدی دریافت می کنند که از 0 شروع می شود و یکی یکی افزایش می
-        یابد
-        (به مثال توجه کنید).
-    </div>
-</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl"><strong>سینتکس:</strong></div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">array_shift(array)</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$a=array("a"=&gt;"red","b"=&gt;"green","c"=&gt;"blue");
-echo array_shift($a);
-echo "&lt;pre&gt;";
-print_r ($a);
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">Array
-            (
-            [b] =&gt; green
-            [c] =&gt; blue
-            )</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 90.119%; height: 46px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 23px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>array</em>
-        </td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. یک آرایه را مشخص می کند.</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<div class="flex justify-between mt-8">
-    <div><a
-            style="border-radius:5px;background-color:#9ca3af; padding: 8px 12px; display: inline-block; width: 150px; text-align: center;"
-            href="https://raiatec.com/%db%b3%db%b2-%d8%aa%d9%85%d8%b1%db%8c%d9%86-php-%d9%82%d8%b3%d9%85%d8%aa-%d8%af%d9%88%d9%85">❮
-        قبلی</a></div>
-</div>
-<div style="margin-bottom: 150px;"></div>
