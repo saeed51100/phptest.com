@@ -16,7 +16,8 @@
     عنوان مثال:
 </div>
 <div dir="rtl">
-    <p dir="ltr"><span style="background-color: #ffffff;">&nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;</span>
+    <p dir="ltr">
+    &nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;
     </p>
     <div>ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
     <div><strong><span class="colored-text">n\</span></strong> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
@@ -67,7 +68,7 @@
 <!-- /wp:spacer -->
 
 <p dir="rtl" style="text-align: right;"><strong>وظیفه:</strong></p>
-<ol>
+<ol class="farsi-number">
     <li dir="rtl" style="text-align: right;">دو تابع <strong><span class="colored-text">vert_mirror</span></strong> و
         <strong><span class="colored-text">hor_mirror</span></strong> را بنویسید.
     </li>
@@ -115,9 +116,9 @@ function oper($fct, $s)
     else
         return vertMirror($s);
 }
-echo "&lt;pre&gt;";
+
   print_r(oper('horMirror', "abcd\nefgh\nijkl\nmnop\n"));
-echo "&lt;/pre&gt;";</pre>
+</pre>
 <!-- /wp:html -->
 
 <!-- wp:html -->
@@ -134,7 +135,8 @@ echo "&lt;/pre&gt;";</pre>
             mnop
             ijkl
             efgh
-            abcd</p>
+            abcd
+            </p>
     </div>
 </div>
 <!-- /wp:html -->
@@ -148,7 +150,7 @@ echo "&lt;/pre&gt;";</pre>
         <strong><span class="colored-text">()implode</span></strong>
         &nbsp;و
 
-        <span class="colored-text"><strong>()explode</strong></span> و
+        <strong><span class="colored-text">()explode</span></strong> و
         <strong><span class="colored-text">()array_reverse </span></strong>در تمرینات قبلی معرفی شدند.</p>
 
 <!-- wp:spacer -->
@@ -163,7 +165,8 @@ echo "&lt;/pre&gt;";</pre>
 <div dir="rtl" style="text-align: justify;">به شما یک رشته از n خط داده می شود که هر زیر رشته دارای n کاراکتر است: به
     عنوان مثال:
 </div>
-<p dir="ltr" style="text-align: left;"><span style="background-color: #ffffff;">&nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;</span>
+<p dir="ltr" style="text-align: left;">
+&nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;
 </p>
 <div dir="rtl" style="text-align: justify;">ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
 <div dir="rtl"><strong><span class="colored-text">n\</span></strong> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
@@ -186,7 +189,7 @@ echo "&lt;/pre&gt;";</pre>
 
 <ul>
     <li dir="rtl" style="text-align: right;">چرخش ساعتگرد ۱۸۰ درجه و نقاط پراکنده: <strong><span
-            style="color: #800000;">selfie_and_rot</span></strong>
+            class="colored-text">selfie_and_rot</span></strong>
     </li>
 </ul>
 
@@ -223,12 +226,12 @@ echo "&lt;/pre&gt;";</pre>
 <!-- /wp:spacer -->
 
 <p dir="rtl" style="text-align: right;"><strong>وظیفه:</strong></p>
-<ol>
-    <li dir="rtl" style="text-align: right;">دو تابع <span style="color: #800000;"><strong>rot</strong> </span>و <span
-            style="color: #800000;"><strong>selfie_and_rot</strong></span> را بنویسید.
+<ol class="farsi-number">
+    <li dir="rtl" style="text-align: right;">دو تابع <strong><span class="colored-text">rot</span></strong> و
+    <strong><span class="colored-text">selfie_and_rot</span></strong> را بنویسید.
     </li>
-    <li dir="rtl" style="text-align: right;">تابع دست بالای <span
-            style="color: #800000;"><strong>oper(fct, s)</strong></span> را بنویسید. در این تابع پارامتر fct مشخص می کند
+    <li dir="rtl" style="text-align: right;">تابع دست بالای <strong><span
+            class="colored-text">oper(fct, s)</span></strong> را بنویسید. در این تابع پارامتر fct مشخص می کند
         که
         کدامیک از دو تابع rot و selfie_and_rot باید روی رشته اعمال شود.
     </li>
@@ -312,20 +315,19 @@ echo "&lt;/pre&gt;";</pre>
 <div style="height:81px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<p dir="rtl" style="text-align: justify;">توابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">implode</span></strong>&nbsp;و <span
-        style="color: #ff0000;"><strong>()</strong></span><span
-        style="color: #ff0000;"><strong>explode</strong></span> و <strong><span
-        style="color: #ff0000;">()strrev</span></strong> و <span
-        style="color: #ff0000;"><strong>()str_repeat</strong></span>
-    و <strong><span style="color: #ff0000;">()count</span></strong> در تمرینات قبلی معرفی شدند.</p>
+<p dir="rtl" style="text-align: justify;">توابع
+        <strong><span class="colored-text">()implode</span></strong>&nbsp;و
+        <strong><span class="colored-text">()explode</span></strong> و
+        <strong><span class="colored-text">()strrev</span></strong> و
+        <strong><span class="colored-text">()str_repeat</span></strong>
+    و <strong><span class="colored-text">()count</span></strong> در تمرینات قبلی معرفی شدند.</p>
 
 <!-- wp:spacer -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۳. این سومین تمرین از چهارگانهء «رشته‌های مربع» است.</span>
+<h4><span class="colored-text">۲۳. این سومین تمرین از چهارگانهء «رشته‌های مربع» است.</span>
 </h4>
 <!-- /wp:heading -->
 
@@ -333,16 +335,17 @@ echo "&lt;/pre&gt;";</pre>
     عنوان مثال:
 </div>
 <div dir="rtl">
-    <p dir="ltr"><span style="color: #333333; background-color: #ffffff;">&nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;</span>
+    <p dir="ltr">
+    &nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;
     </p>
     <div>ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
-    <div><span style="color: #ff0000;"><strong>n\</strong></span> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
+    <div><strong><span class="colored-text">n\</span></strong> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
 </div>
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 <div dir="rtl">
     <ul>
-        <li>تقارن با توجه به قطر اصلی: <strong><span style="color: #800000;">diag_1_sym</span></strong> (یا diag1Sym یا
+        <li>تقارن با توجه به قطر اصلی: <strong><span class="colored-text">diag_1_sym</span></strong> (یا diag1Sym یا
             diag-1-sym)
         </li>
     </ul>
@@ -357,8 +360,8 @@ echo "&lt;/pre&gt;";</pre>
 <!-- /wp:spacer -->
 
 <ul>
-    <li dir="rtl" style="text-align: justify;">چر خش در جهت عقربه های ساعت 90 درجه: <span
-            style="color: #800000;"><strong>rot_90_clock</strong></span>
+    <li dir="rtl" style="text-align: justify;">چر خش در جهت عقربه های ساعت 90 درجه: <strong><span
+            class="colored-text">rot_90_clock</span></strong>
         (یا rot90Clock یا rot-90-clock)
     </li>
 </ul>
@@ -373,7 +376,7 @@ echo "&lt;/pre&gt;";</pre>
 
 <ul>
     <li dir="rtl" style="text-align: justify;">
-        <div><span style="color: #800000;"><strong>selfie_and_diag1(s)</strong></span> (یا selfieAndDiag1 یا
+        <div><strong><span class="colored-text">selfie_and_diag1(s)</span></strong> (یا selfieAndDiag1 یا
             selfie-and-diag1): این یک رشته اولیه + رشته است که با تقارن نسبت به قطر اصلی به دست می آید.
         </div>
     </li>
@@ -402,11 +405,11 @@ echo "&lt;/pre&gt;";</pre>
 <p dir="rtl" style="text-align: justify;"><strong>وظیفه:</strong></p>
 <ul>
     <li dir="rtl" style="text-align: justify;">این توابع را بنویسید: <strong><span
-            style="color: #800000;">diag_1_sym</span></strong> و <span
-            style="color: #800000;"><strong>rot_90_clock</strong></span> و <span style="color: #800000;"><strong>selfie_and_diag1</strong></span>
+            class="colored-text">diag_1_sym</span></strong> و <strong><span
+            class="colored-text">rot_90_clock</span></strong> و <strong><span class="colored-text">selfie_and_diag1</span></strong>
     </li>
     <li dir="rtl" style="text-align: right;">
-        <div>تابع مرتبه بالای <span style="color: #800000;"><strong>oper(fct, s)</strong></span> را بنویسید.</div>
+        <div>تابع مرتبه بالای <strong><span class="colored-text">oper(fct, s)</span></strong> را بنویسید.</div>
     </li>
     <li dir="rtl" style="text-align: right;">
         <div style="text-align: justify;">fct تابع یک متغیر f برای اعمال به رشته s است (fct یکی از diag_1_sym،
@@ -491,13 +494,12 @@ echo "&lt;/pre&gt;";</pre>
 <div style="height:77px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<p dir="rtl" style="text-align: justify;">توابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">implode</span></strong>&nbsp;و <span
-        style="color: #ff0000;"><strong>()</strong></span><span
-        style="color: #ff0000;"><strong>explode</strong></span> و <strong><span
-        style="color: #ff0000;">()strrev</span></strong> و <span
-        style="color: #ff0000;"><strong>()array_reverse</strong></span> و <strong><span
-        style="color: #ff0000;">()count</span></strong>
+<p dir="rtl" style="text-align: justify;">توابع
+        <strong><span class="colored-text">()implode</span></strong>&nbsp;و
+        <strong><span class="colored-text">()explode</span></strong> و
+        <strong><span class="colored-text">()strrev</span></strong> و
+        <strong><span class="colored-text">()array_reverse</span></strong> و
+        <strong><span class="colored-text">()count</span></strong>
     در تمرینات قبلی معرفی شدند.</p>
 
 <!-- wp:spacer -->
@@ -505,7 +507,7 @@ echo "&lt;/pre&gt;";</pre>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۴. این چهارمین تمرین از چهارگانهء «رشته‌های مربع» است.</span>
+<h4><span class="colored-text">۲۴. این چهارمین تمرین از چهارگانهء «رشته‌های مربع» است.</span>
 </h4>
 <!-- /wp:heading -->
 
@@ -513,17 +515,18 @@ echo "&lt;/pre&gt;";</pre>
     عنوان مثال:
 </div>
 <div dir="rtl">
-    <p dir="ltr"><span style="background-color: #ffffff;">&nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;</span>
+    <p dir="ltr">
+    &nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;
     </p>
     <div>ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
-    <div><span style="color: #ff0000;"><strong>n\</strong></span> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
+    <div><strong><span class="colored-text">n\</span></strong> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
     <div>&nbsp;</div>
 </div>
 <div>&nbsp;</div>
 <div>
     <ul>
         <li dir="rtl" style="text-align: justify;">تقارن با توجه به مورب متقاطع اصلی: <strong><span
-                style="color: #800000;">diag_2_sym</span>
+                class="colored-text">diag_2_sym</span>
         </strong>(یا diag2Sym یا diag-2-sym)
         </li>
     </ul>
@@ -539,7 +542,7 @@ echo "&lt;/pre&gt;";</pre>
 
 <ul>
     <li dir="rtl" style="text-align: justify;">
-        <div>چرخش خلاف جهت عقربه های ساعت 90 درجه: <strong><span style="color: #800000;">rot_90_counter</span> </strong>(یا
+        <div>چرخش خلاف جهت عقربه های ساعت 90 درجه: <strong><span class="colored-text">rot_90_counter</span> </strong>(یا
             rot90Counter یا rot-90-counter)
         </div>
     </li>
@@ -555,7 +558,7 @@ echo "&lt;/pre&gt;";</pre>
 
 <ul>
     <li dir="rtl" style="text-align: justify;"><strong><span
-            style="color: #800000;">selfie_diag2_counterclock</span></strong> (یا selfieDiag2Counterclock یا
+            class="colored-text">selfie_diag2_counterclock</span></strong> (یا selfieDiag2Counterclock یا
         selfie-diag2-counterclock) رشته اولیه + رشته است که با تقارن نسبت به مورب اصلی متقاطع + چرخش خلاف جهت عقربه های
         ساعت
         90 درجه به دست می آید.
@@ -585,14 +588,14 @@ echo "&lt;/pre&gt;";</pre>
 
 <p dir="rtl" style="text-align: justify;"><strong>وظیفه:</strong></p>
 
-<ol>
+<ol class="farsi-number">
     <li dir="rtl" style="text-align: justify;">این توابع را بنویسید: <strong><span
-            style="color: #800000;">diag_2_sym</span></strong> و&nbsp; <span
-            style="color: #800000;"><strong>rot_90_counter</strong></span> و&nbsp; <span
-            style="color: #800000;"><strong>selfie_diag2_counterclock</strong></span>
+            class="colored-text">diag_2_sym</span></strong> و&nbsp; <strong><span
+            class="colored-text">rot_90_counter</span></strong> و&nbsp; <strong><span
+            class="colored-text">selfie_diag2_counterclock</span></strong>
     </li>
     <li dir="rtl" style="text-align: justify;">
-        <div>تابع مرتبه بالا<span style="color: #800000;"><strong> oper(fct,s)</strong></span> را بنویسید که در آن fct
+        <div>تابع مرتبه بالا<strong><span class="colored-text"> oper(fct,s)</span></strong> را بنویسید که در آن fct
             تابع یک متغیر f است که روی رشته s اعمال می شود (fct یکی از diag_2_sym، rot_90_counter،
             selfie_diag2_counterclock
             خواهد بود)
@@ -675,25 +678,24 @@ echo "&lt;/pre&gt;";</pre>
 <div style="height:83px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<p dir="rtl" style="text-align: justify;">توابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">implode</span></strong>&nbsp;و <span
-        style="color: #ff0000;"><strong>()</strong></span><span
-        style="color: #ff0000;"><strong>explode</strong></span> و <strong><span
-        style="color: #ff0000;">()strrev</span></strong> و <span
-        style="color: #ff0000;"><strong>()array_reverse</strong></span> &nbsp;در تمرینات قبلی معرفی شدند.</p>
+<p dir="rtl" style="text-align: justify;">
+        <strong><span class="colored-text">()implode</span></strong>&nbsp;و
+        <strong><span class="colored-text">()explode</span></strong> و
+        <strong><span class="colored-text">()strrev</span></strong> و
+        <strong><span class="colored-text">()array_reverse</span></strong> &nbsp;در تمرینات قبلی معرفی شدند.</p>
 
 <!-- wp:spacer -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۵. تابعی بنویسید که یک لیست را از لیست دیگر کم می کند و نتیجه را برمی گرداند.</span>
+<h4><span class="colored-text">۲۵. تابعی بنویسید که یک لیست را از لیست دیگر کم می کند و نتیجه را برمی گرداند.</span>
 </h4>
 <!-- /wp:heading -->
 
-<div dir="rtl" style="text-align: right;">تابع باید تمام مقادیری را که در لیست <strong><span
-        style="color: #800000;">b</span></strong> وجود دارد از لیست <strong><span
-        style="color: #800000;">a</span></strong> کم
+<div dir="rtl" style="text-align: right;">تابع باید تمام مقادیری را که در لیست
+        <strong><span class="colored-text">b</span></strong> وجود دارد از لیست
+        <strong><span class="colored-text">a</span></strong> کم
     کند. همچنین ترتیب را حفظ نماید:
 </div>
 
@@ -757,8 +759,8 @@ echo "&lt;/pre&gt;";</pre>
 <h3 class="wp-block-heading has-text-align-right">معرفی تابع ()array_values :</h3>
 <!-- /wp:heading -->
 
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()array_values</span></strong>
-    ​​یک آرایه حاوی تمام <strong><span style="color: #800000;">مقادیر</span> </strong>یک آرایه را برمی گرداند.
+<div dir="rtl" style="text-align: justify;">تابع <strong><span class="colored-text">()array_values</span></strong>
+    ​​یک آرایه حاوی تمام <strong><span class="colored-text">مقادیر</span> </strong>یک آرایه را برمی گرداند.
 </div>
 <div dir="rtl">&nbsp;</div>
 <div dir="rtl">
@@ -841,7 +843,7 @@ print_r(array_values($a));</pre>
 <h3 class="wp-block-heading has-text-align-right">معرفی تابع ()array_diff :</h3>
 <!-- /wp:heading -->
 
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()array_diff</span></strong>
+<div dir="rtl" style="text-align: justify;">تابع <strong><span class="colored-text">()array_diff</span></strong>
     مقادیر دو (یا چند) آرایه را مقایسه می کند و تفاوت ها را برمی گرداند.
 </div>
 <div dir="rtl">
@@ -935,7 +937,7 @@ echo "&lt;/pre&gt;";</pre>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۶. تابعی بنویسید که رشته ای از یک یا چند کلمه را دریافت کند و همان رشته را برگرداند، اما تمام کلمات پنج یا چند حرفی معکوس شوند. رشته های ارسال شده فقط از حروف و فاصله تشکیل شده است. فضاها فقط زمانی درج خواهند شد که بیش از یک کلمه وجود داشته باشد.</span>
+<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۲۶. تابعی بنویسید که رشته ای از یک یا چند کلمه را دریافت کند و همان رشته را برگرداند، اما تمام کلمات پنج یا چند حرفی معکوس شوند. رشته های ارسال شده فقط از حروف و فاصله تشکیل شده است. فضاها فقط زمانی درج خواهند شد که بیش از یک کلمه وجود داشته باشد.</span>
 </h4>
 <!-- /wp:heading -->
 
@@ -983,17 +985,17 @@ echo spinWords(" is currently unable to handle this request.");</pre>
 <!-- /wp:spacer -->
 
 <p dir="rtl" style="text-align: justify;">تابعهای <strong><span
-        style="color: #ff0000;">()preg_replace_callback</span></strong> و <span
-        style="color: #ff0000;"><strong>()strrev</strong></span> در تمرینهای قبلی معرفی شدند.</p>
-<p dir="rtl"><strong><span style="color: #ff0000;">/\w{5,}/</span></strong> یک عبارت <strong><span
-        style="color: #800000;">RegEx</span> </strong>است که برای پیدا کردن کلمات ۵ حرفی یا بیشتر استفاده شده است.</p>
+        class="colored-text">()preg_replace_callback</span></strong> و <strong><span
+        class="colored-text">()strrev</span></strong> در تمرینهای قبلی معرفی شدند.</p>
+<p dir="rtl"><strong><span class="colored-text">/\w{5,}/</span></strong> یک عبارت <strong><span
+        class="colored-text">RegEx</span> </strong>است که برای پیدا کردن کلمات ۵ حرفی یا بیشتر استفاده شده است.</p>
 
 <!-- wp:spacer -->
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۷. تابعی بنویسید که اگر n یک عدد صحیح بود، رشته ای را با علامت های dash'-' قبل و بعد از هر عدد صحیح فرد برگرداند، اما رشته را با علامت خط تیره شروع یا پایان ندهد. اگر n منفی باشد، علامت منفی باید حذف شود. اگر n یک عدد صحیح نبود، یک مقدار خالی برگرداند.</span>
+<h4><span class="colored-text">۲۷. تابعی بنویسید که اگر n یک عدد صحیح بود، رشته ای را با علامت های dash'-' قبل و بعد از هر عدد صحیح فرد برگرداند، اما رشته را با علامت خط تیره شروع یا پایان ندهد. اگر n منفی باشد، علامت منفی باید حذف شود. اگر n یک عدد صحیح نبود، یک مقدار خالی برگرداند.</span>
 </h4>
 <!-- /wp:heading -->
 
@@ -1042,8 +1044,8 @@ echo dashatize(124434568789);</pre>
 <h3 class="wp-block-heading has-text-align-right">معرفی تابع ()str_replace :</h3>
 <!-- /wp:heading -->
 
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">str_replace</span></strong>&nbsp;برخی از کاراکترها را با برخی کاراکترهای دیگر در یک رشته
+<div dir="rtl" style="text-align: justify;">تابع
+<strong><span class="colored-text">()str_replace</span></strong>&nbsp;برخی از کاراکترها را با برخی کاراکترهای دیگر در یک رشته
     جایگزین می کند.
 </div>
 <div dir="rtl">&nbsp;</div>
@@ -1057,24 +1059,23 @@ echo dashatize(124434568789);</pre>
             <div>اگر رشته ای که باید جستجو شود یک آرایه است، پیدا کردن و جایگزینی با هر عنصر آرایه انجام می شود.</div>
         </li>
         <li>
-            <div>اگر هم <span style="color: #800000;"><strong>find</strong> </span>و هم <strong><span
-                    style="color: #800000;">replace</span>
-            </strong>آرایه باشند، و <span style="color: #800000;"><strong>replace</strong> </span>عناصر کمتری نسبت به
-                <span
-                        style="color: #800000;"><strong>find</strong> </span>داشته باشد، یک رشته خالی به عنوان <span
-                        style="color: #800000;"><strong>replace</strong> </span>استفاده می شود.
+            <div>اگر هم <strong><span class="colored-text">find</span></strong> و هم <strong><span
+                    class="colored-text">replace</span>
+            </strong>آرایه باشند، و <strong><span class="colored-text">replace</span></strong> عناصر کمتری نسبت به
+                <strong><span class="colored-text">find</span></strong> داشته باشد، یک رشته خالی به عنوان
+                <strong><span class="colored-text">replace</span></strong> استفاده می شود.
             </div>
         </li>
         <li>
-            <div>اگر <span style="color: #800000;"><strong>find</strong> </span>یک آرایه و <span
-                    style="color: #800000;"><strong>replace</strong></span> یک رشته باشد، رشته جایگزین برای هر مقدار
+            <div>اگر <strong><span class="colored-text">find</span></strong> یک آرایه و <strong><span
+                    class="colored-text">replace</span></strong> یک رشته باشد، رشته جایگزین برای هر مقدار
                 <strong><span
-                        style="color: #800000;">find</span> </strong>استفاده می شود.
+                        class="colored-text">find</span> </strong>استفاده می شود.
             </div>
         </li>
     </ul>
-    <div><strong>توجه:</strong> این تابع به حروف بزرگ و کوچک حساس است. از تابع <strong><span style="color: #ff0000;">()str_ireplace</span></strong>
-        برای انجام جستجوی <strong><span style="color: #ff0000;">غیرحساس</span> </strong>به حروف بزرگ و کوچک استفاده
+    <div><strong>توجه:</strong> این تابع به حروف بزرگ و کوچک حساس است. از تابع <strong><span class="colored-text">()str_ireplace</span></strong>
+        برای انجام جستجوی <strong><span class="colored-text">غیرحساس</span> </strong>به حروف بزرگ و کوچک استفاده
         کنید.
     </div>
 </div>
@@ -1169,7 +1170,7 @@ echo str_replace("world","Peter","Hello world!");</pre>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۸. data و data1 دو رشته با رکورد بارندگی چند شهر برای ماهها از ژانویه تا دسامبر است. سوابق شهرها با n\ جدا می شوند. پس از نام هر شهر دو نقطه : قرار دارد.</span>
+<h4><span class="colored-text">۲۸. data و data1 دو رشته با رکورد بارندگی چند شهر برای ماهها از ژانویه تا دسامبر است. سوابق شهرها با n\ جدا می شوند. پس از نام هر شهر دو نقطه : قرار دارد.</span>
 </h4>
 <!-- /wp:heading -->
 
@@ -1178,7 +1179,7 @@ echo str_replace("world","Peter","Hello world!");</pre>
 <!-- /wp:spacer -->
 
 <p dir="rtl" style="text-align: justify;"><strong>وظیفه:</strong></p>
-<ol>
+<ol class="farsi-number">
     <li dir="rtl" style="text-align: justify;">
         <div>تابع: mean(town, strng) باید میانگین بارندگی شهر و داده strng یا data1 را برگرداند (در R و Julia این تابع
             avg
@@ -1252,7 +1253,7 @@ $data2 =
 <div style="height:75px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<p dir="rtl" style="text-align: justify;">سپس آن را در فایل اصلی <strong><span style="color: #800000;">include</span>
+<p dir="rtl" style="text-align: justify;">سپس آن را در فایل اصلی <strong><span class="colored-text">include</span>
 </strong>می کنیم:</p>
 
 <!-- wp:spacer {"height":"60px"} -->
@@ -1337,12 +1338,11 @@ echo "&lt;/pre&gt;";</pre>
 <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<p dir="rtl" style="text-align: justify;">تابع های <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">preg_replace_callback</span></strong>&nbsp;و <strong><span
-        style="color: #ff0000;">()</span></strong><span style="color: #ff0000;"><strong>explode</strong></span>&nbsp;و
-    <strong><span style="color: #ff0000;">()</span></strong><strong><span
-            style="color: #ff0000;">array_sum</span></strong>&nbsp;و <strong><span
-            style="color: #ff0000;">()</span></strong><span style="color: #ff0000;"><strong>count</strong></span>&nbsp;در
+<p dir="rtl" style="text-align: justify;">تابع های
+    <strong><span class="colored-text">()preg_replace_callback</span></strong>&nbsp;و
+    <strong><span class="colored-text">()explode</span></strong>&nbsp;و
+    <strong><span class="colored-text">()array_sum</span></strong>&nbsp;و
+    <strong><span class="colored-text">()count</span></strong>&nbsp;در
     تمرینات قبلی معرفی شدند.</p>
 
 <!-- wp:spacer -->
@@ -1353,9 +1353,10 @@ echo "&lt;/pre&gt;";</pre>
 <h3 class="wp-block-heading has-text-align-right">معرفی تابع ()preg_match :</h3>
 <!-- /wp:heading -->
 
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">preg_match</span></strong>&nbsp;برمی‌گرداند که آیا مطابقت در یک رشته پیدا شده است یا
+<div dir="rtl" style="text-align: justify;">تابع <strong>
+<strong><span class="colored-text">preg_match</span></strong>&nbsp;برمی‌گرداند که آیا مطابقت در یک رشته پیدا شده است یا
     خیر.
+</strong>
 </div>
 <div dir="rtl">&nbsp;</div>
 <div dir="rtl">&nbsp;</div>
@@ -1435,14 +1436,14 @@ echo preg_match($pattern, $str);</pre>
             <div>اختیاری. مجموعه ای از گزینه ها که نحوه ساختار آرایه مطابقت را تغییر می دهد:</div>
 
             <ul>
-                <li><strong><span style="color: #ff0000;">PREG_OFFSET_CAPTURE</span></strong> - وقتی این گزینه فعال
+                <li><strong><span class="colored-text">PREG_OFFSET_CAPTURE</span></strong> - وقتی این گزینه فعال
                     باشد، هر
                     تطابق، به جای اینکه یک رشته باشد، آرایه ای خواهد بود که عنصر اول یک زیررشته حاوی تطابق و عنصر دوم
                     موقعیت
                     اولین کاراکتر رشته فرعی در ورودی است.
                 </li>
                 <li>
-                    <div><strong><span style="color: #ff0000;">PREG_UNMATCHED_AS_NULL</span></strong> - وقتی این گزینه
+                    <div><strong><span class="colored-text">PREG_UNMATCHED_AS_NULL</span></strong> - وقتی این گزینه
                         فعال
                         باشد، الگوهای فرعی ناهمسان به جای رشته خالی به صورت NULL برگردانده می شوند.
                     </div>
@@ -1470,7 +1471,7 @@ echo preg_match($pattern, $str);</pre>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۹. تابعی بنویسید که دو ماتریس مربع (N x N آرایه دو بعدی) را بپذیرد و مجموع آن دو را برگرداند. هر دو ماتریس ارسال شده به تابع دارای اندازه N x N (مربع) خواهند بود که فقط شامل اعداد صحیح هستند.</span>
+<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۲۹. تابعی بنویسید که دو ماتریس مربع (N x N آرایه دو بعدی) را بپذیرد و مجموع آن دو را برگرداند. هر دو ماتریس ارسال شده به تابع دارای اندازه N x N (مربع) خواهند بود که فقط شامل اعداد صحیح هستند.</span>
 </h4>
 <!-- /wp:heading -->
 
@@ -1567,7 +1568,7 @@ echo "&lt;/pre&gt;";</pre>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۳۰. شما باید تابعی بسازید که اگر پارامترهای داده شده مختصات جغرافیایی معتبری باشند اعتبار سنجی کند.</span>
+<h4><span class="colored-text">۳۰. شما باید تابعی بسازید که اگر پارامترهای داده شده مختصات جغرافیایی معتبری باشند اعتبار سنجی کند.</span>
 </h4>
 <!-- /wp:heading -->
 
@@ -1664,10 +1665,11 @@ echo(isValidCoordinates($a));</pre>
 <h3 class="wp-block-heading has-text-align-right">معرفی تابع ()is_numeric :</h3>
 <!-- /wp:heading -->
 
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">is_numeric</span></strong>&nbsp;بررسی می کند که متغیر یک <strong><span
-        style="color: #800000;">عدد </span></strong>است یا یک <span
-        style="color: #800000;"><strong>رشته عددی</strong></span>.
+<div dir="rtl" style="text-align: justify;">تابع
+
+        <strong><span class="colored-text">()is_numeric</span></strong>&nbsp;بررسی می کند که متغیر یک
+        <strong><span class="colored-text">عدد </span></strong>است یا یک
+        <strong><span class="colored-text">رشته عددی</span></strong>.
 </div>
 <div dir="rtl">
     <div>اگر متغیر یک عدد یا یک رشته عددی باشد، این تابع true (1) را برمی‌گرداند، در غیر این صورت false/nothing را
@@ -1754,7 +1756,8 @@ echo "f is " . is_numeric($f) . "&lt;br&gt;";
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۳۱. با توجه به آرایه ای از اعداد صحیح، اعدادی را که به تعداد فرد ظاهر می شود، پیدا کنید.</span>
+<h4>
+<span class="colored-text">۳۱. با توجه به آرایه ای از اعداد صحیح، اعدادی را که به تعداد فرد ظاهر می شود، پیدا کنید.</span>
 </h4>
 <!-- /wp:heading -->
 
@@ -1851,7 +1854,7 @@ echo "&lt;/pre&gt;";</pre>
 <div style="height:51px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<p dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()array_search</span></strong> در
+<p dir="rtl" style="text-align: justify;">تابع <strong><span class="colored-text">()array_search</span></strong> در
     تمرین های قبلی معرفی شد.</p>
 
 <!-- wp:spacer -->
@@ -1859,7 +1862,7 @@ echo "&lt;/pre&gt;";</pre>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۳۲. آرایه ای از اعداد به شما داده می شود. شما باید اعداد فرد را به ترتیب صعودی مرتب کنید در حالی که اعداد زوج را در موقعیت اصلی خود نگه دارید.</span>
+<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۳۲. آرایه ای از اعداد به شما داده می شود. شما باید اعداد فرد را به ترتیب صعودی مرتب کنید در حالی که اعداد زوج را در موقعیت اصلی خود نگه دارید.</span>
 </h4>
 <!-- /wp:heading -->
 
@@ -1942,7 +1945,7 @@ echo "&lt;/pre&gt;";</pre>
 <div style="height:37px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()array_shift</span></strong>
+<div dir="rtl" style="text-align: justify;">تابع <strong><span class="colored-text">()array_shift</span></strong>
     اولین عنصر را از یک آرایه حذف می کند و مقدار عنصر حذف شده را برمی گرداند.
 </div>
 <div dir="rtl">
@@ -2025,2023 +2028,3 @@ echo "&lt;/pre&gt;";</pre>
         قبلی</a></div>
 </div>
 <div style="margin-bottom: 150px;"></div>
-<!-- /wp:html -->ading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۱. این اولین تمرین از چهارگانهء «رشته‌های مربع» است.</span>
-
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"56px"} -->
-<div style="height:56px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">به شما یک رشته از n خط داده می شود که هر زیر رشته دارای n کاراکتر است: به
-    عنوان مثال:
-</div>
-<div dir="rtl">
-    <p dir="ltr"><span style="background-color: #ffffff;">&nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;</span>
-    </p>
-    <div>ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
-    <div><span style="color: #ff0000;"><strong>n\</strong></span> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
-</div>
-<div>&nbsp;</div>
-<ul>
-    <li dir="rtl" style="text-align: right;">آینه عمودی: <strong><span style="color: #800000;">vert_mirror</span>
-    </strong>(یا vertMirror یا vert-mirror)
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">vert_mirror(s) =&gt; "dcba\nhgfe\nlkji\nponm"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"75px"} -->
-<div style="height:75px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: justify;">آینه افقی: <strong><span style="color: #800000;">hor_mirror</span>
-    </strong>(یا horizontal mirror یا hor-mirror)
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr"> hor_mirror(s) =&gt; "mnop\nijkl\nefgh\nabcd"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"71px"} -->
-<div style="height:71px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>یا چاپ شده:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">
-    vertical mirror |horizontal mirror
-    abcd --&gt; dcba   |abcd --&gt; mnop
-    efgh hgfe       |efgh ijkl
-    ijkl lkji       |ijkl efgh
-    mnop ponm       |mnop abcd
-</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: right;"><strong>وظیفه:</strong></p>
-<ol>
-    <li dir="rtl" style="text-align: right;">دو تابع <span style="color: #800000;"><strong>vert_mirror</strong></span> و
-        <strong><span style="color: #800000;">hor_mirror</span></strong> را بنویسید.
-    </li>
-    <li dir="rtl" style="text-align: right;">تابع دست بالای <span
-            style="color: #800000;"><strong>oper(fct, s)</strong></span> را بنویسید. در این تابع پارامتر fct مشخص می کند
-        که
-        کدامیک از دو تابع vert_mirror و hor_mirror باید روی رشته اعمال شود.
-    </li>
-</ol>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">s = "abcd\nefgh\nijkl\nmnop"
-oper(vert_mirror, s) =&gt; "dcba\nhgfe\nlkji\nponm"
-oper(hor_mirror, s) =&gt; "mnop\nijkl\nefgh\nabcd"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function vertMirror($s)
-{
-    // How to explode a multi-line string?
-    // https://stackoverflow.com/questions/6162912/how-to-explode-a-multi-line-string
-    return implode("\n", array_reverse(explode("\n", strrev($s))));
-}
-function horMirror($s)
-{
-    return implode("\n", array_reverse(explode("\n", $s)));
-}
-function oper($fct, $s)
-{
-    if ($fct == 'horMirror')
-        return horMirror($s);
-    else
-        return vertMirror($s);
-}
-echo "&lt;pre&gt;";
-  print_r(oper('horMirror', "abcd\nefgh\nijkl\nmnop\n"));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">
-            mnop
-            ijkl
-            efgh
-            abcd</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">توابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">implode</span></strong>&nbsp;و <span
-        style="color: #ff0000;"><strong>()</strong></span><span
-        style="color: #ff0000;"><strong>explode</strong></span> و <strong><span
-        style="color: #ff0000;">()array_reverse </span></strong>در تمرینات قبلی معرفی شدند.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۲. <span
-        style="color:#cf2e2e" class="tadv-color">این دومین تمرین از چهارگانهء «رشته‌های مربع» است</span>.</span></h4>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">به شما یک رشته از n خط داده می شود که هر زیر رشته دارای n کاراکتر است: به
-    عنوان مثال:
-</div>
-<p dir="ltr" style="text-align: left;"><span style="background-color: #ffffff;">&nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;</span>
-</p>
-<div dir="rtl" style="text-align: justify;">ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
-<div dir="rtl"><span style="color: #ff0000;"><strong>n\</strong></span> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">&nbsp;</div>
-
-<ul>
-    <li dir="rtl" style="text-align: justify;">چرخش ساعتگرد ۱۸۰ درجه: <strong><span
-            style="color: #800000;">rot</span></strong></li>
-</ul>
-
-
-<!-- wp:html -->
-<pre style="direction:ltr">rot(s) =&gt; "ponm\nlkji\nhgfe\ndcba"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"80px"} -->
-<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: right;">چرخش ساعتگرد ۱۸۰ درجه و نقاط پراکنده: <strong><span
-            style="color: #800000;">selfie_and_rot</span></strong>
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">selfie_and_rot(s) =&gt;
-"abcd....\nefgh....\nijkl....\nmnop....\n....ponm\n....lkji\n....hgfe\n....dcba"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl"><strong>یا چاپ شده:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">
-    |rotation          |selfie_and_rot
-    |abcd --&gt; ponm     |abcd --&gt; abcd....
-    |efgh     lkji     |efgh     efgh....
-    |ijkl     hgfe     |ijkl     ijkl....
-    |mnop     dcba     |mnop     mnop....
-                                 ....ponm
-                                 ....lkji
-                                 ....hgfe
-                                 ....dcba
-</pre>
-<!-- /wp:code -->
-
-<p dir="rtl" style="text-align: justify;">توجه داشته باشید که تعداد نقاط برابر با طول مشترک "abcd"، "efgh"، "ijkl"،
-    "mnop" است.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: right;"><strong>وظیفه:</strong></p>
-<ol>
-    <li dir="rtl" style="text-align: right;">دو تابع <span style="color: #800000;"><strong>rot</strong> </span>و <span
-            style="color: #800000;"><strong>selfie_and_rot</strong></span> را بنویسید.
-    </li>
-    <li dir="rtl" style="text-align: right;">تابع دست بالای <span
-            style="color: #800000;"><strong>oper(fct, s)</strong></span> را بنویسید. در این تابع پارامتر fct مشخص می کند
-        که
-        کدامیک از دو تابع rot و selfie_and_rot باید روی رشته اعمال شود.
-    </li>
-</ol>
-
-<!-- wp:spacer {"height":"75px"} -->
-<div style="height:75px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">s = "abcd\nefgh\nijkl\nmnop"
-oper(rot, s) =&gt; "ponm\nlkji\nhgfe\ndcba"
-oper(selfie_and_rot, s) =&gt; "abcd....\nefgh....\nijkl....\nmnop....\n....ponm\n....lkji\n....hgfe\n....dcba"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function rot($s)
-{
-    return strrev($s);
-}
-function selfieAndRot($s)
-{
-    $z = explode("\n", ($s));
-    $dots = str_repeat(".", count($z));
-    foreach ($z as $valuel) {
-        $zz1[] = ($valuel . $dots);
-    }
-    $aa = explode("\n", strrev($s));
-    foreach ($aa as $valuel) {
-        $zz2[] = ($dots . $valuel);
-    }
-    return implode("\n", $zz1) . "\n" . implode("\n", $zz2);
-}
-function oper($fct, $s)
-{
-    if ($fct == 'rot')
-        return rot($s);
-    else
-        return selfieAndRot($s);
-}
-echo "&lt;pre&gt;";
-  print_r(oper('selfieAndRot', "hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">
-            hSgdHQ......
-            HnDMao......
-            ClNNxX......
-            iRvxxH......
-            bqTVvA......
-            wvSyRu......
-            ......uRySvw
-            ......AvVTqb
-            ......HxxvRi
-            ......XxNNlC
-            ......oaMDnH
-            ......QHdgSh</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"81px"} -->
-<div style="height:81px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">توابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">implode</span></strong>&nbsp;و <span
-        style="color: #ff0000;"><strong>()</strong></span><span
-        style="color: #ff0000;"><strong>explode</strong></span> و <strong><span
-        style="color: #ff0000;">()strrev</span></strong> و <span
-        style="color: #ff0000;"><strong>()str_repeat</strong></span>
-    و <strong><span style="color: #ff0000;">()count</span></strong> در تمرینات قبلی معرفی شدند.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۳. این سومین تمرین از چهارگانهء «رشته‌های مربع» است.</span>
-</h4>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">به شما یک رشته از n خط داده می شود که هر زیر رشته دارای n کاراکتر است: به
-    عنوان مثال:
-</div>
-<div dir="rtl">
-    <p dir="ltr"><span style="color: #333333; background-color: #ffffff;">&nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;</span>
-    </p>
-    <div>ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
-    <div><span style="color: #ff0000;"><strong>n\</strong></span> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
-</div>
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-<div dir="rtl">
-    <ul>
-        <li>تقارن با توجه به قطر اصلی: <strong><span style="color: #800000;">diag_1_sym</span></strong> (یا diag1Sym یا
-            diag-1-sym)
-        </li>
-    </ul>
-</div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">diag_1_sym(s) =&gt; "aeim\nbfjn\ncgko\ndhlp"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"85px"} -->
-<div style="height:85px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: justify;">چر خش در جهت عقربه های ساعت 90 درجه: <span
-            style="color: #800000;"><strong>rot_90_clock</strong></span>
-        (یا rot90Clock یا rot-90-clock)
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">rot_90_clock(s) =&gt; "miea\nnjfb\nokgc\nplhd"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"85px"} -->
-<div style="height:85px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: justify;">
-        <div><span style="color: #800000;"><strong>selfie_and_diag1(s)</strong></span> (یا selfieAndDiag1 یا
-            selfie-and-diag1): این یک رشته اولیه + رشته است که با تقارن نسبت به قطر اصلی به دست می آید.
-        </div>
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">s = "abcd\nefgh\nijkl\nmnop" --&gt;
-"abcd|aeim\nefgh|bfjn\nijkl|cgko\nmnop|dhlp"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>یا چاپ شده:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">
-    selfie_and_diag1
-    abcd|aeim
-    efgh|bfjn
-    ijkl|cgko
-    mnop|dhlp</pre>
-<!-- /wp:code -->
-
-<p dir="rtl" style="text-align: justify;"><strong>وظیفه:</strong></p>
-<ul>
-    <li dir="rtl" style="text-align: justify;">این توابع را بنویسید: <strong><span
-            style="color: #800000;">diag_1_sym</span></strong> و <span
-            style="color: #800000;"><strong>rot_90_clock</strong></span> و <span style="color: #800000;"><strong>selfie_and_diag1</strong></span>
-    </li>
-    <li dir="rtl" style="text-align: right;">
-        <div>تابع مرتبه بالای <span style="color: #800000;"><strong>oper(fct, s)</strong></span> را بنویسید.</div>
-    </li>
-    <li dir="rtl" style="text-align: right;">
-        <div style="text-align: justify;">fct تابع یک متغیر f برای اعمال به رشته s است (fct یکی از diag_1_sym،
-            rot_90_clock،
-            selfie_and_diag1 خواهد بود)
-        </div>
-    </li>
-</ul>
-<p dir="rtl">
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">   s = "abcd\nefgh\nijkl\nmnop"
-   oper(diag_1_sym, s) =&gt; "aeim\nbfjn\ncgko\ndhlp"
-   oper(rot_90_clock, s) =&gt; "miea\nnjfb\nokgc\nplhd"
-   oper(selfie_and_diag1, s) =&gt; "abcd|aeim\nefgh|bfjn\nijkl|cgko\nmnop|dhlp"</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function diag1Sym($s)
-{
-    $a = explode("\n", $s);
-    foreach ($a as $key =&gt; $value) {
-        foreach ($a as $keya =&gt; $valuea) {
-            $zz1[$key][$keya] = $a[$keya][$key];
-        }
-    }
-    foreach ($zz1 as $value) {
-        $output[] = implode('', $value);
-    }
-    return implode("\n", $output);
-}
-function rot90Clock($s)
-{
-    $s = diag1Sym($s);
-    return implode("\n", array_reverse(explode("\n", strrev($s))));
-}
-function selfieAndDiag1($s)
-{
-    $a = explode("\n", $s);
-    $imp = explode("\n", diag1Sym($s));
-    foreach ($a as $key =&gt; $value) {
-        $output2[$key] = $a[$key] . "|" . $imp[$key];
-    }
-    return implode("\n", $output2);
-}
-function oper($fct, $s)
-{
-    return $fct($s);
-}
-echo "&lt;pre&gt;";
-  print_r(oper('selfieAndDiag1', "abcd\nefgh\nijkl\nmnop"));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">
-            abcd|aeim
-            efgh|bfjn
-            ijkl|cgko
-            mnop|dhlp
-        </p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"77px"} -->
-<div style="height:77px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">توابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">implode</span></strong>&nbsp;و <span
-        style="color: #ff0000;"><strong>()</strong></span><span
-        style="color: #ff0000;"><strong>explode</strong></span> و <strong><span
-        style="color: #ff0000;">()strrev</span></strong> و <span
-        style="color: #ff0000;"><strong>()array_reverse</strong></span> و <strong><span
-        style="color: #ff0000;">()count</span></strong>
-    در تمرینات قبلی معرفی شدند.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۴. این چهارمین تمرین از چهارگانهء «رشته‌های مربع» است.</span>
-</h4>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">به شما یک رشته از n خط داده می شود که هر زیر رشته دارای n کاراکتر است: به
-    عنوان مثال:
-</div>
-<div dir="rtl">
-    <p dir="ltr"><span style="background-color: #ffffff;">&nbsp; &nbsp;s = "abcd\nefgh\nijkl\nmnop"&nbsp; &nbsp;</span>
-    </p>
-    <div>ما برخی از تبدیلات این مربع از رشته ها را مطالعه خواهیم کرد.</div>
-    <div><span style="color: #ff0000;"><strong>n\</strong></span> برای رفتن به خط بعدی است و چاپ نمی شود.</div>
-    <div>&nbsp;</div>
-</div>
-<div>&nbsp;</div>
-<div>
-    <ul>
-        <li dir="rtl" style="text-align: justify;">تقارن با توجه به مورب متقاطع اصلی: <strong><span
-                style="color: #800000;">diag_2_sym</span>
-        </strong>(یا diag2Sym یا diag-2-sym)
-        </li>
-    </ul>
-</div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">diag_2_sym(s) =&gt; "plhd\nokgc\nnjfb\nmiea"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: justify;">
-        <div>چرخش خلاف جهت عقربه های ساعت 90 درجه: <strong><span style="color: #800000;">rot_90_counter</span> </strong>(یا
-            rot90Counter یا rot-90-counter)
-        </div>
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">rot_90_counter(s)=&gt; "dhlp\ncgko\nbfjn\naeim"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<ul>
-    <li dir="rtl" style="text-align: justify;"><strong><span
-            style="color: #800000;">selfie_diag2_counterclock</span></strong> (یا selfieDiag2Counterclock یا
-        selfie-diag2-counterclock) رشته اولیه + رشته است که با تقارن نسبت به مورب اصلی متقاطع + چرخش خلاف جهت عقربه های
-        ساعت
-        90 درجه به دست می آید.
-    </li>
-</ul>
-
-<!-- wp:html -->
-<pre style="direction:ltr">s = "abcd\nefgh\nijkl\nmnop" --&gt;
-"abcd|plhd|dhlp\nefgh|okgc|cgko\nijkl|njfb|bfjn\nmnop|miea|aeim"</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"66px"} -->
-<div style="height:66px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>یا چاپ شده:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">
-    selfie_diag2_counterclock
-   abcd|plhd|dhlp
-   efgh|okgc|cgko
-   ijkl|njfb|bfjn
-   mnop|miea|aeim
-</pre>
-<!-- /wp:code -->
-
-<p dir="rtl" style="text-align: justify;"><strong>وظیفه:</strong></p>
-
-<ol>
-    <li dir="rtl" style="text-align: justify;">این توابع را بنویسید: <strong><span
-            style="color: #800000;">diag_2_sym</span></strong> و&nbsp; <span
-            style="color: #800000;"><strong>rot_90_counter</strong></span> و&nbsp; <span
-            style="color: #800000;"><strong>selfie_diag2_counterclock</strong></span>
-    </li>
-    <li dir="rtl" style="text-align: justify;">
-        <div>تابع مرتبه بالا<span style="color: #800000;"><strong> oper(fct,s)</strong></span> را بنویسید که در آن fct
-            تابع یک متغیر f است که روی رشته s اعمال می شود (fct یکی از diag_2_sym، rot_90_counter،
-            selfie_diag2_counterclock
-            خواهد بود)
-        </div>
-    </li>
-</ol>
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:code {"style":{"typography":{"fontSize":"16px"}},"backgroundColor":"white"} -->
-<pre style="direction:ltr">   s = "abcd\nefgh\nijkl\nmnop"
-   oper(diag_2_sym, s) =&gt; "plhd\nokgc\nnjfb\nmiea"
-   oper(rot_90_counter, s) =&gt; "dhlp\ncgko\nbfjn\naeim"
-   oper(selfie_diag2_counterclock, s) =&gt;       "abcd|plhd|dhlp\nefgh|okgc|cgko\nijkl|njfb|bfjn\nmnop|miea|aeim"</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: right;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function transpose($array)
-{
-    array_unshift($array, null);
-    return call_user_func_array('array_map', $array);
-}
-function rot90Counter($s)
-{
-    $m = transpose(array_map("str_split", array_map("strrev", explode("\n", $s))));
-    return implode("\n", array_map(function ($x) {
-        return implode("", $x);
-    }, $m));
-}
-function diag2Sym($s)
-{
-    return implode("\n", array_map("strrev", explode("\n", rot90Counter($s))));
-}
-function selfieDiag2Counterclock($s)
-{
-    $ts = explode("\n", $s);
-    $tDiag = explode("\n", diag2Sym($s));
-    $stcounter = explode("\n", rot90Counter($s));
-    $result = [];
-    for ($i = 0; $i &lt; count($ts); $i++) {
-        $result[$i] = $ts[$i] . "|" . $tDiag[$i] . "|" . $stcounter[$i];
-    }
-    return implode("\n", $result);
-}
-function oper($fct, $s)
-{
-    return $fct($s);
-}
-echo "&lt;pre&gt;";
-  print_r(oper('selfieDiag2Counterclock', "abcd\nefgh\nijkl\nmnop"));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">
-            abcd|plhd|dhlp
-            efgh|okgc|cgko
-            ijkl|njfb|bfjn
-            mnop|miea|aeim
-        </p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"83px"} -->
-<div style="height:83px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">توابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">implode</span></strong>&nbsp;و <span
-        style="color: #ff0000;"><strong>()</strong></span><span
-        style="color: #ff0000;"><strong>explode</strong></span> و <strong><span
-        style="color: #ff0000;">()strrev</span></strong> و <span
-        style="color: #ff0000;"><strong>()array_reverse</strong></span> &nbsp;در تمرینات قبلی معرفی شدند.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۵. تابعی بنویسید که یک لیست را از لیست دیگر کم می کند و نتیجه را برمی گرداند.</span>
-</h4>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: right;">تابع باید تمام مقادیری را که در لیست <strong><span
-        style="color: #800000;">b</span></strong> وجود دارد از لیست <strong><span
-        style="color: #800000;">a</span></strong> کم
-    کند. همچنین ترتیب را حفظ نماید:
-</div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">arrayDiff([1,2],[1]) == [2]</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"79px"} -->
-<div style="height:79px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">اگر مقداری در b وجود داشته باشد، باید تمام مقادیر آن از دیگری حذف شوند:
-</div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">arrayDiff([1,2,2,2,3],[2]) == [1,3]</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function arrayDiff($a, $b)
-{
-    return array_values(array_diff($a, $b));
-}
-echo "&lt;pre&gt;";
-  print_r(arrayDiff([1, 2, 2, 2, 3, 3], [2]));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">
-            Array
-            (
-            [0] =&gt; 1
-            [1] =&gt; 3
-            [2] =&gt; 3
-            )
-        </p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"88px"} -->
-<div style="height:88px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()array_values :</h3>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()array_values</span></strong>
-    ​​یک آرایه حاوی تمام <strong><span style="color: #800000;">مقادیر</span> </strong>یک آرایه را برمی گرداند.
-</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">
-    <div><strong>نکته:</strong> آرایه برگشتی دارای کلیدهای عددی است که از صفر شروع می شود و یکی یکی افزایش می یابد.
-    </div>
-</div>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$a=array("Name"=&gt;"Peter","Age"=&gt;"41","Country"=&gt;"USA");
-print_r(array_values($a));</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">Array
-            (
-            [0] =&gt; Peter
-            [1] =&gt; 41
-            [2] =&gt; USA
-            )</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"79px"} -->
-<div style="height:79px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>سینتکس:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">array_values(array)</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"86px"} -->
-<div style="height:86px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 90.119%; height: 49px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 26px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 68.2391%; height: 26px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>array</em>
-        </td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. تعیین یک آرایه</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()array_diff :</h3>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()array_diff</span></strong>
-    مقادیر دو (یا چند) آرایه را مقایسه می کند و تفاوت ها را برمی گرداند.
-</div>
-<div dir="rtl">
-    <div style="text-align: justify;">این تابع مقادیر دو (یا چند) آرایه را مقایسه می‌کند و آرایه‌ای را برمی‌گرداند که
-        حاوی
-        ورودی‌های آرایه <strong>۱</strong> است که در آرایه <strong>۲</strong> یا آرایه <strong>۳</strong> و غیره وجود
-        ندارند.
-    </div>
-</div>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$a1=array("a"=&gt;"red","b"=&gt;"green","c"=&gt;"blue","d"=&gt;"yellow");
-$a2=array("e"=&gt;"red","f"=&gt;"green","g"=&gt;"blue");
-$result=array_diff($a1,$a2);
-echo "&lt;pre&gt;";
-  print_r($result);
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap"> Array
-            (
-            &#91;d] =&gt; yellow
-            )</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<p dir="rtl" style="text-align: justify;"><strong>سینتکس:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">array_diff(array1, array2, array3, ...)</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 87.1427%; height: 79px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 23px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 64.9366%; height: 23px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>array1</em>
-        </td>
-        <td dir="rtl" style="width: 64.9366%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. آرایه ای برای مقایسه</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #dbd7d7;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>array2</em>
-        </td>
-        <td dir="rtl" style="width: 64.9366%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. آرایه ای برای مقایسه</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 10px; text-align: center; border-left: 2px solid #3b3a3a;">array3,...</td>
-        <td dir="rtl" style="width: 64.9366%; height: 10px; text-align: justify; padding-right: 40px;">
-            <div>اختیاری. آرایه های بیشتر برای مقایسه با</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۶. تابعی بنویسید که رشته ای از یک یا چند کلمه را دریافت کند و همان رشته را برگرداند، اما تمام کلمات پنج یا چند حرفی معکوس شوند. رشته های ارسال شده فقط از حروف و فاصله تشکیل شده است. فضاها فقط زمانی درج خواهند شد که بیش از یک کلمه وجود داشته باشد.</span>
-</h4>
-<!-- /wp:heading -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:code {"backgroundColor":"white"} -->
-<pre style="direction:ltr">   spinWords( "Hey fellow warriors" ) =&gt; returns "Hey wollef sroirraw"
-   spinWords( "This is a test" ) =&gt; returns "This is a test"
-   spinWords( "This is another test" )=&gt; returns "This is rehtona test"</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function spinWords(string $str)
-{
-    return preg_replace_callback('/\w{5,}/', function ($matches) {
-        return strrev($matches[0]);
-    }, $str);
-}
-echo spinWords(" is currently unable to handle this request.");</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background has-medium-font-size">is yltnerruc elbanu to eldnah this
-            tseuqer.</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"77px"} -->
-<div style="height:77px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">تابعهای <strong><span
-        style="color: #ff0000;">()preg_replace_callback</span></strong> و <span
-        style="color: #ff0000;"><strong>()strrev</strong></span> در تمرینهای قبلی معرفی شدند.</p>
-<p dir="rtl"><strong><span style="color: #ff0000;">/\w{5,}/</span></strong> یک عبارت <strong><span
-        style="color: #800000;">RegEx</span> </strong>است که برای پیدا کردن کلمات ۵ حرفی یا بیشتر استفاده شده است.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۷. تابعی بنویسید که اگر n یک عدد صحیح بود، رشته ای را با علامت های dash'-' قبل و بعد از هر عدد صحیح فرد برگرداند، اما رشته را با علامت خط تیره شروع یا پایان ندهد. اگر n منفی باشد، علامت منفی باید حذف شود. اگر n یک عدد صحیح نبود، یک مقدار خالی برگرداند.</span>
-</h4>
-<!-- /wp:heading -->
-
-<p dir="rtl"><strong>مثال:</strong></p>
-
-<!-- wp:code {"backgroundColor":"white"} -->
-<pre style="direction:ltr">
-    dashatize(274) -&gt; '2-7-4'
-   dashatize(6815) -&gt; '68-1-5'
-</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function dashatize(int $num): string
-{
-    return trim(str_replace('--', '-', preg_replace('/([13579])/', '-$1-', $num)), '-');
-}
-echo dashatize(124434568789);</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background has-medium-font-size">1-244-3-4-5-68-7-8-9</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()str_replace :</h3>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">str_replace</span></strong>&nbsp;برخی از کاراکترها را با برخی کاراکترهای دیگر در یک رشته
-    جایگزین می کند.
-</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">
-    <div>این تابع با قوانین زیر کار می کند:</div>
-    <ul>
-        <li>
-            <div>اگر رشته مورد جستجو یک آرایه باشد، یک آرایه را برمی گرداند.</div>
-        </li>
-        <li>
-            <div>اگر رشته ای که باید جستجو شود یک آرایه است، پیدا کردن و جایگزینی با هر عنصر آرایه انجام می شود.</div>
-        </li>
-        <li>
-            <div>اگر هم <span style="color: #800000;"><strong>find</strong> </span>و هم <strong><span
-                    style="color: #800000;">replace</span>
-            </strong>آرایه باشند، و <span style="color: #800000;"><strong>replace</strong> </span>عناصر کمتری نسبت به
-                <span
-                        style="color: #800000;"><strong>find</strong> </span>داشته باشد، یک رشته خالی به عنوان <span
-                        style="color: #800000;"><strong>replace</strong> </span>استفاده می شود.
-            </div>
-        </li>
-        <li>
-            <div>اگر <span style="color: #800000;"><strong>find</strong> </span>یک آرایه و <span
-                    style="color: #800000;"><strong>replace</strong></span> یک رشته باشد، رشته جایگزین برای هر مقدار
-                <strong><span
-                        style="color: #800000;">find</span> </strong>استفاده می شود.
-            </div>
-        </li>
-    </ul>
-    <div><strong>توجه:</strong> این تابع به حروف بزرگ و کوچک حساس است. از تابع <strong><span style="color: #ff0000;">()str_ireplace</span></strong>
-        برای انجام جستجوی <strong><span style="color: #ff0000;">غیرحساس</span> </strong>به حروف بزرگ و کوچک استفاده
-        کنید.
-    </div>
-</div>
-<div>&nbsp;</div>
-<div dir="rtl" style="text-align: justify;">
-    <div><strong>توجه:</strong> این تابع binary-safe است.</div>
-</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl"><strong>سینتکس:</strong></div>
-<div dir="rtl">&nbsp;</div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">str_replace(find,replace,string,count)</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:paragraph {"align":"right"} -->
-<p class="has-text-align-right"><strong>مثال:</strong></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-echo str_replace("world","Peter","Hello world!");</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap"> Hello Peter!</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 90.119%; height: 102px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 23px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>find</em></td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. مقدار مورد نظر را مشخص می کند.</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #dbd7d7;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>replace</em>
-        </td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. مقدار را برای جایگزینی مقدار در find مشخص می کند.</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 10px; text-align: center; border-left: 2px solid #3b3a3a;"><em>string</em>
-        </td>
-        <td dir="rtl" style="width: 68.2391%; height: 10px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. رشته مورد جستجو را مشخص می کند.</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #dbd7d7;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>count</em>
-        </td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>اختیاری. متغیری که تعداد تعویض ها را می شمارد.</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۸. data و data1 دو رشته با رکورد بارندگی چند شهر برای ماهها از ژانویه تا دسامبر است. سوابق شهرها با n\ جدا می شوند. پس از نام هر شهر دو نقطه : قرار دارد.</span>
-</h4>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"79px"} -->
-<div style="height:79px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>وظیفه:</strong></p>
-<ol>
-    <li dir="rtl" style="text-align: justify;">
-        <div>تابع: mean(town, strng) باید میانگین بارندگی شهر و داده strng یا data1 را برگرداند (در R و Julia این تابع
-            avg
-            را فراخوانی می کند).
-        </div>
-    </li>
-    <li dir="rtl" style="text-align: justify;">
-        <div>تابع: (town، strng)variance باید واریانس بارندگی برای شهر town و داده strng یا data1 را برگرداند.</div>
-    </li>
-</ol>
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:code {"backgroundColor":"white"} -->
-<pre style="direction:ltr">mean("London", data), 51.19(9999999999996)
-variance("London", data), 57.42(833333333374)</pre>
-<!-- /wp:code -->
-
-<p dir="rtl"><strong>ملاحظات:</strong></p>
-<ul>
-    <li dir="rtl" style="text-align: justify;">
-        <div>اگر میانگین یا واریانس توابع به عنوان شهر پارامتر شهری باشد که هیچ رکوردی ندارد -1 یا -1.0 (بسته به زبان)
-            برمی‌گرداند.
-        </div>
-    </li>
-    <li dir="rtl" style="text-align: justify;">
-        <div>کوتاه یا گرد نکنید: بسته به زبان، اگر abs(نتیجه_شما - نتیجه_تست) &lt;= 1e-2 یا abs((نتیجه_آزمایش_تست) /
-            نتیجه_تست) &lt;= 1e-6 باشد، آزمون ها با موفقیت انجام می شود.
-        </div>
-    </li>
-    <li dir="rtl" style="text-align: justify;">
-        <div><strong>مرجع:</strong> http://www.mathsisfun.com/data/standard-deviation.html</div>
-    </li>
-</ul>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: right;"><strong>پاسخ:</strong></p>
-<p dir="rtl">ابتدا فایل <strong><span style="color: #ff0000;">datafile.php</span></strong> را که حاوی اطلاعات بارندگی
-    شهرها است ایجاد می کنیم.</p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$data1 =
-"Rome:Jan 81.2,Feb 63.2,Mar 70.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 117.7,Nov 111.0,Dec 97.9\n"
-. "London:Jan 48.0,Feb 38.9,Mar 39.9,Apr 42.2,May 47.3,Jun 52.1,Jul 59.5,Aug 57.2,Sep 55.4,Oct 62.0,Nov 59.0,Dec 52.9\n"
-. "Paris:Jan 182.3,Feb 120.6,Mar 158.1,Apr 204.9,May 323.1,Jun 300.5,Jul 236.8,Aug 192.9,Sep 66.3,Oct 63.3,Nov 83.2,Dec 154.7\n"
-. "NY:Jan 108.7,Feb 101.8,Mar 131.9,Apr 93.5,May 98.8,Jun 93.6,Jul 102.2,Aug 131.8,Sep 92.0,Oct 82.3,Nov 107.8,Dec 94.2\n"
-. "Vancouver:Jan 145.7,Feb 121.4,Mar 102.3,Apr 69.2,May 55.8,Jun 47.1,Jul 31.3,Aug 37.0,Sep 59.6,Oct 116.3,Nov 154.6,Dec 171.5\n"
-. "Sydney:Jan 103.4,Feb 111.0,Mar 131.3,Apr 129.7,May 123.0,Jun 129.2,Jul 102.8,Aug 80.3,Sep 69.3,Oct 82.6,Nov 81.4,Dec 78.2\n"
-. "Bangkok:Jan 10.6,Feb 28.2,Mar 30.7,Apr 71.8,May 189.4,Jun 151.7,Jul 158.2,Aug 187.0,Sep 319.9,Oct 230.8,Nov 57.3,Dec 9.4\n"
-. "Tokyo:Jan 49.9,Feb 71.5,Mar 106.4,Apr 129.2,May 144.0,Jun 176.0,Jul 135.6,Aug 148.5,Sep 216.4,Oct 194.1,Nov 95.6,Dec 54.4\n"
-. "Beijing:Jan 3.9,Feb 4.7,Mar 8.2,Apr 18.4,May 33.0,Jun 78.1,Jul 224.3,Aug 170.0,Sep 58.4,Oct 18.0,Nov 9.3,Dec 2.7\n"
-. "Lima:Jan 1.2,Feb 0.9,Mar 0.7,Apr 0.4,May 0.6,Jun 1.8,Jul 4.4,Aug 3.1,Sep 3.3,Oct 1.7,Nov 0.5,Dec 0.7";
-$data2 =
-    "Rome:Jan 90.2,Feb 73.2,Mar 80.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 147.7,Nov 121.0,Dec 97.9\n"
-    ."London:Jan 58.0,Feb 38.9,Mar 49.9,Apr 42.2,May 67.3,Jun 52.1,Jul 59.5,Aug 77.2,Sep 55.4,Oct 62.0,Nov 69.0,Dec 52.9\n"
-    ."Paris:Jan 182.3,Feb 120.6,Mar 188.1,Apr 204.9,May 323.1,Jun 350.5,Jul 336.8,Aug 192.9,Sep 66.3,Oct 63.3,Nov 83.2,Dec 154.7\n"
-    ."NY:Jan 128.7,Feb 121.8,Mar 151.9,Apr 93.5,May 98.8,Jun 93.6,Jul 142.2,Aug 131.8,Sep 92.0,Oct 82.3,Nov 107.8,Dec 94.2\n"
-    ."Vancouver:Jan 155.7,Feb 121.4,Mar 132.3,Apr 69.2,May 85.8,Jun 47.1,Jul 31.3,Aug 37.0,Sep 69.6,Oct 116.3,Nov 154.6,Dec 171.5\n"
-    ."Sydney:Jan 123.4,Feb 111.0,Mar 151.3,Apr 129.7,May 123.0,Jun 159.2,Jul 102.8,Aug 90.3,Sep 69.3,Oct 82.6,Nov 81.4,Dec 78.2\n"
-    ."Bangkok:Jan 20.6,Feb 28.2,Mar 40.7,Apr 81.8,May 189.4,Jun 151.7,Jul 198.2,Aug 197.0,Sep 319.9,Oct 230.8,Nov 57.3,Dec 9.4\n"
-    ."Tokyo:Jan 59.9,Feb 81.5,Mar 106.4,Apr 139.2,May 144.0,Jun 186.0,Jul 155.6,Aug 148.5,Sep 216.4,Oct 194.1,Nov 95.6,Dec 54.4\n"
-    ."Beijing:Jan 13.9,Feb 14.7,Mar 18.2,Apr 18.4,May 43.0,Jun 88.1,Jul 224.3,Aug 170.0,Sep 58.4,Oct 38.0,Nov 19.3,Dec 2.7\n"
-    ."Lima:Jan 11.2,Feb 10.9,Mar 10.7,Apr 10.4,May 10.6,Jun 11.8,Jul 14.4,Aug 13.1,Sep 23.3,Oct 1.7,Nov 0.5,Dec 10.7";
-</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"75px"} -->
-<div style="height:75px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">سپس آن را در فایل اصلی <strong><span style="color: #800000;">include</span>
-</strong>می کنیم:</p>
-
-<!-- wp:spacer {"height":"60px"} -->
-<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function extract_town($town1, $strng1)
-{
-    // https://regex-generator.olafneumann.org/
-    $nnn = preg_replace_callback('/[a-zA-Z]+:/', function ($matches) {
-        return "  " . $matches[0];
-    }, $strng1);
-    $mmm = explode("  ", $nnn);
-    $zzz = array_filter($mmm, function ($var) use ($town1) {
-        return preg_match("/\b$town1\b/i", $var);
-    });
-    $sss = implode("", $zzz);
-    // Replace multiple characters in one replace call:
-    // https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call
-    $ggg = preg_replace('/[a-zA-Z]|:|,/', "", $sss);
-    $yyy = ltrim($ggg);
-    $bbb = explode(" ", $yyy);
-    return $bbb;
-}
-function mean($town, $strng)
-{
-    if (preg_match("/$town/", $strng) === 0) {
-        return -1;
-    }
-    $aaa = extract_town($town, $strng);
-    // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
-    // calculate the mean
-    $the_mean = array_sum($aaa) / count($aaa);
-    return $the_mean;
-}
-function variance($town, $strng)
-{
-    if (preg_match("/$town/", $strng) === 0) {
-        return -1;
-    }
-    $aaa = extract_town($town, $strng);
-    // https://www.ajdesigner.com/php_code_statistics/variance_sample.php
-    // calculate the variance
-    $the_variance = 0.0;
-    $the_mean = array_sum($aaa) / count($aaa);
-    for ($i = 0; $i &lt; count($aaa); $i++) {
-        //sum the array
-        $the_variance = $the_variance + ($aaa[$i] - $the_mean) * ($aaa[$i] - $the_mean);
-    }
-    $the_variance = $the_variance / (count($aaa) /*- 1.0*/);
-    //return the variance
-    return $the_variance;
-}
-include 'datafile.php';
-// PHPStorm: undefined variables caused by include/require
-// https://stackoverflow.com/questions/22476778/phpstorm-undefined-variables-caused-by-include-require
-/**
- * @var string $data1
- * @var string $data2
- */
-echo "&lt;pre&gt;";
-  print_r(variance("London", $data1));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">57.428333333333</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">تابع های <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">preg_replace_callback</span></strong>&nbsp;و <strong><span
-        style="color: #ff0000;">()</span></strong><span style="color: #ff0000;"><strong>explode</strong></span>&nbsp;و
-    <strong><span style="color: #ff0000;">()</span></strong><strong><span
-            style="color: #ff0000;">array_sum</span></strong>&nbsp;و <strong><span
-            style="color: #ff0000;">()</span></strong><span style="color: #ff0000;"><strong>count</strong></span>&nbsp;در
-    تمرینات قبلی معرفی شدند.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()preg_match :</h3>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">preg_match</span></strong>&nbsp;برمی‌گرداند که آیا مطابقت در یک رشته پیدا شده است یا
-    خیر.
-</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl"><strong>سینتکس:</strong></div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">preg_match(pattern, input, matches, flags, offset)</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$str = "Visit W3Schools";
-$pattern = "/w3schools/i";
-echo preg_match($pattern, $str);</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background has-medium-font-size">1</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 98.6906%; height: 112px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 23px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 77.7503%; height: 23px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>pattern</em>
-        </td>
-        <td dir="rtl" style="width: 77.7503%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. شامل یک عبارت منظم است که نشان می دهد چه چیزی باید جستجو شود.</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #dbd7d7;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>input</em>
-        </td>
-        <td dir="rtl" style="width: 77.7503%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. رشته ای که جستجو در آن انجام خواهد شد.</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 10px; text-align: center; border-left: 2px solid #3b3a3a;"><em>matches</em>
-        </td>
-        <td dir="rtl" style="width: 77.7503%; height: 10px; text-align: justify; padding-right: 40px;">
-            <div>اختیاری. متغیر مورد استفاده در این پارامتر با آرایه‌ای پر می‌شود که شامل همه موارد منطبق است</div>
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #dbd7d7;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>flags</em>
-        </td>
-        <td dir="rtl" style="width: 77.7503%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>اختیاری. مجموعه ای از گزینه ها که نحوه ساختار آرایه مطابقت را تغییر می دهد:</div>
-
-            <ul>
-                <li><strong><span style="color: #ff0000;">PREG_OFFSET_CAPTURE</span></strong> - وقتی این گزینه فعال
-                    باشد، هر
-                    تطابق، به جای اینکه یک رشته باشد، آرایه ای خواهد بود که عنصر اول یک زیررشته حاوی تطابق و عنصر دوم
-                    موقعیت
-                    اولین کاراکتر رشته فرعی در ورودی است.
-                </li>
-                <li>
-                    <div><strong><span style="color: #ff0000;">PREG_UNMATCHED_AS_NULL</span></strong> - وقتی این گزینه
-                        فعال
-                        باشد، الگوهای فرعی ناهمسان به جای رشته خالی به صورت NULL برگردانده می شوند.
-                    </div>
-                </li>
-            </ul>
-
-        </td>
-    </tr>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 10px; text-align: center; border-left: 2px solid #3b3a3a;"><em>offset</em>
-        </td>
-        <td dir="rtl" style="width: 77.7503%; height: 10px; text-align: justify; padding-right: 40px;">
-            <div>اختیاری. پیش‌فرض به 0 می‌رسد. نشان می‌دهد که تا چه اندازه در رشته برای شروع جستجو است. تابع
-                ()preg_match
-                منطبقاتی را که قبل از موقعیت داده شده در این پارامتر رخ می دهد، پیدا نمی کند.
-            </div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۲۹. تابعی بنویسید که دو ماتریس مربع (N x N آرایه دو بعدی) را بپذیرد و مجموع آن دو را برگرداند. هر دو ماتریس ارسال شده به تابع دارای اندازه N x N (مربع) خواهند بود که فقط شامل اعداد صحیح هستند.</span>
-</h4>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"69px"} -->
-<div style="height:69px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">چگونه دو ماتریس را جمع کنیم:</div>
-<div dir="rtl">
-    <div>هر سلول [n][m] را از ماتریس اول بگیرید و با همان [n][m] سلول از ماتریس دوم اضافه کنید. این سلول [n][m] ماتریس
-        حل
-        شده خواهد بود.
-    </div>
-</div>
-<div>&nbsp;</div>
-<div dir="rtl" style="text-align: justify;"><strong>مثال:</strong></div>
-
-<!-- wp:code {"backgroundColor":"white"} -->
-<pre style="direction:ltr">    |1 2 3|     |2 2 1|     |1+2 2+2 3+1|     |3 4 4|
-    |3 2 1|  +  |3 2 3|  =  |3+3 2+2 1+3|  =  |6 4 4|
-    |1 1 1|     |1 1 3|     |1+1 1+1 1+3|     |2 2 4|</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function matrix_addition($ar1, $ar2): array
-{
-    for ($row = 0; $row &lt; count($ar1); $row++) {
-        for ($col = 0; $col &lt; count($ar1[0]); $col++) {
-            $result[$row][$col] = ($ar1[$row][$col]) + ($ar2[$row][$col]);
-        }
-    }
-    return $result;
-}
-$a = array(
-    [10, 3, 5],
-    [2, 4, 6],
-    [2, 4, 9],
-);
-$b = array(
-    [1, 2, 5],
-    [3, 4, 3],
-    [3, 4, 6],
-);
-echo "&lt;pre&gt;";
-  print_r(matrix_addition($a, $b));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">Array
-            (
-            [0] =&gt; Array
-            (
-            [0] =&gt; 11
-            [1] =&gt; 5
-            [2] =&gt; 10
-            )
-
-            [1] =&gt; Array
-            (
-            [0] =&gt; 5
-            [1] =&gt; 8
-            [2] =&gt; 9
-            )
-
-            [2] =&gt; Array
-            (
-            [0] =&gt; 5
-            [1] =&gt; 8
-            [2] =&gt; 15
-            )
-
-            )</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۳۰. شما باید تابعی بسازید که اگر پارامترهای داده شده مختصات جغرافیایی معتبری باشند اعتبار سنجی کند.</span>
-</h4>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"43px"} -->
-<div style="height:43px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">مختصات معتبر مانند زیر است: "23.32353342, -32.543534534". مقدار بازگشتی باید
-    درست یا نادرست باشد.
-</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">
-    <div><strong>عرض جغرافیایی</strong> (که اولین float است) می تواند بین 0 تا 90 باشد، مثبت یا منفی.</div>
-    <div><strong> طول جغرافیایی</strong> (که float دوم است) می تواند بین 0 تا 180 باشد، مثبت یا منفی.</div>
-</div>
-<div>&nbsp;</div>
-<div dir="rtl" style="text-align: justify;">
-    <div>مختصات فقط می توانند دارای اعداد یا یکی از نمادهای زیر باشند (از جمله فاصله بعد از کاما) __ -، . __</div>
-</div>
-<div dir="rtl">
-    <div>بین علامت منفی "-" و رقم بعد از آن نباید فاصله ای وجود داشته باشد.</div>
-</div>
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-<div dir="rtl">
-    <div>در اینجا چند مختصات معتبر وجود دارد:</div>
-</div>
-<ul style="margin-left: 90px;">
-    <li dir="ltr" style="text-align: left;">-23, 25</li>
-    <li dir="ltr" style="text-align: left;">24.53525235, 23.45235</li>
-    <li dir="ltr" style="text-align: left;">04, -23.234235</li>
-    <li dir="ltr" style="text-align: left;">43.91343345, 143</li>
-    <li dir="ltr" style="text-align: left;">4, -3</li>
-</ul>
-<div dir="rtl" style="text-align: justify;">و چند مورد نامعتبر:</div>
-<div dir="rtl">&nbsp;</div>
-<ul style="margin-left: 90px;">
-    <li dir="ltr" style="text-align: left;">23.234, - 23.4234</li>
-    <li dir="ltr" style="text-align: left;">2342.43536, 34.324236</li>
-    <li dir="ltr" style="text-align: left;">N23.43345, E32.6457</li>
-    <li dir="ltr" style="text-align: left;">99.234, 12.324</li>
-    <li dir="ltr" style="text-align: left;">6.325624, 43.34345.345</li>
-    <li dir="ltr" style="text-align: left;">0, 1,2</li>
-    <li dir="ltr" style="text-align: left;">0.342q0832, 1.2324</li>
-</ul>
-<div dir="rtl">&nbsp;</div>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function isValidCoordinates($coordinates)
-{
-    $mmm = explode(" ", $coordinates);
-    $mmm[0] = rtrim($mmm[0], ",");
-    if (
-        is_numeric($mmm[0])
-        &amp;&amp; is_numeric($mmm[1])
-        &amp;&amp; ($mmm[0] &gt;= -90 &amp;&amp; $mmm[0] &lt;= 90)
-        &amp;&amp; ($mmm[1] &gt;= -180 &amp;&amp; $mmm[1] &lt;= 180)
-        &amp;&amp; !preg_match("/e/i", $coordinates)
-    )
-        return "true";
-    else
-        return "false";
-}
-//$a = "0, 1,2";
-$a = "-23, 25";
-echo(isValidCoordinates($a));</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background" style="font-size:18px">true</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()is_numeric :</h3>
-<!-- /wp:heading -->
-
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()</span></strong><strong><span
-        style="color: #ff0000;">is_numeric</span></strong>&nbsp;بررسی می کند که متغیر یک <strong><span
-        style="color: #800000;">عدد </span></strong>است یا یک <span
-        style="color: #800000;"><strong>رشته عددی</strong></span>.
-</div>
-<div dir="rtl">
-    <div>اگر متغیر یک عدد یا یک رشته عددی باشد، این تابع true (1) را برمی‌گرداند، در غیر این صورت false/nothing را
-        برمی‌گرداند.
-    </div>
-</div>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>سینتکس:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">is_numeric(variable);</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$a = 32;
-echo "a is " . is_numeric($a) . "&lt;br&gt;";
-$b = 0;
-echo "b is " . is_numeric($b) . "&lt;br&gt;";
-$c = 32.5;
-echo "c is " . is_numeric($c) . "&lt;br&gt;";
-$d = "32";
-echo "d is " . is_numeric($d) . "&lt;br&gt;";
-$e = true;
-echo "e is " . is_numeric($e) . "&lt;br&gt;";
-$f = null;
-echo "f is " . is_numeric($f) . "&lt;br&gt;";
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background" style="font-size:17px">a is 1<br>b is 1<br>c is 1<br>d is 1<br>e
-            is<br>f is</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 83.9284%; height: 46px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 23px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 61.3699%; height: 23px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>variable</em>
-        </td>
-        <td dir="rtl" style="width: 61.3699%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. متغیری را برای بررسی مشخص می کند.</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۳۱. با توجه به آرایه ای از اعداد صحیح، اعدادی را که به تعداد فرد ظاهر می شود، پیدا کنید.</span>
-</h4>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"49px"} -->
-<div style="height:49px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">همیشه فقط یک عدد صحیح وجود خواهد داشت که به تعداد فرد ظاهر می شود.</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl">
-    <div><strong>مثال:</strong></div>
-    <div>
-        <div>[7] باید 7 را برگرداند، زیرا 1 بار رخ می دهد (که فرد است).</div>
-        <div>[0] باید 0 را برگرداند، زیرا 1 بار رخ می دهد (که فرد است).</div>
-        <div>[1،1،2] باید 2 را برگرداند، زیرا 1 بار رخ می دهد (که فرد است).</div>
-        <div>[0,1,0,1,0] باید 0 را برگرداند، زیرا 3 بار اتفاق می افتد (که فرد است).</div>
-        <div>[1،2،2،3،3،3،4،3،3،3،2،2،1] باید 4 را برگرداند، زیرا 1 بار ظاهر می شود (که فرد است).</div>
-
-    </div>
-</div>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-<p dir="rtl">
-<p dir="rtl" style="text-align: justify;"><strong>روش اول:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function findIt(array $seq)
-{
-    $y = array_count_values($seq);
-    foreach ($y as $value) {
-        if ($value % 2 !== 0)
-            return array_search($value, $y);
-    }
-}
-echo "&lt;pre&gt;";
-  print_r(findIt([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5]));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background" style="font-size:18px">5</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>روش دوم:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function findIt(array $seq)
-{
-     $nums = array_count_values($seq);
-    foreach ($nums as $key =&gt; $val) {
-        if ($val % 2) {
-            return $key;
-        }
-    }
-}
-echo "&lt;pre&gt;";
-  print_r(findIt([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5]));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p class="has-white-background-color has-background" style="font-size:18px">5</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"51px"} -->
-<div style="height:51px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()array_search</span></strong> در
-    تمرین های قبلی معرفی شد.</p>
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span style="color:#cf2e2e" class="tadv-color">۳۲. آرایه ای از اعداد به شما داده می شود. شما باید اعداد فرد را به ترتیب صعودی مرتب کنید در حالی که اعداد زوج را در موقعیت اصلی خود نگه دارید.</span>
-</h4>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"63px"} -->
-<div style="height:63px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:code -->
-<pre style="direction:ltr">&#91;7, 1]  =&gt;  &#91;1, 7]
-&#91;5, 8, 6, 3, 4]  =&gt;  &#91;3, 8, 6, 5, 4]
-&#91;9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =&gt;  &#91;1, 8, 3, 6, 5, 4, 7, 2, 9, 0]</pre>
-<!-- /wp:code -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>پاسخ:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-function sortArray(array $arr)
-{
-    $even = $odd = array();
-    // Reset keys:
-    foreach ($arr as $a) {
-        if ($a % 2 == 0)
-            $even[] = $a;
-        else
-            $odd[] = $a;
-    }
-    sort($odd);
-    $newArr = [];
-    for ($i = 0; $i &lt; count($arr); $i++) {
-        if ($arr[$i] % 2 == 0) {
-            $newArr[] = array_shift($even);
-        } else {
-            $newArr[] = array_shift($odd);
-        }
-    }
-    return $newArr;
-}
-echo "&lt;pre&gt;";
-  print_r(sortArray([5, 3, 2, 8, 1, 4]));
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap"> Array
-            (
-            &#91;0] =&gt; 1
-            &#91;1] =&gt; 3
-            &#91;2] =&gt; 2
-            &#91;3] =&gt; 8
-            &#91;4] =&gt; 5
-            &#91;5] =&gt; 4
-            )</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right">معرفی تابع ()array_shift :</h3>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"37px"} -->
-<div style="height:37px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()array_shift</span></strong>
-    اولین عنصر را از یک آرایه حذف می کند و مقدار عنصر حذف شده را برمی گرداند.
-</div>
-<div dir="rtl">
-    <div>توجه: اگر کلیدها عددی باشند، همه عناصر کلیدهای جدیدی دریافت می کنند که از 0 شروع می شود و یکی یکی افزایش می
-        یابد
-        (به مثال توجه کنید).
-    </div>
-</div>
-<div dir="rtl">&nbsp;</div>
-<div dir="rtl"><strong>سینتکس:</strong></div>
-
-<!-- wp:html -->
-<pre style="direction:ltr">array_shift(array)</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-
-<!-- wp:html -->
-<pre style="direction:ltr">&lt;?php
-$a=array("a"=&gt;"red","b"=&gt;"green","c"=&gt;"blue");
-echo array_shift($a);
-echo "&lt;pre&gt;";
-print_r ($a);
-echo "&lt;/pre&gt;";</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-    <div style="width: 100px">
-        <img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png"
-             alt="flesh"
-        >
-    </div>
-    <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto">
-        <p style="direction:ltr; white-space: pre-wrap">Array
-            (
-            [b] =&gt; green
-            [c] =&gt; blue
-            )</p>
-    </div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مقادیر پارامتر :</strong></p>
-<table style="color: black; border-collapse: collapse; width: 90.119%; height: 46px;">
-    <thead>
-    <tr style="background-color: #ffadad; border-bottom: 4px solid #706e6e; height: 23px;">
-        <td dir="rtl" style="width: 19.499%; height: 23px; border-left: 2px solid #3b3a3a; text-align: center;"><strong
-                style="color: black; ">پارامتر</strong></td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: center;"><strong
-                style="color: black; ">توضیحات</strong></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr style="height: 23px; background-color: #ebe8e8;">
-        <td style="width: 19.499%; height: 23px; text-align: center; border-left: 2px solid #3b3a3a;"><em>array</em>
-        </td>
-        <td dir="rtl" style="width: 68.2391%; height: 23px; text-align: justify; padding-right: 40px;">
-            <div>ضروری. یک آرایه را مشخص می کند.</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<div class="flex justify-between mt-8">
-    <div><a
-            style="border-radius:5px;background-color:#9ca3af; padding: 8px 12px; display: inline-block; width: 150px; text-align: center;"
-            href="https://raiatec.com/%db%b3%db%b2-%d8%aa%d9%85%d8%b1%db%8c%d9%86-php-%d9%82%d8%b3%d9%85%d8%aa-%d8%af%d9%88%d9%85">❮
-        قبلی</a></div>
-</div>
-<div style="margin-bottom: 150px;"></div>
-<!-- /wp:html -->
