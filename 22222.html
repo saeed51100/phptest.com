@@ -1,232 +1,68 @@
-<p dir="rtl" style="text-align: justify;">      برای اجرای برنامه های php نیاز به یک سرور داریم که روی آن php و پایگاه داده روی آن به درستی نصب و پیکربندی شده است. سرور هم همانطور که می دانید مجموعه ای از سخت افزار و نرم افزار شامل سیستم عامل است که وظیفه آن میزبانی سایت ها است.</p>
-<p dir="rtl" style="text-align: justify;">      خب. اگر برای مقاصد تمرینی و یا آزمایشی بخواهیم php ران کنیم ، پرداخت هزینه و زمان برای سرور واقعی منطقی نیست. از این رو نرم افزارهایی ساخته شده است که یک سرور مجازی را روی کامپیوتر شما شبیه سازی می کنند. یکی از معروف ترین این برنامه ها استک <strong><span class="colored-text">LAMP </span></strong>است.</p>
-<p dir="rtl" style="text-align: justify;"><strong><span class="colored-text">LAMP</span> </strong>چیست؟ پشته "LAMP" گروهی از نرم‌افزارهای منبع باز است که معمولاً با هم نصب می‌شوند تا سرور را قادر به میزبانی وب‌سایت‌های پویا و برنامه‌های وب نوشته شده به زبان PHP کند. این پشته شامل برنامه های زیر می باشد:</p>
-<p dir="rtl"><strong><span class="colored-text">L</span></strong>inux : نام سیستم عامل متن باز ، رایگان و مورد علاقه برنامه نویسان است.</p>
-<p dir="rtl"><strong><span class="colored-text">A</span></strong>pache : یکی از معروف ترین وب سرورهای لینوکس است.</p>
-<p dir="rtl"><strong><span class="colored-text">M</span></strong>ysql : یک سیستم مدیریت پایگاه داده می باشد.</p>
-<p dir="rtl"><strong><span class="colored-text">P</span></strong>HP : یک زبان برنامه نویسی سمت سرور است. ( ممکن است با زبان Perl یا Python جایگزین شود. )</p>
+<!-- wp:html -->
+<ol class="farsi-number colored-text p-8" start="7">
+<li dir="rtl" style="text-align: right;"><a href="#e7"><span class="colored-text">Integer</span></a></li>
+<li dir="rtl" style="text-align: right;"><a href="#e8"><span class="colored-text">Float</span></a></li>
+<li dir="rtl" style="text-align: right;"><a href="#e9"><span class="colored-text">بی نهایت</span></a></li>
+<li dir="rtl" style="text-align: right;"><a href="#e10"><span class="colored-text">NaN</span></a></li>
+<li dir="rtl" style="text-align: right;"><a href="#e11"><span class="colored-text">رشته های عددی</span></a></li>
+<li dir="rtl" style="text-align: right;"><a href="#e12"><span class="colored-text">Type Casting در PHP</span></a></li>
+<li dir="rtl" style="text-align: right;"><a href="#e13"><span class="colored-text">Math</span></a></li>
+<li dir="rtl" style="text-align: right;"><a href="#e14"><span class="colored-text">ثابت ها در php</span></a></li>
+</ol>
+<!-- /wp:html -->
+
 <!-- wp:spacer -->
 <div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":3} -->
-<h3 class="wp-block-heading has-text-align-right"><span class="tadv-color" style="color: #0693e3;">مراحل نصب LAMP :</span></h3>
-<!-- /wp:heading -->
-
-<!-- wp:spacer {"height":"58px"} -->
-<div class="wp-block-spacer" style="height: 58px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۱) ابتدا با دو دستور زیر پکیج های اوبونتو را به روز رسانی می کنیم:</span></h4>
+<h4>اعداد در PHP</h4>
 <!-- /wp:heading -->
 
 <!-- wp:html -->
-<pre style="direction: ltr;">sudo apt update
-sudo apt upgrade</pre>
+<div dir="rtl" style="text-align: justify;">در ادامه عمیق تر به Integers, Floats و رشته های عددی خواهیم پرداخت.</div>
 <!-- /wp:html -->
 
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- wp:spacer {"height":"61px"} -->
+<div class="wp-block-spacer" style="height: 61px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۲) سپس با دستور زیر apache را نصب می کنیم. در هنگام نصب از شما تاییدیه نصب سؤال می شود که با Y پاسخ دهید.</span></h4>
+<!-- wp:html -->
+<p><strong>نکته: </strong>php به طور خودکار نوع داده را تبدیل می کند. یعنی اگر یک عدد صحیح به یک متغیر اختصاص دهید، نوع آن متغیر به طور خودکار <strong>Integer </strong>خواهد بود و سپس اگر یک رشته متنی را به همان متغیر اختصاص دهید، نوع آن به <strong>String </strong>تغییر می کند. این تبدیل خودکار نوع داده گاهی اوقات ممکن است نتایج غیر منتظره ای داشته باشد. پس باید به این موضوع توجه داشته باشید.</p>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"76px"} -->
+<div class="wp-block-spacer" style="height: 76px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p id="e7">​</p>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+<h4><strong><span class="colored-text">۷. Integer</span></strong></h4>
 <!-- /wp:heading -->
 
 <!-- wp:html -->
-<pre style="direction: ltr;">sudo apt install apache2</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"53px"} -->
-<div class="wp-block-spacer" style="height: 53px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-<p dir="rtl" style="text-align: justify;">برای اطمینان از درست نصب شدن آپاچی در مرورگر خود تایپ کنید <strong><span class="colored-text">localhost</span> </strong>یا <strong><span class="colored-text">http://127.0.0.1</span></strong> باید صفحه ای مانند این ببینید:</p>
-<!-- wp:image {"align":"center","id":6731,"sizeSlug":"full","linkDestination":"none"} -->
-<div style="display: flex; justify-content: center;">
-<div style="width: 600px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/apache.png" alt="apache" /></div>
+<div>
+<div dir="rtl" style="text-align: justify;">2، 256، -256، 10358، -179567 همه اعداد صحیح یا <strong><span class="colored-text">Integer </span></strong>هستند.</div>
 </div>
-<!-- /wp:image -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right">
-<span class="colored-text">۳) نصب MySQL :</span></h4>
-<!-- /wp:heading -->
-<div dir="rtl" style="text-align: justify;">اکنون که یک وب سرور دارید، باید سیستم پایگاه داده را نصب کنید تا بتوانید داده ها را برای سایت خود ذخیره و مدیریت کنید. <strong><span class="colored-text">MySQL</span> </strong>یک سیستم مدیریت پایگاه داده محبوب است که در محیط های PHP استفاده می شود.</div>
-<p dir="rtl">با دستور زیر MySQL را نصب کنید:</p>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo apt install mysql-server</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">وقتی از شما خواسته شد، نصب را با تایپ <strong><span class="colored-text">Y </span></strong>و سپس ENTER تأیید کنید.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">عدد صحیح عددی است که هیچگونه اعشاری ندارد.</div>
 <div dir="rtl"> </div>
 <div dir="rtl">
-<div>در انتها تست کنید که آیا می‌توانید با تایپ کردن به کنسول MySQL وارد شوید:</div>
+<div>
+<div style="text-align: justify;">عدد صحیح یا <strong><span class="colored-text">Integer</span></strong> یک عدد غیر اعشاری بین 2147483648- و 2147483647 در سیستم های 32 بیتی و بین 9223372036854775808- و 9223372036854775807 در سیستم های 64 بیتی می باشد. مقدار بزرگتر (یا کمتر) از این به عنوان <strong><span class="colored-text">float</span></strong> ذخیره می شود، زیرا از محدوده یک عدد صحیح فراتر می رود.</div>
 </div>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo mysql</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">شما باید خروجی را مانند این ببینید:</div>
-<!-- wp:image {"align":"center","id":6751,"width":"682px","height":"360px","sizeSlug":"full","linkDestination":"none"} -->
-<div style="display: flex; justify-content: center;">
-<div style="width: 650px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/mysql.png" alt="mysql" /></div>
-</div>
-<!-- /wp:image -->
-<div style="text-align: right;">برای خروج از MySQL :</div>
-<!-- wp:html -->
-<div style="display: flex; justify-content: center;">
-<div style="width: 650px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/exit.png" alt="exit" /></div>
 </div>
 <!-- /wp:html -->
 
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- wp:spacer {"height":"68px"} -->
+<div class="wp-block-spacer" style="height: 68px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۴) نصب PHP :</span></h4>
-<!-- /wp:heading -->
-<p dir="rtl" style="text-align: justify;">      شما Apache را برای ارائه محتوای خود و MySQL را برای ذخیره و مدیریت داده های خود نصب کرده اید. حالا نوبت به نصب PHP است که کد را برای نمایش محتوای پویا به کاربر نهایی پردازش می کند. علاوه بر بسته php، به <strong><span class="colored-text">php-mysql</span></strong> نیاز دارید، که یک ماژول PHP است که به PHP اجازه می دهد با پایگاه های داده مبتنی بر MySQL ارتباط برقرار کند. شما همچنین به <strong><span class="colored-text">libapache2-mod-php</span></strong> نیاز دارید تا Apache را برای مدیریت فایل های PHP فعال کند. بسته های اصلی PHP به طور خودکار به عنوان وابستگی نصب می شوند.</p>
-<p dir="rtl"><strong>کدام ورژن PHP را نصب کنیم؟</strong></p>
-<p dir="rtl" style="text-align: justify;">      هدف از نصب LAMP و PHP آماده سازی یک محیط توسعه برای اجرای لاراول یا وردپرس یا . . . است. از آنجایی که اپلیکیشن هایی که با PHP ساخته شده اند مدتی طول می کشد تا توابع جدید PHP را ساپورت کنند، بهتر است از یک ورژن ماقبل جدید ترین ورژن PHP استفاده کنید تا مشکل عدم شناسایی توابع جدید PHP توسط اپلیکیشن تان به وجود نیاید. در زمان نوشتن این مقاله آخرین ورژن PHP ورژن 8.1 است و ما می توانیم ورژن 8.0 را نصب و استفاده کنیم.</p>
-<p dir="rtl">برای نصب PHP ورژن 8 باید ابتدا پکیجهای شخص ثالث زیر را نصب کنیم:</p>
 <!-- wp:html -->
-<pre style="direction: ltr;">sudo apt update
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:ondrej/php</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"44px"} -->
-<div class="wp-block-spacer" style="height: 44px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-<p dir="rtl" style="text-align: justify;">حالا نوبت نصب PHP و ماژول های آن است: ( به ورژن PHP توجه کنید )</p>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo apt install php8.0 libapache2-mod-php8.0 php8.0-mysql</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"42px"} -->
-<div class="wp-block-spacer" style="height: 42px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-<div dir="rtl" style="text-align: justify;">پس از اتمام نصب، می توانید دستور زیر را برای تایید نسخه PHP خود اجرا کنید:</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">php -v</pre>
-<!-- /wp:html -->
-
-<!-- wp:image {"align":"center","id":6754,"width":"732px","height":"259px","sizeSlug":"full","linkDestination":"none"} -->
-<div style="display: flex; justify-content: center;">
-<div style="width: 650px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/php-v.png" alt="php-v.png" /></div>
-</div>
-<!-- /wp:image -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span class="colored-text">۵) ایجاد یک هاست مجازی برای وبسایت شما :</span></h4>
-<!-- /wp:heading -->
-<div dir="rtl" style="text-align: justify;">      هنگام استفاده از وب سرور آپاچی، می‌توانید یک هاست مجازی ایجاد کنید تا جزئیات پیکربندی را کپسوله کرده و بیش از یک دامنه را از یک سرور واحد میزبانی کنید. در این راهنما، دامنه ای به نام your_domain راه اندازی می کنیم، اما شما باید آن را با نام دامنه خود جایگزین کنید.</div>
-<div> </div>
-<div>
-<div dir="rtl" style="text-align: justify;">      آپاچی در اوبونتو 20.04 دارای یک بلوک سرور است که به طور پیش فرض فعال شده است که برای ارائه اسناد از دایرکتوری /var/www/html پیکربندی شده است. ارائه یک سایت از این دایرکتوری خوب کار می کند اما اگر بخواهید چندین سایت را میزبانی کنید ، کار سخت می شود. به جای تغییر /var/www/html، یک ساختار دایرکتوری در /var/www برای سایت your_domain ایجاد می‌کنیم و در صورت عدم درخواست مشتری، /var/www/html را به عنوان دایرکتوری پیش‌فرض باقی می‌گذاریم تا با هر سایت دیگری مطابقت داشته باشد.</div>
-<div> </div>
-<div>
-<div dir="rtl" style="text-align: justify;">یک دایرکتوری برای your_domain به صورت زیر ایجاد کنید:</div>
-</div>
-</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo mkdir /var/www/your_domain</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">سپس، مالکیت دایرکتوری را با متغیر محیطی $USER اختصاص دهید، که به کاربر فعلی سیستم شما ارجاع خواهد داد:</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo chown -R $USER:$USER /var/www/your_domain</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">      سپس، با استفاده از ویرایشگر خط فرمان دلخواه خود، یک فایل پیکربندی جدید را در دایرکتوری sites-available Apache باز کنید. در اینجا از نانو استفاده خواهیم کرد:</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo nano /etc/apache2/sites-available/your_domain.conf</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">با این کار یک فایل خالی جدید ایجاد می شود. کدهای زیر را در آن قرار دهید:</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;VirtualHost *:80&gt;
-   ServerName your_domain
-   ServerAlias www.your_domain
-   ServerAdmin webmaster@localhost
-   DocumentRoot /var/www/your_domain
-   ErrorLog ${APACHE_LOG_DIR}/error.log
-   CustomLog ${APACHE_LOG_DIR}/access.log combined
-&lt;/VirtualHost&gt;</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">      پس از اتمام، فایل را ذخیره کرده و ببندید. اگر از نانو استفاده می کنید، می توانید این کار را با فشار دادن CTRL+X، سپس Y و ENTER انجام دهید.</div>
-<div dir="rtl">
-<div style="text-align: justify;">    با این پیکربندی VirtualHost، به آپاچی می‌گوییم که your_domain را با استفاده از /var/www/your_domain به‌عنوان دایرکتوری ریشه وب سرویس دهد. اگر می‌خواهید آپاچی را بدون نام دامنه آزمایش کنید، می‌توانید با اضافه کردن یک کاراکتر # در ابتدای خطوط هر گزینه، گزینه‌های ServerName و ServerAlias ​​را حذف یا کامنت کنید.</div>
-</div>
-<div> </div>
-<div>
-<div dir="rtl">
-<div style="text-align: justify;">اکنون می توانید از <strong><span class="colored-text">a2ensite </span></strong>برای فعال کردن میزبان مجازی جدید استفاده کنید:</div>
-</div>
-</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo a2ensite your_domain</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">      ممکن است بخواهید وب سایت پیش فرض نصب شده با آپاچی را غیرفعال کنید. اگر از نام دامنه سفارشی استفاده نمی کنید، این مورد ضروری است، زیرا در این مورد تنظیمات پیش فرض آپاچی میزبان مجازی شما را بازنویسی می کند. برای غیرفعال کردن وب‌سایت پیش‌فرض آپاچی، تایپ کنید:</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo a2dissite 000-default</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">برای اطمینان از اینکه فایل پیکربندی شما حاوی خطاهای نحوی نیست، دستور زیر را اجرا کنید:</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo apache2ctl configtest</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">در نهایت، آپاچی را دوباره بارگیری کنید تا این تغییرات اعمال شوند:</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo systemctl reload apache2</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">      وب سایت جدید شما اکنون فعال است، اما ریشه وب /var/www/your_domain هنوز خالی است. یک فایل index.html در آن مکان ایجاد کنید تا بتوانیم آزمایش کنیم که میزبان مجازی مطابق انتظار کار می کند:</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">nano /var/www/your_domain/index.html</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">کدهای زیر را در این فایل قرار دهید:</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;your_domain website&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-    &lt;p&gt;This is the landing page of &lt;strong&gt;your_domain&lt;/strong&gt;.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">اکنون به مرورگر خود بروید و یک بار دیگر به نام دامنه یا آدرس IP سرور خود دسترسی پیدا کنید:</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">http://server_domain_or_IP</pre>
-<!-- /wp:html -->
-<p dir="rtl" style="text-align: justify;">باید صفحه ای مانند این را ببینید:</p>
-<!-- wp:image {"align":"center","id":6741,"width":"556px","height":"235px","sizeSlug":"full","linkDestination":"none"} -->
-<div style="display: flex; justify-content: center;">
-<div style="width: 550px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/helloworld.png" alt="helloworld.png" /></div>
-</div>
-<!-- /wp:image -->
-<div dir="rtl" style="text-align: justify;">اگر این صفحه را می بینید، به این معنی است که هاست مجازی آپاچی شما مطابق انتظار کار می کند.</div>
-<div dir="rtl"> </div>
-<div dir="rtl">
-<div style="text-align: justify;">      شما می توانید این فایل را به عنوان یک صفحه فرود موقت برای برنامه خود بگذارید تا زمانی که یک فایل index.php برای جایگزینی آن تنظیم کنید. پس از انجام این کار، به یاد داشته باشید که فایل index.html را از ریشه سند خود حذف کرده یا تغییر نام دهید، زیرا به طور پیش فرض بر فایل index.php اولویت دارد.</div>
-</div>
-<div> </div>
-<div>
-<div dir="rtl" style="text-align: justify;"><strong>نکته ای درباره <span style="color: #800000;">DirectoryIndex</span><br />در آپاچی</strong></div>
-</div>
-<div dir="rtl">
-<div style="text-align: justify;">      با تنظیمات پیش‌فرض DirectoryIndex در آپاچی، فایلی با نام index.html همیشه بر فایل index.php اولویت دارد. این برای راه‌اندازی صفحات نگهداری در برنامه‌های PHP، با ایجاد یک فایل موقت index.html حاوی یک پیام آموزنده برای بازدیدکنندگان مفید است. از آنجایی که این صفحه بر صفحه index.php اولویت دارد، سپس به صفحه فرود برنامه تبدیل می شود. پس از پایان تعمیر و نگهداری، index.html تغییر نام داده یا از ریشه سند حذف می شود و صفحه برنامه معمولی را باز می گرداند.</div>
-</div>
-<div>
-<div dir="rtl" style="text-align: justify;">اگر می‌خواهید این رفتار را تغییر دهید، باید فایل /etc/apache2/mods-enabled/dir.conf را ویرایش کنید و ترتیب فهرست‌بندی فایل index.php را در دستورالعمل DirectoryIndex تغییر دهید:</div>
-</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo nano /etc/apache2/mods-enabled/dir.conf</pre>
+<p><strong>نکته: </strong>اگر بخواهیم 4*2.5 را که برابر 10 می شود ذخیره کنیم، نتیجه به عنوان <strong>Float</strong> ذخیره می شود، زیرا یکی از عملوندها ( 2.5 ) <strong>Float</strong> است.</p>
 <!-- /wp:html -->
 
 <!-- wp:spacer {"height":"67px"} -->
@@ -234,69 +70,872 @@ sudo add-apt-repository ppa:ondrej/php</pre>
 <!-- /wp:spacer -->
 
 <!-- wp:html -->
-<pre style="direction: ltr;">&lt;IfModule mod_dir.c&gt;
-        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
-&lt;/IfModule&gt;</pre>
+<p dir="rtl" style="text-align: justify;"><strong>قوانین موجود برای اعداد صحیح:</strong></p>
+<ul>
+<li dir="rtl" style="text-align: justify;">
+<div>یک عدد صحیح باید حداقل یک رقم داشته باشد.</div>
+</li>
+<li dir="rtl" style="text-align: justify;">
+<div>یک عدد صحیح نباید دارای اعشار باشد.</div>
+</li>
+<li dir="rtl" style="text-align: justify;">
+<div>یک عدد صحیح می تواند مثبت یا منفی باشد.</div>
+</li>
+<li dir="rtl" style="text-align: justify;">
+<div>اعداد صحیح را می توان در سه قالب مشخص کرد: اعشاری (مبتنی بر 10)، هگزا دسیمال (مبتنی بر 16 - پیشوند با 0x) یا اکتال (بر اساس 8 - پیشوند با 0)</div>
+</li>
+</ul>
 <!-- /wp:html -->
 
-<!-- wp:spacer {"height":"82px"} -->
-<div class="wp-block-spacer" style="height: 82px;" aria-hidden="true"> </div>
+<!-- wp:spacer {"height":"92px"} -->
+<div class="wp-block-spacer" style="height: 92px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
-<div dir="rtl" style="text-align: justify;">پس از ذخیره و بستن فایل، باید Apache را مجدداً بارگیری کنید تا تغییرات اعمال شوند:</div>
+
 <!-- wp:html -->
-<pre style="direction: ltr;">sudo systemctl reload apache2</pre>
+<div dir="rtl" style="text-align: justify;"><strong>PHP دارای ثابت های از پیش تعریف شده زیر برای اعداد صحیح است:</strong></div>
+<div dir="rtl"> </div>
+<ul>
+<li dir="rtl" style="text-align: justify;">
+<div>PHP_INT_MAX - بزرگترین عدد صحیح پشتیبانی شده</div>
+</li>
+<li dir="rtl" style="text-align: justify;">
+<div>PHP_INT_MIN - کوچکترین عدد صحیح پشتیبانی شده</div>
+</li>
+<li dir="rtl" style="text-align: justify;">
+<div>PHP_INT_SIZE - اندازه یک عدد صحیح بر حسب بایت</div>
+</li>
+</ul>
 <!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">در مرحله بعد، ما یک اسکریپت PHP ایجاد می کنیم تا آزمایش کنیم که PHP به درستی روی سرور شما نصب و پیکربندی شده است.</div>
+
+<!-- wp:spacer {"height":"107px"} -->
+<div class="wp-block-spacer" style="height: 107px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;"><strong>PHP دارای توابع زیر برای بررسی Integer بودن نوع متغیر است:</strong></div>
+<div dir="rtl"> </div>
+<ul>
+<li dir="rtl" style="text-align: justify;">()is_int</li>
+<li dir="rtl" style="text-align: justify;">()is_integer   نام مستعار  ()is_int</li>
+<li dir="rtl" style="text-align: justify;">()is_long       نام مستعار ()is_int</li>
+</ul>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
+<div dir="rtl" style="text-align: justify;">بررسی کنید که آیا نوع متغیر عدد صحیح است یا خیر:</div>
+<p dir="rtl"> </p>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  // Check if the type of a variable is integer
+  $x = 5985;
+  var_dump(is_int($x));
+  echo "&lt;br&gt;";
+  // Check again...
+  $x = 59.85;
+  var_dump(is_int($x));
+?&gt; </pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>bool(true)<br />bool(false)</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"51px"} -->
+<div class="wp-block-spacer" style="height: 51px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p id="e8">​</p>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+
+<h4><strong><span class="colored-text">۸. Float</span></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">در PHP از نوع داده <strong><span class="colored-text">Float</span></strong> برای مقادیر اعشاری استفاده می شود. شناور عددی با نقطه اعشار است و می توان آن را به شکل <strong>نمایی</strong> نشان داد. به شناور عدد ممیز شناور نیز گفته می شود.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div>محدوده اعداد <strong>float </strong>بین 2.0، 256.4، 10.358و 7.64E+5، 5.56E-5 می باشد.</div>
+</div>
+<div> </div>
+<div dir="rtl" style="text-align: justify;">
+<div>
+<div>نوع داده <strong>float </strong>معمولاً می تواند مقداری تا 1.7976931348623E+308 (وابسته به پلتفرم) را ذخیره کند و حداکثر دقت ۱۴ رقمی دارد.</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"104px"} -->
+<div class="wp-block-spacer" style="height: 104px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">
+<div><strong>PHP دارای ثابت های از پیش تعریف شده زیر برای <span style="color: #ff0000;">Float </span>ها است (از PHP 7.2):</strong></div>
+</div>
+<ul>
+<li dir="rtl" style="text-align: justify;">
+<div>PHP_FLOAT_MAX - بزرگترین عدد ممیز شناور قابل نمایش</div>
+</li>
+<li dir="rtl" style="text-align: justify;">
+<div>PHP_FLOAT_MIN -کوچکترین عدد ممیز شناور مثبت قابل نمایش. </div>
+</li>
+<li dir="rtl" style="text-align: justify;">
+<div>PHP_FLOAT_DIG - تعداد ارقام اعشاری که می توانند به صورت شناور و بدون از دست دادن دقیق گرد شوند.</div>
+</li>
+<li dir="rtl" style="text-align: justify;">
+<div>PHP_FLOAT_EPSILON - کوچکترین عدد مثبت قابل نمایش x، به طوری که x + 1.0 != 1.0</div>
+</li>
+</ul>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"90px"} -->
+<div class="wp-block-spacer" style="height: 90px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;"><strong>PHP دارای توابع زیر برای بررسی شناور بودن نوع متغیر است:</strong></div>
+<ul>
+<li dir="rtl" style="text-align: justify;">()is_float</li>
+<li dir="rtl" style="text-align: justify;">()is_double   نام مستعار ()is_float</li>
+</ul>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p dir="rtl" style="text-align: right;"><strong>مثال:</strong></p>
+<p dir="rtl" style="text-align: right;">بررسی کنید که آیا نوع متغیر Float است یا خیر:</p>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  $x = 10.365;
+  var_dump(is_float($x));
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>bool(true)</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"55px"} -->
+<div class="wp-block-spacer" style="height: 55px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p id="e9">​</p>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+
+<h4><strong><span class="colored-text">۹. بی نهایت</span></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">مقدار عددی که بزرگتر از PHP_FLOAT_MAX باشد، <span style="color: #ff0000;"><strong>Infinity</strong> </span>یا بی نهایت در نظر گرفته می شود.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p dir="rtl" style="text-align: justify;"><strong>PHP دارای توابع زیر برای بررسی متناهی یا نامتناهی بودن یک مقدار عددی است:</strong></p>
+<ul>
+<li dir="rtl" style="text-align: justify;">()is_finite</li>
+<li dir="rtl" style="text-align: justify;">()is_infinite</li>
+</ul>
+<div dir="rtl" style="text-align: justify;">با این حال، تابع <strong>()var_dump</strong> نوع و مقدار داده را برمی‌گرداند:</div>
+<div dir="rtl"> </div>
+<div dir="rtl"><strong>مثال:</strong></div>
+<div dir="rtl">
+<div style="text-align: justify;">بررسی کنید که آیا یک مقدار عددی متناهی است یا نامتناهی:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  // Check if a numeric value is finite or infinite
+  $x = 1.9e411;
+  var_dump($x);
+?&gt; </pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>float(INF)</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"49px"} -->
+<div class="wp-block-spacer" style="height: 49px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p id="e10">​</p>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+
+<h4><strong><span class="colored-text">۱۰. NaN</span></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div>
+<div dir="rtl" style="text-align: justify;">NaN مخفف <span style="color: #ff0000;"><strong>N</strong></span>ot <strong><span style="color: #ff0000;">a</span> <span style="color: #ff0000;">N</span></strong>umber است.</div>
+</div>
+<div dir="rtl" style="text-align: justify;"> </div>
+<div dir="rtl">
+<div>
+<div>
+<div>NaN برای عملیات غیرممکن ریاضی استفاده می شود.</div>
+</div>
+</div>
+</div>
+<div dir="rtl" style="text-align: justify;"> </div>
+<div dir="rtl">
+<div>PHP تابع زیر را برای بررسی اینکه آیا یک مقدار یک عدد نیست، دارد:</div>
+</div>
+<div dir="rtl" style="text-align: justify;"> </div>
+<ul>
+<li dir="rtl" style="text-align: justify;">
+<div>()is_nan</div>
+</li>
+</ul>
+<div dir="rtl" style="text-align: justify;">با این حال، تابع <strong>()var_dump</strong> نوع و مقدار داده را برمی‌گرداند:</div>
+<div dir="rtl"> </div>
+<div dir="rtl"><strong>مثال:</strong></div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  // Invalid calculation will return a NaN value
+  $x = acos(8);
+  var_dump($x);
+?&gt; </pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>float(NAN)</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"56px"} -->
+<div class="wp-block-spacer" style="height: 56px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p id="e11">​</p>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+
+<h4><strong><span class="colored-text">۱۱. رشته های عددی</span></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">تابع <strong>()is_numeric</strong> می تواند برای تعیین عددی بودن یک متغیر استفاده شود. اگر متغیر یک عدد یا یک رشته عددی باشد، خروجی تابع true است، در غیر این صورت false را بر می گرداند.</div>
+<div dir="rtl"> </div>
+<div dir="rtl"><strong>مثال:</strong></div>
+<div dir="rtl">
+<div>بررسی کنید که آیا متغیر عددی است یا خیر:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"69px"} -->
+<div class="wp-block-spacer" style="height: 69px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  $x = 5985;
+  var_dump(is_numeric($x));
+  $x = "5985";
+  var_dump(is_numeric($x));
+  $x = "59.85" + 100;
+  var_dump(is_numeric($x));
+  $x = "Hello";
+  var_dump(is_numeric($x));
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>bool(true)<br />bool(true)<br />bool(true)<br />bool(false)</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"74px"} -->
+<div class="wp-block-spacer" style="height: 74px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p><strong>توجه: </strong>از PHP 7.0 تابع <strong>()is_numeric</strong> مقدار False را برای رشته های عددی هگزادسیمال برمی گرداند. به عنوان مثال 0xf4c3b00c دیگر به عنوان رشته عددی در نظر گرفته نمی شود.</p>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"64px"} -->
+<div class="wp-block-spacer" style="height: 64px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p id="e12">​</p>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+
+<h4><strong><span class="colored-text">۱۲. Type Casting در PHP</span></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div>
+<div dir="rtl" style="text-align: justify;">زمانی که در حال نوشتن یک برنامه هستید، باید چندین متغیر را ایجاد و دستکاری کنید. این متغیرها ممکن است نوع مشابه یا متفاوتی از داده ها را ذخیره کنند. به عنوان مثال، برخی از آنها می توانند یک مقدار صحیح داشته باشند، در حالی که برخی دیگر می توانند یک رشته یا شناور باشند.</div>
+</div>
+<div dir="rtl" style="text-align: justify;"> </div>
+<div dir="rtl">
+<div>
+<div style="text-align: justify;">زبان های برنامه نویسی مختلف مجموعه قوانین خاص خود را برای تعریف و اعلان متغیرها دارند. در زبانی مانند ++C شما باید نوع متغیر را قبل از شروع استفاده از آن مشخص کنید و به طور ضمنی آن را به نوع دیگری تبدیل نمی کند. از سوی دیگر، PHP قوانین سهل گیرانه تری در مورد نوع متغیرها دارد. یعنی لازم نیست از قبل نوع مقداری را که در یک متغیر ذخیره می کنید مشخص کنید. همچنین به شما این امکان را می دهد که نوع متفاوتی از مقدار را در همان متغیر بدون هیچ گونه تبدیل نوع صریح برای استفاده بعدی ذخیره کنید.</div>
+</div>
+</div>
+<div dir="rtl" style="text-align: justify;"> </div>
+<div dir="rtl" style="text-align: justify;">PHP این نوع تبدیل را برای شما به طور خودکار بر اساس زمینه ای که یک متغیر در آن استفاده می شود انجام می دهد. در این قسمت، یاد می گیرید چگونه می توانید هر زمان که نیاز باشد، <strong><span style="color: #ff0000;">Type Casting</span></strong> یا تعیین نوع متغیر را به صراحت انجام دهید.</div>
+<div dir="rtl" style="text-align: justify;"> </div>
+<div dir="rtl">
+<div>
+<div><strong>می‌توانید با اضافه کردن نوع دلخواه خود در پرانتز قبل از متغیری که می‌خواهید ارسال کنید، یک نوع از مقادیر را به دیگری تبدیل کنید.</strong></div>
+</div>
+<div> </div>
+<div><strong>مثال:</strong></div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  $text = "Apple";
+  $x = (int)$text;
+  $y = (boolean)$text;
+  echo gettype($x);
+  echo "&lt;br&gt;";
+  echo gettype($y);
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>integer<br />boolean</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"61px"} -->
+<div class="wp-block-spacer" style="height: 61px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;"><strong>شش نوع کست اصلی در PHP مجاز است. این موارد در زیر ذکر شده است:</strong></div>
+<ul>
+<li dir="rtl" style="text-align: justify;">
+<div>کست به int با استفاده از (int) یا (integer)</div>
+</li>
+<li dir="rtl" style="text-align: justify;">کست به bool با استفاده از (bool) یا (boolean)</li>
+<li dir="rtl" style="text-align: justify;">کست به float با استفاده از (float) یا (double) یا (real)</li>
+<li dir="rtl" style="text-align: justify;">کست به string با استفاده از (string)</li>
+<li dir="rtl" style="text-align: justify;">کست به array با استفاده از (array)</li>
+<li dir="rtl" style="text-align: justify;">کست به object با استفاده از (object)</li>
+</ul>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"73px"} -->
+<div class="wp-block-spacer" style="height: 73px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p id="e13">​</p>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+
+<h4><strong><span class="colored-text">۱۳. Math</span></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">PHP دارای مجموعه ای از توابع ریاضی است که به شما امکان می دهد عملسریاضی را روی اعداد انجام دهید.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>تابع ()pi</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">تابع ()pi مقدار PI را برمی گرداند:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  echo(pi());
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>3.1415926535898</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>تابع های ()min و ()max</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">از توابع ()min و ()max می توان برای یافتن کمترین یا بالاترین مقدار در لیستی از آرگومان ها استفاده کرد:</div>
+<div dir="rtl"> </div>
+<div dir="rtl"><strong>مثال:</strong></div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  echo(min(0, 150, 30, 20, -8, -200));
+  echo(max(0, 150, 30, 20, -8, -200));
+
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong><strong>-</strong>200<br />150</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>تابع ()abs</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">
+<div>تابع ()abs قدر مطلق (مثبت) یک عدد را برمی گرداند:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  echo(abs(-6.7));
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>6.7</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>تابع ()sqrt</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div>
+<div dir="rtl" style="text-align: justify;">تابع ()sqrt جذر یک عدد را برمی گرداند:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  echo(sqrt(64) . "&lt;br&gt;");
+  echo(sqrt(0) . "&lt;br&gt;");
+  echo(sqrt(1) . "&lt;br&gt;");
+  echo(sqrt(9));
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>8<br />0<br />1<br />3</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>تابع ()round</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">تابع ()round یک عدد <strong>Float</strong> را به نزدیکترین عدد صحیح آن گرد می کند:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  echo(round(0.60) . "&lt;br&gt;");
+  echo(round(0.50) . "&lt;br&gt;");
+  echo(round(0.49) . "&lt;br&gt;");
+  echo(round(-4.40) . "&lt;br&gt;");
+  echo(round(-4.60));
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>1<br />1<br />0<br />-4<br />-5</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>تابع ()rand</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div>
+<div dir="rtl" style="text-align: justify;">تابع ()rand یک عدد تصادفی تولید می کند:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  echo(rand());
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>1381167960</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">برای کنترل بیشتر بر روی اعداد تصادفی، می توانید پارامترهای حداقل و حداکثر اختیاری را اضافه کنید تا کمترین عدد صحیح و بالاترین عدد صحیح را مشخص کنید.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div style="text-align: justify;">به عنوان مثال، اگر یک عدد صحیح تصادفی بین 10 و 100 (شامل) می خواهید، از rand (10، 100) استفاده کنید:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  echo(rand(10, 100));
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>97</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"67px"} -->
+<div class="wp-block-spacer" style="height: 67px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p id="e14">​</p>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+
+<h4><strong><span class="colored-text">۱۴. ثابت ها در php</span></strong></h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">ثابت یا <strong>Constant</strong> شناسه ای است که مقدار مشخصی را در خود نگه می دارد. مقدار ذخیره شده در یک ثابت فقط در زمان اجرا قابل تعریف است و در طول اجرای برنامه تغییر نمی کند.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div>
+<div>یک نام ثابت با یک حرف یا زیرخط شروع می شود (بدون علامت $ قبل از نام ثابت).</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"66px"} -->
+<div class="wp-block-spacer" style="height: 66px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p><strong>نکته: </strong>بر خلاف متغیرها ، ثابت ها به طور خودکار در کل اسکریپت سراسری یا <strong>Global</strong> هستند.</p>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">برای ایجاد یک ثابت، از تابع <span style="color: #ff0000;"><strong>()define</strong></span> استفاده کنید.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"77px"} -->
+<div class="wp-block-spacer" style="height: 77px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>سینتکس:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">define(name, value, case-insensitive)</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"75px"} -->
+<div class="wp-block-spacer" style="height: 75px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>پارامترها:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<ul>
+<li dir="rtl" style="text-align: justify;">name: نام ثابت را مشخص می کند.</li>
+<li dir="rtl" style="text-align: justify;">value: مقدار ثابت را مشخص می کند.</li>
+<li dir="rtl" style="text-align: justify;">case-insensitive: اختیاری. مشخص می کند که آیا نام ثابت باید به حروف بزرگ و کوچک حساس باشد یا خیر. مقادیر ممکن:</li>
+</ul>
+<div>
+<div dir="rtl" style="text-align: justify;"><strong>TRUE</strong> - حساس به حروف بزرگ و کوچک (در PHP 7.3 منسوخ شده است)</div>
+<div dir="rtl" style="text-align: justify;"><strong>FALSE</strong> - حساس به حروف کوچک و بزرگ (پیش‌فرض است)</div>
+<div>
+<div> </div>
+</div>
+</div>
+<div> </div>
+<p dir="rtl" style="text-align: justify;"><br /><br /><strong>مثال۱:</strong></p>
+<div dir="rtl" style="text-align: justify;">یک ثابت case-sensitive ایجاد کنید:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  // case-sensitive constant name
+  define("GREETING", "Welcome to raiatec.com!");
+  echo GREETING;
+?&gt; </pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background">Welcome to raiatec.com!</p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p dir="rtl" style="text-align: justify;"><strong>مثال۲: </strong></p>
+<p dir="rtl" style="text-align: justify;">یک ثابت غیر حساس به نام بزرگ و کوچک ایجاد کنید:</p>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  // case-insensitive constant name
+  define("GREETING", "Welcome to raiatec.com!", true);
+  echo greeting;
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background">Welcome to raiatec.com!</p>
+</div>
+</div>
+<!-- /wp:html -->
+
 <!-- wp:spacer -->
 <div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"right","level":4} -->
-<h4 class="wp-block-heading has-text-align-right"><span class="tadv-color" style="color: #cf2e2e;">۶) آزمایش پردازش PHP بر روی وب سرور شما</span></h4>
+<h4>آرایه های ثابت</h4>
 <!-- /wp:heading -->
-<div dir="rtl" style="text-align: justify;">      اکنون که یک مکان سفارشی برای میزبانی فایل‌ها و پوشه‌های وب‌سایت خود دارید، یک اسکریپت تست PHP ایجاد می‌کنیم تا تأیید کنیم که آپاچی قادر به رسیدگی و پردازش درخواست‌های فایل‌های PHP است.</div>
-<div dir="rtl">
-<div>یک فایل جدید به نام info.php در پوشه ریشه وب سفارشی خود ایجاد کنید:</div>
-</div>
+
 <!-- wp:html -->
-<pre style="direction: ltr;">nano /var/www/your_domain/info.php</pre>
+<div dir="rtl" style="text-align: justify;">در PHP7 می توانید با استفاده از تابع ()define یک آرایه ثابت ایجاد کنید.</div>
+<div dir="rtl"> </div>
+<div dir="rtl"><strong>مثال:</strong></div>
+<div dir="rtl">
+<div>یک آرایه ثابت ایجاد کنید:</div>
+</div>
 <!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">با این کار یک فایل خالی باز می شود. متن زیر را که یک کد PHP معتبر است، داخل فایل اضافه کنید:</div>
+
 <!-- wp:html -->
 <pre style="direction: ltr;">&lt;?php
-phpinfo();</pre>
+  define("cars", [
+    "Alfa Romeo",
+    "BMW",
+    "Toyota"
+  ]);
+  echo cars[0];
+?&gt;php code.</pre>
 <!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">وقتی کارتان تمام شد، فایل را ذخیره کرده و ببندید.</div>
-<div dir="rtl">
-<div style="text-align: justify;">برای آزمایش این اسکریپت، به مرورگر وب خود بروید و به نام دامنه یا آدرس IP سرور خود دسترسی پیدا کنید و به دنبال آن نام اسکریپت که در این مورد info.php است وارد کنید:</div>
-</div>
+
 <!-- wp:html -->
-<pre style="direction: ltr;">http://server_domain_or_IP/info.php</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">صفحه ای مشابه این را خواهید دید:</div>
-<!-- wp:html -->
-<div style="display: flex; justify-content: center;">
-<div style="width: 700px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/phpinfo.png" alt="phpinfo.png" /></div>
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>Alfa Romeo</strong></p>
+</div>
 </div>
 <!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">      این صفحه اطلاعاتی در مورد سرور شما از دیدگاه PHP ارائه می دهد. برای اشکال زدایی و اطمینان از اینکه تنظیمات شما به درستی اعمال می شوند مفید است.</div>
-<div dir="rtl">
-<div>اگر می توانید این صفحه را در مرورگر خود ببینید، نصب PHP شما همانطور که انتظار می رود کار می کند.</div>
-<div style="text-align: justify;">      پس از بررسی اطلاعات مربوط به سرور PHP خود از طریق آن صفحه، بهتر است فایلی را که ایجاد کرده اید حذف کنید زیرا حاوی اطلاعات حساسی در مورد محیط PHP و سرور اوبونتو شما است. برای این کار می توانید از <strong><span style="color: #800000;">rm</span> </strong>استفاده کنید:</div>
-</div>
-<!-- wp:html -->
-<pre style="direction: ltr;">sudo rm /var/www/your_domain/info.php</pre>
-<!-- /wp:html -->
-<div dir="rtl" style="text-align: justify;">در صورت نیاز به دسترسی مجدد به اطلاعات، همیشه می توانید این صفحه را دوباره ایجاد کنید.</div>
+
 <!-- wp:spacer -->
 <div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
-<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-cyan-blue"} -->
-<h3 class="wp-block-heading has-text-align-right has-vivid-cyan-blue-color has-text-color">نتیجه گیری</h3>
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>ثابت ها Global هستند</h4>
 <!-- /wp:heading -->
-<div dir="rtl" style="text-align: justify;">      در این راهنما، با استفاده از آپاچی به عنوان وب سرور و MySQL به عنوان سیستم پایگاه داده، پایه ای انعطاف پذیر برای ارائه وب سایت ها و برنامه های کاربردی PHP به بازدیدکنندگان ایجاد کرده ایم.</div>
-<div dir="rtl">      اگر می خواهید از آپاچی به عنوان سرور جهت نصب لاراول ، وردپرس یا . . . استفاده کنید گام بعدی می تواند نصب phpmyadmin باشد. phpmyadmin یک نرم افزار رایگان است که به شما امکان می دهد پایگاه داده mysql خود را به صورت گرافیکی مدیریت کرده و هرنوع عملیات را روی آن اعمال نمایید.</div>
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">ثابت ها به طور خودکار جهانی هستند و می توانند در کل اسکریپت استفاده شوند.</div>
+<div dir="rtl"> </div>
+<div dir="rtl"><strong>مثال:</strong></div>
+<div dir="rtl">
+<div>این مثال از یک ثابت در داخل یک تابع استفاده می کند، حتی اگر خارج از تابع تعریف شده باشد:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+  define("GREETING", "Welcome to
+  raiatec.com!");
+  function myTest() {
+    echo GREETING;
+  }
+
+  myTest();
+?&gt; </pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background">!Welcome to raiatec.com</p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"68px"} -->
+<div class="wp-block-spacer" style="height: 68px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p><a dir="rtl" href="https://www.w3schools.com/php/default.asp"> <strong> منبع: w3schools.com </strong> </a></p>
+<!-- /wp:html -->
+
 <!-- wp:spacer -->
 <div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
+
+<!-- wp:html --><!-- Navigation buttons -->
+<div class="flex justify-between mt-8">
+<div><a style="border-radius: 5px; background-color: #9ca3af; padding: 8px 12px; display: inline-block; width: 150px; text-align: center;" href="https://raiatec.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-php-%d9%82%d8%b3%d9%85%d8%aa-%d8%a7%d9%88%d9%84">❮ قبلی</a></div>
+<div><a style="border-radius: 5px; background-color: #9ca3af; padding: 8px 12px; display: inline-block; width: 150px; text-align: center;" href="https://raiatec.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-php-%d9%82%d8%b3%d9%85%d8%aa-%d8%b3%d9%88%d9%85">بعدی ❯</a></div>
+</div>
+<div style="margin-bottom: 150px;"> </div>
+<!-- /wp:html -->
