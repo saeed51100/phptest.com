@@ -1,68 +1,64 @@
 <!-- wp:html -->
-<ol class="farsi-number colored-text p-8" start="7">
-<li dir="rtl" style="text-align: right;"><a href="#e7"><span class="colored-text">Integer</span></a></li>
-<li dir="rtl" style="text-align: right;"><a href="#e8"><span class="colored-text">Float</span></a></li>
-<li dir="rtl" style="text-align: right;"><a href="#e9"><span class="colored-text">بی نهایت</span></a></li>
-<li dir="rtl" style="text-align: right;"><a href="#e10"><span class="colored-text">NaN</span></a></li>
-<li dir="rtl" style="text-align: right;"><a href="#e11"><span class="colored-text">رشته های عددی</span></a></li>
-<li dir="rtl" style="text-align: right;"><a href="#e12"><span class="colored-text">Type Casting در PHP</span></a></li>
-<li dir="rtl" style="text-align: right;"><a href="#e13"><span class="colored-text">Math</span></a></li>
-<li dir="rtl" style="text-align: right;"><a href="#e14"><span class="colored-text">ثابت ها در php</span></a></li>
+<ol class="farsi-number colored-text p-8" start="20">
+<li dir="rtl" style="text-align: right;"><a href="#e20"><span class="colored-text">متغیرهای جهانی Superglobals</span></a></li>
+<li dir="rtl" style="text-align: right;"><a href="#e21"><span class="colored-text">عبارات با قاعده</span></a></li>
+<li dir="rtl" style="text-align: right;"><a href="#e22"><span class="colored-text">فرمها در در PHP</span></a></li>
 </ol>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<p id="e20">​</p>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+<h4>۲۰. متغیرهای جهانی Superglobals</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;"><strong><span style="color: #ff0000;">Superglobal</span> </strong>ها در PHP 4.1.0 معرفی شدند. آنها متغیرهای داخلی هستند که همیشه در همه حوزه ها در دسترس هستند.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div style="text-align: justify;">برخی از متغیرهای از پیش تعریف شده superglobal ها هستند، به این معنی که آنها همیشه بدون توجه به محدوده قابل دسترسی هستند و شما می توانید از هر تابع، کلاس یا فایلی بدون نیاز به انجام کار خاصی به آنها دسترسی داشته باشید.</div>
+</div>
+<div dir="rtl" style="text-align: justify;"> </div>
+<div dir="rtl">
+<div>متغیرهای <strong>superglobal</strong> عبارتند از:</div>
+<ul>
+<li><strong><span style="color: #ff0000;">GLOBALS$</span></strong></li>
+<li><strong><span style="color: #ff0000;">SERVER_$</span></strong></li>
+<li><strong><span style="color: #ff0000;">REQUEST_$</span></strong></li>
+<li><strong><span style="color: #ff0000;">POST_$</span></strong></li>
+<li><strong><span style="color: #ff0000;">GET_$</span></strong></li>
+<li><strong><span style="color: #ff0000;">FILES_$</span></strong></li>
+<li><strong><span style="color: #ff0000;">ENV_$</span></strong></li>
+<li><strong><span style="color: #ff0000;">COOKIE_$</span></strong></li>
+<li><strong><span style="color: #ff0000;">SESSION_$</span></strong></li>
+</ul>
+</div>
 <!-- /wp:html -->
 
 <!-- wp:spacer -->
 <div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
-<!-- wp:heading {"textAlign":"right","level":3} -->
-<h4>اعداد در PHP</h4>
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>GLOBALS$</h4>
 <!-- /wp:heading -->
 
 <!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">در ادامه عمیق تر به Integers, Floats و رشته های عددی خواهیم پرداخت.</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"61px"} -->
-<div class="wp-block-spacer" style="height: 61px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p><strong>نکته: </strong>php به طور خودکار نوع داده را تبدیل می کند. یعنی اگر یک عدد صحیح به یک متغیر اختصاص دهید، نوع آن متغیر به طور خودکار <strong>Integer </strong>خواهد بود و سپس اگر یک رشته متنی را به همان متغیر اختصاص دهید، نوع آن به <strong>String </strong>تغییر می کند. این تبدیل خودکار نوع داده گاهی اوقات ممکن است نتایج غیر منتظره ای داشته باشد. پس باید به این موضوع توجه داشته باشید.</p>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"76px"} -->
-<div class="wp-block-spacer" style="height: 76px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p id="e7">​</p>
-<!-- /wp:html -->
-
-<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
-<h4><strong><span class="colored-text">۷. Integer</span></strong></h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div>
-<div dir="rtl" style="text-align: justify;">2، 256، -256، 10358، -179567 همه اعداد صحیح یا <strong><span class="colored-text">Integer </span></strong>هستند.</div>
-</div>
-<div dir="rtl"> </div>
-<div dir="rtl">عدد صحیح عددی است که هیچگونه اعشاری ندارد.</div>
-<div dir="rtl"> </div>
+<div dir="rtl" style="text-align: justify;">متغیرهای <strong>Super global</strong> ، متغیرهای داخلی هستند که همیشه در همه حوزه‌ها در دسترس هستند.</div>
+<div dir="rtl" style="text-align: justify;"> </div>
 <div dir="rtl">
-<div>
-<div style="text-align: justify;">عدد صحیح یا <strong><span class="colored-text">Integer</span></strong> یک عدد غیر اعشاری بین 2147483648- و 2147483647 در سیستم های 32 بیتی و بین 9223372036854775808- و 9223372036854775807 در سیستم های 64 بیتی می باشد. مقدار بزرگتر (یا کمتر) از این به عنوان <strong><span class="colored-text">float</span></strong> ذخیره می شود، زیرا از محدوده یک عدد صحیح فراتر می رود.</div>
+<div style="text-align: justify;"><span style="color: #ff0000;"><strong>GLOBALS$</strong></span> یک متغیر <strong>Super global</strong> است که برای دسترسی به متغیرهای سراسری از هر نقطه در اسکریپت PHP ( همچنین از درون توابع یا متدها ) استفاده می‌شود.</div>
+<div> </div>
 </div>
+<div dir="rtl">
+<div style="text-align: justify;">PHP همه متغیرهای سراسری را در آرایه ای به نام <strong>GLOBALS[index]$</strong> ذخیره می کند. ایندکس نام متغیر را نگه می دارد.</div>
 </div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"68px"} -->
-<div class="wp-block-spacer" style="height: 68px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p><strong>نکته: </strong>اگر بخواهیم 4*2.5 را که برابر 10 می شود ذخیره کنیم، نتیجه به عنوان <strong>Float</strong> ذخیره می شود، زیرا یکی از عملوندها ( 2.5 ) <strong>Float</strong> است.</p>
+<div dir="rtl" style="text-align: justify;"> </div>
+<div dir="rtl">
+<div>مثال زیر نحوه استفاده از متغیر سوپر گلوبال <strong><span style="color: #ff0000;">GLOBALS$</span> </strong>را نشان می دهد:</div>
+</div>
 <!-- /wp:html -->
 
 <!-- wp:spacer {"height":"67px"} -->
@@ -70,55 +66,402 @@
 <!-- /wp:spacer -->
 
 <!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>قوانین موجود برای اعداد صحیح:</strong></p>
-<ul>
-<li dir="rtl" style="text-align: justify;">
-<div>یک عدد صحیح باید حداقل یک رقم داشته باشد.</div>
-</li>
-<li dir="rtl" style="text-align: justify;">
-<div>یک عدد صحیح نباید دارای اعشار باشد.</div>
-</li>
-<li dir="rtl" style="text-align: justify;">
-<div>یک عدد صحیح می تواند مثبت یا منفی باشد.</div>
-</li>
-<li dir="rtl" style="text-align: justify;">
-<div>اعداد صحیح را می توان در سه قالب مشخص کرد: اعشاری (مبتنی بر 10)، هگزا دسیمال (مبتنی بر 16 - پیشوند با 0x) یا اکتال (بر اساس 8 - پیشوند با 0)</div>
-</li>
-</ul>
+<pre style="direction: ltr;">&lt;?php
+
+$x = 75;
+$y = 25;
+function addition() {
+  $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
+}
+addition();
+echo $z;
+?&gt;</pre>
 <!-- /wp:html -->
 
-<!-- wp:spacer {"height":"92px"} -->
-<div class="wp-block-spacer" style="height: 92px;" aria-hidden="true"> </div>
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>100</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">در مثال بالا، از آنجایی که z یک متغیر موجود در آرایه GLOBALS$ است، از خارج از تابع نیز قابل دسترسی است!</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>SERVER_$</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;"><strong><span style="color: #ff0000;">SERVER_$</span></strong> یک متغیر سوپر گلوبال PHP است که اطلاعات مربوط به سرصفحه‌ها، مسیرها و مکان‌های اسکریپت را در خود نگه می‌دارد.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div>مثال زیر نحوه استفاده از برخی از عناصر موجود در SERVER_$ را نشان می دهد:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;?php
+echo $_SERVER['PHP_SELF'];
+echo "&lt;br&gt;";
+echo $_SERVER['SERVER_NAME'];
+echo "&lt;br&gt;";
+echo $_SERVER['HTTP_HOST'];
+echo "&lt;br&gt;";
+echo $_SERVER['HTTP_REFERER'];
+echo "&lt;br&gt;";
+echo $_SERVER['HTTP_USER_AGENT'];
+echo "&lt;br&gt;";
+echo $_SERVER['SCRIPT_NAME'];
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p>/phptest.com/public_html/index.php<br />PhpStorm 2021.3<br />localhost:63342</p>
+<p><strong>Warning</strong>: Undefined array key "HTTP_REFERER" in <strong>C:\xampp\htdocs\phptest.com\public_html\index.php</strong> on line <strong>13</strong></p>
+<p>Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36<br />/phptest.com/public_html/index.php</p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>REQUEST_$</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">متغیرهای سوپر گلوبال، متغیرهای داخلی هستند که همیشه در همه حوزه‌ها در دسترس هستند.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div style="text-align: justify;"><strong><span style="color: #ff0000;">REQUEST_$</span></strong> یک متغیر سوپر گلوبال PHP است که برای جمع آوری داده ها پس از ارسال فرم HTML استفاده می شود.</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"56px"} -->
+<div class="wp-block-spacer" style="height: 56px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
 <!-- wp:html -->
-<div dir="rtl" style="text-align: justify;"><strong>PHP دارای ثابت های از پیش تعریف شده زیر برای اعداد صحیح است:</strong></div>
-<div dir="rtl"> </div>
-<ul>
-<li dir="rtl" style="text-align: justify;">
-<div>PHP_INT_MAX - بزرگترین عدد صحیح پشتیبانی شده</div>
-</li>
-<li dir="rtl" style="text-align: justify;">
-<div>PHP_INT_MIN - کوچکترین عدد صحیح پشتیبانی شده</div>
-</li>
-<li dir="rtl" style="text-align: justify;">
-<div>PHP_INT_SIZE - اندازه یک عدد صحیح بر حسب بایت</div>
-</li>
-</ul>
+<div dir="rtl" style="text-align: justify;">مثال زیر فرمی را با فیلد ورودی و دکمه ارسال نشان می دهد. هنگامی که کاربر داده ها را با کلیک بر روی "ارسال" ارسال می کند، داده های فرم به فایل مشخص شده در ویژگی عملکرد تگ &lt;form&gt; ارسال می شود. در این مثال برای پردازش داده های فرم به خود این فایل اشاره می کنیم. اگر می خواهید از فایل PHP دیگری برای پردازش داده های فرم استفاده کنید، آن را با نام فایل انتخابی خود جایگزین کنید. سپس، می‌توانیم از متغیر سوپر گلوبال REQUEST_$ برای جمع‌آوری مقدار فیلد ورودی استفاده کنیم:</div>
 <!-- /wp:html -->
 
-<!-- wp:spacer {"height":"107px"} -->
-<div class="wp-block-spacer" style="height: 107px;" aria-hidden="true"> </div>
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;html&gt;
+&lt;body&gt;
+&lt;form method="post" action="&lt;?php echo $_SERVER['PHP_SELF']; ?&gt;"&gt;
+    Name: &lt;input type="text" name="fname"&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_REQUEST['fname'];
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p dir="rtl" style="text-align: left;">Name: <input name="fname" type="text" /> <input type="submit" /></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>POST_$</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">متغیرهای سوپر گلوبال، متغیرهای داخلی هستند که همیشه در همه حوزه‌ها در دسترس هستند.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div style="text-align: justify;">PHP $_POST یک متغیر سوپر گلوبال PHP است که برای جمع‌آوری داده‌های فرم پس از ارسال یک فرم HTML با روش = "post" استفاده می‌شود. $_POST همچنین به طور گسترده ای برای انتقال متغیرها استفاده می شود.</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"75px"} -->
+<div class="wp-block-spacer" style="height: 75px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
 <!-- wp:html -->
-<div dir="rtl" style="text-align: justify;"><strong>PHP دارای توابع زیر برای بررسی Integer بودن نوع متغیر است:</strong></div>
+<div>
+<div dir="rtl" style="text-align: justify;">مثال زیر فرمی را با فیلد ورودی و دکمه ارسال نشان می دهد. هنگامی که کاربر داده ها را با کلیک بر روی "ارسال" ارسال می کند، داده های فرم به فایل مشخص شده در ویژگی عملکرد تگ &lt;form&gt; ارسال می شود. در این مثال برای پردازش داده های فرم به خود فایل اشاره می کنیم. اگر می خواهید از فایل PHP دیگری برای پردازش داده های فرم استفاده کنید، آن را با نام فایل انتخابی خود جایگزین کنید. سپس، می‌توانیم از متغیر super global $_POST برای جمع‌آوری مقدار فیلد ورودی استفاده کنیم:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;html&gt;
+&lt;body&gt;
+&lt;form method="post" action="&lt;?php echo $_SERVER['PHP_SELF'];?&gt;"&gt;
+  Name: &lt;input type="text" name="fname"&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_POST['fname'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p dir="rtl" style="text-align: left;">Name: <input name="fname" type="text" /> <input type="submit" /></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>GET_$</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">متغیرهای سوپر گلوبال، متغیرهای داخلی هستند که همیشه در همه حوزه‌ها در دسترس هستند.</div>
 <div dir="rtl"> </div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">GET_$ یک متغیر سوپر گلوبال PHP است که برای جمع‌آوری داده‌های فرم پس از ارسال فرم HTML با متد="get" استفاده می‌شود.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div>GET_$ همچنین می تواند داده های ارسال شده در URL را جمع آوری کند.</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"73px"} -->
+<div class="wp-block-spacer" style="height: 73px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">فرض کنید یک صفحه HTML داریم که حاوی یک لینک با پارامترهای زیر است:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;html&gt;
+&lt;body&gt;
+&lt;a href="test_get.php?subject=PHP&amp;web=W3schools.com"&gt;Test $GET&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">هنگامی که کاربر روی پیوند "Test $GET" کلیک می کند، پارامترهای "subject" و "web" به "test_get.php" ارسال می شوند و سپس می توانید با GET_$ به مقادیر آنها در "test_get.php" دسترسی پیدا کنید.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div>مثال زیر کد موجود در "test_get.php" را نشان می دهد:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;html&gt;
+&lt;body&gt;
+&lt;?php
+echo "Study " . $_GET['subject'] . " at " . $_GET['web'];
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"54px"} -->
+<div class="wp-block-spacer" style="height: 54px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p id="e21">​</p>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+<h4>۲۱. عبارات با قاعده</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">عبارات با قاعده (regular expression) یا به اختصار <span style="color: #ff0000;"><strong>رجکس</strong></span>، دنباله ای از کاراکترها است که با الگوی مشخص مطابقت دارد. وقتی داده‌ها را در یک متن جستجو می‌کنید، می‌توانید از این الگوی جستجو برای توصیف آن استفاده کنید.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div>یک عبارت با قاعده می تواند یک کاراکتر واحد یا یک الگوی پیچیده تر باشد.</div>
+</div>
+<div dir="rtl" style="text-align: justify;"> </div>
+<div dir="rtl">
+<div>از عبارات منظم می توان برای انجام انواع عملیات جستجوی متن و جایگزینی متن استفاده کرد.</div>
+</div>
+<div dir="rtl"> </div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"67px"} -->
+<div class="wp-block-spacer" style="height: 67px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p dir="rtl" style="text-align: justify;"><strong>سینتکس:</strong></p>
+<div dir="rtl" style="text-align: justify;">در PHP، عبارات منظم رشته‌هایی هستند که از جداکننده‌ها، یک الگو و اصلاح‌کننده‌های اختیاری تشکیل شده‌اند.</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">$exp = "/raiatec/i";</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">در مثال بالا، سه قسمت وجود دارد:</div>
+<div dir="rtl"> </div>
+<div dir="rtl"> </div>
+<div dir="rtl" style="text-align: justify;"><span style="color: #ff0000;"><strong>   /            </strong></span> جداکننده<strong> ( delimiter ) </strong>است،</div>
+<div dir="rtl" style="text-align: justify;"><strong><span style="color: #ff0000;">raiatec</span>   </strong>الگویی <strong>( pattern )</strong> است که جستجو می‌شود، و</div>
+<div dir="rtl" style="text-align: justify;"><span style="color: #ff0000;"><strong>    i</strong></span>          اصلاح‌کننده‌ <strong>( modifier ) </strong> است که جستجو را به حروف بزرگ و کوچک حساس می‌کند.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
 <ul>
-<li dir="rtl" style="text-align: justify;">()is_int</li>
-<li dir="rtl" style="text-align: justify;">()is_integer   نام مستعار  ()is_int</li>
-<li dir="rtl" style="text-align: justify;">()is_long       نام مستعار ()is_int</li>
+<li style="text-align: justify;">جداکننده <strong>( delimiter ) </strong>می تواند هر کاراکتری باشد بجز حرف، عدد، بک اسلش و فاصله.  متداول ترین جداکننده، اسلش (<span style="color: #ff0000;"><strong>/</strong></span>) است، اما زمانی که الگوی شما حاوی اسلش است، از جداکننده های دیگر مانند <span style="color: #ff0000;"><strong>#</strong></span> یا <span style="color: #ff0000;"><strong>~</strong></span> استفاده می شود.</li>
 </ul>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"67px"} -->
+<div class="wp-block-spacer" style="height: 67px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>توابع عبارات با قاعده</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">PHP توابع مختلفی را ارائه می دهد که به شما امکان می دهد از عبارات منظم استفاده کنید. توابع preg_match()، preg_match_all() و ()preg_replace برخی از متداول ترین آنها هستند:</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"33px"} -->
+<div class="wp-block-spacer" style="height: 33px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<table style="color: black; width: 98.676%; height: 92px;">
+<thead>
+<tr style="height: 30px; background-color: #f5f189; border: 4px solid #706e6e;">
+<td style="width: 19.1397%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">تابع</strong></td>
+<td style="width: 79.1276%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">شرح</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.1397%; height: 23px; border-left: solid #3b3a3a; text-align: center;">()preg_match</td>
+<td style="width: 79.1276%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>اگر الگو در رشته پیدا شد 1 و در غیر این صورت 0 برمی گرداند</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.1397%; height: 23px; border-left: solid #3b3a3a; text-align: center;">()preg_match_all</td>
+<td style="width: 79.1276%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>تعداد دفعاتی که الگو در رشته پیدا شده است را برمی‌گرداند که ممکن است 0 نیز باشد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.1397%; height: 23px; border-left: solid #3b3a3a; text-align: center;">()preg_replace</td>
+<td style="width: 79.1276%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>یک رشته جدید را برمی‌گرداند که در آن الگوهای همسان با رشته دیگری جایگزین شده‌اند</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>()preg_match</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()preg_match</span></strong> به شما می گوید که آیا یک رشته دارای مطابقت های یک الگو است یا خیر.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl"><strong>مثال:</strong></div>
+<div dir="rtl">
+<div>
+<div>از یک regular expression ( رجکس ) برای انجام جستجوی غیر حساس به حروف بزرگ برای "raiatec" در یک رشته استفاده کنید:</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+$str = "Visit Raiatec";
+$pattern = "/raiatec/i";
+echo preg_match($pattern, $str); // Outputs 1
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>1</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>()preg_match_all</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">تابع <strong><span style="color: #ff0000;">()preg_match_all</span></strong> به شما می گوید که چه تعداد مطابق برای یک الگو در یک رشته پیدا شده است.</div>
 <!-- /wp:html -->
 
 <!-- wp:spacer -->
@@ -127,111 +470,14 @@
 
 <!-- wp:html -->
 <p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
-<div dir="rtl" style="text-align: justify;">بررسی کنید که آیا نوع متغیر عدد صحیح است یا خیر:</div>
-<p dir="rtl"> </p>
+<div dir="rtl" style="text-align: justify;">از یک رجکس برای انجام شمارش غیرحساس به حروف بزرگ جهت شمارش تعداد دفعات "ain" در یک رشته استفاده کنید:</div>
 <!-- /wp:html -->
 
 <!-- wp:html -->
 <pre style="direction: ltr;">&lt;?php
-  // Check if the type of a variable is integer
-  $x = 5985;
-  var_dump(is_int($x));
-  echo "&lt;br&gt;";
-  // Check again...
-  $x = 59.85;
-  var_dump(is_int($x));
-?&gt; </pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>bool(true)<br />bool(false)</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"51px"} -->
-<div class="wp-block-spacer" style="height: 51px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p id="e8">​</p>
-<!-- /wp:html -->
-
-<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
-
-<h4><strong><span class="colored-text">۸. Float</span></strong></h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">در PHP از نوع داده <strong><span class="colored-text">Float</span></strong> برای مقادیر اعشاری استفاده می شود. شناور عددی با نقطه اعشار است و می توان آن را به شکل <strong>نمایی</strong> نشان داد. به شناور عدد ممیز شناور نیز گفته می شود.</div>
-<div dir="rtl"> </div>
-<div dir="rtl">
-<div>محدوده اعداد <strong>float </strong>بین 2.0، 256.4، 10.358و 7.64E+5، 5.56E-5 می باشد.</div>
-</div>
-<div> </div>
-<div dir="rtl" style="text-align: justify;">
-<div>
-<div>نوع داده <strong>float </strong>معمولاً می تواند مقداری تا 1.7976931348623E+308 (وابسته به پلتفرم) را ذخیره کند و حداکثر دقت ۱۴ رقمی دارد.</div>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"104px"} -->
-<div class="wp-block-spacer" style="height: 104px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">
-<div><strong>PHP دارای ثابت های از پیش تعریف شده زیر برای <span style="color: #ff0000;">Float </span>ها است (از PHP 7.2):</strong></div>
-</div>
-<ul>
-<li dir="rtl" style="text-align: justify;">
-<div>PHP_FLOAT_MAX - بزرگترین عدد ممیز شناور قابل نمایش</div>
-</li>
-<li dir="rtl" style="text-align: justify;">
-<div>PHP_FLOAT_MIN -کوچکترین عدد ممیز شناور مثبت قابل نمایش. </div>
-</li>
-<li dir="rtl" style="text-align: justify;">
-<div>PHP_FLOAT_DIG - تعداد ارقام اعشاری که می توانند به صورت شناور و بدون از دست دادن دقیق گرد شوند.</div>
-</li>
-<li dir="rtl" style="text-align: justify;">
-<div>PHP_FLOAT_EPSILON - کوچکترین عدد مثبت قابل نمایش x، به طوری که x + 1.0 != 1.0</div>
-</li>
-</ul>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"90px"} -->
-<div class="wp-block-spacer" style="height: 90px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;"><strong>PHP دارای توابع زیر برای بررسی شناور بودن نوع متغیر است:</strong></div>
-<ul>
-<li dir="rtl" style="text-align: justify;">()is_float</li>
-<li dir="rtl" style="text-align: justify;">()is_double   نام مستعار ()is_float</li>
-</ul>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p dir="rtl" style="text-align: right;"><strong>مثال:</strong></p>
-<p dir="rtl" style="text-align: right;">بررسی کنید که آیا نوع متغیر Float است یا خیر:</p>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  $x = 10.365;
-  var_dump(is_float($x));
+$str = "The rain in SPAIN falls mainly on the plains.";
+$pattern = "/ain/i";
+echo preg_match_all($pattern, $str);
 ?&gt;</pre>
 <!-- /wp:html -->
 
@@ -239,30 +485,21 @@
 <div class="flex items-center" dir="ltr">
 <div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
 <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>bool(true)</strong></p>
+<p class="has-white-background-color has-background"><strong>4</strong></p>
 </div>
 </div>
 <!-- /wp:html -->
-
-<!-- wp:spacer {"height":"55px"} -->
-<div class="wp-block-spacer" style="height: 55px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
 
 <!-- wp:spacer -->
 <div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
-<!-- wp:html -->
-<p id="e9">​</p>
-<!-- /wp:html -->
-
-<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
-
-<h4><strong><span class="colored-text">۹. بی نهایت</span></strong></h4>
+<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
+<h4>()preg_replace</h4>
 <!-- /wp:heading -->
 
 <!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">مقدار عددی که بزرگتر از PHP_FLOAT_MAX باشد، <span style="color: #ff0000;"><strong>Infinity</strong> </span>یا بی نهایت در نظر گرفته می شود.</div>
+<div dir="rtl" style="text-align: justify;">تابع <span style="color: #ff0000;"><strong>()</strong></span><span style="color: #ff0000;"><strong>preg_replace</strong></span> تمام مطابقت های الگوی یک رشته را با رشته دیگری جایگزین می کند.</div>
 <!-- /wp:html -->
 
 <!-- wp:spacer -->
@@ -270,42 +507,303 @@
 <!-- /wp:spacer -->
 
 <!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>PHP دارای توابع زیر برای بررسی متناهی یا نامتناهی بودن یک مقدار عددی است:</strong></p>
-<ul>
-<li dir="rtl" style="text-align: justify;">()is_finite</li>
-<li dir="rtl" style="text-align: justify;">()is_infinite</li>
-</ul>
-<div dir="rtl" style="text-align: justify;">با این حال، تابع <strong>()var_dump</strong> نوع و مقدار داده را برمی‌گرداند:</div>
-<div dir="rtl"> </div>
-<div dir="rtl"><strong>مثال:</strong></div>
-<div dir="rtl">
-<div style="text-align: justify;">بررسی کنید که آیا یک مقدار عددی متناهی است یا نامتناهی:</div>
-</div>
+<p dir="rtl" style="text-align: justify;"><strong>مثال:</strong></p>
+<div dir="rtl" style="text-align: justify;">برای جایگزینی مایکروسافت با W3Schools در یک رشته از یک رجکس غیر حساس به حروف کوچک و بزرگ استفاده کنید:</div>
 <!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
 
 <!-- wp:html -->
 <pre style="direction: ltr;">&lt;?php
-  // Check if a numeric value is finite or infinite
-  $x = 1.9e411;
-  var_dump($x);
-?&gt; </pre>
+$str = "Visit Microsoft!";
+$pattern = "/microsoft/i";
+echo preg_replace($pattern, "W3Schools", $str);
+?&gt;</pre>
 <!-- /wp:html -->
 
 <!-- wp:html -->
 <div class="flex items-center" dir="ltr">
 <div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
 <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>float(INF)</strong></p>
+<p><span style="background-color: #ffffff;"><strong>Visit W3Schools!</strong></span></p>
 </div>
 </div>
 <!-- /wp:html -->
 
-<!-- wp:spacer {"height":"49px"} -->
-<div class="wp-block-spacer" style="height: 49px;" aria-hidden="true"> </div>
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>اصلاح کننده ها ( Modifiers ) در عبارات باقاعده</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">اصلاح‌کننده‌ها می‌توانند نحوه انجام جستجو را تغییر دهند.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"14px"} -->
+<div class="wp-block-spacer" style="height: 14px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<table style="color: black; width: 98.6744%; height: 92px;">
+<thead>
+<tr style="height: 30px; background-color: #f5f189; border: 4px solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">Modifiers</strong></td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">شرح</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">i</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>جستجوی غیر حساس به حروف بزرگ را انجام می دهد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">m</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>جستجوی چند خطی را انجام می دهد (الگوهایی که ابتدا یا انتهای یک رشته را جستجو می کنند با ابتدا یا انتهای هر خط مطابقت دارند)</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">u</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>تطابق صحیح الگوهای رمزگذاری شده UTF-8 را فعال می کند</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>الگوهای عبارات باقاعده</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">از براکت ها برای یافتن طیف وسیعی از کاراکترها استفاده می شود:</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"17px"} -->
+<div class="wp-block-spacer" style="height: 17px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<table style="color: black; width: 98.6744%; height: 78px;">
+<thead>
+<tr style="height: 30px; background-color: #f5f189; border: 4px solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">عبارت</strong></td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">شرح</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 22px; border-left: solid #3b3a3a; text-align: center;">[abc]</td>
+<td style="width: 78.7657%; height: 22px; border-left: solid #3b3a3a; text-align: center;">
+<div>یک کاراکتر از گزینه های بین پرانتز را پیدا می کند</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">[^abc]</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>هر کاراکتری را که بین پرانتزها نباشد را پیدا می کند</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 10px; border-left: solid #3b3a3a; text-align: center;">[0-9]</td>
+<td style="width: 78.7657%; height: 10px; border-left: solid #3b3a3a; text-align: center;">
+<div>یک کاراکتر از محدوده 0 تا 9 را پیدا می کند</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>متا کاراکترها</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">متاکاراکترها کاراکترهایی با معنای خاص هستند:</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"17px"} -->
+<div class="wp-block-spacer" style="height: 17px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<table style="color: black; width: 98.6744%; height: 78px;">
+<thead>
+<tr style="height: 30px; background-color: #f5f189; border: 4px solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">متا کاراکتر</strong></td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">شرح</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 22px; border-left: solid #3b3a3a; text-align: center;">|</td>
+<td style="width: 78.7657%; height: 22px; border-left: solid #3b3a3a; text-align: center;">
+<div>برای هر یک از الگوهای جدا شده با | مطابقت پیدا می کند مانند: گربه|سگ|ماهی</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">.</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>فقط یک نمونه از هر کاراکتر را پیدا می کند</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 10px; border-left: solid #3b3a3a; text-align: center;">^</td>
+<td style="width: 78.7657%; height: 10px; border-left: solid #3b3a3a; text-align: center;">
+<div>مطابقت را به عنوان ابتدای یک رشته پیدا می کند مانند: Hello^</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">$</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>مطابقت را در انتهای رشته پیدا می کند مانند: $World</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 10px; border-left: solid #3b3a3a; text-align: center;">d\</td>
+<td style="width: 78.7657%; height: 10px; border-left: solid #3b3a3a; text-align: center;">
+<div>یک رقم پیدا می کند</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">s\</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>یک کاراکتر فضای خالی پیدا می کند</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 10px; border-left: solid #3b3a3a; text-align: center;">b\</td>
+<td style="width: 78.7657%; height: 10px; border-left: solid #3b3a3a; text-align: center;">
+<div>یک مطابقت در ابتدای کلمه ای مانند این پیدا می کند: bWORD\ یا در انتهای کلمه ای مانند این: WORD\b</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">uxxxx\</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>کاراکتر یونیکد مشخص شده با عدد هگزادسیمال xxxx را پیدا می کند</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>شمارشگرها ( Quantifiers )</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<p dir="rtl" style="text-align: justify;">برای سنجش تعداد از شمارشگرها استفاده می شود.</p>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<table style="color: black; width: 98.6744%; height: 134px;">
+<thead>
+<tr style="height: 30px; background-color: #f5f189; border: 4px solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">شمارشگر</strong></td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">شرح</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 22px; border-left: solid #3b3a3a; text-align: center;">+n</td>
+<td style="width: 78.7657%; height: 22px; border-left: solid #3b3a3a; text-align: center;">
+<div>با هر رشته ای که حداقل یک n داشته باشد مطابقت دارد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">*n</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>با هر رشته ای که حاوی صفر یا بیشتر از n باشد مطابقت دارد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 10px; border-left: solid #3b3a3a; text-align: center;">?n</td>
+<td style="width: 78.7657%; height: 10px; border-left: solid #3b3a3a; text-align: center;">
+<div>با هر رشته ای که شامل صفر یا یک وقوع n باشد مطابقت دارد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">n{x}</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>با هر رشته ای که دارای دنباله ای از X n است مطابقت دارد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 10px; border-left: solid #3b3a3a; text-align: center;">n{x,y}</td>
+<td style="width: 78.7657%; height: 10px; border-left: solid #3b3a3a; text-align: center;">
+<div>هر رشته ای را که حاوی دنباله ای از X تا Y n باشد مطابقت می دهد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 19.5016%; height: 23px; border-left: solid #3b3a3a; text-align: center;">n{x,}</td>
+<td style="width: 78.7657%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>با هر رشته ای که دارای دنباله ای از حداقل X n باشد مطابقت دارد</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"47px"} -->
+<div class="wp-block-spacer" style="height: 47px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p class="has-text-align-right has-background" dir="rtl" style="background-color: rgba(255, 237, 71, 0.38); text-align: justify;"><strong>توجه:</strong> اگر عبارت شما نیاز به جستجوی یکی از کاراکترهای خاص دارد، می‌توانید از بک اسلش ( \ ) برای فرار از آنها استفاده کنید. به عنوان مثال، برای جستجوی یک یا چند علامت سوال می توانید از عبارت زیر استفاده کنید:  '/+?\/' = pattern$</p>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>گروه بندی</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">می‌توانید از پرانتز ( ) برای اعمال کمیت‌نماها به کل الگوها استفاده کنید. همچنین می توان از آنها برای انتخاب قسمت هایی از الگوی مورد استفاده به عنوان یک مطابقت استفاده کرد.</div>
+<div dir="rtl"> </div>
+<div dir="rtl"><strong>مثال:</strong></div>
+<div dir="rtl">
+<div>از گروه بندی برای جستجوی کلمه "banana" با جستجوی ba به دنبال دو نمونه na استفاده کنید:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+$str = "Apples and bananas.";
+$pattern = "/ba(na){2}/i";
+echo preg_match($pattern, $str);
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p class="has-white-background-color has-background"><strong>1</strong></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"53px"} -->
+<div class="wp-block-spacer" style="height: 53px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
 <!-- wp:spacer -->
@@ -313,54 +811,882 @@
 <!-- /wp:spacer -->
 
 <!-- wp:html -->
-<p id="e10">​</p>
+<p id="e22">​</p>
 <!-- /wp:html -->
 
 <!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
+<h4>۲۲. فرمها در PHP</h4>
+<!-- /wp:heading -->
 
-<h4><strong><span class="colored-text">۱۰. NaN</span></strong></h4>
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">سوپر گلوبال های <span style="color: #ff0000;"><strong>GET_$</strong></span> و <strong><span style="color: #ff0000;">POST_$</span></strong> برای جمع آوری داده های فرم استفاده می شود.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>ایجاد یک فرم ساده HTML</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">مثال زیر یک فرم ساده HTML با دو فیلد ورودی و یک دکمه ارسال را نمایش می دهد:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;form action="welcome.php" method="post"&gt;
+Name: &lt;input type="text" name="نام"&gt;&lt;br&gt;
+E-mail: &lt;input type="text" name="ایمیل"&gt;&lt;br&gt;
+&lt;input type="ارسال"&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p dir="ltr" style="text-align: left;">Name: <input name="name" type="text" /><br /> Email: <input name="email" type="text" /><br /><input type="submit" /></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<p>&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">هنگامی که کاربر فرم بالا را پر می کند و روی دکمه Submit کلیک می کند، داده های فرم برای پردازش به فایل PHP به نام "welcome.php" ارسال می شود. داده های فرم با روش HTTP POST ارسال می شود.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div style="text-align: justify;">برای نمایش داده های ارسالی، می توانید همه متغیرها را به خروجی بفرستید. "welcome.php" به شکل زیر است:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;html&gt;
+&lt;body&gt;
+Welcome &lt;?php echo $_POST["name"]; ?&gt;&lt;br&gt;
+Your email address is: &lt;?php echo $_POST["email"]; ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div style="text-align: justify;">خروجی می تواند چیزی شبیه به این باشد:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">Welcome John
+Your email address is john.doe@example.com</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">همین نتیجه را می توان با استفاده از روش HTTP GET نیز به دست آورد:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;form action="welcome_get.php" method="get"&gt;
+Name: &lt;input type="text" name="name"&gt;&lt;br&gt;
+E-mail: &lt;input type="text" name="email"&gt;&lt;br&gt;
+&lt;input type="submit"&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<p>Name: <input name="name" type="text" /><br />E-mail: <input name="email" type="text" /><br /><input type="submit" /></p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">و "welcome_get.php" به شکل زیر است:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;html&gt;
+&lt;body&gt;
+Welcome &lt;?php echo $_GET["name"]; ?&gt;&lt;br&gt;
+Your email address is: &lt;?php echo $_GET["email"]; ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">کد بالا بسیار ساده است. با این حال، مهمترین چیز از قلم افتاده است. برای محافظت از اسکریپت خود در برابر کدهای مخرب باید داده های فرم را تأیید کنید.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"42px"} -->
+<div class="wp-block-spacer" style="height: 42px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div style="background-color: rgba(255, 237, 71, 0.38);">
+<p class="has-text-align-right has-background" dir="rtl" style="text-align: justify;"><strong>نکته: هنگام پردازش فرم های PHP به امنیت فکر کنید!</strong><br />کد بالا حاوی هیچ گونه اعتبارسنجی فرم نیست، فقط نشان می دهد که چگونه می توانید داده های فرم را ارسال و بازیابی کنید.<br />در ادامه نحوه پردازش فرم های PHP با در نظر گرفتن امنیت را بررسی می کنیم. اعتبارسنجی صحیح داده های فرم برای محافظت از فرم شما در برابر هکرها و هرزنامه ها مهم است!</p>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>مقایسه GET و POST</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">هم GET و هم POST یک آرایه ایجاد می کنند (به عنوان مثال آرایه:</div>
+<div dir="rtl" style="text-align: justify;">(</div>
+<div dir="rtl" style="text-align: justify;">key1 =&gt; value1</div>
+<div dir="rtl" style="text-align: justify;">key2 =&gt; value2</div>
+<div dir="rtl" style="text-align: justify;">key3 =&gt; value3</div>
+<div dir="rtl" style="text-align: justify;">).</div>
+<div dir="rtl" style="text-align: justify;">این آرایه جفت‌های کلید/مقدار را نگه می‌دارد. <strong><span style="color: #ff0000;">کلیدها</span></strong> نام کنترل‌های فرم و <span style="color: #ff0000;"><strong>مقادیر</strong></span> داده‌های ورودی کاربر هستند.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div style="text-align: justify;">هم GET و هم POST به عنوان GET_$ و POST_$ در نظر گرفته می شوند. یعنی <strong>superglobal</strong> بوده و همیشه بدون توجه به حوزه قابل دسترسی هستند و شما می توانید از هر تابع، کلاس یا فایلی بدون نیاز به انجام کار خاصی به آنها دسترسی داشته باشید.</div>
+</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div style="text-align: justify;"><span style="color: #ff0000;"><strong>GET_$</strong></span> آرایه ای از متغیرها است که از طریق پارامترهای <span style="color: #ff0000;"><strong>URL</strong> </span>به اسکریپت فعلی ارسال می شود.</div>
+</div>
+<div style="text-align: justify;"> </div>
+<div dir="rtl" style="text-align: justify;">
+<div><strong><span style="color: #ff0000;">POST_$</span></strong> آرایه ای از متغیرها است که از طریق روش <strong><span style="color: #ff0000;">HTTP POST</span></strong> به اسکریپت فعلی ارسال می شود.</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"104px"} -->
+<div class="wp-block-spacer" style="height: 104px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>چه زمانی از GET استفاده کنیم؟</h4>
 <!-- /wp:heading -->
 
 <!-- wp:html -->
 <div>
-<div dir="rtl" style="text-align: justify;">NaN مخفف <span style="color: #ff0000;"><strong>N</strong></span>ot <strong><span style="color: #ff0000;">a</span> <span style="color: #ff0000;">N</span></strong>umber است.</div>
+<div dir="rtl" style="text-align: justify;">اطلاعات ارسال شده از فرم با متد GET برای همه قابل مشاهده است (همه نام ها و مقادیر متغیرها در URL نمایش داده می شوند). همچنین GET محدودیت هایی در میزان ارسال اطلاعات دارد. محدودیت حدود 2000 کاراکتر است. با این حال، به دلیل اینکه متغیرها در URL نمایش داده می شوند، می توان صفحه را <strong>bookmark</strong> کرد.</div>
+<div dir="rtl"> </div>
+</div>
+<div dir="rtl">
+<div style="text-align: justify;">GET می تواند برای ارسال داده های غیر حساس استفاده شود.</div>
 </div>
 <div dir="rtl" style="text-align: justify;"> </div>
 <div dir="rtl">
-<div>
-<div>
-<div>NaN برای عملیات غیرممکن ریاضی استفاده می شود.</div>
+<div><strong>توجه:</strong> GET هرگز نباید برای ارسال رمز عبور یا سایر اطلاعات حساس استفاده شود!</div>
 </div>
-</div>
-</div>
-<div dir="rtl" style="text-align: justify;"> </div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>چه زمانی از POST استفاده کنیم؟</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">اطلاعات ارسال شده از فرم با متد POST برای دیگران نامرئی است (همه نام ها/مقادیر در بدنه درخواست HTTP تعبیه شده است) و محدودیتی در میزان اطلاعات ارسالی ندارد.</div>
+<div dir="rtl"> </div>
 <div dir="rtl">
-<div>PHP تابع زیر را برای بررسی اینکه آیا یک مقدار یک عدد نیست، دارد:</div>
+<div>علاوه بر این POST از عملکردهای پیشرفته مانند پشتیبانی از ورودی باینری چند قسمتی در هنگام آپلود فایل ها به سرور پشتیبانی می کند.</div>
 </div>
-<div dir="rtl" style="text-align: justify;"> </div>
-<ul>
-<li dir="rtl" style="text-align: justify;">
-<div>()is_nan</div>
+<div dir="rtl">
+<div>با این حال، به دلیل اینکه متغیرها در URL نمایش داده نمی شوند، امکان <strong>bookmark</strong> کردن صفحه وجود ندارد.</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"77px"} -->
+<div class="wp-block-spacer" style="height: 77px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p class="has-text-align-right has-background" dir="rtl" style="background-color: rgba(255, 237, 71, 0.38); text-align: justify;"><strong>نکته: توسعه دهندگان POST را برای ارسال داده های فرم ترجیح می دهند.</strong></p>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"41px"} -->
+<div class="wp-block-spacer" style="height: 41px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">در مرحله بعد، بررسی می کنیم که چگونه می توانیم فرم های PHP را به روش <strong><span style="color: #ff0000;">ایمن</span> </strong>پردازش کنیم!</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>اعتبارسنجی فرمها</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">در این قسمت و قسمت های بعدی نحوه استفاده از PHP برای اعتبارسنجی داده های فرم را بررسی می کنیم.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"17px"} -->
+<div class="wp-block-spacer" style="height: 17px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">فرم HTML که در این فصل ها روی آن کار خواهیم کرد، شامل فیلدهای ورودی مختلف است: <span style="color: #ff0000;"><strong>فیلدهای متنی</strong></span> ضروری و اختیاری، <strong><span style="color: #ff0000;">دکمه های رادیویی</span></strong> و یک <strong><span style="color: #ff0000;">دکمه ارسال</span></strong>:</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"101px"} -->
+<div class="wp-block-spacer" style="height: 101px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>مثال اعتبارسنجی فرم:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:spacer {"height":"43px"} -->
+<div class="wp-block-spacer" style="height: 43px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p><span class="error">* required field</span></p>
+<form dir="ltr" action="https://tryphp.w3schools.com/demo/demo_form_validation_complete.php" method="post">Name: <input name="name" type="text" value="" /> <span class="error">*</span><br /><br />E-mail: <input name="email" type="text" value="" /> <span class="error">*</span><br /><br />Website: <input name="website" type="text" value="" /><br /><br />Comment: <textarea cols="40" name="comment" rows="5"></textarea><br /><br />Gender: <input name="gender" type="radio" value="female" />Female <input name="gender" type="radio" value="male" />Male <input name="gender" type="radio" value="other" />Other <span class="error">*</span><br /><br /><input name="submit" type="submit" value="Submit" /></form>
+<h2 dir="ltr"> </h2>
+<h2 dir="ltr" style="text-align: left;">Your Input:</h2>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">قوانین اعتبار سنجی فرم فوق به شرح زیر است:</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"29px"} -->
+<div class="wp-block-spacer" style="height: 29px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<table style="color: black; width: 99.6278%; height: 138px;">
+<thead>
+<tr style="height: 30px; background-color: #f5f189; border: 4px solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">فیلد</strong></td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">قوانین اعتبارسنجی</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;">Name</td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>ضروری.  فقط باید شامل حروف و فضای خالی باشد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;">E-mail</td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>ضروری.  باید دارای یک آدرس ایمیل معتبر (با @ و .) باشد.</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;">Website</td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>اختیاری. در صورت وجود، باید دارای یک URL معتبر باشد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;">Comment</td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>اختیاری. فیلد ورودی چند خطی (textarea)</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;">Gender</td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>ضروری. باید جنسیت را انتخاب کرد</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"90px"} -->
+<div class="wp-block-spacer" style="height: 90px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;"><strong>ابتدا به کد HTML ساده برای فرم نگاه می کنیم:</strong></div>
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"right","level":5} -->
+<h5 class="wp-block-heading has-text-align-right">فیلدهای متنی</h5>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">فیلدهای نام، ایمیل و وب سایت عناصر ورودی متن هستند و فیلد Comment یک ناحیه متنی است. کد HTML به شکل زیر است:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">Name: &lt;input type="text" name="name"&gt;
+E-mail: &lt;input type="text" name="email"&gt;
+Website: &lt;input type="text" name="website"&gt;
+Comment: &lt;textarea name="comment" rows="5" cols="40"&gt;&lt;/textarea&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":5} -->
+<h5 class="wp-block-heading has-text-align-right">دکمه های رادیویی</h5>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">فیلدهای جنسیت دکمه های رادیویی هستند و کد HTML به شکل زیر است:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">Gender:
+&lt;input type="radio" name="gender" value="female"&gt;Female
+&lt;input type="radio" name="gender" value="male"&gt;Male
+&lt;input type="radio" name="gender" value="other"&gt;Other</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":5} -->
+<h5 class="wp-block-heading has-text-align-right">المان فرم</h5>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;form method="post" action="&lt;?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?&gt;"&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">هنگامی که فرم ارسال می شود، داده های فرم با روش = "post" ارسال می شود.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div style="background-color: rgba(255, 237, 71, 0.38);">
+<p class="has-text-align-right has-background" dir="rtl" style="text-align: justify;"><strong>متغیر SERVER["PHP_SELF"]_$ چیست؟</strong><br />SERVER["PHP_SELF"]_$ یک متغیر سوپر گلوبال است که نام فایل اسکریپت در حال اجرا را برمی گرداند.</p>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">بنابراین، SERVER["PHP_SELF"]_$ به جای پرش به صفحه دیگری، داده های فرم ارسال شده را به خود صفحه ارسال می کند. به این ترتیب کاربر در همان صفحه فرم پیغام خطا دریافت می کند.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div style="background-color: rgba(255, 237, 71, 0.38);">
+<p class="has-text-align-right has-background" dir="rtl" style="text-align: justify;"><strong>تابع ()htmlspecialchars چیست؟</strong><br />تابع ()htmlspecialchars کاراکترهای خاص را به <strong><span style="color: #ff0000;">موجودیت </span></strong>های HTML تبدیل می کند. این بدان معنی است که کاراکترهای HTML مانند &lt; و &gt; را با &lt; و &gt; جایگزین می کند. این مانع از سوء استفاده مهاجمان از کد با تزریق کد HTML یا Javascript (حملات Cross-site Scripting) در فرم ها می شود.</p>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<h4>نکته مهم در مورد امنیت فرم PHP</h4>
+<div dir="rtl" style="text-align: justify;">متغیر <strong>SERVER["PHP_SELF"]_$</strong> می تواند توسط هکرها استفاده شود!</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div style="text-align: justify;">اگر از PHP_SELF در صفحه شما استفاده می شود، کاربر می تواند یک اسلش (/) و سپس چند دستور Cross Site Scripting (XSS) را برای اجرا وارد کند.</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"45px"} -->
+<div class="wp-block-spacer" style="height: 45px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div class="has-text-align-right has-background" dir="rtl" style="background-color: rgba(255, 237, 71, 0.38); text-align: justify;">
+<p style="text-align: justify; padding: 20px;"><strong>نکته: </strong>برنامه نویسی متقابل سایت (XSS) نوعی آسیب پذیری امنیتی رایانه است که معمولاً در برنامه های کاربردی وب یافت می شود. XSS مهاجمان را قادر می سازد تا اسکریپت سمت سرویس گیرنده را به صفحات وب که توسط سایر کاربران مشاهده می شود تزریق کنند.</p>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"63px"} -->
+<div class="wp-block-spacer" style="height: 63px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">فرض کنید فرم زیر را در صفحه ای به نام "test_form.php" داریم:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;form method="post" action="&lt;?php echo $_SERVER["PHP_SELF"];?&gt;"&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">اکنون، اگر کاربر URL معمولی را در نوار آدرس مانند "http://www.example.com/test_form.php" وارد کند، کد بالا به این صورت ترجمه می شود:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;form method="post" action="test_form.php"&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">تا اینجای کار خیلی خوبه.</div>
+<div dir="rtl">
+<div>
+<div style="text-align: justify;">با این حال، در نظر بگیرید که یک کاربر URL زیر را در نوار آدرس وارد می کند:</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">http://www.example.com/test_form.php/%22%3E%3Cscript%3Ealert('hacked')%3C/script%3E</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">در این صورت کد بالا به صورت زیر ترجمه می شود:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;form method="post" action="test_form.php/"&gt;&lt;script&gt;alert('hacked')&lt;/script&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">این کد یک تگ اسکریپت و یک فرمان هشدار اضافه می کند. و هنگامی که صفحه بارگذاری می شود، کد جاوا اسکریپت اجرا می شود (کاربر یک جعبه هشدار را مشاهده می کند). این فقط یک مثال ساده و بی ضرر است که چگونه می توان از متغیر PHP_SELF سوء استفاده کرد.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div>
+<div style="text-align: justify;">توجه داشته باشید که <strong>هر کد جاوا اسکریپت را می توان در تگ &lt;script&gt; اضافه کرد!</strong> یک هکر می‌تواند کاربر را به فایلی در سرور دیگری هدایت کند، و آن فایل می‌تواند کد مخربی را در خود نگه دارد که می‌تواند متغیرهای سراسری را تغییر دهد یا فرم را به آدرس دیگری ارسال کند تا داده‌های کاربر را ذخیره نماید.</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<h4>چگونه از سوء استفاده‌های SERVER["PHP_SELF"]_$ جلوگیری کنیم؟</h4>
+<div dir="rtl" style="text-align: justify;">با استفاده از تابع ()htmlspecialchars می توان از سوء استفاده های SERVER["PHP_SELF"]_$ اجتناب کرد.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div>کد فرم باید به شکل زیر باشد:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;form method="post" action="&lt;?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?&gt;"&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">تابع ()htmlspecialchars کاراکترهای خاص را به موجودیت های HTML تبدیل می کند. حال اگر کاربر سعی کند از متغیر PHP_SELF سوء استفاده کند، خروجی زیر را به همراه خواهد داشت:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;form method="post" action="test_form.php/&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert('hacked')&amp;lt;/script&amp;gt;"&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">تلاش برای سوء استفاده شکست می خورد و هیچ آسیبی وارد نمی شود!</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<h4>اعتبارسنجی داده های فرم با PHP</h4>
+<div dir="rtl" style="text-align: justify;">اولین کاری که انجام می دهیم این است که همه متغیرها را از طریق تابع htmlspecialchars() PHP پاس دهیم.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div>وقتی از تابع ()htmlspecialchars استفاده می کنیم، اگر کاربر سعی کند موارد زیر را در یک فیلد متنی ارسال کند:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;script&gt;location.href('http://www.hacked.com')&lt;/script&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">- این کد اجرا نمی شود، زیرا به عنوان کد فرار <strong>(escaped)</strong>  از HTML ذخیره می شود، مانند این:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&amp;lt;script&amp;gt;location.href('http://www.hacked.com')&amp;lt;/script&amp;gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">اکنون کد برای نمایش در یک صفحه یا داخل یک ایمیل امن است.</div>
+<div dir="rtl"> </div>
+<div dir="rtl" style="text-align: justify;">همچنین زمانی که کاربر فرم را ارسال کرد، دو کار دیگر نیز باید انجام داد:</div>
+<div dir="rtl"> </div>
+<ol>
+<li dir="rtl">
+<div style="text-align: justify;">کاراکترهای غیر ضروری (فضای اضافی، تب، خط جدید) را از داده های ورودی کاربر حذف کنید (با تابع PHP trim())</div>
 </li>
-</ul>
-<div dir="rtl" style="text-align: justify;">با این حال، تابع <strong>()var_dump</strong> نوع و مقدار داده را برمی‌گرداند:</div>
+<li dir="rtl">
+<div style="text-align: justify;">حذف بک اسلش (\) از داده های ورودی کاربر (با تابع PHP stripslashes())</div>
+</li>
+</ol>
+<div dir="rtl" style="text-align: justify;">مرحله بعدی ایجاد تابعی است که تمام بررسی ها را برای ما انجام می دهد (که بسیار راحت تر از نوشتن یک کد یکسان است).</div>
 <div dir="rtl"> </div>
-<div dir="rtl"><strong>مثال:</strong></div>
+<div dir="rtl">
+<div>نام تابع را ()test_input  می گذاریم.</div>
+</div>
+<div dir="rtl">
+<div style="text-align: justify;">اکنون می‌توانیم هر متغیر POST_$ را با تابع ()test_input بررسی کنیم و اسکریپت به شکل زیر است:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+// define variables and set to empty values
+$name = $email = $gender = $comment = $website = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["name"]);
+  $email = test_input($_POST["email"]);
+  $website = test_input($_POST["website"]);
+  $comment = test_input($_POST["comment"]);
+  $gender = test_input($_POST["gender"]);
+}
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?&gt;
+&lt;h2&gt;PHP Form Validation Example&lt;/h2&gt;
+&lt;form method="post" action="&lt;?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?&gt;"&gt;
+  Name: &lt;input type="text" name="name"&gt;
+  &lt;br&gt;&lt;br&gt;
+  E-mail: &lt;input type="text" name="email"&gt;
+  &lt;br&gt;&lt;br&gt;
+  Website: &lt;input type="text" name="website"&gt;
+  &lt;br&gt;&lt;br&gt;
+  Comment: &lt;textarea name="comment" rows="5" cols="40"&gt;&lt;/textarea&gt;
+  &lt;br&gt;&lt;br&gt;
+  Gender:
+  &lt;input type="radio" name="gender" value="female"&gt;Female
+  &lt;input type="radio" name="gender" value="male"&gt;Male
+  &lt;input type="radio" name="gender" value="other"&gt;Other
+  &lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" name="submit" value="Submit"&gt;
+&lt;/form&gt;
+&lt;?php
+echo "&lt;h2&gt;Your Input:&lt;/h2&gt;";
+echo $name;
+echo "&lt;br&gt;";
+echo $email;
+echo "&lt;br&gt;";
+echo $website;
+echo "&lt;br&gt;";
+echo $comment;
+echo "&lt;br&gt;";
+echo $gender;
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"44px"} -->
+<div class="wp-block-spacer" style="height: 44px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div class="flex items-center" dir="ltr">
+<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
+<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
+<h4><strong>مثال اعتبار سنجی فرم PHP</strong></h4>
+<div> </div>
+<form action="https://tryphp.w3schools.com/demo/demo_form_validation_escapechar.php" method="post">Name: <input name="name" type="text" /><br /><br />E-mail: <input name="email" type="text" /><br /><br />Website: <input name="website" type="text" /><br /><br />Comment: <textarea cols="40" name="comment" rows="5"></textarea><br /><br />Gender: <input name="gender" type="radio" value="female" />Female <input name="gender" type="radio" value="male" />Male <input name="gender" type="radio" value="other" />Other<br /><br /><input name="submit" type="submit" value="Submit" /></form>
+<h2> </h2>
+<h2>Your Input:</h2>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div>
+<div dir="rtl" style="text-align: justify;">توجه داشته باشید که در ابتدای اسکریپت، بررسی می‌کنیم که آیا فرم با استفاده از SERVER["REQUEST_METHOD"]_$ ارسال شده است یا خیر. اگر REQUEST_METHOD POST باشد، فرم ارسال شده است - و باید اعتبارسنجی شود. اگر ارسال نشده است، از تأیید اعتبار رد شده و یک فرم خالی نمایش می دهد.</div>
+</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div style="text-align: justify;">با این حال، در مثال بالا، تمام فیلدهای ورودی اختیاری هستند. اسکریپت به خوبی کار می کند حتی اگر کاربر هیچ داده ای را وارد نکند.</div>
+</div>
+<div dir="rtl">
+<div>مرحله بعدی این است که فیلدهای ورودی را ضروری <strong>(required)</strong> قرار دهید و در صورت نیاز پیام های خطا ایجاد کنید.</div>
+</div>
+<div> </div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<h4>فیلدهای ضروری <strong>(required)</strong></h4>
+<div dir="rtl" style="text-align: justify;">از جدول قوانین اعتبارسنجی صفحه قبل می بینیم که فیلدهای "Name"، "E-mail" و "Gender" الزامی هستند. این فیلدها نمی توانند خالی باشند و باید در فرم HTML پر شوند.</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"46px"} -->
+<div class="wp-block-spacer" style="height: 46px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<table style="color: black; width: 99.6278%; height: 138px;">
+<thead>
+<tr style="height: 30px; background-color: #f5f189; border: 4px solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">فیلد</strong></td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;"><strong style="color: black;">قوانین اعتبارسنجی</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;">Name</td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>ضروری.  فقط باید شامل حروف و فضای خالی باشد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;">E-mail</td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>ضروری.  باید دارای یک آدرس ایمیل معتبر (با @ و .) باشد.</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;">Website</td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>اختیاری. در صورت وجود، باید دارای یک URL معتبر باشد</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #dbd7d7; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;">Comment</td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>اختیاری. فیلد ورودی چند خطی (textarea)</div>
+</td>
+</tr>
+<tr style="height: 23px; background-color: #ebe8e8; border-left: solid #706e6e; border-right: solid #706e6e; border-bottom: solid #706e6e;">
+<td style="width: 12.7063%; height: 23px; border-left: solid #3b3a3a; text-align: center;">Gender</td>
+<td style="width: 85.561%; height: 23px; border-left: solid #3b3a3a; text-align: center;">
+<div>ضروری. باید جنسیت را انتخاب کرد</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"31px"} -->
+<div class="wp-block-spacer" style="height: 31px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">در قسمت قبل، تمام فیلدهای ورودی اختیاری بودند.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div>
+<div style="text-align: justify;">در کد زیر چند متغیر جدید اضافه کرده‌ایم: nameErr، $emailErr، $genderErr$، و websiteErr$. این متغیرهای خطا پیام های خطا را برای فیلدهای مورد نیاز نگه می دارند. ما همچنین برای هر متغیر POST_$ یک عبارت if else اضافه کرده ایم. این بررسی می‌کند که آیا متغیر POST_$ خالی است یا نه (با تابع ()PHP vala). اگر خالی باشد، یک پیام خطا در متغیرهای خطای مختلف ذخیره می‌شود و اگر خالی نباشد، داده‌های ورودی کاربر را از طریق تابع ()test_input ارسال می‌کند:</div>
+</div>
+</div>
 <!-- /wp:html -->
 
 <!-- wp:html -->
 <pre style="direction: ltr;">&lt;?php
-  // Invalid calculation will return a NaN value
-  $x = acos(8);
-  var_dump($x);
-?&gt; </pre>
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+  }
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+  }
+  if (empty($_POST["website"])) {
+    $website = "";
+  } else {
+    $website = test_input($_POST["website"]);
+  }
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+}
+?&gt;</pre>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">مرحله بعدی اعتبارسنجی داده های ورودی است، یعنی «آیا فیلد نام فقط شامل حروف و فضای خالی است؟» و «آیا فیلد ایمیل حاوی یک نحو آدرس ایمیل معتبر است؟» و اگر پر شود، « آیا فیلد وب سایت حاوی یک URL معتبر است؟».</div>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<h4>اعتبارسنجی نام ، ایمیل و URL</h4>
+<div dir="rtl" style="text-align: justify;">در این قسمت نحوه تأیید اعتبار نام ها، ایمیل ها و URL ها را بررسی می کنیم.</div>
+<div dir="rtl"> </div>
+<h4>اعتبارسنجی نام</h4>
+<div dir="rtl" style="text-align: justify;">کد زیر یک راه ساده برای بررسی اینکه آیا فیلد نام فقط شامل حروف، خط تیره، آپستروف و فضاهای سفید است را نشان می دهد.</div>
+<div dir="rtl" style="text-align: justify;">اگر مقدار فیلد نام معتبر نیست، یک پیام خطا ذخیره کنید:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">$name = test_input($_POST["name"]);
+if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+  $nameErr = "Only letters and white space allowed";
+}</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer {"height":"56px"} -->
+<div class="wp-block-spacer" style="height: 56px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<p class="has-text-align-right has-background" dir="rtl" style="background-color: rgba(255, 237, 71, 0.38); text-align: justify;"><strong>نکته: تابع ()preg_match یک رشته را برای الگو جستجو می کند، اگر الگو وجود داشته باشد true و در غیر این صورت false را برمی گرداند.<br /></strong></p>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<h4>اعتبارسنجی ایمیل</h4>
+<div dir="rtl" style="text-align: justify;">ساده ترین و ایمن ترین راه برای بررسی درست بودن آدرس ایمیل، استفاده از تابع filter_var() است.</div>
+<div dir="rtl"> </div>
+<div dir="rtl">
+<div><strong>مثال:</strong></div>
+<div>کد زیر، اگر آدرس ایمیل درست نباشد، یک پیام خطا ذخیره می کند:</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">$email = test_input($_POST["email"]);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $emailErr = "Invalid email format";
+}</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:html -->
+<h4>اعتبارسنجی URL</h4>
+<div dir="rtl" style="text-align: justify;">کد زیر روشی را برای بررسی اینکه آیا سینتکس آدرس URL معتبر است نشان می دهد ( این رجکس همچنین به خط تیره در URL اجازه می دهد ). اگر سینتکس آدرس URL معتبر نباشد، یک پیام خطا ذخیره می کند:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">$website = test_input($_POST["website"]);
+if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&amp;@#\/%?=~_|!:,.;]*[-a-z0-9+&amp;@#\/%=~_|]/i",$website)) {
+  $websiteErr = "Invalid URL";
+}</pre>
+<!-- /wp:html -->
+
+<!-- wp:spacer -->
+<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"right","level":4} -->
+<h4>مثال از اعتبارسنجی Name , Email و URL</h4>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">حال، اسکریپت به شکل زیر است:</div>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<pre style="direction: ltr;">&lt;?php
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+  }
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+  }
+  if (empty($_POST["website"])) {
+    $website = "";
+  } else {
+    $website = test_input($_POST["website"]);
+    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&amp;@#\/%?=~_|!:,.;]*[-a-z0-9+&amp;@#\/%=~_|]/i",$website)) {
+      $websiteErr = "Invalid URL";
+    }
+  }
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+}
+?&gt;</pre>
 <!-- /wp:html -->
 
 <!-- wp:html -->
 <div class="flex items-center" dir="ltr">
 <div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
 <div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>float(NAN)</strong></p>
+<h2>PHP Form Validation Example</h2>
+<p><span class="error">* required field</span></p>
+<form action="https://tryphp.w3schools.com/demo/demo_form_validation_special.php" method="post">Name: <input name="name" type="text" /> <span class="error">*</span><br /><br />E-mail: <input name="email" type="text" /> <span class="error">*</span><br /><br />Website: <input name="website" type="text" /><br /><br />Comment: <textarea cols="40" name="comment" rows="5"></textarea><br /><br />Gender: <input name="gender" type="radio" value="female" />Female <input name="gender" type="radio" value="male" />Male <input name="gender" type="radio" value="other" />Other <span class="error">*</span><br /><br /><input name="submit" type="submit" value="Submit" /></form>
+<h2> </h2>
+<h2>Your Input:</h2>
 </div>
 </div>
 <!-- /wp:html -->
@@ -369,454 +1695,50 @@
 <div class="wp-block-spacer" style="height: 56px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
+<!-- wp:html -->
+<div dir="rtl" style="text-align: justify;">گام بعدی نشان دادن نحوه جلوگیری از خالی شدن تمام فیلدهای ورودی فرم هنگام ارسال فرم توسط کاربر است.</div>
+<!-- /wp:html -->
+
+<!-- wp:tadv/classic-paragraph /-->
+
+<!-- wp:spacer {"height":"102px"} -->
+<div class="wp-block-spacer" style="height: 102px;" aria-hidden="true"> </div>
 <!-- /wp:spacer -->
 
 <!-- wp:html -->
-<p id="e11">​</p>
-<!-- /wp:html -->
-
-<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
-
-<h4><strong><span class="colored-text">۱۱. رشته های عددی</span></strong></h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">تابع <strong>()is_numeric</strong> می تواند برای تعیین عددی بودن یک متغیر استفاده شود. اگر متغیر یک عدد یا یک رشته عددی باشد، خروجی تابع true است، در غیر این صورت false را بر می گرداند.</div>
+<h4>حفظ مقادیر در فیلدهای ورودی</h4>
+<div dir="rtl" style="text-align: justify;">در این قسمت نحوه حفظ مقادیر در فیلدهای ورودی را هنگامی که کاربر دکمه ارسال را فشار می دهد، نشان می دهد.</div>
 <div dir="rtl"> </div>
-<div dir="rtl"><strong>مثال:</strong></div>
-<div dir="rtl">
-<div>بررسی کنید که آیا متغیر عددی است یا خیر:</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"69px"} -->
-<div class="wp-block-spacer" style="height: 69px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  $x = 5985;
-  var_dump(is_numeric($x));
-  $x = "5985";
-  var_dump(is_numeric($x));
-  $x = "59.85" + 100;
-  var_dump(is_numeric($x));
-  $x = "Hello";
-  var_dump(is_numeric($x));
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>bool(true)<br />bool(true)<br />bool(true)<br />bool(false)</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"74px"} -->
-<div class="wp-block-spacer" style="height: 74px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p><strong>توجه: </strong>از PHP 7.0 تابع <strong>()is_numeric</strong> مقدار False را برای رشته های عددی هگزادسیمال برمی گرداند. به عنوان مثال 0xf4c3b00c دیگر به عنوان رشته عددی در نظر گرفته نمی شود.</p>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"64px"} -->
-<div class="wp-block-spacer" style="height: 64px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p id="e12">​</p>
-<!-- /wp:html -->
-
-<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
-
-<h4><strong><span class="colored-text">۱۲. Type Casting در PHP</span></strong></h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div>
-<div dir="rtl" style="text-align: justify;">زمانی که در حال نوشتن یک برنامه هستید، باید چندین متغیر را ایجاد و دستکاری کنید. این متغیرها ممکن است نوع مشابه یا متفاوتی از داده ها را ذخیره کنند. به عنوان مثال، برخی از آنها می توانند یک مقدار صحیح داشته باشند، در حالی که برخی دیگر می توانند یک رشته یا شناور باشند.</div>
-</div>
-<div dir="rtl" style="text-align: justify;"> </div>
-<div dir="rtl">
-<div>
-<div style="text-align: justify;">زبان های برنامه نویسی مختلف مجموعه قوانین خاص خود را برای تعریف و اعلان متغیرها دارند. در زبانی مانند ++C شما باید نوع متغیر را قبل از شروع استفاده از آن مشخص کنید و به طور ضمنی آن را به نوع دیگری تبدیل نمی کند. از سوی دیگر، PHP قوانین سهل گیرانه تری در مورد نوع متغیرها دارد. یعنی لازم نیست از قبل نوع مقداری را که در یک متغیر ذخیره می کنید مشخص کنید. همچنین به شما این امکان را می دهد که نوع متفاوتی از مقدار را در همان متغیر بدون هیچ گونه تبدیل نوع صریح برای استفاده بعدی ذخیره کنید.</div>
-</div>
-</div>
-<div dir="rtl" style="text-align: justify;"> </div>
-<div dir="rtl" style="text-align: justify;">PHP این نوع تبدیل را برای شما به طور خودکار بر اساس زمینه ای که یک متغیر در آن استفاده می شود انجام می دهد. در این قسمت، یاد می گیرید چگونه می توانید هر زمان که نیاز باشد، <strong><span style="color: #ff0000;">Type Casting</span></strong> یا تعیین نوع متغیر را به صراحت انجام دهید.</div>
-<div dir="rtl" style="text-align: justify;"> </div>
-<div dir="rtl">
-<div>
-<div><strong>می‌توانید با اضافه کردن نوع دلخواه خود در پرانتز قبل از متغیری که می‌خواهید ارسال کنید، یک نوع از مقادیر را به دیگری تبدیل کنید.</strong></div>
-</div>
-<div> </div>
-<div><strong>مثال:</strong></div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  $text = "Apple";
-  $x = (int)$text;
-  $y = (boolean)$text;
-  echo gettype($x);
-  echo "&lt;br&gt;";
-  echo gettype($y);
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>integer<br />boolean</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"61px"} -->
-<div class="wp-block-spacer" style="height: 61px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;"><strong>شش نوع کست اصلی در PHP مجاز است. این موارد در زیر ذکر شده است:</strong></div>
-<ul>
-<li dir="rtl" style="text-align: justify;">
-<div>کست به int با استفاده از (int) یا (integer)</div>
-</li>
-<li dir="rtl" style="text-align: justify;">کست به bool با استفاده از (bool) یا (boolean)</li>
-<li dir="rtl" style="text-align: justify;">کست به float با استفاده از (float) یا (double) یا (real)</li>
-<li dir="rtl" style="text-align: justify;">کست به string با استفاده از (string)</li>
-<li dir="rtl" style="text-align: justify;">کست به array با استفاده از (array)</li>
-<li dir="rtl" style="text-align: justify;">کست به object با استفاده از (object)</li>
-</ul>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"73px"} -->
-<div class="wp-block-spacer" style="height: 73px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p id="e13">​</p>
-<!-- /wp:html -->
-
-<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
-
-<h4><strong><span class="colored-text">۱۳. Math</span></strong></h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">PHP دارای مجموعه ای از توابع ریاضی است که به شما امکان می دهد عملسریاضی را روی اعداد انجام دهید.</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
-<h4>تابع ()pi</h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">تابع ()pi مقدار PI را برمی گرداند:</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  echo(pi());
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>3.1415926535898</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
-<h4>تابع های ()min و ()max</h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">از توابع ()min و ()max می توان برای یافتن کمترین یا بالاترین مقدار در لیستی از آرگومان ها استفاده کرد:</div>
+<div dir="rtl" style="text-align: justify;">برای نشان دادن مقادیر در فیلدهای ورودی پس از زدن دکمه ارسال توسط کاربر، ما یک اسکریپت PHP کوچک را در ویژگی مقدار فیلدهای ورودی زیر اضافه می کنیم: نام، ایمیل و وب سایت. در قسمت نظر textarea، اسکریپت را بین تگ‌های &lt;textarea&gt; و &lt;/textarea&gt; قرار می‌دهیم. اسکریپت زیر مقدار متغیرهای:</div>
 <div dir="rtl"> </div>
-<div dir="rtl"><strong>مثال:</strong></div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  echo(min(0, 150, 30, 20, -8, -200));
-  echo(max(0, 150, 30, 20, -8, -200));
-
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong><strong>-</strong>200<br />150</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
-<h4>تابع ()abs</h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">
-<div>تابع ()abs قدر مطلق (مثبت) یک عدد را برمی گرداند:</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  echo(abs(-6.7));
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>6.7</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
-<h4>تابع ()sqrt</h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div>
-<div dir="rtl" style="text-align: justify;">تابع ()sqrt جذر یک عدد را برمی گرداند:</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  echo(sqrt(64) . "&lt;br&gt;");
-  echo(sqrt(0) . "&lt;br&gt;");
-  echo(sqrt(1) . "&lt;br&gt;");
-  echo(sqrt(9));
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>8<br />0<br />1<br />3</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
-<h4>تابع ()round</h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">تابع ()round یک عدد <strong>Float</strong> را به نزدیکترین عدد صحیح آن گرد می کند:</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  echo(round(0.60) . "&lt;br&gt;");
-  echo(round(0.50) . "&lt;br&gt;");
-  echo(round(0.49) . "&lt;br&gt;");
-  echo(round(-4.40) . "&lt;br&gt;");
-  echo(round(-4.60));
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>1<br />1<br />0<br />-4<br />-5</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4,"textColor":"vivid-cyan-blue"} -->
-<h4>تابع ()rand</h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div>
-<div dir="rtl" style="text-align: justify;">تابع ()rand یک عدد تصادفی تولید می کند:</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  echo(rand());
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>1381167960</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">برای کنترل بیشتر بر روی اعداد تصادفی، می توانید پارامترهای حداقل و حداکثر اختیاری را اضافه کنید تا کمترین عدد صحیح و بالاترین عدد صحیح را مشخص کنید.</div>
+<div dir="rtl" style="text-align: justify;">name$ </div>
+<div dir="rtl" style="text-align: justify;">email$ </div>
+<div dir="rtl" style="text-align: justify;">website$</div>
+<div dir="rtl">و</div>
+<div dir="rtl" style="text-align: justify;">comment$</div>
+<div dir="rtl"> </div>
+<div dir="rtl" style="text-align: justify;">را خروجی می‌دهد.</div>
 <div dir="rtl"> </div>
 <div dir="rtl">
-<div style="text-align: justify;">به عنوان مثال، اگر یک عدد صحیح تصادفی بین 10 و 100 (شامل) می خواهید، از rand (10، 100) استفاده کنید:</div>
+<div>سپس، ما همچنین باید نشان دهیم که کدام دکمه رادیویی بررسی شده است. برای این کار، ما باید ویژگی checked (نه ویژگی مقدار برای دکمه‌های رادیویی) را تغییر می دهیم:</div>
 </div>
 <!-- /wp:html -->
 
 <!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  echo(rand(10, 100));
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>97</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"67px"} -->
-<div class="wp-block-spacer" style="height: 67px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p id="e14">​</p>
-<!-- /wp:html -->
-
-<!-- wp:heading {"textAlign":"right","level":3,"textColor":"vivid-red"} -->
-
-<h4><strong><span class="colored-text">۱۴. ثابت ها در php</span></strong></h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">ثابت یا <strong>Constant</strong> شناسه ای است که مقدار مشخصی را در خود نگه می دارد. مقدار ذخیره شده در یک ثابت فقط در زمان اجرا قابل تعریف است و در طول اجرای برنامه تغییر نمی کند.</div>
-<div dir="rtl"> </div>
-<div dir="rtl">
-<div>
-<div>یک نام ثابت با یک حرف یا زیرخط شروع می شود (بدون علامت $ قبل از نام ثابت).</div>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"66px"} -->
-<div class="wp-block-spacer" style="height: 66px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
-<p><strong>نکته: </strong>بر خلاف متغیرها ، ثابت ها به طور خودکار در کل اسکریپت سراسری یا <strong>Global</strong> هستند.</p>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">برای ایجاد یک ثابت، از تابع <span style="color: #ff0000;"><strong>()define</strong></span> استفاده کنید.</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"77px"} -->
-<div class="wp-block-spacer" style="height: 77px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4>سینتکس:</h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">define(name, value, case-insensitive)</pre>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"75px"} -->
-<div class="wp-block-spacer" style="height: 75px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4>پارامترها:</h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<ul>
-<li dir="rtl" style="text-align: justify;">name: نام ثابت را مشخص می کند.</li>
-<li dir="rtl" style="text-align: justify;">value: مقدار ثابت را مشخص می کند.</li>
-<li dir="rtl" style="text-align: justify;">case-insensitive: اختیاری. مشخص می کند که آیا نام ثابت باید به حروف بزرگ و کوچک حساس باشد یا خیر. مقادیر ممکن:</li>
-</ul>
-<div>
-<div dir="rtl" style="text-align: justify;"><strong>TRUE</strong> - حساس به حروف بزرگ و کوچک (در PHP 7.3 منسوخ شده است)</div>
-<div dir="rtl" style="text-align: justify;"><strong>FALSE</strong> - حساس به حروف کوچک و بزرگ (پیش‌فرض است)</div>
-<div>
-<div> </div>
-</div>
-</div>
-<div> </div>
-<p dir="rtl" style="text-align: justify;"><br /><br /><strong>مثال۱:</strong></p>
-<div dir="rtl" style="text-align: justify;">یک ثابت case-sensitive ایجاد کنید:</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  // case-sensitive constant name
-  define("GREETING", "Welcome to raiatec.com!");
-  echo GREETING;
-?&gt; </pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background">Welcome to raiatec.com!</p>
-</div>
-</div>
+<pre style="direction: ltr;">Name: &lt;input type="text" name="name" value="&lt;?php echo $name;?&gt;"&gt;
+E-mail: &lt;input type="text" name="email" value="&lt;?php echo $email;?&gt;"&gt;
+Website: &lt;input type="text" name="website" value="&lt;?php echo $website;?&gt;"&gt;
+Comment: &lt;textarea name="comment" rows="5" cols="40"&gt;&lt;?php echo $comment;?&gt;&lt;/textarea&gt;
+Gender:
+&lt;input type="radio" name="gender"
+&lt;?php if (isset($gender) &amp;&amp; $gender=="female") echo "checked";?&gt;
+value="female"&gt;Female
+&lt;input type="radio" name="gender"
+&lt;?php if (isset($gender) &amp;&amp; $gender=="male") echo "checked";?&gt;
+value="male"&gt;Male
+&lt;input type="radio" name="gender"
+&lt;?php if (isset($gender) &amp;&amp; $gender=="other") echo "checked";?&gt;
+value="other"&gt;Other</pre>
 <!-- /wp:html -->
 
 <!-- wp:spacer -->
@@ -824,109 +1746,17 @@
 <!-- /wp:spacer -->
 
 <!-- wp:html -->
-<p dir="rtl" style="text-align: justify;"><strong>مثال۲: </strong></p>
-<p dir="rtl" style="text-align: justify;">یک ثابت غیر حساس به نام بزرگ و کوچک ایجاد کنید:</p>
+<h4>نمونه فرم کامل</h4>
+<h2> </h2>
+<p dir="ltr" style="text-align: left;"><span class="error">* required field</span></p>
+<form dir="ltr" action="https://tryphp.w3schools.com/demo/demo_form_validation_complete.php" method="post">Name: <input name="name" type="text" value="" /> <span class="error">*</span><br /><br />E-mail: <input name="email" type="text" value="" /> <span class="error">*</span><br /><br />Website: <input name="website" type="text" value="" /><br /><br />Comment: <textarea cols="40" name="comment" rows="5"></textarea><br /><br />Gender: <input name="gender" type="radio" value="female" />Female <input name="gender" type="radio" value="male" />Male <input name="gender" type="radio" value="other" />Other <span class="error">*</span><br /><br /><input name="submit" type="submit" value="Submit" /></form>
+<h2> </h2>
+<h2 dir="ltr" style="text-align: left;">Your Input:</h2>
 <!-- /wp:html -->
 
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  // case-insensitive constant name
-  define("GREETING", "Welcome to raiatec.com!", true);
-  echo greeting;
-?&gt;</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background">Welcome to raiatec.com!</p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4>آرایه های ثابت</h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">در PHP7 می توانید با استفاده از تابع ()define یک آرایه ثابت ایجاد کنید.</div>
-<div dir="rtl"> </div>
-<div dir="rtl"><strong>مثال:</strong></div>
-<div dir="rtl">
-<div>یک آرایه ثابت ایجاد کنید:</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  define("cars", [
-    "Alfa Romeo",
-    "BMW",
-    "Toyota"
-  ]);
-  echo cars[0];
-?&gt;php code.</pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background"><strong>Alfa Romeo</strong></p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer -->
-<div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:heading {"textAlign":"right","level":4} -->
-<h4>ثابت ها Global هستند</h4>
-<!-- /wp:heading -->
-
-<!-- wp:html -->
-<div dir="rtl" style="text-align: justify;">ثابت ها به طور خودکار جهانی هستند و می توانند در کل اسکریپت استفاده شوند.</div>
-<div dir="rtl"> </div>
-<div dir="rtl"><strong>مثال:</strong></div>
-<div dir="rtl">
-<div>این مثال از یک ثابت در داخل یک تابع استفاده می کند، حتی اگر خارج از تابع تعریف شده باشد:</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<pre style="direction: ltr;">&lt;?php
-  define("GREETING", "Welcome to
-  raiatec.com!");
-  function myTest() {
-    echo GREETING;
-  }
-
-  myTest();
-?&gt; </pre>
-<!-- /wp:html -->
-
-<!-- wp:html -->
-<div class="flex items-center" dir="ltr">
-<div style="width: 100px;"><img src="https://raiatec.ir/wp-content/uploads/2023/09/flesh.png" alt="flesh" /></div>
-<div class="p-4 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200" style="margin: auto;">
-<p class="has-white-background-color has-background">!Welcome to raiatec.com</p>
-</div>
-</div>
-<!-- /wp:html -->
-
-<!-- wp:spacer {"height":"68px"} -->
-<div class="wp-block-spacer" style="height: 68px;" aria-hidden="true"> </div>
-<!-- /wp:spacer -->
-
-<!-- wp:html -->
+<!-- wp:paragraph {"align":"right"} -->
 <p><a dir="rtl" href="https://www.w3schools.com/php/default.asp"> <strong> منبع: w3schools.com </strong> </a></p>
-<!-- /wp:html -->
+<!-- /wp:paragraph -->
 
 <!-- wp:spacer -->
 <div class="wp-block-spacer" style="height: 100px;" aria-hidden="true"> </div>
@@ -934,8 +1764,8 @@
 
 <!-- wp:html --><!-- Navigation buttons -->
 <div class="flex justify-between mt-8">
-<div><a style="border-radius: 5px; background-color: #9ca3af; padding: 8px 12px; display: inline-block; width: 150px; text-align: center;" href="https://raiatec.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-php-%d9%82%d8%b3%d9%85%d8%aa-%d8%a7%d9%88%d9%84">❮ قبلی</a></div>
-<div><a style="border-radius: 5px; background-color: #9ca3af; padding: 8px 12px; display: inline-block; width: 150px; text-align: center;" href="https://raiatec.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-php-%d9%82%d8%b3%d9%85%d8%aa-%d8%b3%d9%88%d9%85">بعدی ❯</a></div>
+<div><a style="border-radius: 5px; background-color: #9ca3af; padding: 8px 12px; display: inline-block; width: 150px; text-align: center;" href="https://raiatec.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-php-%d9%82%d8%b3%d9%85%d8%aa-%d8%b3%d9%88%d9%85">❮ قبلی</a></div>
+<div><a style="border-radius: 5px; background-color: #9ca3af; padding: 8px 12px; display: inline-block; width: 150px; text-align: center;" href="https://raiatec.com/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-php-%d9%82%d8%b3%d9%85%d8%aa-%d9%be%d9%86%d8%ac%d9%85">بعدی ❯</a></div>
 </div>
 <div style="margin-bottom: 150px;"> </div>
 <!-- /wp:html -->
